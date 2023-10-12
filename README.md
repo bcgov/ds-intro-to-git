@@ -1,5 +1,5 @@
 <!-- 
-[![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](<Redirect-URL>)
+![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)]
 -->
 
 Introduction To Version Control with git and GitHub

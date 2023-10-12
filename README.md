@@ -1,14 +1,7 @@
 [![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](<Redirect-URL>)
 
-Introduction To Version Control with git and GitHub
+Introduction To Version Control With Git and GitHub
 ============================
-
-### Usage
-
-
-#### Example
-
-### Project Status
 
 ### Getting Help or Reporting an Issue
 

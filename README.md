@@ -1,11 +1,8 @@
 <!-- 
-Add a project state badge
-
-See <https://github.com/BCDevExchange/Our-Project-Docs/blob/master/discussion/projectstates.md> 
-If you have bcgovr installed and you use RStudio, click the 'Insert BCDevex Badge' Addin.
+[![Lifecycle:Maturing](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](<Redirect-URL>)
 -->
 
-ds-intro-to-git
+Introduction To Version Control with git and GitHub
 ============================
 
 ### Usage

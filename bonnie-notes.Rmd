@@ -14,6 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
 #### General Thoughts
 
 - Like the learning objectives, don't love they way they are laid out.  I'd prefer seeing the question be a header and the objectives clearly outlined either above or below.
+- teaching command line will take extra time as we'll need to teach that
+- keep things simple: change directory, list directory contents, make and delete a directory then git commands.
 
 #### Summary and Set Up
 
@@ -23,14 +25,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - We have installation instructions in a git repo somewhere - copy and paste to this directory?
 - Ask ppl to show up ready-to-go with a git account, git installed, m2FA, RStudio (tbd), Git Bash?
+- can we include the configuration as well?
 
 - MacOS has a terminal running a bash or zsh shell for command line work.  Windows...Git Bash?
 
 #### Episode 1. Automated Version Control
+- not keen on the cartoon
+- yes for the document flow diagrams
 
 #### Episode 2. Setting Up Git
+- am concerned this will lose ppl
+- can we pass them a script before hand to work through?
+- yes to touching on default branch naming (inclusive language)
 
 #### Episode 3. Creating a Repository
+- mostly good, like the keypoints at the end
+- making a subdirectory - this has me curious how to force commit these, while ignoring contents
+
 
 #### Episode 4. Tracking Changes
 

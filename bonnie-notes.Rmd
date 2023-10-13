@@ -1,0 +1,57 @@
+---
+title: "Bonnie's Scratch Pad"
+author: "Bonnie Robert"
+date: "2023-10-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Software Carpentry Likes
+
+#### General Thoughts
+
+- Like the learning objectives, don't love they way they are laid out.  I'd prefer seeing the question be a header and the objectives clearly outlined either above or below.
+
+#### Summary and Set Up
+
+- A record of who made what changes when therefore we know who to ask if we have questions later on.  If needed we can revert to a previous version, much like the “undo” feature in an editor"
+- Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. 
+- Anything that changes over time or needs to be shared can be stored in a version control system.
+
+- We have installation instructions in a git repo somewhere - copy and paste to this directory?
+- Ask ppl to show up ready-to-go with a git account, git installed, m2FA, RStudio (tbd), Git Bash?
+
+- MacOS has a terminal running a bash or zsh shell for command line work.  Windows...Git Bash?
+
+#### Episode 1. Automated Version Control
+
+#### Episode 2. Setting Up Git
+
+#### Episode 3. Creating a Repository
+
+#### Episode 4. Tracking Changes
+
+#### Episode 5. Exploring History
+
+#### Episode 6. Ignoring Things
+
+#### Episode 7. Remotes in GitHub
+
+#### Episode 8. Collaborating
+
+#### Episode 9. Conflicts
+
+#### Episode 10. Open Science
+
+#### Episode 11. Licensing
+
+#### Episode 12. Citation
+
+#### Episode 13. Hosting
+
+#### Episode 14. Supplemental: Using Git from RStudio
+
+

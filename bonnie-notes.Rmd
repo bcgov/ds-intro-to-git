@@ -19,11 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #### Summary and Set Up
 
-- A record of who made what changes when therefore we know who to ask if we have questions later on.  If needed we can revert to a previous version, much like the “undo” feature in an editor"
-- Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. 
-- Anything that changes over time or needs to be shared can be stored in a version control system.
-
-- We have installation instructions in a git repo somewhere - copy and paste to this directory?
+- We have installation instructions in a git repo already - copy and paste to this directory?
 - Ask ppl to show up ready-to-go with a git account, git installed, m2FA, RStudio (tbd), Git Bash?
 - can we include the configuration as well?
 
@@ -37,13 +33,12 @@ knitr::opts_chunk$set(echo = TRUE)
 - am concerned this will lose ppl
 - can we pass them a script before hand to work through?
 - yes to touching on default branch naming (inclusive language)
-- 
 
-#### Episode 3. Creating a Repository
+#### Episode 3. Creating a Repository (Local)
 - mostly good, like the keypoints at the end
 - making a subdirectory, 
 - .gitgnore and .gitkeep
-- they don't mention .gitkeep
+- they don't mention .gitkeep but this is a gotcha later on
 
 #### Episode 4. Tracking Changes
 - which editor?  will people be open to using nano? I'm guessing not, and the changes should be a
@@ -51,14 +46,19 @@ word doc or excel file.  we could mention R scripts here. ppl might find themsel
 when -m is omitted.
 - yes to git log
 - no to git diff (intermediate level)
-- I don't think there will be time (in a 1/2 day workshop) to do the exercises 
+- I don't think there will be time (in a 1/2 day workshop) to do the exercises
+- exercises as a takeaway
 
 #### Episode 5. Exploring History
-- this is a deeper dive and could be rushing things to include.  If we include it, it need a rethink.  To me, this section feels like a bunch of information being tossed out, with no specific purpose.
+- this is a deeper dive and could be rushing things to include.  If we include it, it needs a rethink.  To me, this section feels like a bunch of information being tossed out, with no specific purpose.
 
 #### Episode 6. Ignoring Things
+- will need to touch on this as we don't want ppl pushing data to GitHub
 
 #### Episode 7. Remotes in GitHub
+- authentication method - 2FA, ssh keys or PAT
+- GitHub password vs authentication
+- https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github
 
 #### Episode 8. Collaborating
 - skip this section
@@ -67,7 +67,8 @@ when -m is omitted.
 - skip this section
 
 #### Episode 10 - 13 
-- collapse these into one unit where we discuss bcgov organization, licensing, code-sharing, PIA/STRA etc
+- collapse these into one unit where we discuss bcgov organization, licensing, code-sharing, PIA/STRA etc.   
+- Would like to lean on Stephanie for assisstance here
 
 #### Episode 14. Supplemental: Using Git from RStudio
 

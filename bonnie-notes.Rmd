@@ -37,6 +37,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - am concerned this will lose ppl
 - can we pass them a script before hand to work through?
 - yes to touching on default branch naming (inclusive language)
+- 
 
 #### Episode 3. Creating a Repository
 - mostly good, like the keypoints at the end
@@ -45,24 +46,28 @@ knitr::opts_chunk$set(echo = TRUE)
 - they don't mention .gitkeep
 
 #### Episode 4. Tracking Changes
+- which editor?  will people be open to using nano? I'm guessing not, and the changes should be a
+word doc or excel file.  we could mention R scripts here. ppl might find themselves in trouble when
+when -m is omitted.
+- yes to git log
+- no to git diff (intermediate level)
+- I don't think there will be time (in a 1/2 day workshop) to do the exercises 
 
 #### Episode 5. Exploring History
+- this is a deeper dive and could be rushing things to include.  If we include it, it need a rethink.  To me, this section feels like a bunch of information being tossed out, with no specific purpose.
 
 #### Episode 6. Ignoring Things
 
 #### Episode 7. Remotes in GitHub
 
 #### Episode 8. Collaborating
+- skip this section
 
 #### Episode 9. Conflicts
+- skip this section
 
-#### Episode 10. Open Science
-
-#### Episode 11. Licensing
-
-#### Episode 12. Citation
-
-#### Episode 13. Hosting
+#### Episode 10 - 13 
+- collapse these into one unit where we discuss bcgov organization, licensing, code-sharing, PIA/STRA etc
 
 #### Episode 14. Supplemental: Using Git from RStudio
 

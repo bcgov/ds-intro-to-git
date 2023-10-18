@@ -68,7 +68,8 @@ when -m is omitted.
 
 #### Episode 10 - 13 
 - collapse these into one unit where we discuss bcgov organization, licensing, code-sharing, PIA/STRA etc.   
-- Would like to lean on Stephanie for assisstance here
+- Would like to lean on Stephanie for assistance here
+- bcgov-c, bcgov enterprise
 
 #### Episode 14. Supplemental: Using Git from RStudio
 

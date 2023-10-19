@@ -3,19 +3,27 @@
 Introduction To Version Control With Git and GitHub
 ============================
 
-This is a repository to house materials for a 2 day course introducing participants to data science using Python.
+This is a repository to house materials for a 1/2 day workshop introducing participants to version control using git and the popular code hosting platform, GitHub.
 
-The goal of this workshop is to teach new-to-programming data professionals to:
-This is an introductory course to version control with git and GitHub.
-Git is a popular 
-It is commonly used for  
+The goal of this workshop is to teach new-to-programming data professionals how to harness the power of version control by giving attendees a foundation in the fundamentals of version control and git.
 
-The workshop content will follow best practices for version control.... giving attendees a foundation in the fundamentals of version control and git.
+GitHub is a widely-used platform for hosting and sharing code repositories, facilitating seamless collaboration among developers.  It is commonly used for open-source and private projects alike, serving as a central hub for developers to collaborate, contribute, and showcase their work to the world. Git, on the other hand, is a popular version control system that enables you to track changes in your code, collaborate with team members, and maintain a history of your project's development. 
+
+By the end of this course, you will have gained a fundamental understanding of version control, enabling you to:
+
+- Set up a github account and install git (pre-workshop)
+- Connect to GitHub and create a remote repository
+- Use command-line git to track local file changes and push them to GitHub
+- *Something about BC Gov specific materials Org, Licensing, bcgovr*
+- Understand the value-add of using version control to manage software projects
+
+The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking all relevent and secure project files.
 
 ## Who should take this course?
 
- * Anyone who 
- * Anyone keen to learn (**no prior experience necessary!**)
+ * Anyone looking to solidify their foundational understanding of version control
+ * Anyone keen to learn what git or GitHub is (**no prior experience necessary!**)
+ * Anyone wondering how version control can be used to manage and collaborate on software projects
 
 ## Previous Offerings
 

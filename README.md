@@ -7,7 +7,7 @@ This is a repository to house materials for a 1/2 day workshop introducing parti
 
 The goal of this workshop is to teach new-to-programming data professionals how to harness the power of version control by giving attendees a foundation in the fundamentals of version control and git.
 
-GitHub is a widely-used platform for hosting and sharing code repositories, facilitating seamless collaboration among developers.  It is commonly used for open-source and private projects alike, serving as a central hub for developers to collaborate, contribute, and showcase their work to the world. Git, on the other hand, is a popular version control system that enables you to track changes in your code, collaborate with team members, and maintain a history of your project's development. 
+GitHub is a widely-used platform for hosting and sharing code repositories, facilitating seamless collaboration among developers.  Git, on the other hand, is a popular version control system that enables you to track changes in your code, collaborate with team members, and maintain a history of your project's development. 
 
 By the end of this course, you will have gained a fundamental understanding of version control, enabling you to:
 

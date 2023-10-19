@@ -17,7 +17,7 @@ By the end of this course, you will have gained a fundamental understanding of v
 - *Something about BC Gov specific materials Org, Licensing, bcgovr*
 - Understand the value-add of using version control to manage software projects
 
-The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking all relevent and secure project files.
+The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking relevent project files.
 
 ## Who should take this course?
 

@@ -10,13 +10,9 @@ Sources:
 Topics:
 
 -   We have installation instructions in a git repo already also
-
 -   Ask ppl to show up ready-to-go with a git account, git installed, m2FA, RStudio (tbd), Git Bash
-
 -   pass them a script before hand to work through?
-
 -   touching on default branch naming (inclusive language)
-
 -   Git Bash for Windows bash or zsh shell for command line work configuration
 
 ## Section 1. What is version control?
@@ -30,7 +26,6 @@ Sources:
 Topics:
 
 -   the cartoon document
-
 -   flow diagram
 
 ## Section 2. Working local with git
@@ -40,23 +35,16 @@ Learning Objective: Use command-line git to track local file changes
 Sources:
 
 -   SW Carpentry Episode 3. Creating a Repository (Local)
-
 -   SW Carpentry Episode 4. Tracking Changes
 
 Topics:
 
 -   see keypoints at the end
-
 -   making a directory structure
-
 -   committing and tracking changes
-
 -   use a basic text doc and we could mention R scripts here.
-
 -   what to do when when -m is omitted.
-
 -   git log
-
 -   exercises as a takeaway
 
 ## Section 3. Connecting to GitHub
@@ -66,21 +54,15 @@ Learning Objective: Connect to GitHub and create a remote repository. Push local
 Sources:
 
 -   SW Carpentry Episode 7. Remotes in GitHub
-
 -   W Carpentry Episode 6. Ignoring Things
 
 Topics:
 
 -   authentication method - 2FA, ssh keys or PAT
-
 -   GitHub password vs authentication https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github
-
 -   pushing, pulling and cloning
-
 -   we don't want ppl pushing data to GitHub
-
 -   .gitgnore and subdirectories
-
 -   they don't mention .gitkeep but is a gotcha later on
 
 ## Section 4
@@ -94,9 +76,7 @@ Sources:
 Topics:
 
 -   discuss bcgov organization, licensing, code-sharing, PIA/STRA etc.
-
 -   history, value-add statements
-
 -   bcgov-c, bcgov enterprise
 
 #### General Thoughts on SW Carpentry Course

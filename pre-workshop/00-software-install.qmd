@@ -3,6 +3,8 @@ title: "Pre-Workshop Installation and Set-Up"
 author: "Bonnie Robert, Data Science Partnerships"
 format: html
 editor: visual
+project:
+  output-dir: "./myoutput"
 ---
 
 ## Learning Objective
@@ -12,4 +14,3 @@ Set up a github account and install git (pre-workshop)
 ## Running Code
 
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-

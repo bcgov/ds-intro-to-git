@@ -12,10 +12,12 @@ GitHub is a widely-used platform for hosting and sharing code repositories, faci
 By the end of this course, you will have gained a fundamental understanding of version control, enabling you to:
 
 - Set up a github account and install git (pre-workshop)
-- Connect to GitHub and create a remote repository
-- Use command-line git to track local file changes and push them to GitHub
-- *Something about BC Gov specific materials Org, Licensing, bcgovr*
-- Understand the value-add of using version control to manage software projects
+- Understand the value-add of using version control to manage software projects'
+- Use command-line git to track local file changes
+- (*more about git*)
+- What are remote hosting platforms and why do we use them?
+- Connect to GitHub, create a remote repository and push local changes to GitHub
+- (*Something about BC Gov specific materials Org, Licensing, bcgovr*)
 
 The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking relevent project files.
 
@@ -35,29 +37,25 @@ The workshop content will follow best practices for version control such as writ
 
 | Activity      | Start Time | End Time |
 | ------------- | ---------- | -------- |
-| **Session 1** | 8:45       | 9:30     |
-| Break         | 9:30       | 9:45     |
-| **Session 2** | 9:45       | 10:30    |
+| **Session 1** | 8:45       | 9:15     |
+| **Session 2** | 9:15       | 10:30    |
 | Break         | 10:30      | 10:45    |
 | **Session 3** | 10:45      | 11:30    |
-| Break         | 11:30      | 12:15    |
-| **Session 4** | 12:15      | 1:00     |
+| **Session 4** | 11:30      | 12:15    |
 
 ### Pre-Course Work
 
 **Important!**
 
-Before the course starts, we ask that all attendees install ...! Instructions for how to do so are found in the [Introduction to git Section](). If anyone is having troubles getting the software up and running, please contact us **before** the course starts so that we can hit the ground running during the workshop. 
+Before the course starts, we ask that all attendees install git and GitBash and have a basic text editor such as Wordpad, Notepad++, or SublimeText. Instructions for how to install these tools are found in the [Introduction to git Section](). If anyone is having troubles getting the software up and running, please contact us **before** the course starts so that we can hit the ground running during the workshop. 
 
 ### Day 1
 
- * 
+ * Section 1. What is version control?
+ * Section 2. Working locally with git
  * BREAK ☕
- * 
- * BREAK  🍍
- * 
- * BREAK 🍩
- * 
+ * Section 3. Working remotely with GitHub
+ * Section 4. 
 
 ### Getting Help or Reporting an Issue
 

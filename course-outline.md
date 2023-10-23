@@ -30,7 +30,7 @@ Topics:
 
 ## Section 2. Working local with git
 
-Learning Objective: Use command-line git to track local file changes
+Learning Objective: Use command-line git to track local file changes. (*more about git*)
 
 Sources:
 
@@ -47,9 +47,10 @@ Topics:
 -   git log
 -   exercises as a takeaway
 
-## Section 3. Connecting to GitHub
+## Section 3. Using the remote hosting platform GitHub
 
-Learning Objective: Connect to GitHub and create a remote repository. Push local changes to GitHub
+Learning Objective: What are remote hosting platforms and why do we use them?
+Connect to GitHub, create a remote repository and push local changes to GitHub
 
 Sources:
 
@@ -67,7 +68,7 @@ Topics:
 
 ## Section 4
 
-Learning Objective: *Something about BC Gov specific materials Org, Licensing, bcgovr*
+Learning Objective: (*Something about BC Gov specific materials Org, Licensing, bcgovr*)
 
 Sources:
 

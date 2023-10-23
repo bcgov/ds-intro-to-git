@@ -14,28 +14,28 @@ Topics/Learning Outcomes:
 - Configure RStudio (optional)
 - Pre-workshop assignment to show local configuration and connection to GitHub
 
-Source Materials:
+Course Reference Material:
 
-- Take from Installation instructions here: `glue::glue(safepaths::get_network_path(), "/8. Data Science Training/github_how_to")`
-- Take from SW Carpentry Episode 2. Setting Up Git
+- Installation instructions here: `glue::glue(safepaths::get_network_path(), "/8. Data Science Training/github_how_to")`
+- SW Carpentry Episode 2. Setting Up Git
 
 ### Section 1. What is Version Control?
 
 Learning Objective: Understand the value-add of using version control to manage software projects \
-Slides: [Section 1 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html)
+Slides: [Section 1 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc.html)
 
 Topics:
 
 - Flow diagram
 
-Source Materials:
+Course Reference Material:
 
-- Take from SW Carpentry Episode 1. Automated Version Control
+- SW Carpentry Episode 1. Automated Version Control
 
 ### Section 2. Working local with git
 
 Learning Objective: Use command-line git to track local file changes. (*more about git*) \
-Slides: [Section 2 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html)
+Slides: [Section 2 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc.html.html)
 
 Topics:
 
@@ -47,20 +47,19 @@ Topics:
 - Tracking changes made to a text doc
 - What to do when when -m is omitted.
 
-Source Materials:
+Course Reference Material:
 
-- Take from SW Carpentry Episode 3. Creating a Repository (Local)
-- Take from SW Carpentry Episode 4. Tracking Changes
+- SW Carpentry Episode 3. Creating a Repository (Local)
+- SW Carpentry Episode 4. Tracking Changes
 
 ### Section 3. Remote Code Hosting and GitHub
 
 Learning Objective: What are remote hosting platforms and why do we use them? \
-Slides: [Section 3 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html)
+Slides: [Section 3 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc.html.html)
 
 Topics:
 
 - More on secure authentication/login: username/password/2FA to sign in to account, PAT to authenticate
-- Take from: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github
 - Git Bash commands: push, pull
 - Create a remote repository
 - Clone a remote repostitory
@@ -68,15 +67,16 @@ Topics:
 - .gitgnore and subdirectories (we don't want ppl pushing data to GitHub)
 - .gitkeep (time permitting) 
 
-Source Materials:
+Course Reference Material:
 
-- Take from SW Carpentry Episode 7. Remotes in GitHub
-- Take from SW Carpentry Episode 6. Ignoring Things
+- SW Carpentry Episode 7. Remotes in GitHub
+- SW Carpentry Episode 6. Ignoring Things
+- [Github: Keeping your Account and Data Secure](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
 
 ### Section 4
 
 Learning Objective: (*Something about BC Gov specific materials Org, Licensing, bcgovr*) \
-Slides: [Section 4 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html)
+Slides: [Section 4 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc.html)
 
 Topics:
 
@@ -84,7 +84,7 @@ Topics:
 - history, value-add statements
 - bcgov-c, bcgov enterprise
 
-Source Materials:
+Course Reference Material:
 
-- Take from SW Carpentry Episode 10 - 13
+- SW Carpentry Episode 10 - 13
 

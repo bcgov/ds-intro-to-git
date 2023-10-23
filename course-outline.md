@@ -1,16 +1,17 @@
+## Course Outline: Introduction to Version Control 
 
-## Pre-Workshop Installation and Set Up
+### Pre-Workshop Installation and Set Up
 
 Learning Objective: Set up a github account and install git (pre-workshop). \
-
-Instructions: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/00-software-install.html \
-Assignment: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
+Instructions: [Installation and Set-Up](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/00-software-install.html) \
+Assignment: [Pre-Workshop Assignment](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/01-assignment.html) \
 
 Topics/Learning Outcomes:
 
 - Download Git for Windows and bundled software (includes Git Bash)
 - Create a GitHub account with m2FA, PAT for https connection
-- Configure git, RStudio (optional)
+- Configure git
+- Configure RStudio (optional)
 - Pre-workshop assignment to show local configuration and connection to GitHub
 
 Source Materials:
@@ -18,10 +19,10 @@ Source Materials:
 - Take from Installation instructions here: `glue::glue(safepaths::get_network_path(), "/8. Data Science Training/github_how_to")`
 - Take from SW Carpentry Episode 2. Setting Up Git
 
-## Section 1. What is version control?
+### Section 1. What is Version Control?
 
 Learning Objective: Understand the value-add of using version control to manage software projects \
-Slides: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
+Slides: [Section 1 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html)
 
 Topics:
 
@@ -31,10 +32,10 @@ Source Materials:
 
 - Take from SW Carpentry Episode 1. Automated Version Control
 
-## Section 2. Working local with git
+### Section 2. Working local with git
 
 Learning Objective: Use command-line git to track local file changes. (*more about git*) \
-Slides: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
+Slides: [Section 2 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html)
 
 Topics:
 
@@ -51,10 +52,10 @@ Source Materials:
 - Take from SW Carpentry Episode 3. Creating a Repository (Local)
 - Take from SW Carpentry Episode 4. Tracking Changes
 
-## Section 3. Remote Code Hosting and GitHub
+### Section 3. Remote Code Hosting and GitHub
 
 Learning Objective: What are remote hosting platforms and why do we use them? \
-Slides: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
+Slides: [Section 3 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html)
 
 Topics:
 
@@ -72,9 +73,10 @@ Source Materials:
 - Take from SW Carpentry Episode 7. Remotes in GitHub
 - Take from SW Carpentry Episode 6. Ignoring Things
 
-## Section 4
+### Section 4
 
 Learning Objective: (*Something about BC Gov specific materials Org, Licensing, bcgovr*) \
+Slides: [Section 4 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html)
 
 Topics:
 

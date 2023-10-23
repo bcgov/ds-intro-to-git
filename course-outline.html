@@ -355,83 +355,90 @@ display: none;
 <div id="pre-workshop-installation-and-set-up" class="section level2">
 <h2>Pre-Workshop Installation and Set Up</h2>
 <p>Learning Objective: Set up a github account and install git
-(pre-workshop)</p>
-<p>Sources:</p>
+(pre-workshop).<br />
+</p>
+<p>Instructions: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html" class="uri">https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html</a><br />
+Assignment: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html" class="uri">https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html</a></p>
+<p>Topics/Learning Outcomes:</p>
 <ul>
-<li>SW Carpentry Episode 2. Setting Up Git</li>
+<li>Download Git for Windows and bundled software (includes Git
+Bash)</li>
+<li>Create a GitHub account with m2FA, PAT for https connection</li>
+<li>Configure git, RStudio (optional)</li>
+<li>Pre-workshop assignment to show local configuration and connection
+to GitHub</li>
 </ul>
-<p>Topics:</p>
+<p>Source Materials:</p>
 <ul>
-<li>We have installation instructions in a git repo already also</li>
-<li>Ask ppl to show up ready-to-go with a git account, git installed,
-m2FA, RStudio (tbd), Git Bash</li>
-<li>pass them a script before hand to work through?</li>
-<li>touching on default branch naming (inclusive language)</li>
-<li>Git Bash for Windows bash or zsh shell for command line work
-configuration</li>
+<li>Take from Installation instructions here:
+<code>glue::glue(safepaths::get_network_path(), &quot;/8. Data Science Training/github_how_to&quot;)</code></li>
+<li>Take from SW Carpentry Episode 2. Setting Up Git</li>
 </ul>
 </div>
 <div id="section-1.-what-is-version-control" class="section level2">
 <h2>Section 1. What is version control?</h2>
 <p>Learning Objective: Understand the value-add of using version control
-to manage software projects</p>
-<p>Sources:</p>
-<ul>
-<li>SW Carpentry Episode 1. Automated Version Control</li>
-</ul>
+to manage software projects<br />
+Slides: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html" class="uri">https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html</a></p>
 <p>Topics:</p>
 <ul>
-<li>the cartoon document</li>
-<li>flow diagram</li>
+<li>Flow diagram</li>
+</ul>
+<p>Source Materials:</p>
+<ul>
+<li>Take from SW Carpentry Episode 1. Automated Version Control</li>
 </ul>
 </div>
 <div id="section-2.-working-local-with-git" class="section level2">
 <h2>Section 2. Working local with git</h2>
-<p>Learning Objective: Use command-line git to track local file
-changes</p>
-<p>Sources:</p>
-<ul>
-<li>SW Carpentry Episode 3. Creating a Repository (Local)</li>
-<li>SW Carpentry Episode 4. Tracking Changes</li>
-</ul>
+<p>Learning Objective: Use command-line git to track local file changes.
+(<em>more about git</em>)<br />
+Slides: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html" class="uri">https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html</a></p>
 <p>Topics:</p>
 <ul>
-<li>see keypoints at the end</li>
-<li>making a directory structure</li>
-<li>committing and tracking changes</li>
-<li>use a basic text doc and we could mention R scripts here.</li>
-<li>what to do when when -m is omitted.</li>
-<li>git log</li>
-<li>exercises as a takeaway</li>
+<li>Default branch naming (inclusive language)</li>
+<li>What is Bash</li>
+<li>Bash-specific commands: mkdir, rm -r, cd, ls</li>
+<li>Git Bash commands: init, commit, add, status, log</li>
+<li>Directory structure</li>
+<li>Tracking changes made to a text doc</li>
+<li>What to do when when -m is omitted.</li>
+</ul>
+<p>Source Materials:</p>
+<ul>
+<li>Take from SW Carpentry Episode 3. Creating a Repository (Local)</li>
+<li>Take from SW Carpentry Episode 4. Tracking Changes</li>
 </ul>
 </div>
-<div id="section-3.-connecting-to-github" class="section level2">
-<h2>Section 3. Connecting to GitHub</h2>
-<p>Learning Objective: Connect to GitHub and create a remote repository.
-Push local changes to GitHub</p>
-<p>Sources:</p>
-<ul>
-<li>SW Carpentry Episode 7. Remotes in GitHub</li>
-<li>W Carpentry Episode 6. Ignoring Things</li>
-</ul>
+<div id="section-3.-remote-code-hosting-and-github" class="section level2">
+<h2>Section 3. Remote Code Hosting and GitHub</h2>
+<p>Learning Objective: What are remote hosting platforms and why do we
+use them?<br />
+Slides: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html" class="uri">https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html</a></p>
 <p>Topics:</p>
 <ul>
-<li>authentication method - 2FA, ssh keys or PAT</li>
-<li>GitHub password vs authentication <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github" class="uri">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github</a></li>
-<li>pushing, pulling and cloning</li>
-<li>we don’t want ppl pushing data to GitHub</li>
-<li>.gitgnore and subdirectories</li>
-<li>they don’t mention .gitkeep but is a gotcha later on</li>
+<li>More on secure authentication/login: username/password/2FA to sign
+in to account, PAT to authenticate</li>
+<li>Take from: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github" class="uri">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github</a></li>
+<li>Git Bash commands: push, pull</li>
+<li>Create a remote repository</li>
+<li>Clone a remote repostitory</li>
+<li>Push local changes to GitHub.</li>
+<li>.gitgnore and subdirectories (we don’t want ppl pushing data to
+GitHub)</li>
+<li>.gitkeep (time permitting)</li>
+</ul>
+<p>Source Materials:</p>
+<ul>
+<li>Take from SW Carpentry Episode 7. Remotes in GitHub</li>
+<li>Take from SW Carpentry Episode 6. Ignoring Things</li>
 </ul>
 </div>
 <div id="section-4" class="section level2">
 <h2>Section 4</h2>
-<p>Learning Objective: <em>Something about BC Gov specific materials
-Org, Licensing, bcgovr</em></p>
-<p>Sources:</p>
-<ul>
-<li>SW Carpentry Episode 10 - 13</li>
-</ul>
+<p>Learning Objective: (<em>Something about BC Gov specific materials
+Org, Licensing, bcgovr</em>)<br />
+</p>
 <p>Topics:</p>
 <ul>
 <li>discuss bcgov organization, licensing, code-sharing, PIA/STRA
@@ -439,19 +446,10 @@ etc.</li>
 <li>history, value-add statements</li>
 <li>bcgov-c, bcgov enterprise</li>
 </ul>
-<div id="general-thoughts-on-sw-carpentry-course" class="section level4">
-<h4>General Thoughts on SW Carpentry Course</h4>
-<p>Bonnie</p>
-<p>Like the learning objectives, don’t love they way they are laid out.
-I’d prefer seeing the question be a header and the objectives clearly
-outlined either above or below. Teaching command line will take extra
-time as we’ll need to teach that. Keep things simple: change directory,
-list directory contents, make and delete a directory then git
-commands.</p>
-<p>SW Carpentry Episode 5. Exploring History: this is a deeper dive and
-could be rushing things to include. If we include it, it needs a
-rethink.</p>
-</div>
+<p>Source Materials:</p>
+<ul>
+<li>Take from SW Carpentry Episode 10 - 13</li>
+</ul>
 </div>
 
 

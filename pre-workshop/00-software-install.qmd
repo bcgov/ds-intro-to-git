@@ -3,8 +3,6 @@ title: "Pre-Workshop Installation and Set-Up"
 author: "Bonnie Robert, Data Science Partnerships"
 format: html
 editor: visual
-project:
-  output-dir: "./myoutput"
 ---
 
 ## Learning Objective

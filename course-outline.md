@@ -3,7 +3,7 @@
 
 Learning Objective: Set up a github account and install git (pre-workshop). \
 
-Instructions: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html \
+Instructions: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/00-software-install.html \
 Assignment: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
 
 Topics/Learning Outcomes:

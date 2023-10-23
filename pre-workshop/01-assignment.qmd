@@ -1,5 +1,5 @@
 ---
-title: "Pre-Workshop Installation and Set-Up"
+title: "Pre-Workshop Assignment"
 author: "Bonnie Robert, Data Science Partnerships"
 format: html
 editor: visual

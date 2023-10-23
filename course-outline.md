@@ -1,89 +1,73 @@
 
 ## Pre-Workshop Installation and Set Up
 
-Learning Objective: Set up a github account and install git (pre-workshop)
+Learning Objective: Set up a github account and install git (pre-workshop). Learners to show up ready-to-go with a git account, git installed, m2FA, RStudio (tbd), Git Bash
 
-Sources:
+Instructions: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
+Assignment: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
 
--   SW Carpentry Episode 2. Setting Up Git
+Topics/Learning Outcomes:
 
-Topics:
-
--   We have installation instructions in a git repo already also
--   Ask ppl to show up ready-to-go with a git account, git installed, m2FA, RStudio (tbd), Git Bash
--   pass them a script before hand to work through?
--   touching on default branch naming (inclusive language)
--   Git Bash for Windows bash or zsh shell for command line work configuration
+- Download Git for Windows and bundled software (includes Git Bash)
+- Create a GitHub account with m2FA, PAT for https connection
+- Configure git, RStudio (optional)
+- Pre-workshop assignment to show local configuration and connection to GitHub
+- Take from Installation instructions here: `glue::glue(safepaths::get_network_path(), "/8. Data Science Training/github_how_to")`
+- Take from SW Carpentry Episode 2. Setting Up Git
 
 ## Section 1. What is version control?
 
 Learning Objective: Understand the value-add of using version control to manage software projects
-
-Sources:
-
--   SW Carpentry Episode 1. Automated Version Control
+Slides: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
 
 Topics:
 
--   the cartoon document
--   flow diagram
+- Flow diagram
+- Take from SW Carpentry Episode 1. Automated Version Control
 
 ## Section 2. Working local with git
 
 Learning Objective: Use command-line git to track local file changes. (*more about git*)
-
-Sources:
-
--   SW Carpentry Episode 3. Creating a Repository (Local)
--   SW Carpentry Episode 4. Tracking Changes
+Slides: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
 
 Topics:
 
--   see keypoints at the end
--   making a directory structure
--   committing and tracking changes
--   use a basic text doc and we could mention R scripts here.
--   what to do when when -m is omitted.
--   git log
--   exercises as a takeaway
+- Default branch naming (inclusive language)
+- What is Bash
+- Bash-specific commands: mkdir, rm -r, cd, ls
+- Git Bash commands: init, commit, add, status, log
+- Directory structure
+- Tracking changes made to a text doc
+- What to do when when -m is omitted.
+- Take from SW Carpentry Episode 3. Creating a Repository (Local)
+- Take from SW Carpentry Episode 4. Tracking Changes
 
 ## Section 3. Using the remote hosting platform GitHub
 
-Learning Objective: What are remote hosting platforms and why do we use them?
-Connect to GitHub, create a remote repository and push local changes to GitHub
-
-Sources:
-
--   SW Carpentry Episode 7. Remotes in GitHub
--   W Carpentry Episode 6. Ignoring Things
+Learning Objective: What are remote hosting platforms and why do we use them? 
+Slides: https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/course-outline.html
 
 Topics:
 
--   authentication method - 2FA, ssh keys or PAT
--   GitHub password vs authentication https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github
--   pushing, pulling and cloning
--   we don't want ppl pushing data to GitHub
--   .gitgnore and subdirectories
--   they don't mention .gitkeep but is a gotcha later on
+- More on secure authentication/login: username/password/2FA to sign in to account, PAT to authenticate
+- Take from: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github
+- Git Bash commands: push, pull
+- Create a remote repository
+- Clone a remote repostitory
+- Push local changes to GitHub.
+- .gitgnore and subdirectories (we don't want ppl pushing data to GitHub)
+- .gitkeep (time permitting)
+- Take from SW Carpentry Episode 7. Remotes in GitHub
+- Take from SW Carpentry Episode 6. Ignoring Things
 
 ## Section 4
 
 Learning Objective: (*Something about BC Gov specific materials Org, Licensing, bcgovr*)
 
-Sources:
-
--   SW Carpentry Episode 10 - 13
-
 Topics:
 
--   discuss bcgov organization, licensing, code-sharing, PIA/STRA etc.
--   history, value-add statements
--   bcgov-c, bcgov enterprise
+- discuss bcgov organization, licensing, code-sharing, PIA/STRA etc.
+- history, value-add statements
+- bcgov-c, bcgov enterprise
+- Take from SW Carpentry Episode 10 - 13
 
-#### General Thoughts on SW Carpentry Course
-
-Bonnie
-
-Like the learning objectives, don't love they way they are laid out. I'd prefer seeing the question be a header and the objectives clearly outlined either above or below. Teaching command line will take extra time as we'll need to teach that. Keep things simple: change directory, list directory contents, make and delete a directory then git commands.
-
-SW Carpentry Episode 5. Exploring History: this is a deeper dive and could be rushing things to include. If we include it, it needs a rethink.

@@ -1,8 +1,0 @@
----
-title: "Pre-Workshop Installation and Set-Up"
-author: "Bonnie Robert, Data Science Partnerships"
-format: html
-editor: visual
----
-
-## Work in Progress

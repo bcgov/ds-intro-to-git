@@ -1,5 +1,5 @@
 ---
-title: "What is Version Control"
+title: "Working Locally with Git"
 format: revealjs
 editor: visual
 ---

@@ -22,7 +22,7 @@ Course Reference Material:
 ### Section 1. What is Version Control?
 
 Learning Objective: Understand the value-add of using version control to manage software projects \
-Slides: [Section 1 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc.html)
+Slides: [Section 1 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc/01-what-is-vc.html)
 
 Topics:
 
@@ -35,7 +35,7 @@ Course Reference Material:
 ### Section 2. Working local with git
 
 Learning Objective: Use command-line git to track local file changes. (*more about git*) \
-Slides: [Section 2 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc.html)
+Slides: [Section 2 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/02-working-local/02-working-local.html)
 
 Topics:
 
@@ -55,7 +55,7 @@ Course Reference Material:
 ### Section 3. Remote Code Hosting and GitHub
 
 Learning Objective: What are remote hosting platforms and why do we use them? \
-Slides: [Section 3 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc.html)
+Slides: [Section 3 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/03-remote-hosting/03-remote-hosting.html)
 
 Topics:
 
@@ -76,7 +76,7 @@ Course Reference Material:
 ### Section 4
 
 Learning Objective: (*Something about BC Gov specific materials Org, Licensing, bcgovr*) \
-Slides: [Section 4 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc.html)
+Slides: [Section 4 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/04-bcgov-org/04-bcgov-org.html)
 
 Topics:
 

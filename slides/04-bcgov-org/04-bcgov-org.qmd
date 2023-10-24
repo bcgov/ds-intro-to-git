@@ -1,6 +1,10 @@
 ---
 title: "BCGOV GitHub Organization"
-format: revealjs
+format: 
+  revealjs:
+    theme: serif
+    code-copy: true
+    slide-number: true
 editor: visual
 ---
 

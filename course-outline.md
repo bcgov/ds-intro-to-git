@@ -17,7 +17,8 @@ Topics/Learning Outcomes:
 Course Reference Material:
 
 - Installation instructions here: `glue::glue(safepaths::get_network_path(), "/8. Data Science Training/github_how_to")`
-- SW Carpentry Episode 2. Setting Up Git
+- [SW Carpentry Episode 2. Setting Up Git](https://swcarpentry.github.io/git-novice/)
+- [bcgov-r-geo-workshop Lesson 1](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/01-setup.md)
 
 ### Section 1. What is Version Control?
 
@@ -30,7 +31,7 @@ Topics:
 
 Course Reference Material:
 
-- SW Carpentry Episode 1. Automated Version Control
+- [SW Carpentry Episode 1. Automated Version Control](https://swcarpentry.github.io/git-novice/01-basics.html)
 
 ### Section 2. Working local with git
 
@@ -49,8 +50,11 @@ Topics:
 
 Course Reference Material:
 
-- SW Carpentry Episode 3. Creating a Repository (Local)
-- SW Carpentry Episode 4. Tracking Changes
+- [SW Carpentry Episode 3. Creating a Repository (Local)](https://swcarpentry.github.io/git-novice/)
+- [SW Carpentry Episode 4. Tracking Changes](https://swcarpentry.github.io/git-novice/)
+- [bcgov-r-geo-workshop Lesson 2](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/02-create.md)
+- [bcgov-r-geo-workshop Lesson 3](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/03-changes.md)
+- [bcgov-r-geo-workshop Lesson 5](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/05-ignore.md)
 
 ### Section 3. Remote Code Hosting and GitHub
 
@@ -69,8 +73,9 @@ Topics:
 
 Course Reference Material:
 
-- SW Carpentry Episode 7. Remotes in GitHub
-- SW Carpentry Episode 6. Ignoring Things
+- [SW Carpentry Episode 7. Remotes in GitHub](https://swcarpentry.github.io/git-novice/)
+- [SW Carpentry Episode 6. Ignoring Things](https://swcarpentry.github.io/git-novice/)
+- [bcgov-r-geo-workshop Lesson 6](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/06-github.md)
 - [Github: Keeping your Account and Data Secure](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
 
 ### Section 4
@@ -86,5 +91,5 @@ Topics:
 
 Course Reference Material:
 
-- SW Carpentry Episode 10 - 13
+- [SW Carpentry Episode 10 - 13](https://swcarpentry.github.io/git-novice/)
 

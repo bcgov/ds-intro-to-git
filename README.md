@@ -60,7 +60,6 @@ Before the course starts, we ask that all attendees install git and GitBash and 
 
 ### Getting Help or Reporting an Issue
 
-
 To report bugs/issues/feature requests, please file an [issue](https://github.com/bcgov/ds-intro-to-git/issues/).
 
 ### How to Contribute

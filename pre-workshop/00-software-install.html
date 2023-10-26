@@ -357,8 +357,106 @@ display: none;
 </div>
 
 
-<div id="work-in-progresscheck-back-later" class="section level2">
-<h2>Work in progress…check back later!</h2>
+<div id="getting-started-with-github" class="section level2">
+<h2>Getting Started with GitHub</h2>
+<div id="create-your-github-account" class="section level3">
+<h3>1. Create your GitHub Account</h3>
+<p>As part of this workshop we will be connecting and pushing some
+sample code to GitHub. You’ll need a GitHub account for this. In
+general, creating a GitHub account can be a great way to collaborate on
+open-source projects, showcase your work, and learn from others.</p>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://github.com" class="uri">https://github.com</a> and follow the “Sign up” link at the
+top-right of the window.</li>
+<li>Follow the instructions to create an account.</li>
+<li>Verify your email address with GitHub.</li>
+</ol>
+</div>
+<div id="login-to-your-github-account" class="section level3">
+<h3>2. Login to your GitHub Account</h3>
+<p>When we sign in to Github, we are signing into our application
+account created in step 1. This is where we manage our profile settings,
+set our passwords, and browse repositories. It is possible to edit
+repository content from GitHub although more typically, editing is done
+on our local computers. We will go into more detail on that in the
+course workshop.</p>
+<p>To sign in, go to <a href="https://github.com/" class="uri">https://github.com/</a> and click “Sign In” (top right
+corner). Enter either your username or your email address, and
+password.</p>
+</div>
+<div id="configure-multi-factor-authentication-2fa" class="section level3">
+<h3>3. Configure Multi-Factor authentication (2FA)</h3>
+<p>In 2023, GitHub introduced a requirement for all accounts to have
+multi-factor authentication (2FA) configured for extra security. Several
+options exist for setting up 2FA, the simplest is via text message
+described below. The GitHub documentation provides details on the <a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication">other
+options available to you</a>.</p>
+<p>Configuring 2FA via text messages:</p>
+<ol style="list-style-type: decimal">
+<li>In the upper-right corner of any page, click your profile photo,
+then click Settings.</li>
+<li>In the “Access” section of the sidebar, click Password and
+authentication.</li>
+<li>In the “Two-factor authentication” section of the page, click Enable
+two-factor authentication.</li>
+<li>At the bottom of the page, next to “SMS authentication”, click
+Select.</li>
+<li>Complete the CAPTCHA challenge, which helps protect against spam and
+abuse.</li>
+<li>Under “Setup SMS authentication”, select your country code and type
+your mobile phone number, including the area code. When your information
+is correct, click Send authentication code.</li>
+<li>You’ll receive a text message with a security code. On GitHub, type
+the code into the field under “Verify the code sent to your phone” and
+click Continue.</li>
+<li>If you need to edit the phone number you entered, you’ll need to
+complete another CAPTCHA challenge.</li>
+<li>Under “Save your recovery codes”, click Download to download your
+two-factor recovery codes to your device. Save them to a secure location
+because your recovery codes can help you get back into your account if
+you lose access.</li>
+<li>After saving your two-factor recovery codes, click I have saved my
+recovery codes to enable two-factor authentication for your
+account.</li>
+</ol>
+</div>
+<div id="authenticate-to-github" class="section level3">
+<h3>3. Authenticate to GitHub</h3>
+<p>To keep your account secure, you must authenticate before you can
+access certain resources on GitHub. Each way of accessing GitHub
+supports different modes of authentication. When we access resources via
+a browser (as in Step 2) we are authenticating with our username and
+password and two-factor authentication. In the workshop we will also be
+accessing GitHub via the REST API. You can authenticate with the API in
+different ways, but the simplest way is with a Classic Personal Access
+Token (PAT).</p>
+<ol style="list-style-type: decimal">
+<li>Verify your email address, if it hasn’t been verified yet.</li>
+<li>In the upper-right corner of any page, click your profile photo,
+then click Settings.</li>
+<li>In the left sidebar, click Developer settings.</li>
+<li>In the left sidebar, under Personal access tokens, click Tokens
+(classic).</li>
+<li>Select Generate new token, then click Generate new token
+(classic).</li>
+<li>In the “Note” field, give your token a descriptive name.</li>
+<li>To give your token an expiration, select Expiration, then choose a
+default option or click Custom to enter a date.</li>
+<li>Select the scopes you’d like to grant this token. To use your token
+to access repositories from the command line, select repo.</li>
+<li>Click Generate token.</li>
+<li><strong>Copy the new token to your clipboard and save to a text file
+for later.</strong></li>
+</ol>
+<p>Further reading: For more information about authenticate with the API
+see <a href="https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28">Authenticating
+to the REST API.</a></p>
+</div>
+</div>
+<div id="additional-resources" class="section level2">
+<h2>Additional Resources</h2>
+<p><a href="https://github.com/bcgov/BC-Policy-Framework-For-GitHub" class="uri">https://github.com/bcgov/BC-Policy-Framework-For-GitHub</a>
+Get added to the BC Government GitHub Org (“BCGov”) <a href="https://just-ask.developer.gov.bc.ca/" class="uri">https://just-ask.developer.gov.bc.ca/</a></p>
 </div>
 
 

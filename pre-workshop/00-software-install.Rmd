@@ -16,17 +16,20 @@ As part of this workshop we will be connecting and pushing some sample code to G
 2. Follow the instructions to create an account.
 3. Verify your email address with GitHub.
 
+Optional reading:
+[Configuring your GitHub account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account#part-1-configuring-your-github-account)
+
 ### 2. Login to your GitHub Account
 
 When we sign in to Github, we are signing into our application account created in step 1.  This is where we manage our profile settings, set our passwords, and browse repositories.  It is possible to edit repository content from GitHub although more typically, editing is done on our local computers.  We will go into more detail on that in the course workshop. 
 
-To sign in, go to https://github.com/ and click “Sign In” (top right corner).  Enter either your username or your email address, and password.
+1. Go to https://github.com/ and click “Sign In” (top right corner).  
+2. Enter either your username or your email address, and password.
+
 
 ### 3. Configure Multi-Factor authentication (2FA)
 
-In 2023, GitHub introduced a requirement for all accounts to have multi-factor authentication (2FA) configured for extra security.  Several options exist for setting up 2FA, the simplest is via text message described below. The GitHub documentation provides details on the [other options available to you](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication).
-
-Configuring 2FA via text messages:
+In 2023, GitHub introduced a requirement for all accounts to have multi-factor authentication (2FA) configured for extra security.  Several options exist for setting up 2FA, the simplest is via text message described below. 
 
 1. In the upper-right corner of any page, click your profile photo, then click Settings.
 2. In the "Access" section of the sidebar, click  Password and authentication.
@@ -38,6 +41,9 @@ Configuring 2FA via text messages:
 8. If you need to edit the phone number you entered, you'll need to complete another CAPTCHA challenge.
 9. Under "Save your recovery codes", click Download to download your two-factor recovery codes to your device. Save them to a secure location because your recovery codes can help you get back into your account if you lose access.
 10. After saving your two-factor recovery codes, click I have saved my recovery codes to enable two-factor authentication for your account.
+
+Optional reading:
+[Other 2FA configurations](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication).
 
 ### 3. Authenticate to GitHub
 
@@ -55,8 +61,8 @@ To keep your account secure, you must authenticate before you can access certain
 10. **Copy the new token to your clipboard and save to a text file for later.**
 
 
-Further reading:
-For more information about authenticate with the API see [Authenticating to the REST API.](https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28)
+Optional reading:
+[Authenticating to the REST API](https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28)
 
 ## Additional Resources
 https://github.com/bcgov/BC-Policy-Framework-For-GitHub 

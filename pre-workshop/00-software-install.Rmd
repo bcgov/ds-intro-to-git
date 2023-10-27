@@ -64,7 +64,7 @@ Optional reading:
 [Authenticating to the REST API](https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28)
 
 
-### 5. Install Git (and GitBash){.tabset}
+### 5. Install Git (and GitBash) {.tabset}
 
 Git is a set of command line utility programs that are designed to execute on a *Unix style command-line environment*. Linux and macOS both include built-in Unix command line terminals. Most likely you are working on a Windows operating system and will require Git Bash, an application for Windows environments which provides an emulation layer for a Git command line experience.
 
@@ -81,6 +81,58 @@ Please visit: [Installing Git](https://www.atlassian.com/git/tutorials/install-g
 If you need more assistance, please reach out to stephanie.hazlitt@gov.bc.ca or bonnie.robert@gov.bc.ca.
 
 
+### 6. Configure Git
+
+#### Git Set Up
+
+When we use Git on a new computer for the first time, we need to configure a few things.  Below are a few examples of configurations we will set as we get started with Git:
+
+*   our name and email address
+*   and that we want to use these settings globally (i.e. for every project).
+
+On a command line, Git commands are written as `git verb options`, where `verb` is what we actually want to do and `options` is additional optional information which may be needed for the `verb`. 
+
+
+#### Set user.name & user.email
+
+In our workshop, we will be interacting with [GitHub](https://github.com/) and so our configured email address should be the same as the one used when setting up your GitHub account. Most likely this will be your governement email.  
+
+Below is an example configuration, please type in the commands using your name and email address.
+
+~~~
+$ git config --global user.name "Bonnie Robert"
+$ git config --global user.email "bonnie.robert@gov.bc.ca"
+~~~
+
+If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy]. 
+
+
+#### Global Settings
+
+The two commands we just ran above only need to be run once: the flag `--global` tells Git to use the settings for every project, in your user account, on this computer.
+
+You can check your settings at any time:
+
+~~~
+$ git config --list
+~~~
+
+You can change your configuration as many times as you want: use the same commands to update your name or email address.
+
+
+#### Git Help and Manual
+
+Always remember that if you forget a `git` command, you can access the list of commands by using `-h` and access the Git manual by using `--help` :
+
+~~~
+$ git config -h
+$ git config --help
+~~~
+
+While viewing the manual, remember the `:` is a prompt waiting for commands and you can press <kbd>Q</kbd> to exit the manual.
+
+
+[git-privacy]: https://help.github.com/articles/keeping-your-email-address-private/
+
 ## Additional Resources
-https://github.com/bcgov/BC-Policy-Framework-For-GitHub 
-Get added to the BC Government GitHub Org (“BCGov”) https://just-ask.developer.gov.bc.ca/
+https://github.com/bcgov/BC-Policy-Framework-For-GitHub. Get added to the BC Government GitHub Org (“BCGov”) https://just-ask.developer.gov.bc.ca/

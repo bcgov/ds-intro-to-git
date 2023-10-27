@@ -45,7 +45,7 @@ In 2023, GitHub introduced a requirement for all accounts to have multi-factor a
 Optional reading:
 [Other 2FA configurations](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication).
 
-### 3. Authenticate to GitHub
+### 4. Authenticate to GitHub
 
 To keep your account secure, you must authenticate before you can access certain resources on GitHub. Each way of accessing GitHub supports different modes of authentication.  When we access resources via a browser (as in Step 2) we are authenticating with our username and password and two-factor authentication.  In the workshop we will also be accessing GitHub via the REST API.  You can authenticate with the API in different ways, but the simplest way is with a Classic Personal Access Token (PAT). 
 
@@ -60,9 +60,26 @@ To keep your account secure, you must authenticate before you can access certain
 9. Click Generate token.
 10. **Copy the new token to your clipboard and save to a text file for later.**
 
-
 Optional reading:
 [Authenticating to the REST API](https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28)
+
+
+### 5. Install Git (and GitBash){.tabset}
+
+Git is a set of command line utility programs that are designed to execute on a *Unix style command-line environment*. Linux and macOS both include built-in Unix command line terminals. Most likely you are working on a Windows operating system and will require Git Bash, an application for Windows environments which provides an emulation layer for a Git command line experience.
+
+#### Windows
+
+1. Search for "Git Bash" in your start menu to see if Git/GitBash are installed on your computer already.  
+2. If not, navigate to [Git for Windows](https://gitforwindows.org) and click "Download" to download Git/GitBash bundled software. 
+3. When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation. The default options are pretty sensible for most users.
+
+#### MacOS
+
+Please visit: [Installing Git](https://www.atlassian.com/git/tutorials/install-git) and follow the instructions for installing git for MacOSX.
+
+If you need more assistance, please reach out to stephanie.hazlitt@gov.bc.ca or bonnie.robert@gov.bc.ca.
+
 
 ## Additional Resources
 https://github.com/bcgov/BC-Policy-Framework-For-GitHub 

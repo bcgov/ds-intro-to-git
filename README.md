@@ -26,7 +26,7 @@ The workshop content will follow best practices for version control such as writ
 
  * Anyone looking to solidify their foundational understanding of version control
  * Anyone keen to learn what git or GitHub is (**no prior experience necessary!**)
- * Anyone wondering how version control can be used to manage and collaborate on software projects
+ * Anyone wondering how version control can be used to manage and collaborate on software and code-based data science projects
 
 ## Previous Offerings
 

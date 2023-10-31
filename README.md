@@ -5,7 +5,7 @@ Introduction To Version Control With Git and GitHub
 
 This is a repository to house materials for a 1/2 day workshop introducing participants to version control using git and the popular code hosting platform, GitHub.
 
-The goal of this workshop is to teach new-to-programming data professionals how to harness the power of version control by giving attendees a foundation in the fundamentals of version control with git.
+The goal of this workshop is to teach data professionals how to harness the power of version control by giving attendees a foundation in the fundamentals of version control with git.
 
 GitHub is a widely-used platform for hosting and sharing code repositories, facilitating seamless collaboration among developers.  Git, on the other hand, is a popular version control system that enables you to track changes in your code, collaborate with team members, and maintain a history of your project's development. 
 

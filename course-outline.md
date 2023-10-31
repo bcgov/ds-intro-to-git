@@ -2,7 +2,7 @@
 
 ### Pre-Workshop Installation and Set Up
 
-Learning Objective: Set up a github account and install git (pre-workshop). \
+Learning Objective: Set up a GitHub account and install git (pre-workshop). \
 Instructions: [Installation and Set-Up](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/00-software-install.html) \
 Assignment: [Pre-Workshop Assignment](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/01-assignment.html) \
 

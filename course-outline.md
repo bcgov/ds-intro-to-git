@@ -82,7 +82,7 @@ Course Reference Material:
 
 ### Section 4
 
-Learning Objective: Understand how the bcgov framework, policy and related tools help bc government employees share code on GitHub \
+Learning Objective: Understand how the bcgov framework, policy and related tools help B.C. government employees share code on GitHub \
 Slides: [Section 4 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/04-bcgov-org/04-bcgov-org.html)
 
 Topics:

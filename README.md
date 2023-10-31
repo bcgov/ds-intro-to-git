@@ -15,7 +15,6 @@ By the end of this course, you will have gained a fundamental understanding of v
 - Understand the value-add of using version control to manage software projects
 - Understand the basics of how automated version control systems work.
 - Use command-line git to track local file changes
-- (*more about git*)
 - What are remote hosting platforms and why do we use them?
 - Connect to GitHub, create a remote repository and push local changes to GitHub
 - (*Something about BC Gov specific materials Org, Licensing, bcgovr*)
@@ -27,10 +26,6 @@ The workshop content will follow best practices for version control such as writ
  * Anyone looking to solidify their foundational understanding of version control
  * Anyone keen to learn what git or GitHub is (**no prior experience necessary!**)
  * Anyone wondering how version control can be used to manage and collaborate on software projects
-
-## Previous Offerings
-
- * November 2023 will be the first offering of this course
 
 ## Workshop Schedule
 

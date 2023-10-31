@@ -99,3 +99,9 @@ Course Reference Material:
 - [SW Carpentry Episode 12. Citation](https://swcarpentry.github.io/git-novice/12-citation.html)
 - [SW Carpentry Episode 13. Hosting](https://swcarpentry.github.io/git-novice/13-hosting.html)
 
+Further Links to BC Gov Organization Resources:
+
+- [Content Approval Checklist](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Content-Approval-Checklist.md)
+- [BC Gov Organizations in GitHub](https://docs.developer.gov.bc.ca/bc-government-organizations-in-github/)
+- [Policy Framework](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/tree/master)
+

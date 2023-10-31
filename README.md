@@ -18,7 +18,7 @@ By the end of this course, you will have gained a fundamental understanding of v
 - (*more about git*)
 - What are remote hosting platforms and why do we use them?
 - Connect to GitHub, create a remote repository and push local changes to GitHub
-- (*Something about BC Gov specific materials Org, Licensing, bcgovr*)
+- Be familiar with the BC Gov Github Organization which has guidelines and requirements for hosting government developed open source repositories. 
 
 The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking relevent project files.
 

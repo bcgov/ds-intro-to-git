@@ -11,7 +11,7 @@ GitHub is a widely-used platform for hosting and sharing code repositories, faci
 
 By the end of this course, you will have gained a fundamental understanding of version control, enabling you to:
 
-- Set up a github account and install git (pre-workshop)
+- Set up a GitHub account and install the software git (pre-workshop)
 - Understand the value-add of using version control to manage software projects
 - Understand the basics of how automated version control systems work.
 - Use command-line git to track local file changes

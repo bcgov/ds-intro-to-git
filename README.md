@@ -56,7 +56,7 @@ Before the course starts, we ask that all attendees install git and GitBash and 
  * Section 2. Working locally with git
  * BREAK ☕
  * Section 3. Working remotely with GitHub
- * Section 4. 
+ * Section 4. The BC Gov GitHub Organization
 
 ### Getting Help or Reporting an Issue
 

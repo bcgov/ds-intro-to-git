@@ -14,7 +14,7 @@ By the end of this course, you will have gained a fundamental understanding of v
 - Set up a GitHub account and install the software git (pre-workshop)
 - Understand the value-add of using version control to manage software and code-based data science projects
 - Understand the basics of how automated version control systems work
-- Use command-line git to track local file changes
+- Use git, popular command-line version control software, to track local file changes
 - (*more about git*)
 - What are remote hosting platforms and why do we use them?
 - Connect to GitHub, create a remote repository and push local changes to GitHub

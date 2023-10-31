@@ -95,5 +95,8 @@ Topics:
 
 Course Reference Material:
 
-- [SW Carpentry Episode 10 - 13](https://swcarpentry.github.io/git-novice/10-open.html)
+- [SW Carpentry Episode 10. Open Science](https://swcarpentry.github.io/git-novice/10-open.html)
+- [SW Carpentry Episode 11. Licensing](https://swcarpentry.github.io/git-novice/11-licensing.html))
+- [SW Carpentry Episode 12. Citation](https://swcarpentry.github.io/git-novice/12-citation.html)
+- [SW Carpentry Episode 13. Hosting](https://swcarpentry.github.io/git-novice/13-hosting.html)
 

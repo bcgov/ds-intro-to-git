@@ -16,7 +16,6 @@ Topics/Learning Outcomes:
 
 Course Reference Material:
 
-- Installation instructions here: `glue::glue(safepaths::get_network_path(), "/8. Data Science Training/github_how_to")`
 - [SW Carpentry Episode 2. Setting Up Git](https://swcarpentry.github.io/git-novice/)
 - [bcgov-r-geo-workshop Lesson 1](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/01-setup.md)
 

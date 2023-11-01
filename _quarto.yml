@@ -9,8 +9,8 @@ website:
         text: About The Workshop
       - text: "Pre-Workshop Materials"  
         menu:
-         - software-install.qmd
-         - assignment.qmd
+         - pre-workshop/software-install.qmd
+         - pre-workshop/assignment.qmd
   sidebar:
     style: "docked"
     search: false

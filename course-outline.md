@@ -8,10 +8,10 @@ Assignment: [Pre-Workshop Assignment](https://htmlpreview.github.io/?https://git
 
 Topics/Learning Outcomes:
 
-- Download Git for Windows and bundled software (includes Git Bash)
+- Download Git for Windows and bundled software (includes Git Bash) (PC only)
+- Download Git for Mac installer (Mac only)
 - Create a GitHub account with m2FA, PAT for https connection
 - Configure git
-- Configure RStudio (optional)
 - Pre-workshop assignment to show local configuration and connection to GitHub
 
 Course Reference Material:
@@ -89,7 +89,6 @@ Topics:
 - what is the bcgov organization framework
 - bcgov policy framework and licensing
 - code-sharing and teams
-- introduction to bcgovr
 - bcgov-c, bcgov enterprise
 
 Course Reference Material:

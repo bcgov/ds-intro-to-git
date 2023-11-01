@@ -1,4 +1,4 @@
-## Course Outline: Introduction to Version Control 
+## Course Outline
 
 ### Pre-Workshop Installation and Set Up
 

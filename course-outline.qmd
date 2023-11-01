@@ -1,4 +1,6 @@
-## Course Outline
+---
+title: "Course Outline"
+---
 
 ### Pre-Workshop Installation and Set Up
 

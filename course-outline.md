@@ -36,7 +36,7 @@ Course Reference Material:
 
 ### Section 2. Working local with git
 
-Learning Objective: Use command-line git to track local file changes. (*more about git*) \
+Learning Objective: Use command-line git to track local file changes. \
 Slides: [Section 2 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/02-working-local/02-working-local.html)
 
 Topics:

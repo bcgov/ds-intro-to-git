@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Introduction to Version Control - Course Outline</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Introduction to Version Control</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">About The Workshop</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-pre-workshop-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Pre-Workshop Materials</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-pre-workshop-materials">    
+        <li>
+    <a class="dropdown-item" href="./pre-workshop/software-install.html" rel="" target="">
+ <span class="dropdown-text">Installion Instructions and Set-Up</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./pre-workshop/assignment.html" rel="" target="">
+ <span class="dropdown-text">Pre-Workshop Assignment</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-outline.html">Getting Started</a></li><li class="breadcrumb-item"><a href="./course-outline.html">Course Outline</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./course-outline.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Course Outline</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Course Sections</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-what-is-vc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What is Version Control</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-working-local.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working Locally with Git</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-remote-hosting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remote Code Hosting and GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-bcgov-org.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">BCGOV GitHub Organization</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pre-workshop-installation-and-set-up" id="toc-pre-workshop-installation-and-set-up" class="nav-link active" data-scroll-target="#pre-workshop-installation-and-set-up">Pre-Workshop Installation and Set Up</a></li>
+  <li><a href="#section-1.-introductions-and-what-is-version-control" id="toc-section-1.-introductions-and-what-is-version-control" class="nav-link" data-scroll-target="#section-1.-introductions-and-what-is-version-control">Section 1. Introductions and What is Version Control?</a></li>
+  <li><a href="#section-2.-working-local-with-git" id="toc-section-2.-working-local-with-git" class="nav-link" data-scroll-target="#section-2.-working-local-with-git">Section 2. Working local with git</a></li>
+  <li><a href="#section-3.-remote-code-hosting-and-github" id="toc-section-3.-remote-code-hosting-and-github" class="nav-link" data-scroll-target="#section-3.-remote-code-hosting-and-github">Section 3. Remote Code Hosting and GitHub</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">Section 4</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Course Outline</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="pre-workshop-installation-and-set-up" class="level3">
+<h3 class="anchored" data-anchor-id="pre-workshop-installation-and-set-up">Pre-Workshop Installation and Set Up</h3>
+<p>Learning Objective: Set up a GitHub account and install git (pre-workshop).<br>
+Instructions: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/00-software-install.html">Installation and Set-Up</a><br>
+Assignment: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/01-assignment.html">Pre-Workshop Assignment</a><br>
+</p>
+<p>Topics/Learning Outcomes:</p>
+<ul>
+<li>Download Git for Windows and bundled software (includes Git Bash) (PC only)</li>
+<li>Download Git for Mac installer (Mac only)</li>
+<li>Create a GitHub account with m2FA, PAT for https connection</li>
+<li>Configure git</li>
+<li>Pre-workshop assignment to show local configuration and connection to GitHub</li>
+</ul>
+<p>Course Reference Material:</p>
+<ul>
+<li><a href="https://swcarpentry.github.io/git-novice/">SW Carpentry Episode 2. Setting Up Git</a></li>
+<li><a href="https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/01-setup.md">bcgov-r-geo-workshop Lesson 1</a></li>
+</ul>
+</section>
+<section id="section-1.-introductions-and-what-is-version-control" class="level3">
+<h3 class="anchored" data-anchor-id="section-1.-introductions-and-what-is-version-control">Section 1. Introductions and What is Version Control?</h3>
+<p>Learning Objective: Understand the value-add of using version control and the the basics of how automated version control systems work.<br>
+Slides: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/01-what-is-vc/01-what-is-vc.html">Section 1 Slides</a></p>
+<p>Topics:</p>
+<ul>
+<li>How version control systems work</li>
+<li>What is a repository?</li>
+<li>What is the value-add of using version control in teams? individually?</li>
+</ul>
+<p>Course Reference Material:</p>
+<ul>
+<li><a href="https://swcarpentry.github.io/git-novice/01-basics.html">SW Carpentry Episode 1. Automated Version Control</a></li>
+</ul>
+</section>
+<section id="section-2.-working-local-with-git" class="level3">
+<h3 class="anchored" data-anchor-id="section-2.-working-local-with-git">Section 2. Working local with git</h3>
+<p>Learning Objective: Use command-line git to track local file changes.<br>
+Slides: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/02-working-local/02-working-local.html">Section 2 Slides</a></p>
+<p>Topics:</p>
+<ul>
+<li>Default branch naming (inclusive language)</li>
+<li>What is Bash</li>
+<li>Bash-specific commands: mkdir, rm -r, cd, ls</li>
+<li>Git Bash commands: init, commit, add, status, log</li>
+<li>Directory structure</li>
+<li>Tracking changes made to a text doc</li>
+<li>What to do when when -m is omitted.</li>
+</ul>
+<p>Course Reference Material:</p>
+<ul>
+<li><a href="https://swcarpentry.github.io/git-novice/03-create.html">SW Carpentry Episode 3. Creating a Repository (Local)</a></li>
+<li><a href="https://swcarpentry.github.io/git-novice/04-changes.html">SW Carpentry Episode 4. Tracking Changes</a></li>
+<li><a href="https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/02-create.md">bcgov-r-geo-workshop Lesson 2</a></li>
+<li><a href="https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/03-changes.md">bcgov-r-geo-workshop Lesson 3</a></li>
+<li><a href="https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/05-ignore.md">bcgov-r-geo-workshop Lesson 5</a></li>
+</ul>
+</section>
+<section id="section-3.-remote-code-hosting-and-github" class="level3">
+<h3 class="anchored" data-anchor-id="section-3.-remote-code-hosting-and-github">Section 3. Remote Code Hosting and GitHub</h3>
+<p>Learning Objective: What are remote hosting platforms and why do we use them?<br>
+Slides: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/03-remote-hosting/03-remote-hosting.html">Section 3 Slides</a></p>
+<p>Topics:</p>
+<ul>
+<li>More on secure authentication/login: username/password/2FA to sign in to account, PAT to authenticate</li>
+<li>Git Bash commands: push, pull</li>
+<li>Create a remote repository</li>
+<li>Clone a remote repostitory</li>
+<li>Push local changes to GitHub.</li>
+<li>.gitgnore and subdirectories (we don’t want ppl pushing data to GitHub)</li>
+<li>.gitkeep (time permitting)</li>
+</ul>
+<p>Course Reference Material:</p>
+<ul>
+<li><a href="https://swcarpentry.github.io/git-novice/06-ignore.html">SW Carpentry Episode 6. Ignoring Things</a></li>
+<li><a href="https://swcarpentry.github.io/git-novice/07-github.html">SW Carpentry Episode 7. Remotes in GitHub</a></li>
+<li><a href="https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/06-github.md">bcgov-r-geo-workshop Lesson 6</a></li>
+<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github">Github: Keeping your Account and Data Secure</a></li>
+</ul>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">Section 4</h3>
+<p>Learning Objective: Understand how the bcgov framework, policy and related tools help B.C. government employees share code on GitHub<br>
+Slides: <a href="https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/04-bcgov-org/04-bcgov-org.html">Section 4 Slides</a></p>
+<p>Topics:</p>
+<ul>
+<li>what is the bcgov organization framework</li>
+<li>bcgov policy framework and licensing</li>
+<li>code-sharing and teams</li>
+<li>bcgov-c, bcgov enterprise</li>
+</ul>
+<p>Course Reference Material:</p>
+<ul>
+<li><a href="https://swcarpentry.github.io/git-novice/10-open.html">SW Carpentry Episode 10. Open Science</a></li>
+<li><a href="https://swcarpentry.github.io/git-novice/11-licensing.html">SW Carpentry Episode 11. Licensing</a>)</li>
+<li><a href="https://swcarpentry.github.io/git-novice/12-citation.html">SW Carpentry Episode 12. Citation</a></li>
+<li><a href="https://swcarpentry.github.io/git-novice/13-hosting.html">SW Carpentry Episode 13. Hosting</a></li>
+</ul>
+<p>Further Links to BC Gov Organization Resources:</p>
+<ul>
+<li><a href="https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Content-Approval-Checklist.md">Content Approval Checklist</a></li>
+<li><a href="https://docs.developer.gov.bc.ca/bc-government-organizations-in-github/">BC Gov Organizations in GitHub</a></li>
+<li><a href="https://github.com/bcgov/BC-Policy-Framework-For-GitHub/tree/master">Policy Framework</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

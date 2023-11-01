@@ -1,0 +1,15 @@
+---
+title: "Remote Code Hosting and GitHub"
+format: 
+  revealjs:
+    theme: serif
+    code-copy: true
+    slide-number: true
+editor: visual
+---
+
+## Slide 1
+
+## Slide 2
+
+## Slide 3

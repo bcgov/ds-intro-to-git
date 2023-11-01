@@ -2,21 +2,20 @@
 
 ### Pre-Workshop Installation and Set Up
 
-Learning Objective: Set up a github account and install git (pre-workshop). \
+Learning Objective: Set up a GitHub account and install git (pre-workshop). \
 Instructions: [Installation and Set-Up](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/00-software-install.html) \
 Assignment: [Pre-Workshop Assignment](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/pre-workshop/01-assignment.html) \
 
 Topics/Learning Outcomes:
 
-- Download Git for Windows and bundled software (includes Git Bash)
+- Download Git for Windows and bundled software (includes Git Bash) (PC only)
+- Download Git for Mac installer (Mac only)
 - Create a GitHub account with m2FA, PAT for https connection
 - Configure git
-- Configure RStudio (optional)
 - Pre-workshop assignment to show local configuration and connection to GitHub
 
 Course Reference Material:
 
-- Installation instructions here: `glue::glue(safepaths::get_network_path(), "/8. Data Science Training/github_how_to")`
 - [SW Carpentry Episode 2. Setting Up Git](https://swcarpentry.github.io/git-novice/)
 - [bcgov-r-geo-workshop Lesson 1](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/01-setup.md)
 
@@ -37,7 +36,7 @@ Course Reference Material:
 
 ### Section 2. Working local with git
 
-Learning Objective: Use command-line git to track local file changes. (*more about git*) \
+Learning Objective: Use command-line git to track local file changes. \
 Slides: [Section 2 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/02-working-local/02-working-local.html)
 
 Topics:
@@ -82,7 +81,7 @@ Course Reference Material:
 
 ### Section 4
 
-Learning Objective: Understand how the bcgov framework, policy and related tools help bc government employees share code on GitHub \
+Learning Objective: Understand how the bcgov framework, policy and related tools help B.C. government employees share code on GitHub \
 Slides: [Section 4 Slides](https://htmlpreview.github.io/?https://github.com/bcgov/ds-intro-to-git/blob/learning-objectives/slides/04-bcgov-org/04-bcgov-org.html)
 
 Topics:
@@ -90,10 +89,18 @@ Topics:
 - what is the bcgov organization framework
 - bcgov policy framework and licensing
 - code-sharing and teams
-- introduction to bcgovr
 - bcgov-c, bcgov enterprise
 
 Course Reference Material:
 
-- [SW Carpentry Episode 10 - 13](https://swcarpentry.github.io/git-novice/10-open.html)
+- [SW Carpentry Episode 10. Open Science](https://swcarpentry.github.io/git-novice/10-open.html)
+- [SW Carpentry Episode 11. Licensing](https://swcarpentry.github.io/git-novice/11-licensing.html))
+- [SW Carpentry Episode 12. Citation](https://swcarpentry.github.io/git-novice/12-citation.html)
+- [SW Carpentry Episode 13. Hosting](https://swcarpentry.github.io/git-novice/13-hosting.html)
+
+Further Links to BC Gov Organization Resources:
+
+- [Content Approval Checklist](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Content-Approval-Checklist.md)
+- [BC Gov Organizations in GitHub](https://docs.developer.gov.bc.ca/bc-government-organizations-in-github/)
+- [Policy Framework](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/tree/master)
 

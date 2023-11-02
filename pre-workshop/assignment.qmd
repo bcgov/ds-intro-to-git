@@ -1,0 +1,28 @@
+---
+title: "Pre-Workshop Assignment"
+---
+
+## Pre-workshop Assignment
+
+To make the most of our time together on the day of the workshop, we would like you to show up ready-to-go with the proper software installed and configured correctly on your local machine. After working through the installation instructions, please the following in a single Word or PDF document.
+
+#### 1. A screen shot of your git configurations
+
+When we use Git on a new computer for the first time, we need to configure a few things. We'll talk a little more about this in the workshop.
+
+Open the application Git Bash on your local computer and enter the following commands at the command prompt. The command prompt will likely be a combination of your name, computer number and a filepath and ends with `$` The email address used should be the same as the one used when setting up your GitHub account.
+
+```         
+$ git config --global user.name "Your Name in Quotes"
+$ git config --global user.email "youremail@gov.bc.ca"
+```
+
+Then enter the following and take a screen shot of the command-line output.
+
+```         
+$ git config –list
+```
+
+#### 2. Your GitHub handle.
+
+You can see this when you sign in to GitHub and click on your avatar at the top right. Your GitHub handle is in bold font above your name.

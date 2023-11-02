@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Introduction to Version Control"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About The Workshop
+      - text: "Pre-Workshop Materials"  
+        menu:
+         - pre-workshop/software-install.qmd
+         - pre-workshop/assignment.qmd
+      - text: "Slides"
+        menu:
+        - text: "1. What is Version Control"
+          href: slides/01-what-is-vc.qmd
+          target: "_blank"
+        - text: "2. Working Locally with Git"
+          href: slides/02-working-local.qmd
+          target: "_blank"
+        - text: "3. Remote Code Hosting and GitHub"
+          href: slides/03-remote-hosting.qmd
+          target: "_blank"
+        - text: "4. BCGOV GitHub Organization"
+          href: slides/04-bcgov-org.qmd
+          target: "_blank"
+  sidebar:
+    style: "docked"
+    search: false
+    contents:
+      - section: "Getting Started"
+        contents:
+           - course-outline.qmd
+      - section: "Course Sections"
+        contents:
+          - materials/01-what-is-vc.qmd
+          - materials/02-working-local.qmd
+          - materials/03-remote-hosting.qmd
+          - materials/04-bcgov-org.qmd
+  
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+

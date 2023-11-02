@@ -12,6 +12,10 @@ website:
         menu:
          - pre-workshop/software-install.qmd
          - pre-workshop/assignment.qmd
+      - text: "Slides"
+        menu:
+        - text: "1. What is Version Control"
+          href: 01-what-is-vc.qmd
   sidebar:
     style: "docked"
     search: false

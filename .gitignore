@@ -5,5 +5,7 @@
 README.html
 
 /.quarto/
+/_site/
+
 index.html
 index_files

@@ -1,5 +1,5 @@
 ---
-title: "Working Locally with Git"
+title: "2. Working Locally with Git"
 ---
 
 ## 

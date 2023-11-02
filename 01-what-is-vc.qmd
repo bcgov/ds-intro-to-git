@@ -1,5 +1,5 @@
 ---
-title: "What is Version Control"
+title: "1. What is Version Control"
 ---
 
 ## here's some code to copy

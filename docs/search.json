@@ -16,16 +16,16 @@
   {
     "objectID": "01-what-is-vc.html",
     "href": "01-what-is-vc.html",
-    "title": "What is Version Control",
+    "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -1.26807854 -0.58080076 -0.35136884 -1.43208271 -0.16872370 -0.87047452\n [7] -1.29026008  0.39337210  1.29905694  0.02403316"
+    "text": "rnorm(10)\n\n [1] -1.48288428  0.06799246  0.51392699  0.25163551  0.20930114  0.37318312\n [7]  0.94206807  1.55101283 -0.26148160 -0.09903795"
   },
   {
     "objectID": "01-what-is-vc.html#heres-some-code-to-copy",
     "href": "01-what-is-vc.html#heres-some-code-to-copy",
-    "title": "What is Version Control",
+    "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -1.26807854 -0.58080076 -0.35136884 -1.43208271 -0.16872370 -0.87047452\n [7] -1.29026008  0.39337210  1.29905694  0.02403316"
+    "text": "rnorm(10)\n\n [1] -1.48288428  0.06799246  0.51392699  0.25163551  0.20930114  0.37318312\n [7]  0.94206807  1.55101283 -0.26148160 -0.09903795"
   },
   {
     "objectID": "pre-workshop/software-install.html",

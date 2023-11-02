@@ -77,8 +77,6 @@ Git is a set of command line utility programs that are designed to execute on a 
 
 Please visit: [Installing Git](https://www.atlassian.com/git/tutorials/install-git) and follow the instructions for installing git for MacOSX.
 
-If you need more assistance, please reach out to stephanie.hazlitt\@gov.bc.ca or bonnie.robert\@gov.bc.ca.
-
 ### 6. Configure Git
 
 #### Git Set Up
@@ -97,8 +95,8 @@ In our workshop, we will be interacting with [GitHub](https://github.com/) and s
 Below is an example configuration, please type in the commands using your name and email address.
 
 ```         
-$ git config --global user.name "Bonnie Robert"
-$ git config --global user.email "bonnie.robert@gov.bc.ca"
+$ git config --global user.name "Your Name in Quotes"
+$ git config --global user.email "your_email@gmail.com"
 ```
 
 If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private](https://help.github.com/articles/keeping-your-email-address-private/).

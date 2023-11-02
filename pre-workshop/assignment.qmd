@@ -4,7 +4,7 @@ title: "Pre-Workshop Assignment"
 
 ## Pre-workshop Assignment
 
-To make the most of our time together on the day of the workshop, we would like you to show up ready-to-go with the proper software installed and configured correctly on your local machine. After working through the installation instructions, please the following in a single Word or PDF document and email it to bonnie.robert\@gov.bc.ca.
+To make the most of our time together on the day of the workshop, we would like you to show up ready-to-go with the proper software installed and configured correctly on your local machine. After working through the installation instructions, please the following in a single Word or PDF document.
 
 #### 1. A screen shot of your git configurations
 
@@ -23,6 +23,6 @@ Then enter the following and take a screen shot of the command-line output.
 $ git config –list
 ```
 
-#### 2. Your GitHub handle.  
+#### 2. Your GitHub handle.
 
-You can see this when you sign in to GitHub and click on your avatar at the top right.  Your GitHub handle is in bold font above your name.
+You can see this when you sign in to GitHub and click on your avatar at the top right. Your GitHub handle is in bold font above your name.

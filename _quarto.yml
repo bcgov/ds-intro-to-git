@@ -16,12 +16,16 @@ website:
         menu:
         - text: "1. What is Version Control"
           href: slides/01-what-is-vc.qmd
+          target: "_blank"
         - text: "2. Working Locally with Git"
           href: slides/02-working-local.qmd
+          target: "_blank"
         - text: "3. Remote Code Hosting and GitHub"
           href: slides/03-remote-hosting.qmd
+          target: "_blank"
         - text: "4. BCGOV GitHub Organization"
           href: slides/04-bcgov-org.qmd
+          target: "_blank"
   sidebar:
     style: "docked"
     search: false

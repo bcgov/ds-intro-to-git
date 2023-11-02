@@ -15,7 +15,13 @@ website:
       - text: "Slides"
         menu:
         - text: "1. What is Version Control"
-          href: 01-what-is-vc.qmd
+          href: slides/01-what-is-vc.qmd
+        - text: "2. Working Locally with Git"
+          href: slides/02-working-local.qmd
+        - text: "3. Remote Code Hosting and GitHub"
+          href: slides/03-remote-hosting.qmd
+        - text: "4. BCGOV GitHub Organization"
+          href: slides/04-bcgov-org.qmd
   sidebar:
     style: "docked"
     search: false
@@ -25,10 +31,10 @@ website:
            - course-outline.qmd
       - section: "Course Sections"
         contents:
-          - 01-what-is-vc.qmd
-          - 02-working-local.qmd
-          - 03-remote-hosting.qmd
-          - 04-bcgov-org.qmd
+          - materials/01-what-is-vc.qmd
+          - materials/02-working-local.qmd
+          - materials/03-remote-hosting.qmd
+          - materials/04-bcgov-org.qmd
   
 
 

@@ -6,7 +6,7 @@ title: "2. Working Locally with Git"
 
 First, let's create a new directory in the `Desktop` folder for our work and then change the current working directory to the newly created one:
 
-```         
+```{bash}         
 $ cd ~/Desktop
 $ mkdir planets
 $ cd planets
@@ -187,7 +187,7 @@ On branch main
 nothing to commit, working tree clean
 ```
 
-it tells us everything is up to date. If we want to know what we\'ve done recently, we can ask Git to show us the project\'s history using `git log`:
+it tells us everything is up to date. If we want to know what we've done recently, we can ask Git to show us the project's history using `git log`:
 
 ```         
 $ git log
@@ -201,7 +201,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
     Start notes on Mars as a base
 ```
 
-`git log` lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit\'s full identifier (which starts with the same characters as the short identifier printed by the `git commit` command earlier), the commit\'s author, when it was created, and the log message Git was given when the commit was created.
+`git log` lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit's full identifier (which starts with the same characters as the short identifier printed by the `git commit` command earlier), the commit's author, when it was created, and the log message Git was given when the commit was created.
 
 let's add more information to the file. (Again, open up your text editor to add and save your changes. Switch back to command line when you're finished.
 
@@ -226,14 +226,14 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   mars.txt
+    modified:   mars.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-The last line is the key phrase: \"no changes added to commit\". We have changed this file, but we haven\'t told Git we will want to save those changes (which we do with `git add`) nor have we saved them (which we do with `git commit`).
+The last line is the key phrase: "no changes added to commit". We have changed this file, but we haven't told Git we will want to save those changes (which we do with `git add`) nor have we saved them (which we do with `git commit`).
 
-After reviewing our change, it\'s time to commit it:
+After reviewing our change, it's time to commit it:
 
 ```         
 $ git add mars.txt
@@ -245,6 +245,6 @@ $ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
  1 file changed, 1 insertion(+)
 ```
 
-Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we\'re adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but *not*commit some of our work drafting the conclusion (which we haven\'t finished yet).
+Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we're adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but *not*commit some of our work drafting the conclusion (which we haven't finished yet).
 
 To allow for this, Git has a special *staging area* where it keeps track of things that have been added to the current [changeset](https://swcarpentry.github.io/git-novice/reference.html#changeset) but not yet committed.

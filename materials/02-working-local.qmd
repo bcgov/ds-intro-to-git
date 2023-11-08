@@ -6,7 +6,9 @@ title: "2. Working Locally with Git"
 
 First, let's create a new directory in the `Desktop` folder for our work and then change the current working directory to the newly created one:
 
-```{bash}         
+```{bash}
+#| echo: true
+#| code-copy: true
 $ cd ~/Desktop
 $ mkdir planets
 $ cd planets
@@ -14,8 +16,10 @@ $ cd planets
 
 Then we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) \-- a place where Git can store versions of our files:
 
-```         
-$ git init
+```{r}
+#| echo: true
+#| code-copy: true
+#$ git init
 ```
 
 It is important to note that `git init` will create a repository that can include subdirectories and their files---there is no need to create separate repositories nested within the `planets` repository, whether subdirectories are present from the beginning or added later. Also, note that the creation of the `planets` directory and its initialization as a repository are completely separate processes.

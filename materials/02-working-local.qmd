@@ -8,6 +8,7 @@ First, let's create a new directory in the `Desktop` folder for our work and t
 
 ```{bash}
 #| echo: true
+#| eval: false
 #| code-copy: true
 $ cd ~/Desktop
 $ mkdir planets

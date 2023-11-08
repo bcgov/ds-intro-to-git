@@ -18,14 +18,14 @@
     "href": "materials/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  1.1307646 -0.2382778 -0.1756762 -0.1995540 -2.1101048  0.6082037\n [7]  0.5384093 -0.2913868  1.3586921  0.4053585"
+    "text": "rnorm(10)\n\n [1]  0.23214453 -0.42641781  0.25094330  0.14804613 -0.24672527 -1.00650630\n [7] -0.63709334  0.82814919 -1.17131926  0.01108527"
   },
   {
     "objectID": "materials/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "materials/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  1.1307646 -0.2382778 -0.1756762 -0.1995540 -2.1101048  0.6082037\n [7]  0.5384093 -0.2913868  1.3586921  0.4053585"
+    "text": "rnorm(10)\n\n [1]  0.23214453 -0.42641781  0.25094330  0.14804613 -0.24672527 -1.00650630\n [7] -0.63709334  0.82814919 -1.17131926  0.01108527"
   },
   {
     "objectID": "materials/02-working-local.html",
@@ -123,14 +123,14 @@
     "href": "slides/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -0.16628086  0.14578640  1.44250527  0.71912220  0.41556660 -0.16414636\n [7] -0.02789292 -0.08980275  0.23850514 -0.02526242"
+    "text": "rnorm(10)\n\n [1]  1.0474802  1.1872949 -0.5464338 -0.1335002 -0.3759693  1.4960158\n [7]  0.5052900  1.1015954 -0.3682334 -0.9366433"
   },
   {
     "objectID": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -0.16628086  0.14578640  1.44250527  0.71912220  0.41556660 -0.16414636\n [7] -0.02789292 -0.08980275  0.23850514 -0.02526242"
+    "text": "rnorm(10)\n\n [1]  1.0474802  1.1872949 -0.5464338 -0.1335002 -0.3759693  1.4960158\n [7]  0.5052900  1.1015954 -0.3682334 -0.9366433"
   },
   {
     "objectID": "CONTRIBUTING.html",

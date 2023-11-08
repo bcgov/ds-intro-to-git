@@ -207,7 +207,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#creating-a-repository" id="toc-creating-a-repository" class="nav-link active" data-scroll-target="#creating-a-repository">2.1 <strong>Creating a Repository</strong></a></li>
+  <li><a href="#tracking-changes" id="toc-tracking-changes" class="nav-link" data-scroll-target="#tracking-changes">2.2 Tracking Changes</a></li>
   </ul>
 </nav>
     </div>
@@ -231,8 +232,140 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="creating-a-repository" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-repository">2.1 <strong>Creating a Repository</strong></h2>
+<p>First, let’s create a new directory in the&nbsp;<code>Desktop</code>&nbsp;folder for our work and then change the current working directory to the newly created one:</p>
+<pre><code>$ cd ~/Desktop
+$ mkdir planets
+$ cd planets</code></pre>
+<p>Then we tell Git to make&nbsp;<code>planets</code>&nbsp;a&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#repository">repository</a>&nbsp;-- a place where Git can store versions of our files:</p>
+<pre><code>$ git init</code></pre>
+<p>It is important to note that&nbsp;<code>git init</code>&nbsp;will create a repository that can include subdirectories and their files—there is no need to create separate repositories nested within the&nbsp;<code>planets</code>&nbsp;repository, whether subdirectories are present from the beginning or added later. Also, note that the creation of the&nbsp;<code>planets</code>&nbsp;directory and its initialization as a repository are completely separate processes.</p>
+<p>If we use&nbsp;<code>ls</code>&nbsp;to show the directory’s contents, it appears that nothing has changed:</p>
+<pre><code>$ ls</code></pre>
+<p>But if we add the&nbsp;<code>-a</code>&nbsp;flag to show everything, we can see that Git has created a hidden directory within&nbsp;<code>planets</code>&nbsp;called&nbsp;<code>.git</code>:</p>
+<pre><code>$ ls -a</code></pre>
+<p>We get the follwoing output:</p>
+<pre><code>.   ..  .git</code></pre>
+<p>Git uses this special subdirectory to store all the information about the project, including the tracked files and sub-directories located within the project’s directory. If we ever delete the&nbsp;<code>.git</code>subdirectory, we will lose the project’s history.</p>
+<p>Next, we will change the default branch to be called&nbsp;<code>main</code>. This might be the default branch depending on your settings and version of git. See the&nbsp;<a href="https://swcarpentry.github.io/git-novice/02-setup.html#default-git-branch-naming">setup episode</a>&nbsp;for more information on this change.</p>
+<pre><code>$ git checkout -b main</code></pre>
+<p>We get the following output:</p>
+<pre><code>Switched to a new branch 'main'</code></pre>
+<p>We can check that everything is set up correctly by asking Git to tell us the status of our project:</p>
+<pre><code>$ git status</code></pre>
+<p>We get the follwoing output:</p>
+<pre><code>On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)</code></pre>
+<p>If you are using a different version of&nbsp;<code>git</code>, the exact wording of the output might be slightly different.</p>
+</section>
+<section id="tracking-changes" class="level2">
+<h2 class="anchored" data-anchor-id="tracking-changes">2.2 Tracking Changes</h2>
+<p>First let’s make sure we’re still in the right directory. You should be in the&nbsp;<code>planets</code>&nbsp;directory.</p>
+<pre><code>$ cd ~/Desktop/planets</code></pre>
+<p>Let’s create a file called&nbsp;<code>mars.txt</code>&nbsp;that contains some notes about the Red Planet’s suitability as a base. Open a new document named <code>mars.txt</code> using a plain text editor such as Notepad++. Type the text below:</p>
+<pre><code>Cold and dry, but everything is my favorite color</code></pre>
+<p>After switching back to the GitBash command-line interface, let’s verify that the file was properly created by running the list command (<code>ls</code>):</p>
+<pre><code>$ ls</code></pre>
+<p>We should see the following file in our directory:</p>
+<pre><code>mars.txt</code></pre>
+<p><code>mars.txt</code>&nbsp;contains a single line, which we can verify by running:</p>
+<pre><code>$ cat mars.txt</code></pre>
+<pre><code>Cold and dry, but everything is my favorite color</code></pre>
+<p>If we check the status of our project again, Git tells us that it’s noticed the new file:</p>
+<pre><code>$ git status</code></pre>
+<pre><code>On branch main
+
+No commits yet
+
+Untracked files:
+   (use "git add &lt;file&gt;..." to include in what will be committed)
+
+    mars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+<p>The “untracked files” message means that there’s a file in the directory that Git isn’t keeping track of. We can tell Git to track a file using&nbsp;<code>git add</code>:</p>
+<pre><code>$ git add mars.txt</code></pre>
+<p>and then check that the right thing happened:</p>
+<pre><code>$ git status</code></pre>
+<pre><code>On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+
+    new file:   mars.txt</code></pre>
+<p>Git now knows that it’s supposed to keep track of&nbsp;<code>mars.txt</code>, but it hasn’t recorded these changes as a commit yet. To get it to do that, we need to run one more command:</p>
+<pre><code>$ git commit -m "Start notes on Mars as a base"</code></pre>
+<pre><code>[main (root-commit) f22b25e] Start notes on Mars as a base
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mars.txt</code></pre>
+<p>When we run&nbsp;<code>git commit</code>, Git takes everything we have told it to save by using&nbsp;<code>git add</code>&nbsp;and stores a copy permanently inside the special&nbsp;<code>.git</code>&nbsp;directory. This permanent copy is called a&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#commit">commit</a>&nbsp;(or&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#revision">revision</a>) and its short identifier is&nbsp;<code>f22b25e</code>. Your commit may have another identifier.</p>
+<p>We use the&nbsp;<code>-m</code>&nbsp;flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+callout note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If we just run&nbsp;<code>git commit</code>&nbsp;without the&nbsp;<code>-m</code>&nbsp;option, Git will launch&nbsp;<code>nano</code>&nbsp;(or whatever other editor we configured as&nbsp;<code>core.editor</code>) so that we can write a longer message.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+callout note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://chris.beams.io/posts/git-commit/">Good commit messages</a>&nbsp;start with a brief (&lt;50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence “If applied, this commit will”&nbsp;. If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.</p>
+</div>
+</div>
+<p>If we run&nbsp;<code>git status</code>&nbsp;now:</p>
+<pre><code>$ git status</code></pre>
+<pre><code>On branch main
+nothing to commit, working tree clean</code></pre>
+<p>it tells us everything is up to date. If we want to know what we’ve done recently, we can ask Git to show us the project’s history using&nbsp;<code>git log</code>:</p>
+<pre><code>$ git log</code></pre>
+<pre><code>commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
+Author: Vlad Dracula &lt;vlad@tran.sylvan.ia&gt;
+Date:   Thu Aug 22 09:51:46 2013 -0400
+
+    Start notes on Mars as a base</code></pre>
+<p><code>git log</code>&nbsp;lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the&nbsp;<code>git commit</code>&nbsp;command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.</p>
+<p>let’s add more information to the file. (Again, open up your text editor to add and save your changes. Switch back to command line when you’re finished.</p>
+<pre><code>$ cat mars.txt</code></pre>
+<pre><code>Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman</code></pre>
+<p>When we run&nbsp;<code>git status</code>&nbsp;now, it tells us that a file it already knows about has been modified:</p>
+<pre><code>$ git status</code></pre>
+<pre><code>On branch main
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+    modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
+<p>The last line is the key phrase: “no changes added to commit”. We have changed this file, but we haven’t told Git we will want to save those changes (which we do with&nbsp;<code>git add</code>) nor have we saved them (which we do with&nbsp;<code>git commit</code>).</p>
+<p>After reviewing our change, it’s time to commit it:</p>
+<pre><code>$ git add mars.txt
+$ git commit -m "Add concerns about effects of Mars' moons on Wolfman"</code></pre>
+<pre><code>[main 34961b1] Add concerns about effects of Mars' moons on Wolfman
+ 1 file changed, 1 insertion(+)</code></pre>
+<p>Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we’re adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but&nbsp;<em>not</em>commit some of our work drafting the conclusion (which we haven’t finished yet).</p>
+<p>To allow for this, Git has a special&nbsp;<em>staging area</em>&nbsp;where it keeps track of things that have been added to the current&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#changeset">changeset</a>&nbsp;but not yet committed.</p>
 
 
 </section>

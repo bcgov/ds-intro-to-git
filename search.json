@@ -18,14 +18,14 @@
     "href": "materials/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  0.25500338 -0.93098237  0.13032618  1.04988766  1.45550661 -1.25415700\n [7] -1.49311025 -0.02534678  0.73645744 -0.79585998"
+    "text": "rnorm(10)\n\n [1] -1.0416406 -0.2683731  2.1864315 -0.2155232 -0.8086561  0.6498549\n [7]  0.1545049 -0.5056860  0.9868907  0.6130859"
   },
   {
     "objectID": "materials/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "materials/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  0.25500338 -0.93098237  0.13032618  1.04988766  1.45550661 -1.25415700\n [7] -1.49311025 -0.02534678  0.73645744 -0.79585998"
+    "text": "rnorm(10)\n\n [1] -1.0416406 -0.2683731  2.1864315 -0.2155232 -0.8086561  0.6498549\n [7]  0.1545049 -0.5056860  0.9868907  0.6130859"
   },
   {
     "objectID": "pre-workshop/software-install.html",
@@ -102,14 +102,14 @@
     "href": "slides/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  0.8039900 -0.7687640 -0.3123421 -0.6444674  0.7060778  0.4034779\n [7]  1.5685673  0.3241839 -0.3553853  0.7239030"
+    "text": "rnorm(10)\n\n [1] -0.487414170  0.324455267  0.009512166  0.432943793 -1.563064031\n [6]  1.733830767  0.144970327 -1.419503165 -0.239440399 -0.168310681"
   },
   {
     "objectID": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  0.8039900 -0.7687640 -0.3123421 -0.6444674  0.7060778  0.4034779\n [7]  1.5685673  0.3241839 -0.3553853  0.7239030"
+    "text": "rnorm(10)\n\n [1] -0.487414170  0.324455267  0.009512166  0.432943793 -1.563064031\n [6]  1.733830767  0.144970327 -1.419503165 -0.239440399 -0.168310681"
   },
   {
     "objectID": "CONTRIBUTING.html",

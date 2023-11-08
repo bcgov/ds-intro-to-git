@@ -18,28 +18,28 @@
     "href": "materials/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  0.23214453 -0.42641781  0.25094330  0.14804613 -0.24672527 -1.00650630\n [7] -0.63709334  0.82814919 -1.17131926  0.01108527"
+    "text": "rnorm(10)\n\n [1] -1.7374696 -0.1456560 -2.1614361 -1.0878188 -0.9408131 -1.3599874\n [7]  2.2347800 -1.1667682  0.4286780 -1.4324979"
   },
   {
     "objectID": "materials/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "materials/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  0.23214453 -0.42641781  0.25094330  0.14804613 -0.24672527 -1.00650630\n [7] -0.63709334  0.82814919 -1.17131926  0.01108527"
+    "text": "rnorm(10)\n\n [1] -1.7374696 -0.1456560 -2.1614361 -1.0878188 -0.9408131 -1.3599874\n [7]  2.2347800 -1.1667682  0.4286780 -1.4324979"
   },
   {
     "objectID": "materials/02-working-local.html",
     "href": "materials/02-working-local.html",
     "title": "2. Working Locally with Git",
     "section": "",
-    "text": "First, let’s create a new directory in the Desktop folder for our work and then change the current working directory to the newly created one:\n$ cd ~/Desktop\n$ mkdir planets\n$ cd planets\nThen we tell Git to make planets a repository -- a place where Git can store versions of our files:\n$ git init\nIt is important to note that git init will create a repository that can include subdirectories and their files—there is no need to create separate repositories nested within the planets repository, whether subdirectories are present from the beginning or added later. Also, note that the creation of the planets directory and its initialization as a repository are completely separate processes.\nIf we use ls to show the directory’s contents, it appears that nothing has changed:\n$ ls\nBut if we add the -a flag to show everything, we can see that Git has created a hidden directory within planets called .git:\n$ ls -a\nWe get the follwoing output:\n.   ..  .git\nGit uses this special subdirectory to store all the information about the project, including the tracked files and sub-directories located within the project’s directory. If we ever delete the .gitsubdirectory, we will lose the project’s history.\nNext, we will change the default branch to be called main. This might be the default branch depending on your settings and version of git. See the setup episode for more information on this change.\n$ git checkout -b main\nWe get the following output:\nSwitched to a new branch 'main'\nWe can check that everything is set up correctly by asking Git to tell us the status of our project:\n$ git status\nWe get the follwoing output:\nOn branch main\n\nNo commits yet\n\nnothing to commit (create/copy files and use \"git add\" to track)\nIf you are using a different version of git, the exact wording of the output might be slightly different."
+    "text": "First, let’s create a new directory in the Desktop folder for our work and then change the current working directory to the newly created one:\n\n$ cd ~/Desktop\n$ mkdir planets\n$ cd planets\n\nThen we tell Git to make planets a repository -- a place where Git can store versions of our files:\n\n#$ git init\n\nIt is important to note that git init will create a repository that can include subdirectories and their files—there is no need to create separate repositories nested within the planets repository, whether subdirectories are present from the beginning or added later. Also, note that the creation of the planets directory and its initialization as a repository are completely separate processes.\nIf we use ls to show the directory’s contents, it appears that nothing has changed:\n$ ls\nBut if we add the -a flag to show everything, we can see that Git has created a hidden directory within planets called .git:\n$ ls -a\nWe get the follwoing output:\n.   ..  .git\nGit uses this special subdirectory to store all the information about the project, including the tracked files and sub-directories located within the project’s directory. If we ever delete the .gitsubdirectory, we will lose the project’s history.\nNext, we will change the default branch to be called main. This might be the default branch depending on your settings and version of git. See the setup episode for more information on this change.\n$ git checkout -b main\nWe get the following output:\nSwitched to a new branch 'main'\nWe can check that everything is set up correctly by asking Git to tell us the status of our project:\n$ git status\nWe get the follwoing output:\nOn branch main\n\nNo commits yet\n\nnothing to commit (create/copy files and use \"git add\" to track)\nIf you are using a different version of git, the exact wording of the output might be slightly different."
   },
   {
     "objectID": "materials/02-working-local.html#creating-a-repository",
     "href": "materials/02-working-local.html#creating-a-repository",
     "title": "2. Working Locally with Git",
     "section": "",
-    "text": "First, let’s create a new directory in the Desktop folder for our work and then change the current working directory to the newly created one:\n$ cd ~/Desktop\n$ mkdir planets\n$ cd planets\nThen we tell Git to make planets a repository -- a place where Git can store versions of our files:\n$ git init\nIt is important to note that git init will create a repository that can include subdirectories and their files—there is no need to create separate repositories nested within the planets repository, whether subdirectories are present from the beginning or added later. Also, note that the creation of the planets directory and its initialization as a repository are completely separate processes.\nIf we use ls to show the directory’s contents, it appears that nothing has changed:\n$ ls\nBut if we add the -a flag to show everything, we can see that Git has created a hidden directory within planets called .git:\n$ ls -a\nWe get the follwoing output:\n.   ..  .git\nGit uses this special subdirectory to store all the information about the project, including the tracked files and sub-directories located within the project’s directory. If we ever delete the .gitsubdirectory, we will lose the project’s history.\nNext, we will change the default branch to be called main. This might be the default branch depending on your settings and version of git. See the setup episode for more information on this change.\n$ git checkout -b main\nWe get the following output:\nSwitched to a new branch 'main'\nWe can check that everything is set up correctly by asking Git to tell us the status of our project:\n$ git status\nWe get the follwoing output:\nOn branch main\n\nNo commits yet\n\nnothing to commit (create/copy files and use \"git add\" to track)\nIf you are using a different version of git, the exact wording of the output might be slightly different."
+    "text": "First, let’s create a new directory in the Desktop folder for our work and then change the current working directory to the newly created one:\n\n$ cd ~/Desktop\n$ mkdir planets\n$ cd planets\n\nThen we tell Git to make planets a repository -- a place where Git can store versions of our files:\n\n#$ git init\n\nIt is important to note that git init will create a repository that can include subdirectories and their files—there is no need to create separate repositories nested within the planets repository, whether subdirectories are present from the beginning or added later. Also, note that the creation of the planets directory and its initialization as a repository are completely separate processes.\nIf we use ls to show the directory’s contents, it appears that nothing has changed:\n$ ls\nBut if we add the -a flag to show everything, we can see that Git has created a hidden directory within planets called .git:\n$ ls -a\nWe get the follwoing output:\n.   ..  .git\nGit uses this special subdirectory to store all the information about the project, including the tracked files and sub-directories located within the project’s directory. If we ever delete the .gitsubdirectory, we will lose the project’s history.\nNext, we will change the default branch to be called main. This might be the default branch depending on your settings and version of git. See the setup episode for more information on this change.\n$ git checkout -b main\nWe get the following output:\nSwitched to a new branch 'main'\nWe can check that everything is set up correctly by asking Git to tell us the status of our project:\n$ git status\nWe get the follwoing output:\nOn branch main\n\nNo commits yet\n\nnothing to commit (create/copy files and use \"git add\" to track)\nIf you are using a different version of git, the exact wording of the output might be slightly different."
   },
   {
     "objectID": "materials/02-working-local.html#tracking-changes",
@@ -123,14 +123,14 @@
     "href": "slides/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  1.0474802  1.1872949 -0.5464338 -0.1335002 -0.3759693  1.4960158\n [7]  0.5052900  1.1015954 -0.3682334 -0.9366433"
+    "text": "rnorm(10)\n\n [1]  1.4277025  0.9467333 -0.3629510  0.5167913  0.8293879  1.0499628\n [7]  0.8284228 -0.9553874 -0.2218019  0.7610809"
   },
   {
     "objectID": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  1.0474802  1.1872949 -0.5464338 -0.1335002 -0.3759693  1.4960158\n [7]  0.5052900  1.1015954 -0.3682334 -0.9366433"
+    "text": "rnorm(10)\n\n [1]  1.4277025  0.9467333 -0.3629510  0.5167913  0.8293879  1.0499628\n [7]  0.8284228 -0.9553874 -0.2218019  0.7610809"
   },
   {
     "objectID": "CONTRIBUTING.html",

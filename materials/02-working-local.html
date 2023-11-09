@@ -269,13 +269,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="creating-a-repository" class="level2">
 <h2 class="anchored" data-anchor-id="creating-a-repository">2.1 <strong>Creating a Repository</strong></h2>
 <p>First, let’s create a new directory in the&nbsp;<code>Desktop</code>&nbsp;folder for our work and then change the current working directory to the newly created one:</p>
-<div class="cell" data-code-copy="true">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash watch-out code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop</span>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir planets</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd planets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we tell Git to make&nbsp;<code>planets</code>&nbsp;a&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#repository">repository</a>&nbsp;-- a place where Git can store versions of our files:</p>
-<div class="cell" data-code-copy="true">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>It is important to note that&nbsp;<code>git init</code>&nbsp;will create a repository that can include subdirectories and their files—there is no need to create separate repositories nested within the&nbsp;<code>planets</code>&nbsp;repository, whether subdirectories are present from the beginning or added later. Also, note that the creation of the&nbsp;<code>planets</code>&nbsp;directory and its initialization as a repository are completely separate processes.</p>
@@ -287,8 +287,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-code-copy="true">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We get the follwoing output:</p>
-<div class="cell" data-code-copy="false">
+<p>We get the following output:</p>
+<div class="cell" data-code-block-border-left="#31BAE9" data-code-copy="false">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span>   ..  .git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Git uses this special subdirectory to store all the information about the project, including the tracked files and sub-directories located within the project’s directory. If we ever delete the&nbsp;<code>.git</code>subdirectory, we will lose the project’s history.</p>

@@ -18,14 +18,14 @@
     "href": "materials/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -0.28317968 -0.26306498 -0.23033629 -0.45663089 -1.23680525  0.72875560\n [7]  1.17603478  1.24669899 -0.09095427  0.32689070"
+    "text": "rnorm(10)\n\n [1]  1.18270696 -0.35647783  0.74062872 -0.59187868 -1.83509961  0.85898937\n [7]  0.65795025 -1.32884136  3.32106985  0.09448582"
   },
   {
     "objectID": "materials/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "materials/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -0.28317968 -0.26306498 -0.23033629 -0.45663089 -1.23680525  0.72875560\n [7]  1.17603478  1.24669899 -0.09095427  0.32689070"
+    "text": "rnorm(10)\n\n [1]  1.18270696 -0.35647783  0.74062872 -0.59187868 -1.83509961  0.85898937\n [7]  0.65795025 -1.32884136  3.32106985  0.09448582"
   },
   {
     "objectID": "materials/02-working-local.html",
@@ -56,18 +56,18 @@
     "text": "2.3 Committing Changes\nGit now knows that it’s supposed to keep track of mars.txt, but it hasn’t recorded these changes as a commit yet. To get it to do that, we need to run one more command:\n\n$ git commit -m \"Start notes on Mars as a base\"\n\n\n[main (root-commit) f22b25e] Start notes on Mars as a base\n 1 file changed, 1 insertion(+)\n create mode 100644 mars.txt\n\nWhen we run git commit, Git takes everything we have told it to save by using git add and stores a copy permanently inside the special .git directory. This permanent copy is called a commit (or revision) and its short identifier is f22b25e. Your commit may have another identifier.\nWe use the -m flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why.\n\n\n\n\n\n\nNote\n\n\n\nIf we just run git commit without the -m option, Git will launch a utility program called nano  and ask us to write a longer message. If this happens, click CTRL+X to go back to the command line and run git commit -m \"your commit message\".\n\n\n\n\n\n\n\n\nNote\n\n\n\nGood commit messages start with a brief (&lt;50 characters) statement about the changes made in the commit. Generally, the message should complete the sentence “If applied, this commit will” . If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.\n\n\nIf we run git status now:\n$ git status\nOn branch main\nnothing to commit, working tree clean\nit tells us everything is up to date."
   },
   {
-    "objectID": "materials/02-working-local.html#our-commit-history",
-    "href": "materials/02-working-local.html#our-commit-history",
+    "objectID": "materials/02-working-local.html#viewing-the-commit-history",
+    "href": "materials/02-working-local.html#viewing-the-commit-history",
     "title": "2. Working Locally with Git",
-    "section": "Our Commit History",
-    "text": "Our Commit History\nIf we want to know what we’ve done recently, we can ask Git to show us the project’s history using git log:\n$ git log\ncommit f22b25e3233b4645dabd0d81e651fe074bd8e73b\nAuthor: Vlad Dracula &lt;vlad@tran.sylvan.ia&gt;\nDate:   Thu Aug 22 09:51:46 2013 -0400\n\n    Start notes on Mars as a base\ngit log lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the git commit command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.\nlet’s add more information to the file. (Again, open up your text editor to add and save your changes. Switch back to command line when you’re finished.\n$ cat mars.txt\nCold and dry, but everything is my favorite color\nThe two moons may be a problem for Wolfman\nWhen we run git status now, it tells us that a file it already knows about has been modified:\n$ git status\nOn branch main\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git checkout -- &lt;file&gt;...\" to discard changes in working directory)\n\n    modified:   mars.txt\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\nThe last line is the key phrase: “no changes added to commit”. We have changed this file, but we haven’t told Git we will want to save those changes (which we do with git add) nor have we saved them (which we do with git commit).\nAfter reviewing our change, it’s time to commit it:\n$ git add mars.txt\n$ git commit -m \"Add concerns about effects of Mars' moons on Wolfman\"\n[main 34961b1] Add concerns about effects of Mars' moons on Wolfman\n 1 file changed, 1 insertion(+)\nGit insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we’re adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but notcommit some of our work drafting the conclusion (which we haven’t finished yet)."
+    "section": "2.4 Viewing the Commit History",
+    "text": "2.4 Viewing the Commit History\nIf we want to know what we’ve done recently, we can ask Git to show us the project’s history using git log:\n$ git log\ncommit f22b25e3233b4645dabd0d81e651fe074bd8e73b\nAuthor: Vlad Dracula &lt;vlad@tran.sylvan.ia&gt;\nDate:   Thu Aug 22 09:51:46 2013 -0400\n\n    Start notes on Mars as a base\ngit log lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the git commit command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.\nlet’s add more information to the file. (Again, open up your text editor to add and save your changes. Switch back to command line when you’re finished.\n$ cat mars.txt\nCold and dry, but everything is my favorite color\nThe two moons may be a problem for Wolfman\nWhen we run git status now, it tells us that a file it already knows about has been modified:\n$ git status\nOn branch main\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git checkout -- &lt;file&gt;...\" to discard changes in working directory)\n\n    modified:   mars.txt\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\nThe last line is the key phrase: “no changes added to commit”. We have changed this file, but we haven’t told Git we will want to save those changes (which we do with git add) nor have we saved them (which we do with git commit).\nAfter reviewing our change, it’s time to commit it:\n$ git add mars.txt\n$ git commit -m \"Add concerns about effects of Mars' moons on Wolfman\"\n[main 34961b1] Add concerns about effects of Mars' moons on Wolfman\n 1 file changed, 1 insertion(+)\nGit insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we’re adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but notcommit some of our work drafting the conclusion (which we haven’t finished yet)."
   },
   {
-    "objectID": "materials/02-working-local.html#staging-area",
-    "href": "materials/02-working-local.html#staging-area",
+    "objectID": "materials/02-working-local.html#the-staging-area",
+    "href": "materials/02-working-local.html#the-staging-area",
     "title": "2. Working Locally with Git",
-    "section": "Staging Area",
-    "text": "Staging Area\nTo allow for this, Git has a special staging area where it keeps track of things that have been added to the current changeset but not yet committed.\nIf you think of Git as taking snapshots of changes over the life of a project, git add specifies what will go in a snapshot (putting things in the staging area), and git commit then actually takes the snapshot, and makes a permanent record of it (as a commit). If you don’t have anything staged when you type git commit, Git will prompt you to use git commit -a or git commit –all, which is kind of like gathering everyone to take a group photo! However, it’s almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to the group photo simile, you might get an extra with incomplete makeup walking on the stage for the picture because you used -a!) Try to stage things manually, or you might find yourself searching for “git undo commit” more than you would like!\n\n\n\nThe Git Staging Area"
+    "section": "2.5 The Staging Area",
+    "text": "2.5 The Staging Area\nTo allow for this, Git has a special staging area where it keeps track of things that have been added to the current changeset but not yet committed.\nIf you think of Git as taking snapshots of changes over the life of a project, git add specifies what will go in a snapshot (putting things in the staging area), and git commit then actually takes the snapshot, and makes a permanent record of it (as a commit). If you don’t have anything staged when you type git commit, Git will prompt you to use git commit -a or git commit –all, which is kind of like gathering everyone to take a group photo! However, it’s almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to the group photo simile, you might get an extra with incomplete makeup walking on the stage for the picture because you used -a!) Try to stage things manually, or you might find yourself searching for “git undo commit” more than you would like!\n\n\n\nThe Git Staging Area"
   },
   {
     "objectID": "pre-workshop/software-install.html",
@@ -144,14 +144,14 @@
     "href": "slides/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -0.8817033  1.4393826 -1.3836602 -1.0408568  0.9746524  1.4044895\n [7] -1.3945204 -1.5013321 -0.1670018  0.5003513"
+    "text": "rnorm(10)\n\n [1] -1.1445190  1.8047585 -1.8992743  0.2707211  0.3723310 -1.3193219\n [7]  0.1440805  1.5023720 -0.3081803  0.3270474"
   },
   {
     "objectID": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -0.8817033  1.4393826 -1.3836602 -1.0408568  0.9746524  1.4044895\n [7] -1.3945204 -1.5013321 -0.1670018  0.5003513"
+    "text": "rnorm(10)\n\n [1] -1.1445190  1.8047585 -1.8992743  0.2707211  0.3723310 -1.3193219\n [7]  0.1440805  1.5023720 -0.3081803  0.3270474"
   },
   {
     "objectID": "CONTRIBUTING.html",

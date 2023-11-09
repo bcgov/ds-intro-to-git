@@ -2,13 +2,15 @@
 title: "2. Working Locally with Git"
 ---
 
+```{r include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
 ## 2.1 **Creating a Repository**
 
 First, let's create a new directory in the `Desktop` folder for our work and then change the current working directory to the newly created one:
 
 ```{bash}
-#| echo: true
-#| eval: false
 #| code-copy: true
 $ cd ~/Desktop
 $ mkdir planets
@@ -17,29 +19,30 @@ $ cd planets
 
 Then we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) \-- a place where Git can store versions of our files:
 
-```{r}
-#| echo: true
+```{bash}
 #| code-copy: true
-#$ git init
+$ git init
 ```
 
 It is important to note that `git init` will create a repository that can include subdirectories and their files---there is no need to create separate repositories nested within the `planets` repository, whether subdirectories are present from the beginning or added later. Also, note that the creation of the `planets` directory and its initialization as a repository are completely separate processes.
 
 If we use `ls` to show the directory's contents, it appears that nothing has changed:
 
-```         
+```{bash}
+#| code-copy: true
 $ ls
 ```
 
 But if we add the `-a` flag to show everything, we can see that Git has created a hidden directory within `planets` called `.git`:
 
-```         
+```{bash}
+#| code-copy: true
 $ ls -a
 ```
 
 We get the follwoing output:
 
-```         
+```{bash}
 .   ..  .git
 ```
 
@@ -47,25 +50,27 @@ Git uses this special subdirectory to store all the information about the projec
 
 Next, we will change the default branch to be called `main`. This might be the default branch depending on your settings and version of git. See the [setup episode](https://swcarpentry.github.io/git-novice/02-setup.html#default-git-branch-naming) for more information on this change.
 
-```         
+```{bash}
+#| code-copy: true
 $ git checkout -b main
 ```
 
 We get the following output:
 
-```         
+```{bash}
 Switched to a new branch 'main'
 ```
 
 We can check that everything is set up correctly by asking Git to tell us the status of our project:
 
-```         
+```{bash}
+#| code-copy: true
 $ git status
 ```
 
-We get the follwoing output:
+We get the following output:
 
-```         
+```{bash}         
 On branch main
 
 No commits yet

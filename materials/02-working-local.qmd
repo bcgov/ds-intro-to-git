@@ -38,7 +38,7 @@ $ ls -a
 
 We get the following output:
 
-```{bash}
+```{class="bash-output-box"}
 .   ..  .git
 ```
 
@@ -52,7 +52,7 @@ $ git checkout -b main
 
 We get the following output:
 
-```{bash}
+```{class="bash-output-box"}
 Switched to a new branch 'main'
 ```
 
@@ -64,7 +64,7 @@ $ git status
 
 We get the following output:
 
-```{bash}
+```{class="bash-output-box"}
 On branch main
 
 No commits yet
@@ -82,9 +82,9 @@ First let's make sure we're still in the right directory. You should be in the 
 $ cd ~/Desktop/planets
 ```
 
-Let's create a file called `mars.txt` that contains some notes about the Red Planet's suitability as a base. Open a new document named `mars.txt` using a plain text editor such as Notepad++. Type the text below:
+Let's create a file called `mars.txt` that contains some notes about the Red Planet's suitability as a base. Open a new document named `mars.txt` using a plain text editor such as Notepad++. Add the following line to `mars.txt` and save the file.
 
-```{bash}
+```{class="bash-output-box"}
 Cold and dry, but everything is my favorite color
 ```
 
@@ -96,18 +96,8 @@ $ ls
 
 We should see the following file in our directory:
 
-```{bash}
+```{class="bash-output-box"}
 mars.txt
-```
-
-`mars.txt` contains a single line, which we can verify by running:
-
-```{bash}
-$ cat mars.txt
-```
-
-```{bash}
-Cold and dry, but everything is my favorite color
 ```
 
 If we check the status of our project again, Git tells us that it's noticed the new file:
@@ -116,7 +106,7 @@ If we check the status of our project again, Git tells us that it's noticed the 
 $ git status
 ```
 
-```{bash}
+```{class="bash-output-box"}
 On branch main
 
 No commits yet
@@ -141,7 +131,7 @@ and then check that the right thing happened:
 $ git status
 ```
 
-```{bash}
+```{class="bash-output-box"}
 On branch main
 
 No commits yet
@@ -160,7 +150,7 @@ Git now knows that it's supposed to keep track of `mars.txt`, but it hasn't rec
 $ git commit -m "Start notes on Mars as a base"
 ```
 
-```{bash}
+```
 [main (root-commit) f22b25e] Start notes on Mars as a base
  1 file changed, 1 insertion(+)
  create mode 100644 mars.txt
@@ -180,7 +170,7 @@ If we just run `git commit` without the `-m` option, Git will launch a utili
 
 If we run `git status` now:
 
-```         
+```{bash}         
 $ git status
 ```
 
@@ -195,11 +185,11 @@ it tells us everything is up to date.
 
 If we want to know what we've done recently, we can ask Git to show us the project's history using `git log`:
 
-```         
+```{bash}         
 $ git log
 ```
 
-```         
+```{class="bash-output-box"}        
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
 Date:   Thu Aug 22 09:51:46 2013 -0400
@@ -211,22 +201,24 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 
 let's add more information to the file. (Again, open up your text editor to add and save your changes. Switch back to command line when you're finished.
 
-```         
+`mars.txt` contains a new line, which we can verify by running:
+
+```{bash}         
 $ cat mars.txt
 ```
 
-```         
+```{class="bash-output-box"}        
 Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman
 ```
 
 When we run `git status` now, it tells us that a file it already knows about has been modified:
 
-```         
+```{bash}         
 $ git status
 ```
 
-```         
+```{class="bash-output-box"}        
 On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -241,12 +233,12 @@ The last line is the key phrase: "no changes added to commit". We have changed t
 
 After reviewing our change, it's time to commit it:
 
-```         
+```{bash}         
 $ git add mars.txt
 $ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
 ```
 
-```         
+```{class="bash-output-box"}        
 [main 34961b1] Add concerns about effects of Mars' moons on Wolfman
  1 file changed, 1 insertion(+)
 ```

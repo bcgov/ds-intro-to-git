@@ -39,9 +39,6 @@ website:
           - materials/02-working-local.qmd
           - materials/03-remote-hosting.qmd
           - materials/04-bcgov-org.qmd
-  
-
-
 format:
   html:
     theme: cosmo

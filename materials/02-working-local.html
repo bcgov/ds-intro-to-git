@@ -94,7 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -291,30 +291,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We get the following output:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span>   ..  .git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<pre class="bash-output-box"><code>.   ..  .git</code></pre>
 <p>Git uses this special subdirectory to store all the information about the project, including the tracked files and sub-directories located within the project’s directory. If we ever delete the&nbsp;<code>.git</code>subdirectory, we will lose the project’s history.</p>
 <p>Next, we will change the default branch to be called&nbsp;<code>main</code>. This might be the default branch depending on your settings and version of git. See the&nbsp;<a href="https://swcarpentry.github.io/git-novice/02-setup.html#default-git-branch-naming">setup episode</a>&nbsp;for more information on this change.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">-b</span> main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We get the following output:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Switched</span> to a new branch <span class="st">'main'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<pre class="bash-output-box"><code>Switched to a new branch 'main'</code></pre>
 <p>We can check that everything is set up correctly by asking Git to tell us the status of our project:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We get the following output:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">No</span> commits yet</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> to commit <span class="er">(</span><span class="ex">create/copy</span> files and use <span class="st">"git add"</span> to track<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<pre class="bash-output-box"><code>On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)</code></pre>
 <p>If you are using a different version of&nbsp;<code>git</code>, the exact wording of the output might be slightly different.</p>
 </section>
 <section id="tracking-files" class="level2">
@@ -323,71 +317,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop/planets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Let’s create a file called&nbsp;<code>mars.txt</code>&nbsp;that contains some notes about the Red Planet’s suitability as a base. Open a new document named <code>mars.txt</code> using a plain text editor such as Notepad++. Type the text below:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Cold</span> and dry, but everything is my favorite color</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Let’s create a file called&nbsp;<code>mars.txt</code>&nbsp;that contains some notes about the Red Planet’s suitability as a base. Open a new document named <code>mars.txt</code> using a plain text editor such as Notepad++. Add the following line to <code>mars.txt</code> and save the file.</p>
+<pre class="bash-output-box"><code>Cold and dry, but everything is my favorite color</code></pre>
 <p>After switching back to the GitBash command-line interface, let’s verify that the file was properly created by running the list command (<code>ls</code>):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We should see the following file in our directory:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mars.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>mars.txt</code>&nbsp;contains a single line, which we can verify by running:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Cold</span> and dry, but everything is my favorite color</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<pre class="bash-output-box"><code>mars.txt</code></pre>
 <p>If we check the status of our project again, Git tells us that it’s noticed the new file:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ex">No</span> commits yet</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Untracked</span> files:</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>   <span class="kw">(</span><span class="ex">use</span> <span class="st">"git add &lt;file&gt;..."</span> to include in what will be committed<span class="kw">)</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="ex">mars.txt</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> added to commit but untracked files present <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> to track<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<pre class="bash-output-box"><code>On branch main
+
+No commits yet
+
+Untracked files:
+   (use "git add &lt;file&gt;..." to include in what will be committed)
+
+    mars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 <p>The “untracked files” message means that there’s a file in the directory that Git isn’t keeping track of. We can tell Git to track a file using&nbsp;<code>git add</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>and then check that the right thing happened:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="ex">No</span> commits yet</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Changes</span> to be committed:</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git rm --cached &lt;file&gt;..."</span> to unstage<span class="kw">)</span></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="ex">new</span> file:   mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<pre class="bash-output-box"><code>On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+
+    new file:   mars.txt</code></pre>
 </section>
 <section id="committing-changes" class="level2">
 <h2 class="anchored" data-anchor-id="committing-changes">2.3 <strong>Committing Changes</strong></h2>
 <p>Git now knows that it’s supposed to keep track of&nbsp;<code>mars.txt</code>, but it hasn’t recorded these changes as a commit yet. To get it to do that, we need to run one more command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Start notes on Mars as a base"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Start notes on Mars as a base"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[main</span> <span class="er">(</span><span class="ex">root-commit</span><span class="kw">)</span> <span class="ex">f22b25e]</span> Start notes on Mars as a base</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a> <span class="ex">1</span> file changed, 1 insertion<span class="er">(</span><span class="ex">+</span><span class="kw">)</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a> <span class="ex">create</span> mode 100644 mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<pre><code>[main (root-commit) f22b25e] Start notes on Mars as a base
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mars.txt</code></pre>
 <p>When we run&nbsp;<code>git commit</code>, Git takes everything we have told it to save by using&nbsp;<code>git add</code>&nbsp;and stores a copy permanently inside the special&nbsp;<code>.git</code>&nbsp;directory. This permanent copy is called a&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#commit">commit</a>&nbsp;(or&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#revision">revision</a>) and its short identifier is&nbsp;<code>f22b25e</code>. Your commit may have another identifier.</p>
 <p>We use the&nbsp;<code>-m</code>&nbsp;flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -417,7 +394,9 @@ Note
 </div>
 </div>
 <p>If we run&nbsp;<code>git status</code>&nbsp;now:</p>
-<pre><code>$ git status</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <pre><code>On branch main
 nothing to commit, working tree clean</code></pre>
 <p>it tells us everything is up to date.</p>
@@ -425,20 +404,27 @@ nothing to commit, working tree clean</code></pre>
 <section id="viewing-the-commit-history" class="level2">
 <h2 class="anchored" data-anchor-id="viewing-the-commit-history">2.4 <strong>Viewing the Commit History</strong></h2>
 <p>If we want to know what we’ve done recently, we can ask Git to show us the project’s history using&nbsp;<code>git log</code>:</p>
-<pre><code>$ git log</code></pre>
-<pre><code>commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Vlad Dracula &lt;vlad@tran.sylvan.ia&gt;
 Date:   Thu Aug 22 09:51:46 2013 -0400
 
     Start notes on Mars as a base</code></pre>
 <p><code>git log</code>&nbsp;lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit’s full identifier (which starts with the same characters as the short identifier printed by the&nbsp;<code>git commit</code>&nbsp;command earlier), the commit’s author, when it was created, and the log message Git was given when the commit was created.</p>
 <p>let’s add more information to the file. (Again, open up your text editor to add and save your changes. Switch back to command line when you’re finished.</p>
-<pre><code>$ cat mars.txt</code></pre>
-<pre><code>Cold and dry, but everything is my favorite color
+<p><code>mars.txt</code>&nbsp;contains a new line, which we can verify by running:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman</code></pre>
 <p>When we run&nbsp;<code>git status</code>&nbsp;now, it tells us that a file it already knows about has been modified:</p>
-<pre><code>$ git status</code></pre>
-<pre><code>On branch main
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>On branch main
 Changes not staged for commit:
   (use "git add &lt;file&gt;..." to update what will be committed)
   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
@@ -448,9 +434,11 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
 <p>The last line is the key phrase: “no changes added to commit”. We have changed this file, but we haven’t told Git we will want to save those changes (which we do with&nbsp;<code>git add</code>) nor have we saved them (which we do with&nbsp;<code>git commit</code>).</p>
 <p>After reviewing our change, it’s time to commit it:</p>
-<pre><code>$ git add mars.txt
-$ git commit -m "Add concerns about effects of Mars' moons on Wolfman"</code></pre>
-<pre><code>[main 34961b1] Add concerns about effects of Mars' moons on Wolfman
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add mars.txt</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add concerns about effects of Mars' moons on Wolfman"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>[main 34961b1] Add concerns about effects of Mars' moons on Wolfman
  1 file changed, 1 insertion(+)</code></pre>
 <p>Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we’re adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but&nbsp;<em>not</em>commit some of our work drafting the conclusion (which we haven’t finished yet).</p>
 </section>

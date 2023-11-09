@@ -6,20 +6,11 @@ title: "2. Working Locally with Git"
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-```{css, echo=FALSE}
-.watch-out {
-  background-color: lightpink;
-  border: 3px solid red;
-  font-weight: bold;
-}
-```
-
 ## 2.1 **Creating a Repository**
 
 First, let's create a new directory in the `Desktop` folder for our work and then change the current working directory to the newly created one:
 
-```{bash class.source="watch-out"}
-#| code-copy: true
+```{bash}
 $ cd ~/Desktop
 $ mkdir planets
 $ cd planets
@@ -28,7 +19,6 @@ $ cd planets
 Then we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) \-- a place where Git can store versions of our files:
 
 ```{bash}
-#| code-copy: true
 $ git init
 ```
 
@@ -48,9 +38,10 @@ But if we add the `-a` flag to show everything, we can see that Git has create
 $ ls -a
 ```
 
-We get the follwoing output:
+We get the following output:
 
 ```{bash}
+#| code-block-border-left: "#31BAE9"
 #| code-copy: false
 .   ..  .git
 ```

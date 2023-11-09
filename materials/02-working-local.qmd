@@ -78,45 +78,45 @@ If you are using a different version of `git`, the exact wording of the output 
 
 First let's make sure we're still in the right directory. You should be in the `planets` directory.
 
-```{bash}         
+```{bash}
 $ cd ~/Desktop/planets
 ```
 
 Let's create a file called `mars.txt` that contains some notes about the Red Planet's suitability as a base. Open a new document named `mars.txt` using a plain text editor such as Notepad++. Type the text below:
 
-```{bash}         
+```{bash}
 Cold and dry, but everything is my favorite color
 ```
 
 After switching back to the GitBash command-line interface, let's verify that the file was properly created by running the list command (`ls`):
 
-```{bash}         
+```{bash}
 $ ls
 ```
 
 We should see the following file in our directory:
 
-```{bash}         
+```{bash}
 mars.txt
 ```
 
 `mars.txt` contains a single line, which we can verify by running:
 
-```{bash}         
+```{bash}
 $ cat mars.txt
 ```
 
-```{bash}         
+```{bash}
 Cold and dry, but everything is my favorite color
 ```
 
 If we check the status of our project again, Git tells us that it's noticed the new file:
 
-```{bash}         
+```{bash}
 $ git status
 ```
 
-```{bash}         
+```{bash}
 On branch main
 
 No commits yet
@@ -131,17 +131,17 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 The "untracked files" message means that there's a file in the directory that Git isn't keeping track of. We can tell Git to track a file using `git add`:
 
-```{bash}         
+```{bash}
 $ git add mars.txt
 ```
 
 and then check that the right thing happened:
 
-```{bash}         
+```{bash}
 $ git status
 ```
 
-```{bash}         
+```{bash}
 On branch main
 
 No commits yet
@@ -152,16 +152,15 @@ Changes to be committed:
     new file:   mars.txt
 ```
 
-
 ## 2.3 Committing Changes
 
 Git now knows that it's supposed to keep track of `mars.txt`, but it hasn't recorded these changes as a commit yet. To get it to do that, we need to run one more command:
 
-```{bash}         
+```{bash}
 $ git commit -m "Start notes on Mars as a base"
 ```
 
-```{bash}         
+```{bash}
 [main (root-commit) f22b25e] Start notes on Mars as a base
  1 file changed, 1 insertion(+)
  create mode 100644 mars.txt
@@ -190,9 +189,10 @@ On branch main
 nothing to commit, working tree clean
 ```
 
-it tells us everything is up to date. 
+it tells us everything is up to date.
 
 ## Our Commit History
+
 If we want to know what we've done recently, we can ask Git to show us the project's history using `git log`:
 
 ```         
@@ -254,8 +254,9 @@ $ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
 Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we're adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but *not*commit some of our work drafting the conclusion (which we haven't finished yet).
 
 ## Staging Area
+
 To allow for this, Git has a special *staging area* where it keeps track of things that have been added to the current [changeset](https://swcarpentry.github.io/git-novice/reference.html#changeset) but not yet committed.
 
-If you think of Git as taking snapshots of changes over the life of a project, git add specifies what will go in a snapshot (putting things in the staging area), and git commit then actually takes the snapshot, and makes a permanent record of it (as a commit). If you don’t have anything staged when you type git commit, Git will prompt you to use git commit -a or git commit --all, which is kind of like gathering everyone to take a group photo! However, it’s almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to the group photo simile, you might get an extra with incomplete makeup walking on the stage for the picture because you used -a!) Try to stage things manually, or you might find yourself searching for “git undo commit” more than you would like!
+If you think of Git as taking snapshots of changes over the life of a project, git add specifies what will go in a snapshot (putting things in the staging area), and git commit then actually takes the snapshot, and makes a permanent record of it (as a commit). If you don't have anything staged when you type git commit, Git will prompt you to use git commit -a or git commit --all, which is kind of like gathering everyone to take a group photo! However, it's almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to the group photo simile, you might get an extra with incomplete makeup walking on the stage for the picture because you used -a!) Try to stage things manually, or you might find yourself searching for "git undo commit" more than you would like!
 
-!()[https://github.com/bcgov/ds-intro-to-git/blob/main/png/tracking-changes.png]
+![The Git Staging Area](https://github.com/bcgov/ds-intro-to-git/blob/main/png/tracking-changes.png)

@@ -6,11 +6,19 @@ title: "2. Working Locally with Git"
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
+```{css, echo=FALSE}
+.watch-out {
+  background-color: lightpink;
+  border: 3px solid red;
+  font-weight: bold;
+}
+```
+
 ## 2.1 **Creating a Repository**
 
 First, let's create a new directory in the `Desktop` folder for our work and then change the current working directory to the newly created one:
 
-```{bash}
+```{bash class.source="watch-out"}
 #| code-copy: true
 $ cd ~/Desktop
 $ mkdir planets
@@ -43,6 +51,7 @@ $ ls -a
 We get the follwoing output:
 
 ```{bash}
+#| code-copy: false
 .   ..  .git
 ```
 
@@ -58,6 +67,7 @@ $ git checkout -b main
 We get the following output:
 
 ```{bash}
+#| code-copy: false
 Switched to a new branch 'main'
 ```
 
@@ -70,7 +80,8 @@ $ git status
 
 We get the following output:
 
-```{bash}         
+```{bash}
+#| code-copy: false
 On branch main
 
 No commits yet

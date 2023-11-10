@@ -55,8 +55,8 @@ Then create your PAT:
 2.  In the left sidebar, click Developer settings.
 3.  In the left sidebar, under Personal access tokens, click Tokens (classic).
 4.  Select Generate new token, then click Generate new token (classic).
-5.  In the "Note" field, give your token a descriptive name.
-6.  To give your token an expiration date, select Expiration. You have several options, choose what is best for you.
+5.  In the "Note" field, give your token a descriptive name. At some point you may use a second PAT and a name helps keep things straight but for now you could name it "work-2023" or "november-2023".
+6.  To give your token an expiration date, select Expiration. For first time users, 30 days is a good choice, after which time GitHub will send an email notification reminding you to renew your PAT.
 7.  Select the scopes you'd like to grant this token. The repo and user boxes should be sufficient for the workshop and most cases in general.
 8.  Click Generate token.
 9.  **Copy the new token to your clipboard and save to a text file for later.**

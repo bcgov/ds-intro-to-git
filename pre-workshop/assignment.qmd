@@ -4,14 +4,14 @@ title: "Pre-Workshop Assignment"
 
 ## Pre-workshop Assignment
 
-To make the most of our time together on the day of the workshop, we would like you to show up ready-to-go with the proper software installed and configured correctly on your local machine. After working through the installation instructions, please the following in a single Word or PDF document.
+To make the most of our time together on the day of the workshop, we would like you to show up ready-to-go with the proper software installed and configured correctly on your local machine. After working through the installation instructions, please include the following in a single Word or PDF document.
 
 #### 1. A screen shot of your git configurations
 
 Open the application Git Bash on your local computer and enter the following commands at the command prompt.
 
 ```         
-$ git config –list
+$ git config -–list
 ```
 
 Take a screen shot of the command-line output.

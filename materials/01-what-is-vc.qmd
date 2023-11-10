@@ -2,7 +2,7 @@
 title: "1. What is Version Control"
 ---
 
-## What is Version Control?
+## 1.1 What is Version Control?
 Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time. 
 
 Consider the following scenario: you and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic.  You want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated.  A colleague suggests using **version control** to manage your work. 
@@ -21,7 +21,7 @@ Unless multiple users make changes to the same section of the document - a confl
 
 A version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.
 
-## Why Version Control?
+## 1.2 Why Version Control?
 
 Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people.
 

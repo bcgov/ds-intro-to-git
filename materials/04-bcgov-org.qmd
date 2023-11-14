@@ -1,5 +1,5 @@
 ---
-title: "4. BCGOV GitHub Organization"
+title: "4. bcgov GitHub Organization"
 ---
 
 ## 

@@ -42,14 +42,14 @@ Teams are not the only ones to benefit from version control: lone researchers ca
 
 In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Some of the metadata that a repository contains includes, among other things, a historical record of changes in the repository, a set of commit objects, and a set of references to commit objects, called heads. 
 
-Essentially, a **version control repository** keeps track of a set of files in a project. It is like a regular project folder containing subfolders to organize your work, but with an additional `.git` folder in which to house metadata.  
+Essentially, a **version control repository** keeps track of a set of files in a project. It is like a regular project folder containing sub folders to organize your work, but with an additional `.git` folder in which to house metadata.  We will go into more detail on how the `.git` folder and metadata files are created during the workshop.
 
 Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:
 
 ```         
 ├──wes-analysis
 |  ├── data
-|  │   ├── wes-results.csv
+|  │   ├── wes-results
 |  │   │   ├── wes-results-2019.csv
 |  │   │   ├── wes-results-2020.csv
 |  │   │   ├── wes-results-2021.csv
@@ -63,5 +63,4 @@ Using the WES analysis example above, you and your colleagues may choose to stru
 |  ├── .git
 ```
 
-We will go into more detail on this during the workshop.
 

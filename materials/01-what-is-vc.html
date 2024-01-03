@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -241,8 +207,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#heres-some-code-to-copy" id="toc-heres-some-code-to-copy" class="nav-link active" data-scroll-target="#heres-some-code-to-copy">here’s some code to copy</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#what-is-version-control" id="toc-what-is-version-control" class="nav-link active" data-scroll-target="#what-is-version-control">1.1 What is Version Control?</a></li>
+  <li><a href="#why-version-control" id="toc-why-version-control" class="nav-link" data-scroll-target="#why-version-control">1.2 Why Version Control?</a></li>
+  <li><a href="#what-is-a-version-control-repository" id="toc-what-is-a-version-control-repository" class="nav-link" data-scroll-target="#what-is-a-version-control-repository">1.3 What is a Version Control Repository?</a></li>
   </ul>
 </nav>
     </div>
@@ -266,18 +233,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="heres-some-code-to-copy" class="level2">
-<h2 class="anchored" data-anchor-id="heres-some-code-to-copy">here’s some code to copy</h2>
-<div class="cell" data-code-copy="true">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] -0.32393564 -0.75191085 -0.65701141  1.53704901 -0.97099931  0.27509383
- [7] -0.18211724  0.03477038  1.92450325  1.35327006</code></pre>
+<section id="what-is-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-version-control">1.1 What is Version Control?</h2>
+<p><strong>Version control</strong>, also known as source control, is the practice of tracking and managing changes to software code. <strong>Version control systems</strong> are software tools that are used to help individuals and software development teams manage changes to code/documents over time.</p>
+<p>Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.</p>
+<p>We’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as Microsoft Word’s Track Changes and Google Docs’ version history.</p>
+<p>Version control systems start with a base version of the document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/what-is-vc-1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Changes Are Saved Sequentially</figcaption>
+</figure>
+</div>
+<p>Once you think of changes as separate from the document itself, you can then think about “playing back” different sets of changes on the base document, ultimately resulting in different versions of that document. For example, two users can make independent sets of changes on the same document.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/what-is-vc-2.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Different Versions Can be Saved and Merged</figcaption>
+</figure>
+</div>
+<p>Unless multiple users make changes to the same section of the document - a conflict - you can incorporate two sets of changes into the same base document.</p>
+<p>A version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.</p>
+</section>
+<section id="why-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="why-version-control">1.2 Why Version Control?</h2>
+<p>Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people.</p>
+<p>Version control is better than sharing files back and forth because:</p>
+<ul>
+<li><p>Nothing that is committed to version control is ever lost, unless you work really, really hard at it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.</p></li>
+<li><p>As we have this record of who made what changes when, we know who to ask if we have questions later on, and, if needed, revert to a previous version, much like the “undo” feature in an editor.</p></li>
+<li><p>When several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes. The version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).</p>
 </div>
 </div>
 </section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="what-is-a-version-control-repository" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-version-control-repository">1.3 What is a Version Control Repository?</h2>
+<p>In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Some of the metadata that a repository contains includes, among other things, a historical record of changes in the repository, a set of commit objects, and a set of references to commit objects, called heads.</p>
+<p>Essentially, a <strong>version control repository</strong> keeps track of a set of files in a project. It is like a regular project folder containing sub folders to organize your work, but with an additional <code>.git</code> folder in which to house metadata. We will go into more detail on how the <code>.git</code> folder and metadata files are created during the workshop.</p>
+<p>Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:</p>
+<pre><code>├──wes-analysis
+|  ├── data
+|  │   ├── wes-results
+|  │   │   ├── wes-results-2019.csv
+|  │   │   ├── wes-results-2020.csv
+|  │   │   ├── wes-results-2021.csv
+|  │   |   |── wes-results-2022.csv
+|  ├── doc
+|  ├── ref
+|  │   ├── references
+|  │   ├── images
+|  ├── plots
+|  ├── code
+|  ├── .git</code></pre>
 
 
 </section>

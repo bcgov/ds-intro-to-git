@@ -4,9 +4,9 @@ title: "1. What is Version Control"
 
 ## 1.1 What is Version Control?
 
-Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time.
+**Version control**, also known as source control, is the practice of tracking and managing changes to software code. **Version control systems** are software tools that help software teams manage changes to source code over time.
 
-Consider the following scenario: you and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using **version control** to manage your work.
+Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.
 
 We've all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as Microsoft Word's Track Changes and Google Docs' version history.
 
@@ -40,9 +40,11 @@ Teams are not the only ones to benefit from version control: lone researchers ca
 
 ## 1.3 What is a Version Control Repository?
 
-In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Some of the metadata that a repository contains includes, among other things, a historical record of changes in the repository, a set of commit objects, and a set of references to commit objects, called heads. We will go into more detail on these during the workshop.
+In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Some of the metadata that a repository contains includes, among other things, a historical record of changes in the repository, a set of commit objects, and a set of references to commit objects, called heads. 
 
-Essentially, a version control repository keeps track of a set of files in a project. Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:
+Essentially, a **version control repository** keeps track of a set of files in a project. It is like a regular project folder containing subfolders to organize your work, but with an additional `.git` folder in which to house metadata.  
+
+Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:
 
 ```         
 ├──wes-analysis
@@ -61,4 +63,5 @@ Essentially, a version control repository keeps track of a set of files in a pro
 |  ├── .git
 ```
 
-Which is essentially a regular project folder containing subfolders to organize your work, but with an additional `.git` folder in which to house the metadata.
+We will go into more detail on this during the workshop.
+

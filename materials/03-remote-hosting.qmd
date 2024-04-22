@@ -2,4 +2,24 @@
 title: "3. Remote Code Hosting and GitHub"
 ---
 
-## 
+```{r include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this ; the only thing missing is to copy changes from one repository to another.
+
+Systems like Git allow us to move work between two repositories. The repositories can live on separate computers or network locations. In practice, we often use one copy as a central hub, and keep it on the web rather than on someone’s laptop. Most programmers use a hosting service like GitHub to hold the central repositories; and this is true for many BC Government employees.
+
+If you recall, in the pre-workshop, you created a GitHub account and associated it with your GitHub handle (or ID). You also configured your computer with a token (PAT) in a way that should seamlessly allow us to to create a remote repository on GitHub that will be linked to our local repository. Then we will share the changes we’ve made to our current project with the world.
+
+## 3.1 **Creating a Remote Repository**
+
+Log in to GitHub, then click on the icon in the top right corner to create a new repository called `planets`:
+
+![](images/clipboard-3017811518.png)
+
+## 3.2 **Connecting to (Cloning) a Remote Repository**
+
+```{bash}
+$ 
+```

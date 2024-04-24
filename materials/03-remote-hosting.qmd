@@ -107,7 +107,7 @@ To https://github.com/<youusername>/planets.git
 
 ## **3.3 Ignoring Things**
 
-What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects where we do not know the Let’s create a few dummy files:
+What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects 
 
 ``` {bash}
 $ mkdir results 

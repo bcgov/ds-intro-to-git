@@ -103,8 +103,6 @@ To https://github.com/<youusername>/planets.git
 
 ![](../materials/images/github-repo-after-first-push.svg)
 
-**ADD SOMETHING about Windows Credential Manager here??**
-
 ## **3.3 Ignoring Things**
 
 What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.

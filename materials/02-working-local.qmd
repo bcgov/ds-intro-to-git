@@ -199,7 +199,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 
 `git log` lists all commits made to a repository in reverse chronological order. The listing for each commit includes the commit's full identifier (which starts with the same characters as the short identifier printed by the `git commit` command earlier), the commit's author, when it was created, and the log message Git was given when the commit was created.
 
-let's add more information to the file. (Again, open up your text editor to add and save your changes. Switch back to command line when you're finished.
+Let's add more information to the file. Again, open up your text editor to add and save your changes. Switch back to command line when you're finished.
 
 `mars.txt` contains a new line, which we can verify by running:
 

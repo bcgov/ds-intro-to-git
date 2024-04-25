@@ -103,7 +103,7 @@ To https://github.com/<youusername>/planets.git
 
 ![](../materials/images/github-repo-after-first-push.svg)
 
-**ADD SOMETHING about Windows Credential Manager (link to something on the net)**
+**ADD SOMETHING about Windows Credential Manager here??**
 
 ## **3.3 Ignoring Things**
 

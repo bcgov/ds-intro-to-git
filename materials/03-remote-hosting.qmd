@@ -109,10 +109,9 @@ To https://github.com/<youusername>/planets.git
 
 What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.
 
-Let's create a file called `a.csv` that contains some data about the Red Planet's average temperature. Open a new csv named `a.csv` using Excel and add two columns named 'Time' and 'Temperature'. Add a few rows of data if you want and close the file. It doesn't really matter what data is in the file, only that it is in our directory, planets. Type the ls command to be certain, then check the output of git status.
+Let's create a file called `a.csv` that contains some data about the Red Planet's average temperature. Open a new csv using Excel and add two columns named 'Time' and 'Temperature'. Add a few rows of data if you want and save it to the planets directory. Then check the output of git status.
 
 ```{bash}
-$ ls
 $ git status
 ```
 
@@ -126,17 +125,15 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Putting data files under version control is be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of **not pushing data to GitHub**. We accomplish this by creating a file in the root directory of our project called a **.gitignore**. Create a
+Putting data files under version control is be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of **not pushing data to GitHub**. We accomplish this by creating a file in the root directory of our project called a **.gitignore**.
 
-```{bash}
-$ nano .gitignore
-```
-
-Enter the following line into your .gitignore file using the editor. Then close and save the file with CTRL+X.
+Again, open up your favorite text editor and type the following line into the first line of the file:
 
 ``` bash-output-box
 *.csv
 ```
+
+Then save and close the file, naming it .gitignore. Don't forget the dot at the beginning!
 
 These patterns tell Git to ignore any file whose name ends in .csv and everything in the results directory. (If any of these files were already being tracked, Git would continue to track them.)
 
@@ -156,14 +153,14 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-And since everyone we’re sharing our repository with will probably want to ignore the same things that we’re ignoring, let’s add and commit .gitignore:
+And since everyone we’re sharing our repository with will probably want to ignore the same things that we’re ignoring, let’s add and commit our .gitignore:
 
 ```{bash}
 $ git add .gitignore
 $ git commit -m "Ignore data file"
 ```
 
-Now if we try to add our csv files, .gitignore helps us avoid accidentally adding files to the repository that we don’t want to track. It also gives us a way to override the .gitignore using the -f flag.
+Now if we try to add our csv files, .gitignore helps us avoid accidentally adding files to the repository that we don’t want to track. It also gives us a way to override the .gitignore with the -f flag.
 
 ```{bash}
 $ git add a.csv
@@ -175,7 +172,9 @@ a.csv
 Use -f if you really want to add them.
 ```
 
-We can also ignore full subfolders by adding the folder pathname to our .gitignore. Add another line to your .gitignore file so it looks like:
+We can also ignore full subfolders by adding the folder name to our .gitignore.
+
+Add another line to your .gitignore so it looks like:
 
 ``` bash-output-box
 *.csv
@@ -188,7 +187,7 @@ Make a subfolder in planets:
 $ mkdir results
 ```
 
-And then add a .txt file to that subfolder. Again, open up your favorite text editor and add some text to a file, then save your changes. Switch back to command line when you're finished and check the git status.
+And then add a .txt file to that subfolder. Again, open up your favorite text editor and add some text to a file and save your changes. Switch back to command line when you're finished and check the git status.
 
 ```{bash}
 $ git status
@@ -204,4 +203,4 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-The subfolder, results, and it's contents are ignored. This is handy for keeping all of your data in one place.
+The subfolder "results" and it's contents are ignored. This is handy for keeping all of your data in a single folder. You simply add the data folder to your .gitignore and the contents will not be accidentally pushed.

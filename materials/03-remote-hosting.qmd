@@ -123,7 +123,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Putting data files under version control is be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of **not pushing data to GitHub**. We accomplish this by creating a file in the root directory of our project called a **.gitignore**.
+Putting data files under version control can be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of **not pushing data to GitHub**. We accomplish this by creating a file in the root directory of our project called a **.gitignore**.
 
 Again, open up your favorite text editor and type the following line into the first line of the file:
 

@@ -20,7 +20,7 @@ If you recall, in the pre-workshop, you created a GitHub account and associated 
 
 2.  Click on the `+` icon in the top right corner of your personal dashboard, then `New Repository`
 
-3.  Name your repository “planets”. Further down the page are other options available to us that can be toggled to suit the repository's purpose. For this workshop it's fine to create a "Public" repository however since this repository will be connected to a local repository, it needs to be empty. Therefore, leave “Add a README file” unchecked, and select “None” as options for both “Add .gitignore” and “Add a license.”
+3.  Name your repository “planets”. Further down the page are other options available to us that can be toggled to suit the repository's purpose. For this workshop it's fine to create a "Public" repository. However, as this repository will be connected to a local repository, it needs to be empty. Therefore, leave “Add a README file” unchecked, and select “None” as options for both “Add .gitignore” and “Add a license.”
 
 4.  Click "Create Repository". As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository.
 

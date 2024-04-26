@@ -8,7 +8,7 @@ knitr::opts_chunk$set(eval = FALSE)
 
 ## 2.1 **Creating a Repository**
 
-First, let's create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile ownership H drive as a "safe" fplace for for our work and then change the current working directory to the newly created one:
+First, let's create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile ownership H drive as a "safe" place for our work. After changing to the C: drive, and creating a new directory, we will change the current working directory to the newly created one:
 
 ```{bash}
 $ cd c:/Users/BASHCROF

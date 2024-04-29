@@ -170,12 +170,11 @@ a.csv
 Use -f if you really want to add them.
 ```
 
-Go ahead and push your .gitignore to the remote so other people working on our project can use it too.  
+Go ahead and push your .gitignore to the remote so other people working on our project can use it too.
 
 ```{bash}
 $ git push
 ```
-
 
 We can also ignore full subfolders by adding the folder name to our .gitignore.
 

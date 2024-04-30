@@ -8,9 +8,9 @@ website:
       - href: index.qmd
         text: About The Workshop
       - text: "Pre-Workshop Materials"  
-#        menu:
-#         - pre-workshop/software-install.qmd
-#         - pre-workshop/assignment.qmd
+        menu:
+         - pre-workshop/software-install.qmd
+         - pre-workshop/assignment.qmd
       - text: "Slides"
         menu:
         - text: "1. What is Version Control"

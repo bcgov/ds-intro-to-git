@@ -12,8 +12,8 @@ website:
 #         - pre-workshop/software-install.qmd
 #         - pre-workshop/assignment.qmd
       - text: "Slides"
-#        menu:
-#        - text: "1. What is Version Control"
+        menu:
+        - text: "1. What is Version Control"
           href: slides/01-what-is-vc.qmd
           target: "_blank"
         - text: "2. Working Locally with Git"

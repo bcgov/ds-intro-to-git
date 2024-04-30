@@ -126,21 +126,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">About The Workshop</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-pre-workshop-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Pre-Workshop Materials</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-pre-workshop-materials">    
-        <li>
-    <a class="dropdown-item" href="../pre-workshop/software-install.html">
- <span class="dropdown-text">Installion Instructions and Set-Up</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../pre-workshop/assignment.html">
- <span class="dropdown-text">Pre-Workshop Assignment</span></a>
-  </li>  
-    </ul>
-  </li>
+  <li class="dropdown-header">
+ <span class="menu-text">Pre-Workshop Materials</span></li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Slides</span>
@@ -153,10 +140,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li>
     <a class="dropdown-item" href="../slides/02-working-local.html" target="_blank">
  <span class="dropdown-text">2. Working Locally with Git</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../slides/03-remote-hosting.html" target="_blank">
- <span class="dropdown-text">3. Remote Code Hosting and GitHub</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../slides/04-bcgov-org.html" target="_blank">
@@ -278,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this ; the only thing missing is to copy changes from one repository to another.</p>
+<p>Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.</p>
 <p>Systems like Git allow us to move work between two repositories. The repositories can live on separate computers or network locations. In practice, we often use one copy as a central hub, and keep it on the web rather than on someone’s laptop. Most programmers use a hosting service like GitHub to hold the central repositories; and this is true for many BC Government employees.</p>
 <p>If you recall, in the pre-workshop, you created a GitHub account and associated it with your GitHub handle (or ID). You also configured your computer with a token (PAT) in a way that should seamlessly allow us to to create a remote repository on GitHub that will be linked to our local repository. Then we will share the changes we’ve made to our current project with the world.</p>
 <section id="creating-a-remote-repository" class="level2">

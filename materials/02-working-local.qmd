@@ -6,7 +6,7 @@ title: "2. Working Locally with Git"
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-## 2.1 **Creating a Repository**
+## 2.1 Creating a Repository
 
 First, let's create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile ownership H drive as a "safe" place for our work. After changing to the C: drive, and creating a new directory, we will change the current working directory to the newly created one:
 
@@ -74,7 +74,7 @@ nothing to commit (create/copy files and use "git add" to track)
 
 If you are using a different version of `git`, the exact wording of the output might be slightly different.
 
-## 2.2 **Tracking Files**
+## 2.2 Tracking Files
 
 First let's make sure we're still in the right directory. You should be in the `planets` directory.
 
@@ -142,7 +142,7 @@ Changes to be committed:
     new file:   mars.txt
 ```
 
-## 2.3 **Committing Changes**
+## 2.3 Committing Changes
 
 Git now knows that it's supposed to keep track of `mars.txt`, but it hasn't recorded these changes as a commit yet. To get it to do that, we need to run one more command:
 
@@ -181,7 +181,7 @@ nothing to commit, working tree clean
 
 it tells us everything is up to date.
 
-## 2.4 **Viewing the Commit History**
+## 2.4 Viewing the Commit History
 
 If we want to know what we've done recently, we can ask Git to show us the project's history using `git log`:
 
@@ -245,7 +245,7 @@ $ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
 
 Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we're adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but *not* commit some of our work drafting the conclusion (which we haven't finished yet).
 
-## 2.5 **The Staging Area**
+## 2.5 The Staging Area
 
 To allow for this, Git has a special *staging area* where it keeps track of things that have been added to the current [changeset](https://swcarpentry.github.io/git-novice/reference.html#changeset) but not yet committed.
 

@@ -6,7 +6,7 @@ title: "3. Remote Code Hosting and GitHub"
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this ; the only thing missing is to copy changes from one repository to another.
+Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
 
 Systems like Git allow us to move work between two repositories. The repositories can live on separate computers or network locations. In practice, we often use one copy as a central hub, and keep it on the web rather than on someone’s laptop. Most programmers use a hosting service like GitHub to hold the central repositories; and this is true for many BC Government employees.
 

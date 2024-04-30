@@ -1,0 +1,15 @@
+{
+  "hash": "ef75d83e087674290f0a98c093cf3f7f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"1. What is Version Control\"\n---\n\n\n## here's some code to copy\n\n\n::: {.cell code-copy='true'}\n\n```{.r .cell-code}\nrnorm(10)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n [1] -0.4722502  0.1892460  1.7138764  0.5677753  0.1594253 -0.9535926\n [7] -0.3538479 -1.7178438 -0.7007003  0.6551711\n```\n\n\n:::\n:::\n\n\n## \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

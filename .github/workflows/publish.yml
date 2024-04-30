@@ -16,6 +16,10 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        
+      - name: Setup dependencies
+        run: |
+          R -e 'install.packages("rmarkdown")' 
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

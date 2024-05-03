@@ -277,37 +277,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="creating-a-repository" class="level2">
 <h2 class="anchored" data-anchor-id="creating-a-repository">2.1 Creating a Repository</h2>
-<p>First, let’s create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile ownership H drive as a “safe” place for our work. After changing to the C: drive, and creating a new directory, we will change the current working directory to the newly created one:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd c:/Users/BASHCROF</span>
+<p>First, let’s create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile ownership H drive as a “safe” place for our work. We will start by opening a <code>git bash</code> terminal, changing to the C: drive, creating a new directory, and changing the current working directory to the newly created one:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd c:/users/lfredric</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir planets</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd planets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+An aside on <strong>bash</strong> jargon
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Git is, at its core, a command line set of tools. While there are tips, tools and tricks to use Git via a graphical interface, this often hides the core functionality of what Git is really doing ‘behind the scenes.’ This is why we choose to introduce Git in its purest form. Unfortunately, this means that some familiarity with the command line is needed. Luckily, the amount required to understand is minimal!</p>
+<p>To work our way through a git repository, we only need to access three main <code>bash</code> commands. These are all associated with moving the current working directory that is associated with your open git bash terminal.</p>
+<ul>
+<li><code>cd</code>: This command allows us to move the current working directory associated with the open bash terminal to a new directory. It can be used in the following ways:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd path/to/directory       <span class="co"># Go to specified directory - "quotes" are needed if there are spaces in the path</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ..                      <span class="co"># Go up one directory level</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>mkdir</code>: This command allows us to create a new directory within the current working directory. It is used by specifying the name of the new directory.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir new_directory        <span class="co"># Create specified directory</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>ls</code>: This command allows us to inspect the contents of the current working directory. It can be used in the following ways:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls                         <span class="co"># List directories and files</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-a</span>                      <span class="co"># List directorings and files, including hidden</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note that if you are ever unsure of which working directory you are in, it should be visible as part of the command prompt. If not visible, you can request it via the <code>pwd</code> bash command.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="../figures/bash-commands.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>The command line, and current working directory.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="../figures/mkdir-planets.png" class="img-fluid figure-img" style="width:40.0%"></p>
+<figcaption>New folder in the user/username directory.</figcaption>
+</figure>
 </div>
 <p>Then we tell Git to make&nbsp;<code>planets</code>&nbsp;a&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#repository">repository</a>&nbsp;– a place where Git can store versions of our files:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>It is important to note that&nbsp;<code>git init</code>&nbsp;will create a repository that can include subdirectories and their files—there is no need to create separate repositories nested within the&nbsp;<code>planets</code>&nbsp;repository, whether subdirectories are present from the beginning or added later. Also, note that the creation of the&nbsp;<code>planets</code>&nbsp;directory and its initialization as a repository are completely separate processes.</p>
 <p>If we use&nbsp;<code>ls</code>&nbsp;to show the directory’s contents, it appears that nothing has changed:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>But if we add the&nbsp;<code>-a</code>&nbsp;flag to show everything, we can see that Git has created a hidden directory within&nbsp;<code>planets</code>&nbsp;called&nbsp;<code>.git</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We get the following output:</p>
 <pre class="bash-output-box"><code>.   ..  .git</code></pre>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="../figures/git-init-planets.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>We can see the hidden folder in Folder Explorer as well.</figcaption>
+</figure>
+</div>
 <p>Git uses this special subdirectory to store all the information about the project, including the tracked files and sub-directories located within the project’s directory. If we ever delete the&nbsp;<code>.git</code>subdirectory, we will lose the project’s history.</p>
 <p>Next, we will change the default branch to be called&nbsp;<code>main</code>. This might be the default branch depending on your settings and version of git. See the&nbsp;<a href="https://swcarpentry.github.io/git-novice/02-setup.html#default-git-branch-naming">setup episode</a>&nbsp;for more information on this change.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">-b</span> main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout <span class="at">-b</span> main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We get the following output:</p>
 <pre class="bash-output-box"><code>Switched to a new branch 'main'</code></pre>
 <p>We can check that everything is set up correctly by asking Git to tell us the status of our project:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We get the following output:</p>
 <pre class="bash-output-box"><code>On branch main
@@ -320,20 +362,38 @@ nothing to commit (create/copy files and use "git add" to track)</code></pre>
 <section id="tracking-files" class="level2">
 <h2 class="anchored" data-anchor-id="tracking-files">2.2 Tracking Files</h2>
 <p>First let’s make sure we’re still in the right directory. You should be in the&nbsp;<code>planets</code>&nbsp;directory.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/Desktop/planets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd c:/users/lfredric/planets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note that you can also tell you are in a Git repository, and not a regular directory, from the Git Bash command prompt. The very last part of the prompt (before the $) should contain, in brackets, the name of the <code>branch</code> we are on. Don’t worry about branches right now, but having <code>main</code> present in the command prompt tells us we are in a Git repository!</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="../figures/check-in-repo.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Repository vs Directory.</figcaption>
+</figure>
 </div>
 <p>Let’s create a file called&nbsp;<code>mars.txt</code>&nbsp;that contains some notes about the Red Planet’s suitability as a base. Open a new document named <code>mars.txt</code> using a plain text editor such as Notepad++. Add the following line to <code>mars.txt</code> and save the file.</p>
 <pre class="{bash-output-box}"><code>Cold and dry, but everything is my favorite color</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To bash or not to bash?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that while Git itself is inherently a command line program, the rest of the files we create within our repository do not have to be made in the same way! We can create subfolders, add documents, code, etc. using our favourite tools. This may be Microsoft Word, VS Code, RStudio, or even vim for the hard core. Once the new items have been added, head back to the git bash terminal to do any Git command magic necessary.</p>
+</div>
+</div>
 <p>After switching back to the GitBash command-line interface, let’s verify that the file was properly created by running the list command (<code>ls</code>):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We should see the following file in our directory:</p>
 <pre class="bash-output-box"><code>mars.txt</code></pre>
 <p>If we check the status of our project again, Git tells us that it’s noticed the new file:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>On branch main
 
@@ -346,12 +406,10 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 <p>The “untracked files” message means that there’s a file in the directory that Git isn’t keeping track of. We can tell Git to track a file using&nbsp;<code>git add</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and then check that the right thing happened:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>On branch main
 
@@ -366,7 +424,7 @@ Changes to be committed:
 <h2 class="anchored" data-anchor-id="committing-changes">2.3 Committing Changes</h2>
 <p>Git now knows that it’s supposed to keep track of&nbsp;<code>mars.txt</code>, but it hasn’t recorded these changes as a commit yet. To get it to do that, we need to run one more command:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Start notes on Mars as a base"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Start notes on Mars as a base"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>[main (root-commit) f22b25e] Start notes on Mars as a base
  1 file changed, 1 insertion(+)
@@ -401,7 +459,7 @@ Note
 </div>
 <p>If we run&nbsp;<code>git status</code>&nbsp;now:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>On branch main
 nothing to commit, working tree clean</code></pre>
@@ -411,7 +469,7 @@ nothing to commit, working tree clean</code></pre>
 <h2 class="anchored" data-anchor-id="viewing-the-commit-history">2.4 Viewing the Commit History</h2>
 <p>If we want to know what we’ve done recently, we can ask Git to show us the project’s history using&nbsp;<code>git log</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Vlad Dracula &lt;vlad@tran.sylvan.ia&gt;
@@ -422,13 +480,13 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 <p>Let’s add more information to the file. Again, open up your text editor to add and save your changes. Switch back to command line when you’re finished.</p>
 <p><code>mars.txt</code>&nbsp;contains a new line, which we can verify by running:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat mars.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>Cold and dry, but everything is my favorite color
 The two moons may be a problem for Wolfman</code></pre>
 <p>When we run&nbsp;<code>git status</code>&nbsp;now, it tells us that a file it already knows about has been modified:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>On branch main
 Changes not staged for commit:
@@ -441,8 +499,8 @@ no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
 <p>The last line is the key phrase: “no changes added to commit”. We have changed this file, but we haven’t told Git we will want to save those changes (which we do with&nbsp;<code>git add</code>) nor have we saved them (which we do with&nbsp;<code>git commit</code>).</p>
 <p>After reviewing our change, it’s time to commit it:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add mars.txt</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add concerns about effects of Mars' moons on Wolfman"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add mars.txt</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add concerns about effects of Mars' moons on Wolfman"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>[main 34961b1] Add concerns about effects of Mars' moons on Wolfman
  1 file changed, 1 insertion(+)</code></pre>
@@ -451,7 +509,7 @@ no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
 <section id="the-staging-area" class="level2">
 <h2 class="anchored" data-anchor-id="the-staging-area">2.5 The Staging Area</h2>
 <p>To allow for this, Git has a special&nbsp;<em>staging area</em>&nbsp;where it keeps track of things that have been added to the current&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#changeset">changeset</a>&nbsp;but not yet committed.</p>
-<p>If you think of Git as taking snapshots of changes over the life of a project, git add specifies what will go in a snapshot (putting things in the staging area), and git commit then actually takes the snapshot, and makes a permanent record of it (as a commit). If you don’t have anything staged when you type git commit, Git will prompt you to use git commit -a or git commit –all, which is kind of like gathering everyone to take a group photo! However, it’s almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to the group photo simile, you might get an extra with incomplete makeup walking on the stage for the picture because you used -a!) Try to stage things manually, or you might find yourself searching for “git undo commit” more than you would like!</p>
+<p>If you think of Git as taking snapshots of changes over the life of a project, <code>git add</code> specifies what will go in a snapshot (putting things in the staging area), and <code>git commit</code> then actually takes the snapshot, and makes a permanent record of it (as a commit). If you don’t have anything staged when you type git commit, Git will prompt you to use git commit -a or git commit –all, which is kind of like gathering everyone to take a group photo! However, it’s almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to the group photo simile, you might get an extra with incomplete makeup walking on the stage for the picture because you used -a!) Try to stage things manually, or you might find yourself searching for “git undo commit” more than you would like!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../figures/tracking-changes.png" class="img-fluid figure-img"></p>

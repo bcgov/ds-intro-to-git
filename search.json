@@ -4,14 +4,14 @@
     "href": "slides/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -1.59724257 -0.32856433 -0.67443743 -0.41920973 -1.52900790  0.33018355\n [7] -0.52586024 -0.02880193 -0.58149409 -0.98814775"
+    "text": "rnorm(10)\n\n [1] -0.79739352 -0.92947901  0.21429920  0.29461121  0.85845701 -0.23239679\n [7]  1.10727378  0.09544023 -0.11381780 -0.38833443"
   },
   {
     "objectID": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1] -1.59724257 -0.32856433 -0.67443743 -0.41920973 -1.52900790  0.33018355\n [7] -0.52586024 -0.02880193 -0.58149409 -0.98814775"
+    "text": "rnorm(10)\n\n [1] -0.79739352 -0.92947901  0.21429920  0.29461121  0.85845701 -0.23239679\n [7]  1.10727378  0.09544023 -0.11381780 -0.38833443"
   },
   {
     "objectID": "index.html",
@@ -130,6 +130,66 @@
       "About The Workshop",
       "Course Sections",
       "2. Working Locally with Git"
+    ]
+  },
+  {
+    "objectID": "materials/04-bcgov-org.html",
+    "href": "materials/04-bcgov-org.html",
+    "title": "4. bcgov GitHub Organization",
+    "section": "",
+    "text": "The bcgov GitHub organization on GitHub.com is the only approved venue for Open Source collaboration on Province of British Columbia files.\nIn the pre-work you created a GitHUb account. You may use this GitHub account for Open Source Project with the Province of British Columbia. You can have more than one email address associated with your account, but at minimum your work email needs to be associated with your account.",
+    "crumbs": [
+      "About The Workshop",
+      "Course Sections",
+      "4. bcgov GitHub Organization"
+    ]
+  },
+  {
+    "objectID": "materials/04-bcgov-org.html#what-is-the-bcgov-organization-framework",
+    "href": "materials/04-bcgov-org.html#what-is-the-bcgov-organization-framework",
+    "title": "4. bcgov GitHub Organization",
+    "section": "",
+    "text": "The bcgov GitHub organization on GitHub.com is the only approved venue for Open Source collaboration on Province of British Columbia files.\nIn the pre-work you created a GitHUb account. You may use this GitHub account for Open Source Project with the Province of British Columbia. You can have more than one email address associated with your account, but at minimum your work email needs to be associated with your account.",
+    "crumbs": [
+      "About The Workshop",
+      "Course Sections",
+      "4. bcgov GitHub Organization"
+    ]
+  },
+  {
+    "objectID": "materials/04-bcgov-org.html#bcgov-policy-framework-and-licensing",
+    "href": "materials/04-bcgov-org.html#bcgov-policy-framework-and-licensing",
+    "title": "4. bcgov GitHub Organization",
+    "section": "4.2 bcgov policy framework and licensing",
+    "text": "4.2 bcgov policy framework and licensing\nadhere to the minimum content requirements for establishing README.md, CONTRIBUTING.md and LICENSE files.",
+    "crumbs": [
+      "About The Workshop",
+      "Course Sections",
+      "4. bcgov GitHub Organization"
+    ]
+  },
+  {
+    "objectID": "materials/04-bcgov-org.html#code-sharing",
+    "href": "materials/04-bcgov-org.html#code-sharing",
+    "title": "4. bcgov GitHub Organization",
+    "section": "4.3 code-sharing",
+    "text": "4.3 code-sharing",
+    "crumbs": [
+      "About The Workshop",
+      "Course Sections",
+      "4. bcgov GitHub Organization"
+    ]
+  },
+  {
+    "objectID": "materials/04-bcgov-org.html#bcgov-c-and-bcgov-enterprise",
+    "href": "materials/04-bcgov-org.html#bcgov-c-and-bcgov-enterprise",
+    "title": "4. bcgov GitHub Organization",
+    "section": "4.4 bcgov-c and bcgov enterprise",
+    "text": "4.4 bcgov-c and bcgov enterprise",
+    "crumbs": [
+      "About The Workshop",
+      "Course Sections",
+      "4. bcgov GitHub Organization"
     ]
   },
   {

@@ -394,9 +394,12 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 <p>Putting data files under version control can be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of <strong>not pushing data to GitHub</strong>. We accomplish this by creating a file in the root directory of our project called a <strong>.gitignore</strong>.</p>
-<p>Again, open up your favorite text editor and type the following line into the first line of the file:</p>
+<p>.gitignore files are plain text files; you can open the file with your chosen text editor. Open up your favorite text editor and type the following line into the first line of the file:</p>
 <pre class="bash-output-box"><code>*.csv</code></pre>
 <p>Then save and close the file, naming it .gitignore. Don’t forget the dot at the beginning!</p>
+<div class="{callout-note}">
+<p>Although a .gitignore is a plain text file, it doesn’t carry the “.txt” extension. To be sure you aren’t saving a .gitignore.txt file, check the “Hidden Items” check box under Show/hide in your File Explorer Window.</p>
+</div>
 <p>These patterns tell Git to ignore any file whose name ends in .csv and everything in the results directory. (If any of these files were already being tracked, Git would continue to track them.)</p>
 <p>Once we have created this file, the output of git status is much cleaner:</p>
 <div class="cell">
@@ -409,6 +412,9 @@ Untracked files:
     .gitignore
 
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+<div class="{callout-note}">
+<p>On Unix-based operating system these files are called hidden files but on a PC they are not hidden. As Git Bash provides a Unix-like environments, to see your .gitignore in Git Bash, type “ls -a”.</p>
+</div>
 <p>And since everyone we’re sharing our repository with will probably want to ignore the same things that we’re ignoring, let’s add and commit our .gitignore:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .gitignore</span>
@@ -483,7 +489,7 @@ Note
 <p>You won’t need to give anyone access on GitHub, because GitHub will recognize both contributors as you.</p>
 </div>
 </div>
-<p>You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file and save in your cloned repository.</p>
+<p>You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file and save it in your cloned repository.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat pluto.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>

@@ -8,17 +8,52 @@ knitr::opts_chunk$set(eval = FALSE)
 
 ## 2.1 Creating a Repository
 
-First, let's create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile ownership H drive as a "safe" place for our work. After changing to the C: drive, and creating a new directory, we will change the current working directory to the newly created one:
+First, let's create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile ownership H drive as a "safe" place for our work. We will start by opening a `git bash` terminal, changing to the C: drive, creating a new directory, and changing the current working directory to the newly created one:
 
-```{bash}
-$ cd c:/Users/BASHCROF
+```bash
+$ cd c:/users/lfredric
 $ mkdir planets
 $ cd planets
 ```
 
+::: {.callout-tip collapse="true"}
+## An aside on **bash** jargon
+
+Git is, at its core, a command line set of tools. While there are tips, tools and tricks to use Git via a graphical interface, this often hides the core functionality of what Git is really doing 'behind the scenes.' This is why we choose to introduce Git in its purest form. Unfortunately, this means that some familiarity with the command line is needed. Luckily, the amount required to understand is minimal! 
+
+To work our way through a git repository, we only need to access three main `bash` commands. These are all associated with moving the current working directory that is associated with your open git bash terminal. 
+
+* `cd`: This command allows us to move the current working directory associated with the open bash terminal to a new directory. It can be used in the following ways: 
+
+```bash
+$ cd path/to/directory       # Go to specified directory - "quotes" are needed if there are spaces in the path
+$ cd ..                      # Go up one directory level
+```
+
+* `mkdir`: This command allows us to create a new directory within the current working directory. It is used by specifying the name of the new directory. 
+
+```bash
+$ mkdir new_directory        # Create specified directory
+```
+
+* `ls`: This command allows us to inspect the contents of the current working directory. It can be used in the following ways:
+
+```bash
+$ ls                         # List directories and files
+$ ls -a                      # List directorings and files, including hidden
+```
+
+Note that if you are ever unsure of which working directory you are in, it should be visible as part of the command prompt. If not visible, you can request it via the `pwd` bash command. 
+
+![The command line, and current working directory.](../figures/bash-commands.png){width=70% fig-align="left"}
+
+:::
+
+![New folder in the user/username directory.](../figures/mkdir-planets.png){width=40% fig-align="left"}
+
 Then we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) -- a place where Git can store versions of our files:
 
-```{bash}
+```bash
 $ git init
 ```
 
@@ -26,13 +61,13 @@ It is important to note that `git init` will create a repository that can incl
 
 If we use `ls` to show the directory's contents, it appears that nothing has changed:
 
-```{bash}
+```bash
 $ ls
 ```
 
 But if we add the `-a` flag to show everything, we can see that Git has created a hidden directory within `planets` called `.git`:
 
-```{bash}
+```bash
 $ ls -a
 ```
 
@@ -41,6 +76,8 @@ We get the following output:
 ``` bash-output-box
 .   ..  .git
 ```
+
+![We can see the hidden folder in Folder Explorer as well.](../figures/git-init-planets.png){width=70% fig-align="left"}
 
 Git uses this special subdirectory to store all the information about the project, including the tracked files and sub-directories located within the project's directory. If we ever delete the `.git`subdirectory, we will lose the project's history.
 
@@ -78,15 +115,25 @@ If you are using a different version of `git`, the exact wording of the output 
 
 First let's make sure we're still in the right directory. You should be in the `planets` directory.
 
-```{bash}
-$ cd ~/Desktop/planets
+```bash
+$ cd c:/users/lfredric/planets
 ```
+
+Note that you can also tell you are in a Git repository, and not a regular directory, from the Git Bash command prompt. The very last part of the prompt (before the $) should contain, in brackets, the name of the `branch` we are on. Don't worry about branches right now, but having `main` present in the command prompt tells us we are in a Git repository!
+
+![Repository vs Directory.](../figures/check-in-repo.png){width=70% fig-align="left"}
 
 Let's create a file called `mars.txt` that contains some notes about the Red Planet's suitability as a base. Open a new document named `mars.txt` using a plain text editor such as Notepad++. Add the following line to `mars.txt` and save the file.
 
 ```{bash-output-box}
 Cold and dry, but everything is my favorite color
 ```
+
+::: callout-tip
+## To bash or not to bash?
+
+Note that while Git itself is inherently a command line program, the rest of the files we create within our repository do not have to be made in the same way! We can create subfolders, add documents, code, etc. using our favourite tools. This may be Microsoft Word, VS Code, RStudio, or even vim for the hard core. Once the new items have been added, head back to the git bash terminal to do any Git command magic necessary.  
+:::
 
 After switching back to the GitBash command-line interface, let's verify that the file was properly created by running the list command (`ls`):
 
@@ -121,7 +168,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 The "untracked files" message means that there's a file in the directory that Git isn't keeping track of. We can tell Git to track a file using `git add`:
 
-```{bash}
+```bash
 $ git add mars.txt
 ```
 
@@ -249,6 +296,6 @@ Git insists that we add files to the set we want to commit before actually commi
 
 To allow for this, Git has a special *staging area* where it keeps track of things that have been added to the current [changeset](https://swcarpentry.github.io/git-novice/reference.html#changeset) but not yet committed.
 
-If you think of Git as taking snapshots of changes over the life of a project, git add specifies what will go in a snapshot (putting things in the staging area), and git commit then actually takes the snapshot, and makes a permanent record of it (as a commit). If you don't have anything staged when you type git commit, Git will prompt you to use git commit -a or git commit --all, which is kind of like gathering everyone to take a group photo! However, it's almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to the group photo simile, you might get an extra with incomplete makeup walking on the stage for the picture because you used -a!) Try to stage things manually, or you might find yourself searching for "git undo commit" more than you would like!
+If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies what will go in a snapshot (putting things in the staging area), and `git commit` then actually takes the snapshot, and makes a permanent record of it (as a commit). If you don't have anything staged when you type git commit, Git will prompt you to use git commit -a or git commit --all, which is kind of like gathering everyone to take a group photo! However, it's almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to the group photo simile, you might get an extra with incomplete makeup walking on the stage for the picture because you used -a!) Try to stage things manually, or you might find yourself searching for "git undo commit" more than you would like!
 
 ![The Git Staging Area](../figures/tracking-changes.png)

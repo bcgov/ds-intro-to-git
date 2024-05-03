@@ -449,13 +449,12 @@ nothing added to commit but untracked files present (use "git add" to track)</co
 <section id="pulling-changes-from-github" class="level2">
 <h2 class="anchored" data-anchor-id="pulling-changes-from-github">3.4 Pulling changes from GitHub</h2>
 <p>Git allows you to work collaboratively, with multiple people making changes to the same repo and sharing those changes through GitHub. We’ve seen how to create a repository and push changes to it; now we will see how to pull another person’s changes from Github.</p>
-<p>Start by opening a second terminal window. This window will represent your partner, working on another computer. You won’t need to give anyone access on GitHub, because both ‘partners’ are you.</p>
-<p>In the second window, navigate to the folder one level “up” in the directory tree from where you have your planets repository.</p>
+<p>Start by opening a second terminal window. This window will represent your colleague, working on another computer. In the second window, navigate to the folder one level “up” in the directory tree from where you have your planets repository.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>planets</code></pre>
-<p>you don’t want to overwrite your first version of planets.git, so you will clone the planets repository to a different location.</p>
+<p>You don’t want to overwrite your first version of planets.git, so you will clone the planets repository to a different location.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir collab</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd collab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -471,6 +470,19 @@ remote: Compressing objects: 100% (5/5), done.
 remote: Total 10 (delta 2), reused 10 (delta 2), pack-reused 0
 Receiving objects: 100% (10/10), done.
 Resolving deltas: 100% (2/2), done.</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You won’t need to give anyone access on GitHub, because GitHub will recognize both contributors as you.</p>
+</div>
+</div>
 <p>You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file and save in your cloned repository.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat pluto.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -492,8 +504,7 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/&lt;yourusername&gt;/planets.git
-   3abcea2..b792d59  main -&gt; main
-</code></pre>
+   3abcea2..b792d59  main -&gt; main</code></pre>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -507,11 +518,17 @@ Note
 <p>We didn’t have to create a remote called origin: Git uses this name by default when we clone a repository. (This is why origin was a sensible choice earlier when we were setting up remotes by hand.)</p>
 </div>
 </div>
-<p>To download the your changes from GitHub, switch to the other bash window (the one with the original repository) and enter:</p>
+<p>To download the your changes from GitHub, switch back to the bash window (where you were working in your original repository) and enter:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>``<code>bash-output-box From https://github.com/&lt;yourusername&gt;/planets  * branch            main       -&gt; FETCH_HEAD Updating 3abcea2..b792d59 Fast-forward  pluto.txt | 1 +  1 file changed, 1 insertion(+)  create mode 100644 pluto.txt</code></p>
+<pre class="bash-output-box"><code>From https://github.com/&lt;yourusername&gt;/planets
+ * branch            main       -&gt; FETCH_HEAD
+Updating 3abcea2..b792d59
+Fast-forward
+ pluto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 pluto.txt</code></pre>
 <p>Now the three repositories (original local, second local, and the one on GitHub) are back in sync.</p>
 
 

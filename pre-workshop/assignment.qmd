@@ -10,7 +10,7 @@ To make the most of our time together on the day of the workshop, we would like 
 
 Open the application Git Bash on your local computer and enter the following commands at the command prompt.
 
-```         
+```bash         
 $ git config -–list
 ```
 
@@ -19,3 +19,5 @@ Take a screen shot of the command-line output.
 #### 2. Your GitHub handle.
 
 You can find this by signing in to GitHub and clicking on your avatar at the top right. Your GitHub handle is in bold font above your name.
+
+![Your GitHub Handle](../figures/github-handle.png){width=50% fig-align="left"}

@@ -1,5 +1,5 @@
 ---
-title: "Installion Instructions and Set-Up"
+title: "Installation Instructions and Set-Up"
 ---
 
 ## Getting Started with GitHub
@@ -8,7 +8,9 @@ title: "Installion Instructions and Set-Up"
 
 As part of this workshop we will be connecting and pushing some sample code to GitHub, therefore you'll need to create a GitHub account. In general, creating a GitHub account can be a great way to collaborate on open-source projects, showcase your work, and learn from others.
 
-1.  Go to https://github.com and click "Sign up" at the top-right of the window.
+1.  Go to [https://github.com](https://github.com) and click "Sign up" at the top-right of the window.
+    * Note that this does **NOT** have to be your BC gov email (but if you want one just for government use, feel free to use your BC gov email). 
+    * If you already have a personal github account, that is just fine! This can be connected to your BC gov email at a later date.
 2.  Follow the step-by-step instructions to create an account.
 3.  Verify your email address with GitHub.
 
@@ -18,7 +20,7 @@ Optional reading: [Configuring your GitHub account](https://docs.github.com/en/g
 
 When we sign in to GitHub on the web, we are signing into our application account created in step 1. This is where we manage our profile settings, set our passwords, and browse repositories. It is possible to edit repository content from GitHub although editing is typically performed in a local application such as RStudio, VS Code or a text editor. We will go into more detail on that in the course workshop.
 
-1.  Go to https://github.com/ and click "Sign In" (top right corner).\
+1.  Go to [https://github.com/](https://github.com) and click "Sign In" (top right corner).\
 2.  Enter either your username or your email address, and password created in Step 1.
 
 ### 3. Configure Multi-Factor authentication (2FA)
@@ -92,9 +94,9 @@ On a command line, Git commands are written as `git verb options`, where `verb` 
 
 In our workshop, we will be interacting with [GitHub](https://github.com/) and so our configured email address should be the same as the one used when setting up your GitHub account. Most likely this will be your governement email.
 
-Below is an example configuration, please type in the commands using your name and email address.
+Below is an example configuration, please type in the commands using your name and email address. For Windows users, these will be typed into a `Git Bash` terminal (search for `Git Bash` from the search bar to create a new window). For Mac users, these will be typed into the `Terminal`. 
 
-```         
+```bash       
 $ git config --global user.name "Your Name in Quotes"
 $ git config --global user.email "your_email@gmail.com"
 ```
@@ -107,7 +109,7 @@ The two commands we just ran above only need to be run once: the flag `--global`
 
 You can check your settings at any time:
 
-```         
+```bash         
 $ git config --list
 ```
 
@@ -117,7 +119,7 @@ You can change your configuration as many times as you want: use the same comman
 
 Always remember that if you forget a `git` command, you can access the list of commands by using `-h` and access the Git manual by using `--help` :
 
-```         
+```bash         
 $ git config -h
 $ git config --help
 ```
@@ -126,4 +128,6 @@ While viewing the manual, remember the `:` is a prompt waiting for commands and 
 
 ## Additional Resources
 
-https://github.com/bcgov/BC-Policy-Framework-For-GitHub. Get added to the BC Government GitHub Org ("BCGov") https://just-ask.developer.gov.bc.ca/
+[https://github.com/bcgov/BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub)
+
+Get added to the BC Government GitHub Org ("BCGov"): [https://just-ask.developer.gov.bc.ca/](https://just-ask.developer.gov.bc.ca/)

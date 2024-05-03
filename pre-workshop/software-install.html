@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Version Control - Installion Instructions and Set-Up</title>
+<title>Introduction to Version Control - Installation Instructions and Set-Up</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -99,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-pre-workshop-materials">    
         <li>
     <a class="dropdown-item" href="../pre-workshop/software-install.html">
- <span class="dropdown-text">Installion Instructions and Set-Up</span></a>
+ <span class="dropdown-text">Installation Instructions and Set-Up</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../pre-workshop/assignment.html">
@@ -137,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Installion Instructions and Set-Up</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Installation Instructions and Set-Up</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -229,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Installion Instructions and Set-Up</h1>
+<h1 class="title">Installation Instructions and Set-Up</h1>
 </div>
 
 
@@ -252,7 +286,11 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="create-your-github-account">1. Create your GitHub Account</h3>
 <p>As part of this workshop we will be connecting and pushing some sample code to GitHub, therefore you’ll need to create a GitHub account. In general, creating a GitHub account can be a great way to collaborate on open-source projects, showcase your work, and learn from others.</p>
 <ol type="1">
-<li>Go to https://github.com and click “Sign up” at the top-right of the window.</li>
+<li>Go to <a href="https://github.com">https://github.com</a> and click “Sign up” at the top-right of the window.
+<ul>
+<li>Note that this does <strong>NOT</strong> have to be your BC gov email (but if you want one just for government use, feel free to use your BC gov email).</li>
+<li>If you already have a personal github account, that is just fine! This can be connected to your BC gov email at a later date.</li>
+</ul></li>
 <li>Follow the step-by-step instructions to create an account.</li>
 <li>Verify your email address with GitHub.</li>
 </ol>
@@ -262,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="login-to-your-github-account">2. Login to your GitHub Account</h3>
 <p>When we sign in to GitHub on the web, we are signing into our application account created in step 1. This is where we manage our profile settings, set our passwords, and browse repositories. It is possible to edit repository content from GitHub although editing is typically performed in a local application such as RStudio, VS Code or a text editor. We will go into more detail on that in the course workshop.</p>
 <ol type="1">
-<li>Go to https://github.com/ and click “Sign In” (top right corner).<br>
+<li>Go to <a href="https://github.com">https://github.com/</a> and click “Sign In” (top right corner).<br>
 </li>
 <li>Enter either your username or your email address, and password created in Step 1.</li>
 </ol>
@@ -339,30 +377,31 @@ ul.task-list li input[type="checkbox"] {
 <section id="set-user.name-user.email" class="level4">
 <h4 class="anchored" data-anchor-id="set-user.name-user.email">Set user.name &amp; user.email</h4>
 <p>In our workshop, we will be interacting with <a href="https://github.com/">GitHub</a> and so our configured email address should be the same as the one used when setting up your GitHub account. Most likely this will be your governement email.</p>
-<p>Below is an example configuration, please type in the commands using your name and email address.</p>
-<pre><code>$ git config --global user.name "Your Name in Quotes"
-$ git config --global user.email "your_email@gmail.com"</code></pre>
+<p>Below is an example configuration, please type in the commands using your name and email address. For Windows users, these will be typed into a <code>Git Bash</code> terminal (search for <code>Git Bash</code> from the search bar to create a new window). For Mac users, these will be typed into the <code>Terminal</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> user.name <span class="st">"Your Name in Quotes"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--global</span> user.email <span class="st">"your_email@gmail.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you are concerned about privacy, please review <a href="https://help.github.com/articles/keeping-your-email-address-private/">GitHub’s instructions for keeping your email address private</a>.</p>
 </section>
 <section id="global-settings" class="level4">
 <h4 class="anchored" data-anchor-id="global-settings">Global Settings</h4>
 <p>The two commands we just ran above only need to be run once: the flag <code>--global</code> tells Git to use the settings for every project, in your user account, on this computer.</p>
 <p>You can check your settings at any time:</p>
-<pre><code>$ git config --list</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can change your configuration as many times as you want: use the same commands to update your name or email address.</p>
 </section>
 <section id="git-help-and-manual" class="level4">
 <h4 class="anchored" data-anchor-id="git-help-and-manual">Git Help and Manual</h4>
 <p>Always remember that if you forget a <code>git</code> command, you can access the list of commands by using <code>-h</code> and access the Git manual by using <code>--help</code> :</p>
-<pre><code>$ git config -h
-$ git config --help</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">-h</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git config <span class="at">--help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>While viewing the manual, remember the <code>:</code> is a prompt waiting for commands and you can press <kbd>Q</kbd> to exit the manual.</p>
 </section>
 </section>
 </section>
 <section id="additional-resources" class="level2">
 <h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
-<p>https://github.com/bcgov/BC-Policy-Framework-For-GitHub. Get added to the BC Government GitHub Org (“BCGov”) https://just-ask.developer.gov.bc.ca/</p>
+<p><a href="https://github.com/bcgov/BC-Policy-Framework-For-GitHub">https://github.com/bcgov/BC-Policy-Framework-For-GitHub</a></p>
+<p>Get added to the BC Government GitHub Org (“BCGov”): <a href="https://just-ask.developer.gov.bc.ca/">https://just-ask.developer.gov.bc.ca/</a></p>
 
 
 </section>

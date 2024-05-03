@@ -89,7 +89,7 @@ origin   https://github.com/<youusername>/planets.git (push)
 
 ## 3.2 Push Local Changes to a Remote Repository
 
-Now that authentication is setup, we can return to the remote. The git push command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.  
+Now that authentication is setup, we can return to the remote. The git push command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.
 
 ```{bash}
 $ git push origin main
@@ -107,7 +107,7 @@ To https://github.com/<youusername>/planets.git
  * [new branch]      main -> main
 ```
 
-The git push command takes two arguments: the name of the remote repository and an optional branch name. Used without the branch name (git push origin) will push changes from all local branches to the remote.  We may also use git push without specifying any arguments if we've already configured the remote for the current branch.  Git push will push only changes on our current branch to the remote.
+The git push command takes two arguments: the name of the remote repository and an optional branch name. Used without the branch name (git push origin) will push changes from all local branches to the remote. We may also use git push without specifying any arguments if we've already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.
 
 Now our repositories look like:
 
@@ -133,15 +133,21 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Putting data files under version control can be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of **not pushing data to GitHub**. We accomplish this by creating a file in the root directory of our project called a **.gitignore**.
+Putting data files under version control can be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of **not pushing data to GitHub**. We accomplish this by creating a file in the root directory of our project called a **.gitignore**.  
 
-Again, open up your favorite text editor and type the following line into the first line of the file:
+
+
+.gitignore files are plain text files; you can open the file with your chosen text editor.  Open up your favorite text editor and type the following line into the first line of the file:
 
 ``` bash-output-box
 *.csv
 ```
 
 Then save and close the file, naming it .gitignore. Don't forget the dot at the beginning!
+
+::: {callout-note}
+Although a .gitignore is a plain text file, it doesn't carry the ".txt" extension.  To be sure you aren't saving a .gitignore.txt file, check the "Hidden Items" check box under Show/hide in your File Explorer Window.
+:::
 
 These patterns tell Git to ignore any file whose name ends in .csv and everything in the results directory. (If any of these files were already being tracked, Git would continue to track them.)
 
@@ -160,6 +166,9 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+::: {callout-note}
+On Unix-based operating system these files are called hidden files but on a PC they are not hidden.  As Git Bash provides a Unix-like environments, to see your .gitignore in Git Bash, type "ls -a".
+:::
 
 And since everyone we’re sharing our repository with will probably want to ignore the same things that we’re ignoring, let’s add and commit our .gitignore:
 
@@ -179,8 +188,7 @@ The following paths are ignored by one of your .gitignore files:
 a.csv
 Use -f if you really want to add them.
 ```
-
-Go ahead and push your .gitignore to the remote so other people working on our project can use it too. 
+Go ahead and push your .gitignore to the remote so other people working on our project can use it too.
 
 ```{bash}
 $ git push
@@ -221,9 +229,9 @@ The subfolder "results" and it's contents are ignored. This is handy for keeping
 
 ## 3.4 Pulling changes from GitHub
 
-Git allows you to work collaboratively, with multiple people making changes to the same repo and sharing those changes through GitHub. We've seen how to create a repository and push changes to it; now we will see how to pull another person's changes from Github.  
+Git allows you to work collaboratively, with multiple people making changes to the same repo and sharing those changes through GitHub. We've seen how to create a repository and push changes to it; now we will see how to pull another person's changes from Github.
 
-Start by opening a second terminal window. This window will represent your colleague, working on another computer. In the second window, navigate to the folder one level "up" in the directory tree from where you have your planets repository. 
+Start by opening a second terminal window. This window will represent your colleague, working on another computer. In the second window, navigate to the folder one level "up" in the directory tree from where you have your planets repository.
 
 ```{bash}
 $ ls
@@ -260,7 +268,7 @@ Resolving deltas: 100% (2/2), done.
 You won’t need to give anyone access on GitHub, because GitHub will recognize both contributors as you.
 :::
 
-You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before.  Add a line of text to a .txt file and save in your cloned repository.  
+You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file and save it in your cloned repository.
 
 ```{bash}
 $ cat pluto.txt

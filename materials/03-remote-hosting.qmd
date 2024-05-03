@@ -223,9 +223,7 @@ The subfolder "results" and it's contents are ignored. This is handy for keeping
 
 Git allows you to work collaboratively, with multiple people making changes to the same repo and sharing those changes through GitHub. We've seen how to create a repository and push changes to it; now we will see how to pull another person's changes from Github.  
 
-Start by opening a second terminal window. This window will represent your partner, working on another computer. You won’t need to give anyone access on GitHub, because both ‘partners’ are you.
-
-In the second window, navigate to the folder one level "up" in the directory tree from where you have your planets repository. 
+Start by opening a second terminal window. This window will represent your colleague, working on another computer. In the second window, navigate to the folder one level "up" in the directory tree from where you have your planets repository. 
 
 ```{bash}
 $ ls
@@ -235,7 +233,7 @@ $ ls
 planets
 ```
 
-you don't want to overwrite your first version of planets.git, so you will clone the planets repository to a different location.
+You don't want to overwrite your first version of planets.git, so you will clone the planets repository to a different location.
 
 ```{bash}
 $ mkdir collab
@@ -257,6 +255,10 @@ remote: Total 10 (delta 2), reused 10 (delta 2), pack-reused 0
 Receiving objects: 100% (10/10), done.
 Resolving deltas: 100% (2/2), done.
 ```
+
+::: callout-note
+You won’t need to give anyone access on GitHub, because GitHub will recognize both contributors as you.
+:::
 
 You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before.  Add a line of text to a .txt file and save in your cloned repository.  
 
@@ -291,15 +293,13 @@ Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/<yourusername>/planets.git
    3abcea2..b792d59  main -> main
-
 ```
 
 ::: callout-note
 We didn’t have to create a remote called origin: Git uses this name by default when we clone a repository. (This is why origin was a sensible choice earlier when we were setting up remotes by hand.)
 :::
 
-
-To download the your changes from GitHub, switch to the other bash window (the one with the original repository) and enter:
+To download the your changes from GitHub, switch back to the bash window (where you were working in your original repository) and enter:
 
 ```{bash}
 $ git pull origin main
@@ -313,6 +313,6 @@ Fast-forward
  pluto.txt | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 pluto.txt
-`
+```
 
 Now the three repositories (original local, second local, and the one on GitHub) are back in sync.

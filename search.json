@@ -4,14 +4,14 @@
     "href": "slides/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  1.3753333 -0.7380196  0.4529128 -0.9401574 -0.3080005 -1.2361991\n [7] -0.8838601  1.0636826  1.1677349  0.5014655"
+    "text": "rnorm(10)\n\n [1] -0.09472212 -1.48471043  0.61617094 -1.03640699  2.37863818 -0.40539394\n [7] -1.34031496 -0.92122163  0.34904818 -1.18726982"
   },
   {
     "objectID": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  1.3753333 -0.7380196  0.4529128 -0.9401574 -0.3080005 -1.2361991\n [7] -0.8838601  1.0636826  1.1677349  0.5014655"
+    "text": "rnorm(10)\n\n [1] -0.09472212 -1.48471043  0.61617094 -1.03640699  2.37863818 -0.40539394\n [7] -1.34031496 -0.92122163  0.34904818 -1.18726982"
   },
   {
     "objectID": "index.html",
@@ -275,7 +275,7 @@
     "href": "materials/01-what-is-vc.html#what-is-a-version-control-repository",
     "title": "1. What is Version Control",
     "section": "1.3 What is a Version Control Repository?",
-    "text": "1.3 What is a Version Control Repository?\nIn version control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Some of the metadata that a repository contains includes, among other things, a historical record of changes in the repository, a set of commit objects, and a set of references to commit objects, called heads.\nEssentially, a version control repository keeps track of a set of files in a project. It is like a regular project folder containing sub folders to organize your work, but with an additional .git folder in which to house metadata. We will go into more detail on how the .git folder and metadata files are created during the workshop.\nUsing the WES analysis example above, you and your colleagues may choose to structure your version control project like this:\n├──wes-analysis\n|  ├── data\n|  │   ├── wes-results\n|  │   │   ├── wes-results-2019.csv\n|  │   │   ├── wes-results-2020.csv\n|  │   │   ├── wes-results-2021.csv\n|  │   |   |── wes-results-2022.csv\n|  ├── doc\n|  ├── ref\n|  │   ├── references\n|  │   ├── images\n|  ├── plots\n|  ├── code\n|  ├── .git",
+    "text": "1.3 What is a Version Control Repository?\nIn version control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Some of the metadata that a repository contains includes, among other things, a historical record of changes in the repository, a set of commit objects, and a set of references to commit objects, called heads.\nEssentially, a version control repository keeps track of a set of files in a project. It is like a regular project folder containing sub folders to organize your work, but with an additional .git folder in which to house metadata. We will go into more detail on how the .git folder and metadata files are created during the workshop.\nUsing the WES analysis example above, you and your colleagues may choose to structure your version control project like this:\n├── wes-analysis\n|   ├── data    \n|   │   ├── wes-results\n|   │   │   ├── wes-results-2019.csv  &lt;-- DON'T WORRY, THESE WON'T BECOME PUBLIC!\n|   │   │   ├── wes-results-2020.csv\n|   │   │   ├── wes-results-2021.csv\n|   │   |   |── wes-results-2022.csv\n|   ├── doc\n|   ├── ref\n|   │   ├── references\n|   │   ├── images\n|   ├── plots\n|   ├── code\n|   ├── .git      &lt;------------------------ THIS MAKES IT A GIT REPOSITORY!",
     "crumbs": [
       "About The Workshop",
       "Course Sections",

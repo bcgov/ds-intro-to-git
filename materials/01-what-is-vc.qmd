@@ -47,18 +47,18 @@ Essentially, a **version control repository** keeps track of a set of files in a
 Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:
 
 ```         
-├──wes-analysis
-|  ├── data
-|  │   ├── wes-results
-|  │   │   ├── wes-results-2019.csv
-|  │   │   ├── wes-results-2020.csv
-|  │   │   ├── wes-results-2021.csv
-|  │   |   |── wes-results-2022.csv
-|  ├── doc
-|  ├── ref
-|  │   ├── references
-|  │   ├── images
-|  ├── plots
-|  ├── code
-|  ├── .git
+├── wes-analysis
+|   ├── data    
+|   │   ├── wes-results
+|   │   │   ├── wes-results-2019.csv  <-- DON'T WORRY, THESE WON'T BECOME PUBLIC!
+|   │   │   ├── wes-results-2020.csv
+|   │   │   ├── wes-results-2021.csv
+|   │   |   |── wes-results-2022.csv
+|   ├── doc
+|   ├── ref
+|   │   ├── references
+|   │   ├── images
+|   ├── plots
+|   ├── code
+|   ├── .git      <------------------------ THIS MAKES IT A GIT REPOSITORY!
 ```

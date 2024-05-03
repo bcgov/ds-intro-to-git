@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -249,6 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#connecting-to-cloning-a-remote-repository" id="toc-connecting-to-cloning-a-remote-repository" class="nav-link" data-scroll-target="#connecting-to-cloning-a-remote-repository">3.2 Connecting to (Cloning) a Remote Repository</a></li>
   <li><a href="#push-local-changes-to-a-remote-repository" id="toc-push-local-changes-to-a-remote-repository" class="nav-link" data-scroll-target="#push-local-changes-to-a-remote-repository">3.2 Push Local Changes to a Remote Repository</a></li>
   <li><a href="#ignoring-things" id="toc-ignoring-things" class="nav-link" data-scroll-target="#ignoring-things">3.3 Ignoring Things</a></li>
+  <li><a href="#pulling-changes-from-github" id="toc-pulling-changes-from-github" class="nav-link" data-scroll-target="#pulling-changes-from-github">3.4 Pulling changes from GitHub</a></li>
   </ul>
 </nav>
     </div>
@@ -290,33 +291,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol start="5" type="1">
 <li>Make sure HTTPS is selected and then click the clipboard icon to copy the URL. We will use this URL in the next section.</li>
 </ol>
-<p>Note: you have effectively done the following on GitHub’s servers:</p>
+<p>You have effectively done the following on GitHub’s servers:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir planets</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd planets</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+HTTPS vs SSH - what’s the difference?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>HTTP and SSH refer to different protocols Git can use to transfer data. SSH is ubiquitous; many network admins have experience with them and many OS distributions are set up with them or have tools to manage them. Access over SSH is secure as all data transfer is encrypted and authenticated. It is also efficient, making the data as compact as possible before transferring it.</p>
+<p>HTTP operates very similarly to the SSH protocol but runs over standard HTTPS ports and can use various HTTP authentication mechanisms, meaning it’s often easier on the user than something like SSH, since you can use things like username/password authentication rather than having to set up SSH keys.</p>
+</div>
+</div>
 <p>If you remember back to the earlier episode where we added and committed our earlier work on mars.txt, we had a diagram of the local repository which looked like this:</p>
 <p><img src="../figures/tracking-changes.png" class="img-fluid"></p>
 <p>Now that we have two repositories, we need a diagram like this</p>
 <p><img src="../materials/images/git-freshly-made-github-repo.svg" class="img-fluid"></p>
-<p>Note that our local repository still contains our earlier work on&nbsp;<code>mars.txt</code>, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Our local repository still contains our earlier work on&nbsp;<code>mars.txt</code>, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.</p>
+</div>
+</div>
 </section>
 <section id="connecting-to-cloning-a-remote-repository" class="level2">
 <h2 class="anchored" data-anchor-id="connecting-to-cloning-a-remote-repository">3.2 Connecting to (Cloning) a Remote Repository</h2>
-<p>Now we connect the two repositories. We do this by making the GitHub repository a&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#remote">remote</a>&nbsp;for the local repository. Previously we were shown a page which looked like this:</p>
-<p><img src="images/clipboard-321009940.png" class="img-fluid"></p>
-<p>At the time, we chose to use HTTPS as our security protocol for connecting the two repositories.</p>
-<p><strong>SAY SOMETHING ABOUT HTTPS vs SSH</strong></p>
-<p>Go into the local&nbsp;<code>planets</code> repository, and run this command:</p>
+<p>Now we connect the two repositories. We do this by making the GitHub repository a&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#remote">remote</a>&nbsp;for the local repository. Remote branches are configured using the git <strong>remote</strong> command.</p>
+<p>Go into the local&nbsp;<code>planets</code> repository, and run this command (using the URL copied to our clipboard):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote add origin https://github.com/<span class="op">&lt;</span>yourusername<span class="op">&gt;</span>/planets.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote add origin <span class="op">&lt;</span>paste copied URL here<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>which is equivalent to</p>
+<p>alternatively,</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote add origin <span class="op">&lt;</span>paste copied URL here<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote add origin https://github.com/<span class="op">&lt;</span>yourusername<span class="op">&gt;</span>/planets.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><code>origin</code> is a local name used to refer to the remote repository. It could be called anything, but <code>origin</code> is a convention that is often used by default in git and GitHub, so it’s helpful to stick with this unless there’s a reason not to.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“origin” is a local name used to refer to the remote repository. It could be called anything, but “origin” is a convention that is often used by default in git and GitHub, so it’s helpful to stick with this unless there’s a reason not to.</p>
+</div>
+</div>
 <p>We can check that the command has worked by running <code>git remote -v</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git remote <span class="at">-v</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -326,7 +362,7 @@ origin   https://github.com/&lt;youusername&gt;/planets.git (push)</code></pre>
 </section>
 <section id="push-local-changes-to-a-remote-repository" class="level2">
 <h2 class="anchored" data-anchor-id="push-local-changes-to-a-remote-repository">3.2 Push Local Changes to a Remote Repository</h2>
-<p>Now that authentication is setup, we can return to the remote. This command will push the changes from our local repository to the repository on GitHub:</p>
+<p>Now that authentication is setup, we can return to the remote. The git push command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -339,6 +375,8 @@ Total 16 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), done.
 To https://github.com/&lt;youusername&gt;/planets.git
  * [new branch]      main -&gt; main</code></pre>
+<p>The git push command takes two arguments: the name of the remote repository and an optional branch name. Used without the branch name (git push origin) will push changes from all local branches to the remote. We may also use git push without specifying any arguments if we’ve already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.</p>
+<p>Now our repositories look like:</p>
 <p><img src="../materials/images/github-repo-after-first-push.svg" class="img-fluid"></p>
 </section>
 <section id="ignoring-things" class="level2">
@@ -407,6 +445,74 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 <p>The subfolder “results” and it’s contents are ignored. This is handy for keeping all of your data in a single folder. You simply add the data folder to your .gitignore and the contents will not be accidentally pushed.</p>
+</section>
+<section id="pulling-changes-from-github" class="level2">
+<h2 class="anchored" data-anchor-id="pulling-changes-from-github">3.4 Pulling changes from GitHub</h2>
+<p>Git allows you to work collaboratively, with multiple people making changes to the same repo and sharing those changes through GitHub. We’ve seen how to create a repository and push changes to it; now we will see how to pull another person’s changes from Github.</p>
+<p>Start by opening a second terminal window. This window will represent your partner, working on another computer. You won’t need to give anyone access on GitHub, because both ‘partners’ are you.</p>
+<p>In the second window, navigate to the folder one level “up” in the directory tree from where you have your planets repository.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>planets</code></pre>
+<p>you don’t want to overwrite your first version of planets.git, so you will clone the planets repository to a different location.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir collab</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd collab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Clone the planets repo substituting in your Github user name:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>yourusername<span class="op">&gt;</span>/planets.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>Cloning into 'planets'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 10 (delta 2), reused 10 (delta 2), pack-reused 0
+Receiving objects: 100% (10/10), done.
+Resolving deltas: 100% (2/2), done.</code></pre>
+<p>You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file and save in your cloned repository.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat pluto.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>It is so a planet!</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add pluto.txt</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add notes about Pluto"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code> 1 file changed, 1 insertion(+)
+ create mode 100644 pluto.txt</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/&lt;yourusername&gt;/planets.git
+   3abcea2..b792d59  main -&gt; main
+</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We didn’t have to create a remote called origin: Git uses this name by default when we clone a repository. (This is why origin was a sensible choice earlier when we were setting up remotes by hand.)</p>
+</div>
+</div>
+<p>To download the your changes from GitHub, switch to the other bash window (the one with the original repository) and enter:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>``<code>bash-output-box From https://github.com/&lt;yourusername&gt;/planets  * branch            main       -&gt; FETCH_HEAD Updating 3abcea2..b792d59 Fast-forward  pluto.txt | 1 +  1 file changed, 1 insertion(+)  create mode 100644 pluto.txt</code></p>
+<p>Now the three repositories (original local, second local, and the one on GitHub) are back in sync.</p>
 
 
 </section>

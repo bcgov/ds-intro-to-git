@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Version Control - 2. Working Locally with Git</title>
+<title>Introduction to Version Control</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,15 +148,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
         <li>
     <a class="dropdown-item" href="../slides/01-what-is-vc.html" target="_blank">
- <span class="dropdown-text">1. What is Version Control</span></a>
+ <span class="dropdown-text">What is Version Control</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../slides/02-working-local.html" target="_blank">
- <span class="dropdown-text">2. Working Locally with Git</span></a>
+ <span class="dropdown-text">Working Locally with Git</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../slides/04-bcgov-org.html" target="_blank">
- <span class="dropdown-text">4. BCGOV GitHub Organization</span></a>
+ <span class="dropdown-text">BCGOV GitHub Organization</span></a>
   </li>  
     </ul>
   </li>
@@ -245,38 +245,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-a-repository" id="toc-creating-a-repository" class="nav-link active" data-scroll-target="#creating-a-repository">2.1 Creating a Repository</a></li>
-  <li><a href="#tracking-files" id="toc-tracking-files" class="nav-link" data-scroll-target="#tracking-files">2.2 Tracking Files</a></li>
-  <li><a href="#committing-changes" id="toc-committing-changes" class="nav-link" data-scroll-target="#committing-changes">2.3 Committing Changes</a></li>
-  <li><a href="#viewing-the-commit-history" id="toc-viewing-the-commit-history" class="nav-link" data-scroll-target="#viewing-the-commit-history">2.4 Viewing the Commit History</a></li>
-  <li><a href="#the-staging-area" id="toc-the-staging-area" class="nav-link" data-scroll-target="#the-staging-area">2.5 The Staging Area</a></li>
+  <li><a href="#working-locally-with-git" id="toc-working-locally-with-git" class="nav-link active" data-scroll-target="#working-locally-with-git">2. Working Locally with Git</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-repository" id="toc-creating-a-repository" class="nav-link" data-scroll-target="#creating-a-repository"><span class="header-section-number">2.1</span> Creating a Repository</a></li>
+  <li><a href="#tracking-files" id="toc-tracking-files" class="nav-link" data-scroll-target="#tracking-files"><span class="header-section-number">2.2</span> Tracking Files</a></li>
+  <li><a href="#committing-changes" id="toc-committing-changes" class="nav-link" data-scroll-target="#committing-changes"><span class="header-section-number">2.3</span> Committing Changes</a></li>
+  <li><a href="#viewing-the-commit-history" id="toc-viewing-the-commit-history" class="nav-link" data-scroll-target="#viewing-the-commit-history"><span class="header-section-number">2.4</span> Viewing the Commit History</a></li>
+  <li><a href="#the-staging-area" id="toc-the-staging-area" class="nav-link" data-scroll-target="#the-staging-area"><span class="header-section-number">2.5</span> The Staging Area</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../materials/01-what-is-vc.html">Course Sections</a></li><li class="breadcrumb-item"><a href="../materials/02-working-local.html">2. Working Locally with Git</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">2. Working Locally with Git</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="creating-a-repository" class="level2">
-<h2 class="anchored" data-anchor-id="creating-a-repository">2.1 Creating a Repository</h2>
+<section id="working-locally-with-git" class="level1 unnumbered">
+<h1 class="unnumbered">2. Working Locally with Git</h1>
+<section id="creating-a-repository" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="creating-a-repository"><span class="header-section-number">2.1</span> Creating a Repository</h2>
 <p>First, let’s create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile ownership H drive as a “safe” place for our work. We will start by opening a <code>git bash</code> terminal, changing to the C: drive, creating a new directory, and changing the current working directory to the newly created one:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd c:/users/lfredric</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir planets</span>
@@ -357,8 +346,8 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)</code></pre>
 <p>If you are using a different version of&nbsp;<code>git</code>, the exact wording of the output might be slightly different.</p>
 </section>
-<section id="tracking-files" class="level2">
-<h2 class="anchored" data-anchor-id="tracking-files">2.2 Tracking Files</h2>
+<section id="tracking-files" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="tracking-files"><span class="header-section-number">2.2</span> Tracking Files</h2>
 <p>First let’s make sure we’re still in the right directory. You should be in the&nbsp;<code>planets</code>&nbsp;directory.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd c:/users/lfredric/planets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Note that you can also tell you are in a Git repository, and not a regular directory, from the Git Bash command prompt. The very last part of the prompt (before the $) should contain, in brackets, the name of the <code>branch</code> we are on. Don’t worry about branches right now, but having <code>main</code> present in the command prompt tells us we are in a Git repository!</p>
@@ -416,8 +405,8 @@ Changes to be committed:
 
     new file:   mars.txt</code></pre>
 </section>
-<section id="committing-changes" class="level2">
-<h2 class="anchored" data-anchor-id="committing-changes">2.3 Committing Changes</h2>
+<section id="committing-changes" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="committing-changes"><span class="header-section-number">2.3</span> Committing Changes</h2>
 <p>Git now knows that it’s supposed to keep track of&nbsp;<code>mars.txt</code>, but it hasn’t recorded these changes as a commit yet. To get it to do that, we need to run one more command:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Start notes on Mars as a base"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -461,8 +450,8 @@ Note
 nothing to commit, working tree clean</code></pre>
 <p>it tells us everything is up to date.</p>
 </section>
-<section id="viewing-the-commit-history" class="level2">
-<h2 class="anchored" data-anchor-id="viewing-the-commit-history">2.4 Viewing the Commit History</h2>
+<section id="viewing-the-commit-history" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="viewing-the-commit-history"><span class="header-section-number">2.4</span> Viewing the Commit History</h2>
 <p>If we want to know what we’ve done recently, we can ask Git to show us the project’s history using&nbsp;<code>git log</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -502,8 +491,8 @@ no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
  1 file changed, 1 insertion(+)</code></pre>
 <p>Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we’re adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but <em>not</em> commit some of our work drafting the conclusion (which we haven’t finished yet).</p>
 </section>
-<section id="the-staging-area" class="level2">
-<h2 class="anchored" data-anchor-id="the-staging-area">2.5 The Staging Area</h2>
+<section id="the-staging-area" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="the-staging-area"><span class="header-section-number">2.5</span> The Staging Area</h2>
 <p>To allow for this, Git has a special&nbsp;<em>staging area</em>&nbsp;where it keeps track of things that have been added to the current&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#changeset">changeset</a>&nbsp;but not yet committed.</p>
 <p>If you think of Git as taking snapshots of changes over the life of a project, <code>git add</code> specifies what will go in a snapshot (putting things in the staging area), and <code>git commit</code> then actually takes the snapshot, and makes a permanent record of it (as a commit). If you don’t have anything staged when you type git commit, Git will prompt you to use git commit -a or git commit –all, which is kind of like gathering everyone to take a group photo! However, it’s almost always better to explicitly add things to the staging area, because you might commit changes you forgot you made. (Going back to the group photo simile, you might get an extra with incomplete makeup walking on the stage for the picture because you used -a!) Try to stage things manually, or you might find yourself searching for “git undo commit” more than you would like!</p>
 <div class="quarto-figure quarto-figure-center">
@@ -514,6 +503,7 @@ no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

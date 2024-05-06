@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Version Control - 1. What is Version Control</title>
+<title>Introduction to Version Control</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,15 +114,15 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
         <li>
     <a class="dropdown-item" href="../slides/01-what-is-vc.html" target="_blank">
- <span class="dropdown-text">1. What is Version Control</span></a>
+ <span class="dropdown-text">What is Version Control</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../slides/02-working-local.html" target="_blank">
- <span class="dropdown-text">2. Working Locally with Git</span></a>
+ <span class="dropdown-text">Working Locally with Git</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../slides/04-bcgov-org.html" target="_blank">
- <span class="dropdown-text">4. BCGOV GitHub Organization</span></a>
+ <span class="dropdown-text">BCGOV GitHub Organization</span></a>
   </li>  
     </ul>
   </li>
@@ -211,42 +211,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-version-control" id="toc-what-is-version-control" class="nav-link active" data-scroll-target="#what-is-version-control">1.1 What is Version Control?</a></li>
-  <li><a href="#why-version-control" id="toc-why-version-control" class="nav-link" data-scroll-target="#why-version-control">1.2 Why Version Control?</a></li>
-  <li><a href="#what-is-a-version-control-repository" id="toc-what-is-a-version-control-repository" class="nav-link" data-scroll-target="#what-is-a-version-control-repository">1.3 What is a Version Control Repository?</a></li>
+  <li><a href="#what-is-version-control" id="toc-what-is-version-control" class="nav-link active" data-scroll-target="#what-is-version-control">1. What is Version Control</a>
+  <ul class="collapse">
+  <li><a href="#what-is-version-control-1" id="toc-what-is-version-control-1" class="nav-link" data-scroll-target="#what-is-version-control-1"><span class="header-section-number">1.1</span> What is Version Control?</a></li>
+  <li><a href="#why-version-control" id="toc-why-version-control" class="nav-link" data-scroll-target="#why-version-control"><span class="header-section-number">1.2</span> Why Version Control?</a></li>
+  <li><a href="#what-is-a-version-control-repository" id="toc-what-is-a-version-control-repository" class="nav-link" data-scroll-target="#what-is-a-version-control-repository"><span class="header-section-number">1.3</span> What is a Version Control Repository?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../materials/01-what-is-vc.html">Course Sections</a></li><li class="breadcrumb-item"><a href="../materials/01-what-is-vc.html">1. What is Version Control</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">1. What is Version Control</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="what-is-version-control" class="level1 unnumbered">
+<h1 class="unnumbered">1. What is Version Control</h1>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="../figures/finaldoc.gif" class="img-fluid figure-img"></p>
 <figcaption>Not this…</figcaption>
 </figure>
 </div>
-<section id="what-is-version-control" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-version-control">1.1 What is Version Control?</h2>
+<section id="what-is-version-control-1" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-version-control-1"><span class="header-section-number">1.1</span> What is Version Control?</h2>
 <p><strong>Version control</strong>, also known as source control, is the practice of tracking and managing changes to software code. <strong>Version control systems</strong> are software tools that are used to help individuals and software development teams manage changes to code/documents over time.</p>
 <p>Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.</p>
 <p>We’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as Microsoft Word’s Track Changes and Google Docs’ version history.</p>
@@ -267,8 +256,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Unless multiple users make changes to the same section of the document - a conflict - you can incorporate two sets of changes into the same base document.</p>
 <p>A version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.</p>
 </section>
-<section id="why-version-control" class="level2">
-<h2 class="anchored" data-anchor-id="why-version-control">1.2 Why Version Control?</h2>
+<section id="why-version-control" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="why-version-control"><span class="header-section-number">1.2</span> Why Version Control?</h2>
 <p>Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people.</p>
 <p>Version control is better than sharing files back and forth because:</p>
 <ul>
@@ -290,8 +279,8 @@ Note
 </div>
 </div>
 </section>
-<section id="what-is-a-version-control-repository" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-a-version-control-repository">1.3 What is a Version Control Repository?</h2>
+<section id="what-is-a-version-control-repository" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="what-is-a-version-control-repository"><span class="header-section-number">1.3</span> What is a Version Control Repository?</h2>
 <p>In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Some of the metadata that a repository contains includes, among other things, a historical record of changes in the repository, a set of commit objects, and a set of references to commit objects, called heads.</p>
 <p>Essentially, a <strong>version control repository</strong> keeps track of a set of files in a project. It is like a regular project folder containing sub folders to organize your work, but with an additional <code>.git</code> folder in which to house metadata. We will go into more detail on how the <code>.git</code> folder and metadata files are created during the workshop.</p>
 <p>Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:</p>
@@ -311,6 +300,7 @@ Note
 |   ├── .git      &lt;------------------------ THIS MAKES IT A GIT REPOSITORY!</code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

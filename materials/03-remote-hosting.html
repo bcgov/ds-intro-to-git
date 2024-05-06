@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Version Control - 3. Remote Code Hosting and GitHub</title>
+<title>Introduction to Version Control</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,15 +148,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
         <li>
     <a class="dropdown-item" href="../slides/01-what-is-vc.html" target="_blank">
- <span class="dropdown-text">1. What is Version Control</span></a>
+ <span class="dropdown-text">What is Version Control</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../slides/02-working-local.html" target="_blank">
- <span class="dropdown-text">2. Working Locally with Git</span></a>
+ <span class="dropdown-text">Working Locally with Git</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../slides/04-bcgov-org.html" target="_blank">
- <span class="dropdown-text">4. BCGOV GitHub Organization</span></a>
+ <span class="dropdown-text">BCGOV GitHub Organization</span></a>
   </li>  
     </ul>
   </li>
@@ -245,47 +245,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-a-remote-repository" id="toc-creating-a-remote-repository" class="nav-link active" data-scroll-target="#creating-a-remote-repository">3.1 Creating a Remote Repository</a></li>
-  <li><a href="#connecting-to-cloning-a-remote-repository" id="toc-connecting-to-cloning-a-remote-repository" class="nav-link" data-scroll-target="#connecting-to-cloning-a-remote-repository">3.2 Connecting to (Cloning) a Remote Repository</a></li>
-  <li><a href="#push-local-changes-to-a-remote-repository" id="toc-push-local-changes-to-a-remote-repository" class="nav-link" data-scroll-target="#push-local-changes-to-a-remote-repository">3.2 Push Local Changes to a Remote Repository</a></li>
-  <li><a href="#ignoring-things" id="toc-ignoring-things" class="nav-link" data-scroll-target="#ignoring-things">3.3 Ignoring Things</a></li>
-  <li><a href="#pulling-changes-from-github" id="toc-pulling-changes-from-github" class="nav-link" data-scroll-target="#pulling-changes-from-github">3.4 Pulling changes from GitHub</a></li>
+  <li><a href="#remote-code-hosting-and-github" id="toc-remote-code-hosting-and-github" class="nav-link active" data-scroll-target="#remote-code-hosting-and-github">3. Remote Code Hosting and GitHub</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-remote-repository" id="toc-creating-a-remote-repository" class="nav-link" data-scroll-target="#creating-a-remote-repository"><span class="header-section-number">3.1</span> Creating a Remote Repository</a></li>
+  <li><a href="#connecting-to-a-remote-repository" id="toc-connecting-to-a-remote-repository" class="nav-link" data-scroll-target="#connecting-to-a-remote-repository"><span class="header-section-number">3.2</span> Connecting to a Remote Repository</a></li>
+  <li><a href="#push-local-changes-to-a-remote-repository" id="toc-push-local-changes-to-a-remote-repository" class="nav-link" data-scroll-target="#push-local-changes-to-a-remote-repository"><span class="header-section-number">3.3</span> Push Local Changes to a Remote Repository</a></li>
+  <li><a href="#ignoring-things" id="toc-ignoring-things" class="nav-link" data-scroll-target="#ignoring-things"><span class="header-section-number">3.4</span> Ignoring Things</a></li>
+  <li><a href="#pulling-changes-from-github" id="toc-pulling-changes-from-github" class="nav-link" data-scroll-target="#pulling-changes-from-github"><span class="header-section-number">3.5</span> Pulling changes from GitHub</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../materials/01-what-is-vc.html">Course Sections</a></li><li class="breadcrumb-item"><a href="../materials/03-remote-hosting.html">3. Remote Code Hosting and GitHub</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">3. Remote Code Hosting and GitHub</h1>
+
+
+
+<section id="remote-code-hosting-and-github" class="level1 unnumbered">
+<h1 class="unnumbered">3. Remote Code Hosting and GitHub</h1>
+<div>
+
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="../figures/finaldoc.gif" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>A better way.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="../figures/finaldoc-revised-v2.png" class="img-fluid" style="width:85.0%"></p>
+</div>
+</div>
+</div>
 <p>Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.</p>
-<p>Systems like Git allow us to move work between two repositories. The repositories can live on separate computers or network locations. In practice, we often use one copy as a central hub, and keep it on the web rather than on someone’s laptop. Most programmers use a hosting service like GitHub to hold the central repositories; and this is true for many BC Government employees.</p>
+<p>Systems like Git allow us to move work between two or more repositories. The repositories can live on separate computers or network locations. In practice, we often use one copy as a central hub, and keep it on the web rather than on someone’s laptop. This is your <em>source of truth</em> repository. Anything that lives here is what is then shared between collaborators. Each individual collaborating on the project will have a local version of this shared repository on their own computer. This is where you make changes, edits, and updates that you would eventually like to add to the rest of your shared work. Most programmers use a hosting service like GitHub to hold the central repositories; and this is true for many BC Government employees.</p>
 <p>If you recall, in the pre-workshop, you created a GitHub account and associated it with your GitHub handle (or ID). You also configured your computer with a token (PAT) in a way that should seamlessly allow us to to create a remote repository on GitHub that will be linked to our local repository. Then we will share the changes we’ve made to our current project with the world.</p>
-<section id="creating-a-remote-repository" class="level2">
-<h2 class="anchored" data-anchor-id="creating-a-remote-repository">3.1 Creating a Remote Repository</h2>
+<section id="creating-a-remote-repository" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="creating-a-remote-repository"><span class="header-section-number">3.1</span> Creating a Remote Repository</h2>
 <ol type="1">
 <li><p>Log in to GitHub. Your personal dashboard is the first page you’ll see when you sign in on GitHub.</p>
 <p>Tip: To access your personal dashboard once you’re signed in, click the invertocat <img src="images/github-mark.png" class="img-fluid" width="13"> logo in the upper-left corner of any page on GitHub.</p></li>
 <li><p>Click on the <code>+</code> icon in the top right corner of your personal dashboard, then <code>New Repository</code></p></li>
 <li><p>Name your repository “planets”. Further down the page are other options available to us that can be toggled to suit the repository’s purpose. For this workshop it’s fine to create a “Public” repository. However, as this repository will be connected to a local repository, it needs to be empty. Therefore, leave “Add a README file” unchecked, and select “None” as options for both “Add .gitignore” and “Add a license.”</p></li>
-<li><p>Click “Create Repository”. As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository.</p></li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Creating Empty Repositories
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>More often than not, you will want to include a README, a .gitignore, and a license. We will talk more about these pieces in <a href="../materials/04-bcgov-org.html">Part 4: bcgov GitHub Organization</a>. However, because we are connecting to a locally created git repository that already contains documents, we need to provide a blank repository to connect with.</p>
+<p>For most projects, I strongly recommend starting with a remote repository <strong>first</strong> (with a README, .gitignore and license automatically included), and then <code>cloning</code> this remote repository into a local location. We will go over cloning a repository in a [Section 4: Pulling changes from GitHub(pul)]!</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Click “Create Repository”. As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository.</li>
 </ol>
 <p><img src="images/clipboard-3105004005.png" class="img-fluid"></p>
 <ol start="5" type="1">
@@ -329,8 +352,8 @@ Note
 </div>
 </div>
 </section>
-<section id="connecting-to-cloning-a-remote-repository" class="level2">
-<h2 class="anchored" data-anchor-id="connecting-to-cloning-a-remote-repository">3.2 Connecting to (Cloning) a Remote Repository</h2>
+<section id="connecting-to-a-remote-repository" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="connecting-to-a-remote-repository"><span class="header-section-number">3.2</span> Connecting to a Remote Repository</h2>
 <p>Now we connect the two repositories. We do this by making the GitHub repository a&nbsp;<a href="https://swcarpentry.github.io/git-novice/reference.html#remote">remote</a>&nbsp;for the local repository. Remote branches are configured using the git <strong>remote</strong> command.</p>
 <p>Go into the local&nbsp;<code>planets</code> repository, and run this command (using the URL copied to our clipboard):</p>
 <div class="cell">
@@ -360,11 +383,11 @@ Note
 <pre class="bash-output-box"><code>origin   https://github.com/&lt;yourusername&gt;/planets.git (fetch)
 origin   https://github.com/&lt;youusername&gt;/planets.git (push)</code></pre>
 </section>
-<section id="push-local-changes-to-a-remote-repository" class="level2">
-<h2 class="anchored" data-anchor-id="push-local-changes-to-a-remote-repository">3.2 Push Local Changes to a Remote Repository</h2>
-<p>Now that authentication is setup, we can return to the remote. The git push command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.</p>
+<section id="push-local-changes-to-a-remote-repository" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="push-local-changes-to-a-remote-repository"><span class="header-section-number">3.3</span> Push Local Changes to a Remote Repository</h2>
+<p>Now that authentication is setup, we can return to the remote. The <code>git push</code> command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>Enumerating objects: 16, done.
 Counting objects: 100% (16/16), done.
@@ -375,12 +398,12 @@ Total 16 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), done.
 To https://github.com/&lt;youusername&gt;/planets.git
  * [new branch]      main -&gt; main</code></pre>
-<p>The git push command takes two arguments: the name of the remote repository and an optional branch name. Used without the branch name (git push origin) will push changes from all local branches to the remote. We may also use git push without specifying any arguments if we’ve already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.</p>
+<p>The <code>git push</code> command takes two arguments: the name of the remote repository (<strong>origin</strong>) and an optional branch name (<strong>main</strong>). Used without the branch name (<code>git push origin</code>) will push changes from all local branches to the remote. We may also use git push without specifying any arguments if we’ve already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.</p>
 <p>Now our repositories look like:</p>
 <p><img src="../materials/images/github-repo-after-first-push.svg" class="img-fluid"></p>
 </section>
-<section id="ignoring-things" class="level2">
-<h2 class="anchored" data-anchor-id="ignoring-things">3.3 Ignoring Things</h2>
+<section id="ignoring-things" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="ignoring-things"><span class="header-section-number">3.4</span> Ignoring Things</h2>
 <p>What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.</p>
 <p>Let’s create a file called&nbsp;<code>a.csv</code>&nbsp;that contains some data about the Red Planet’s average temperature. Open a new csv using Excel and add two columns named ‘Time’ and ‘Temperature’. Add a few rows of data if you want and save it to the planets directory. Then check the output of git status.</p>
 <div class="cell">
@@ -452,8 +475,8 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 <p>The subfolder “results” and it’s contents are ignored. This is handy for keeping all of your data in a single folder. You simply add the data folder to your .gitignore and the contents will not be accidentally pushed.</p>
 </section>
-<section id="pulling-changes-from-github" class="level2">
-<h2 class="anchored" data-anchor-id="pulling-changes-from-github">3.4 Pulling changes from GitHub</h2>
+<section id="pulling-changes-from-github" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="pulling-changes-from-github"><span class="header-section-number">3.5</span> Pulling changes from GitHub</h2>
 <p>Git allows you to work collaboratively, with multiple people making changes to the same repo and sharing those changes through GitHub. We’ve seen how to create a repository and push changes to it; now we will see how to pull another person’s changes from Github.</p>
 <p>Start by opening a second terminal window. This window will represent your colleague, working on another computer. In the second window, navigate to the folder one level “up” in the directory tree from where you have your planets repository.</p>
 <div class="cell">
@@ -538,6 +561,7 @@ Fast-forward
 <p>Now the three repositories (original local, second local, and the one on GitHub) are back in sync.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

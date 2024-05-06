@@ -4,14 +4,14 @@
     "href": "slides/01-what-is-vc.html",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  1.60580960  1.34255605 -1.05520695  0.54963568  0.14924360 -0.46450692\n [7]  0.16369858  1.40812972 -0.51474249  0.04283482"
+    "text": "rnorm(10)\n\n [1]  1.6356451  1.4403560 -0.7346527 -0.9759837 -1.5269753 -0.4439302\n [7]  1.4284367 -0.4514971 -1.1860880  0.1589371"
   },
   {
     "objectID": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "href": "slides/01-what-is-vc.html#heres-some-code-to-copy",
     "title": "1. What is Version Control",
     "section": "",
-    "text": "rnorm(10)\n\n [1]  1.60580960  1.34255605 -1.05520695  0.54963568  0.14924360 -0.46450692\n [7]  0.16369858  1.40812972 -0.51474249  0.04283482"
+    "text": "rnorm(10)\n\n [1]  1.6356451  1.4403560 -0.7346527 -0.9759837 -1.5269753 -0.4439302\n [7]  1.4284367 -0.4514971 -1.1860880  0.1589371"
   },
   {
     "objectID": "index.html",
@@ -46,7 +46,7 @@
     "href": "index.html#workshop-schedule",
     "title": "About The Workshop",
     "section": "Workshop Schedule",
-    "text": "Workshop Schedule\n\nDaily Schedule (to be finalized)\n\n\n\n\n\n\n\n\nActivity\nStart Time\nEnd Time\n\n\n\n\nSession 1. What is version control?\n8:45\n9:15\n\n\nSession 2. Working locally with git\n9:15\n10:30\n\n\nBREAK ☕\n10:30\n10:45\n\n\nSession 3. Working remotely with GitHub\n10:45\n11:30\n\n\nSession 4. The BC Gov GitHub Organization\n11:30\n12:15\n\n\n\n\n\nPre-Course Work\nImportant!\nBefore the course starts, we ask that all attendees install git and GitBash and have a basic text editor such as Wordpad, Notepad++, or SublimeText. Instructions for how to install these tools are found in the Introduction to git Section. If anyone is having troubles getting the software up and running, please contact us before the course starts so that we can hit the ground running during the workshop."
+    "text": "Workshop Schedule\n\nDaily Schedule (to be finalized)\n\n\n\n\n\n\n\n\nActivity\nStart Time\nEnd Time\n\n\n\n\nSession 1. What is version control?\n1:00\n1:30\n\n\nSession 2. Working locally with git\n1:30\n2:15\n\n\nBREAK ☕\n2:15\n2:30\n\n\nSession 3. Working remotely with GitHub\n2:30\n3:15\n\n\nSession 4. The BC Gov GitHub Organization\n3:15\n4:00\n\n\n\n\n\nPre-Course Work\nImportant!\nBefore the course starts, we ask that all attendees install git and GitBash and have a basic text editor such as Wordpad, Notepad++, or SublimeText. Instructions for how to install these tools are found in the Introduction to git Section. If anyone is having troubles getting the software up and running, please contact us before the course starts so that we can hit the ground running during the workshop."
   },
   {
     "objectID": "course-outline.html",

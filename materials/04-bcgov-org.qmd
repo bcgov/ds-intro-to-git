@@ -1,17 +1,21 @@
 ---
-title: "4. bcgov GitHub Organization"
+format:
+  html:
+    number-offset: 4
 ---
 
-## 4.1 what is the bcgov organization framework
+# 4. bcgov GitHub Organization {.unnumbered}
+
+## what is the bcgov organization framework
 
 The bcgov GitHub organization on GitHub.com is the only approved venue for Open Source collaboration on Province of British Columbia files.
 
 In the pre-work you created a GitHUb account.  You may use this GitHub account for Open Source Project with the Province of British Columbia. You can have more than one email address associated with your account, but at minimum your work email needs to be associated with your account.
 
-## 4.2 bcgov policy framework and licensing
+## bcgov policy framework and licensing
 
 adhere to the minimum content requirements for establishing README.md, CONTRIBUTING.md and LICENSE files.
 
-## 4.3 code-sharing 
+## code-sharing 
 
-## 4.4 bcgov-c and bcgov enterprise
+## bcgov-c and bcgov enterprise

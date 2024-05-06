@@ -1,18 +1,28 @@
 ---
-title: "3. Remote Code Hosting and GitHub"
+format:
+  html:
+    number-offset: 3
 ---
+
+# 3. Remote Code Hosting and GitHub {.unnumbered}
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
+::: {layout-ncol=2}
+
+![A better way.](../figures/finaldoc.gif){fig-align='left' width=80%}
+
+![](../figures/finaldoc-revised-v2.png){width=85%}
+:::
 Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
 
-Systems like Git allow us to move work between two repositories. The repositories can live on separate computers or network locations. In practice, we often use one copy as a central hub, and keep it on the web rather than on someone’s laptop. Most programmers use a hosting service like GitHub to hold the central repositories; and this is true for many BC Government employees.
+Systems like Git allow us to move work between two or more repositories. The repositories can live on separate computers or network locations. In practice, we often use one copy as a central hub, and keep it on the web rather than on someone’s laptop. This is your *source of truth* repository. Anything that lives here is what is then shared between collaborators. Each individual collaborating on the project will have a local version of this shared repository on their own computer. This is where you make changes, edits, and updates that you would eventually like to add to the rest of your shared work. Most programmers use a hosting service like GitHub to hold the central repositories; and this is true for many BC Government employees.
 
 If you recall, in the pre-workshop, you created a GitHub account and associated it with your GitHub handle (or ID). You also configured your computer with a token (PAT) in a way that should seamlessly allow us to to create a remote repository on GitHub that will be linked to our local repository. Then we will share the changes we’ve made to our current project with the world.
 
-## 3.1 Creating a Remote Repository
+## Creating a Remote Repository
 
 1.  Log in to GitHub. Your personal dashboard is the first page you'll see when you sign in on GitHub.
 
@@ -21,6 +31,14 @@ If you recall, in the pre-workshop, you created a GitHub account and associated 
 2.  Click on the `+` icon in the top right corner of your personal dashboard, then `New Repository`
 
 3.  Name your repository “planets”. Further down the page are other options available to us that can be toggled to suit the repository's purpose. For this workshop it's fine to create a "Public" repository. However, as this repository will be connected to a local repository, it needs to be empty. Therefore, leave “Add a README file” unchecked, and select “None” as options for both “Add .gitignore” and “Add a license.”
+
+::: {.callout-important}
+## Creating Empty Repositories
+
+More often than not, you will want to include a README, a .gitignore, and a license. We will talk more about these pieces in [Part 4: bcgov GitHub Organization](04-bcgov-org.qmd). However, because we are connecting to a locally created git repository that already contains documents, we need to provide a blank repository to connect with. 
+
+For most projects, I strongly recommend starting with a remote repository **first** (with a README, .gitignore and license automatically included), and then `cloning` this remote repository into a local location. We will go over cloning a repository in a [Section 4: Pulling changes from GitHub(pul)]! 
+:::
 
 4.  Click "Create Repository". As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository.
 
@@ -56,7 +74,7 @@ Now that we have two repositories, we need a diagram like this
 Our local repository still contains our earlier work on `mars.txt`, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
 :::
 
-## 3.2 Connecting to (Cloning) a Remote Repository
+## Connecting to a Remote Repository
 
 Now we connect the two repositories. We do this by making the GitHub repository a [remote](https://swcarpentry.github.io/git-novice/reference.html#remote) for the local repository. Remote branches are configured using the git **remote** command.
 
@@ -87,12 +105,12 @@ origin   https://github.com/<yourusername>/planets.git (fetch)
 origin   https://github.com/<youusername>/planets.git (push)
 ```
 
-## 3.2 Push Local Changes to a Remote Repository
+## Push Local Changes to a Remote Repository
 
-Now that authentication is setup, we can return to the remote. The git push command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.
+Now that authentication is setup, we can return to the remote. The `git push` command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.
 
 ```{bash}
-$ git push origin main
+$ git push -u origin main
 ```
 
 ``` bash-output-box
@@ -107,13 +125,13 @@ To https://github.com/<youusername>/planets.git
  * [new branch]      main -> main
 ```
 
-The git push command takes two arguments: the name of the remote repository and an optional branch name. Used without the branch name (git push origin) will push changes from all local branches to the remote. We may also use git push without specifying any arguments if we've already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.
+The `git push` command takes two arguments: the name of the remote repository (**origin**) and an optional branch name (**main**). Used without the branch name (`git push origin`) will push changes from all local branches to the remote. We may also use git push without specifying any arguments if we've already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.
 
 Now our repositories look like:
 
 ![](../materials/images/github-repo-after-first-push.svg)
 
-## 3.3 Ignoring Things
+## Ignoring Things
 
 What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.
 
@@ -227,7 +245,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 The subfolder "results" and it's contents are ignored. This is handy for keeping all of your data in a single folder. You simply add the data folder to your .gitignore and the contents will not be accidentally pushed.
 
-## 3.4 Pulling changes from GitHub
+## Pulling changes from GitHub
 
 Git allows you to work collaboratively, with multiple people making changes to the same repo and sharing those changes through GitHub. We've seen how to create a repository and push changes to it; now we will see how to pull another person's changes from Github.
 

@@ -6,7 +6,7 @@ title: "Pre-Workshop Assignment"
 
 To make the most of our time together on the day of the workshop, we would like you to show up ready-to-go with the proper software installed and configured correctly on your local machine. After working through the installation instructions, please include the following in a single Word or PDF document.
 
-#### 1. A screen shot of your git configurations
+#### A screen shot of your git configurations
 
 Open the application Git Bash on your local computer and enter the following commands at the command prompt.
 
@@ -16,7 +16,7 @@ $ git config -–list
 
 Take a screen shot of the command-line output.
 
-#### 2. Your GitHub handle.
+#### Your GitHub handle.
 
 You can find this by signing in to GitHub and clicking on your avatar at the top right. Your GitHub handle is in bold font above your name.
 

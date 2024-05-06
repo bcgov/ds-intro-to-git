@@ -1,10 +1,13 @@
 ---
-title: "1. What is Version Control"
+format:
+  html:
+    number-offset: 1
 ---
 
+# 1. What is Version Control {.unnumbered}
 ![Not this...](../figures/finaldoc.gif){fig-align="left"}
 
-## 1.1 What is Version Control?
+## What is Version Control?
 
 **Version control**, also known as source control, is the practice of tracking and managing changes to software code. **Version control systems** are software tools that are used to help individuals and software development teams manage changes to code/documents over time.
 
@@ -24,7 +27,7 @@ Unless multiple users make changes to the same section of the document - a confl
 
 A version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.
 
-## 1.2 Why Version Control?
+## Why Version Control?
 
 Version control is the lab notebook of the digital world: it's what professionals use to keep track of what they've done and to collaborate with other people.
 
@@ -40,7 +43,7 @@ Version control is better than sharing files back and forth because:
 Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).
 :::
 
-## 1.3 What is a Version Control Repository?
+## What is a Version Control Repository?
 
 In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Some of the metadata that a repository contains includes, among other things, a historical record of changes in the repository, a set of commit objects, and a set of references to commit objects, called heads.
 

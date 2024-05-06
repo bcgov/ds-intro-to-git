@@ -84,13 +84,7 @@ Git uses this special subdirectory to store all the information about the projec
 Next, we will change the default branch to be called `main`. This might be the default branch depending on your settings and version of git. See the [setup episode](https://swcarpentry.github.io/git-novice/02-setup.html#default-git-branch-naming) for more information on this change.
 
 ```{bash}
-$ git checkout -b main
-```
-
-We get the following output:
-
-``` bash-output-box
-Switched to a new branch 'main'
+$ git branch -m main
 ```
 
 We can check that everything is set up correctly by asking Git to tell us the status of our project:

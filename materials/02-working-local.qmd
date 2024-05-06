@@ -49,7 +49,7 @@ Note that if you are ever unsure of which working directory you are in, it shoul
 
 :::
 
-![New folder in the user/username directory.](../figures/mkdir-planets.png){width=40% fig-align="left"}
+![New folder in the user/username directory.](../figures/mkdir-planets.png){width=60% fig-align="left"}
 
 Then we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) -- a place where Git can store versions of our files:
 
@@ -137,7 +137,7 @@ Note that while Git itself is inherently a command line program, the rest of the
 
 After switching back to the GitBash command-line interface, let's verify that the file was properly created by running the list command (`ls`):
 
-```{bash}
+```bash
 $ ls
 ```
 

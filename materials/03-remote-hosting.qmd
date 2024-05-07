@@ -37,7 +37,7 @@ If you recall, in the pre-workshop, you created a GitHub account and associated 
 
 More often than not, you will want to include a README, a .gitignore, and a license. We will talk more about these pieces in [Part 4: bcgov GitHub Organization](04-bcgov-org.qmd). However, because we are connecting to a locally created git repository that already contains documents, we need to provide a blank repository to connect with. 
 
-For most projects, I strongly recommend starting with a remote repository **first** (with a README, .gitignore and license automatically included), and then `cloning` this remote repository into a local location. We will go over cloning a repository in a [Section 4: Pulling changes from GitHub(pul)]! 
+For most projects, I strongly recommend starting with a remote repository **first** (with a README, .gitignore and license automatically included), and then `cloning` this remote repository into a local location. We will go over cloning a repository in [Section 3.5: Pulling changes from GitHub!](#pulling-changes-from-github) 
 :::
 
 4.  Click "Create Repository". As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository.
@@ -110,7 +110,7 @@ origin   https://github.com/<youusername>/planets.git (push)
 Now that authentication is setup, we can return to the remote. The `git push` command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.
 
 ```{bash}
-$ git push -u origin main
+$ git push origin main
 ```
 
 ``` bash-output-box
@@ -125,7 +125,17 @@ To https://github.com/<youusername>/planets.git
  * [new branch]      main -> main
 ```
 
-The `git push` command takes two arguments: the name of the remote repository (**origin**) and an optional branch name (**main**). Used without the branch name (`git push origin`) will push changes from all local branches to the remote. We may also use git push without specifying any arguments if we've already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.
+The `git push` command takes two arguments: the name of the remote repository (**origin**) and an optional branch name (**main**). Used without the branch name (`git push origin`) will push changes from all local branches to the remote. We may also use `git push` without specifying any arguments if we've already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.
+
+::: {.callout-tip}
+### push vs push origin vs push origin main??
+
+It can get confusing trying to keep track of whether or not extra options are needed when pushing changes to the remote repository. As a good rule of thumb:
+
+* On the **first** push from a branch to the remote (origin), use the full call: `git push origin <branch-name>`
+* For every push after this, `git push` will be sufficient. 
+
+:::
 
 Now our repositories look like:
 

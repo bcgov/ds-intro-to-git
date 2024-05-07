@@ -20,7 +20,7 @@ $ mkdir planets
 $ cd planets
 ```
 
-::: {.callout-tip collapse="true"}
+::: {.callout-note collapse="true"}
 ## An aside on **bash** jargon
 
 Git is, at its core, a command line set of tools. While there are tips, tools and tricks to use Git via a graphical interface, this often hides the core functionality of what Git is really doing 'behind the scenes.' This is why we choose to introduce Git in its purest form. Unfortunately, this means that some familiarity with the command line is needed. Luckily, the amount required to understand is minimal! 
@@ -51,6 +51,12 @@ Note that if you are ever unsure of which working directory you are in, it shoul
 
 ![The command line, and current working directory.](../figures/bash-commands.png){width=70% fig-align="left"}
 
+:::
+
+::: {.callout-tip}
+## Orienting yourself to bash
+
+It is often useful to keep a File Explorer instance open while you are first learning to navigate through the world of the command line. This allows you to see, in real time, the new directories and files you are creating from the command line. 
 :::
 
 ![New folder in the user/username directory.](../figures/mkdir-planets.png){width=60% fig-align="left"}

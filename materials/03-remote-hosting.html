@@ -304,7 +304,7 @@ Creating Empty Repositories
 </div>
 <div class="callout-body-container callout-body">
 <p>More often than not, you will want to include a README, a .gitignore, and a license. We will talk more about these pieces in <a href="../materials/04-bcgov-org.html">Part 4: bcgov GitHub Organization</a>. However, because we are connecting to a locally created git repository that already contains documents, we need to provide a blank repository to connect with.</p>
-<p>For most projects, I strongly recommend starting with a remote repository <strong>first</strong> (with a README, .gitignore and license automatically included), and then <code>cloning</code> this remote repository into a local location. We will go over cloning a repository in a [Section 4: Pulling changes from GitHub(pul)]!</p>
+<p>For most projects, I strongly recommend starting with a remote repository <strong>first</strong> (with a README, .gitignore and license automatically included), and then <code>cloning</code> this remote repository into a local location. We will go over cloning a repository in <a href="#pulling-changes-from-github">Section 3.5: Pulling changes from GitHub!</a></p>
 </div>
 </div>
 <ol start="4" type="1">
@@ -387,7 +387,7 @@ origin   https://github.com/&lt;youusername&gt;/planets.git (push)</code></pre>
 <h2 data-number="3.3" class="anchored" data-anchor-id="push-local-changes-to-a-remote-repository"><span class="header-section-number">3.3</span> Push Local Changes to a Remote Repository</h2>
 <p>Now that authentication is setup, we can return to the remote. The <code>git push</code> command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>Enumerating objects: 16, done.
 Counting objects: 100% (16/16), done.
@@ -398,7 +398,24 @@ Total 16 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), done.
 To https://github.com/&lt;youusername&gt;/planets.git
  * [new branch]      main -&gt; main</code></pre>
-<p>The <code>git push</code> command takes two arguments: the name of the remote repository (<strong>origin</strong>) and an optional branch name (<strong>main</strong>). Used without the branch name (<code>git push origin</code>) will push changes from all local branches to the remote. We may also use git push without specifying any arguments if we’ve already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.</p>
+<p>The <code>git push</code> command takes two arguments: the name of the remote repository (<strong>origin</strong>) and an optional branch name (<strong>main</strong>). Used without the branch name (<code>git push origin</code>) will push changes from all local branches to the remote. We may also use <code>git push</code> without specifying any arguments if we’ve already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+push vs push origin vs push origin main??
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It can get confusing trying to keep track of whether or not extra options are needed when pushing changes to the remote repository. As a good rule of thumb:</p>
+<ul>
+<li>On the <strong>first</strong> push from a branch to the remote (origin), use the full call: <code>git push origin &lt;branch-name&gt;</code></li>
+<li>For every push after this, <code>git push</code> will be sufficient.</li>
+</ul>
+</div>
+</div>
 <p>Now our repositories look like:</p>
 <p><img src="../materials/images/github-repo-after-first-push.svg" class="img-fluid"></p>
 </section>

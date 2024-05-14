@@ -250,8 +250,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#creating-a-remote-repository" id="toc-creating-a-remote-repository" class="nav-link" data-scroll-target="#creating-a-remote-repository"><span class="header-section-number">3.1</span> Creating a Remote Repository</a></li>
   <li><a href="#connecting-to-a-remote-repository" id="toc-connecting-to-a-remote-repository" class="nav-link" data-scroll-target="#connecting-to-a-remote-repository"><span class="header-section-number">3.2</span> Connecting to a Remote Repository</a></li>
   <li><a href="#push-local-changes-to-a-remote-repository" id="toc-push-local-changes-to-a-remote-repository" class="nav-link" data-scroll-target="#push-local-changes-to-a-remote-repository"><span class="header-section-number">3.3</span> Push Local Changes to a Remote Repository</a></li>
-  <li><a href="#ignoring-things" id="toc-ignoring-things" class="nav-link" data-scroll-target="#ignoring-things"><span class="header-section-number">3.4</span> Ignoring Things</a></li>
-  <li><a href="#pulling-changes-from-github" id="toc-pulling-changes-from-github" class="nav-link" data-scroll-target="#pulling-changes-from-github"><span class="header-section-number">3.5</span> Pulling changes from GitHub</a></li>
+  <li><a href="#pulling-changes-from-github" id="toc-pulling-changes-from-github" class="nav-link" data-scroll-target="#pulling-changes-from-github"><span class="header-section-number">3.4</span> Pulling changes from GitHub</a></li>
+  <li><a href="#a-typical-workflow" id="toc-a-typical-workflow" class="nav-link" data-scroll-target="#a-typical-workflow"><span class="header-section-number">3.5</span> A Typical Workflow</a></li>
+  <li><a href="#ignoring-things" id="toc-ignoring-things" class="nav-link" data-scroll-target="#ignoring-things"><span class="header-section-number">3.6</span> Ignoring Things</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -411,7 +412,11 @@ push vs push origin vs push origin main??
 <div class="callout-body-container callout-body">
 <p>It can get confusing trying to keep track of whether or not extra options are needed when pushing changes to the remote repository. As a good rule of thumb:</p>
 <ul>
-<li>On the <strong>first</strong> push from a branch to the remote (origin), use the full call: <code>git push origin &lt;branch-name&gt;</code></li>
+<li>On the <strong>first</strong> push from a branch to the remote (origin), use the full call: <code>git push origin &lt;branch-name&gt;</code> so that the remote repository knows that the <code>main</code> branch from your local machine should track the <code>main</code> branch from the remote GitHub repository.
+<ul>
+<li>This is called setting your remote repository to be the <code>upstream</code> repository.</li>
+<li>It is the source of truth, and all changes should flow downstream from the remote GitHub repository to every local repository.</li>
+</ul></li>
 <li>For every push after this, <code>git push</code> will be sufficient.</li>
 </ul>
 </div>
@@ -419,96 +424,26 @@ push vs push origin vs push origin main??
 <p>Now our repositories look like:</p>
 <p><img src="../materials/images/github-repo-after-first-push.svg" class="img-fluid"></p>
 </section>
-<section id="ignoring-things" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="ignoring-things"><span class="header-section-number">3.4</span> Ignoring Things</h2>
-<p>What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.</p>
-<p>Let’s create a file called&nbsp;<code>a.csv</code>&nbsp;that contains some data about the Red Planet’s average temperature. Open a new csv using Excel and add two columns named ‘Time’ and ‘Temperature’. Add a few rows of data if you want and save it to the planets directory. Then check the output of git status.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<pre class="bash-output-box"><code>On branch main
-Untracked files:
-  (use "git add &lt;file&gt;..." to include in what will be committed)
-
-    a.csv
-
-nothing added to commit but untracked files present (use "git add" to track)</code></pre>
-<p>Putting data files under version control can be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of <strong>not pushing data to GitHub</strong>. We accomplish this by creating a file in the root directory of our project called a <strong>.gitignore</strong>.</p>
-<p>.gitignore files are plain text files; you can open the file with your chosen text editor. Open up your favorite text editor and type the following line into the first line of the file:</p>
-<pre class="bash-output-box"><code>*.csv</code></pre>
-<p>Then save and close the file, naming it .gitignore. Don’t forget the dot at the beginning!</p>
-<div class="{callout-note}">
-<p>Although a .gitignore is a plain text file, it doesn’t carry the “.txt” extension. To be sure you aren’t saving a .gitignore.txt file, check the “Hidden Items” check box under Show/hide in your File Explorer Window.</p>
-</div>
-<p>These patterns tell Git to ignore any file whose name ends in .csv and everything in the results directory. (If any of these files were already being tracked, Git would continue to track them.)</p>
-<p>Once we have created this file, the output of git status is much cleaner:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<pre class="bash-output-box"><code>On branch main
-Untracked files:
-  (use "git add &lt;file&gt;..." to include in what will be committed)
-
-    .gitignore
-
-nothing added to commit but untracked files present (use "git add" to track)</code></pre>
-<div class="{callout-note}">
-<p>On Unix-based operating system these files are called hidden files but on a PC they are not hidden. As Git Bash provides a Unix-like environments, to see your .gitignore in Git Bash, type “ls -a”.</p>
-</div>
-<p>And since everyone we’re sharing our repository with will probably want to ignore the same things that we’re ignoring, let’s add and commit our .gitignore:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .gitignore</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Ignore data file"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Now if we try to add our csv files, .gitignore helps us avoid accidentally adding files to the repository that we don’t want to track. It also gives us a way to override the .gitignore with the -f flag.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add a.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<pre class="bash-output-box"><code>The following paths are ignored by one of your .gitignore files:
-a.csv
-Use -f if you really want to add them.</code></pre>
-<p>Go ahead and push your .gitignore to the remote so other people working on our project can use it too.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>We can also ignore full subfolders by adding the folder name to our .gitignore.</p>
-<p>Add another line to your .gitignore so it looks like:</p>
-<pre class="bash-output-box"><code>*.csv
-results/</code></pre>
-<p>Make a subfolder in planets:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>And then add a .txt file to that subfolder. Again, open up your favorite text editor and add some text to a file and save your changes. Switch back to command line when you’re finished and check the git status.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<pre class="bash-output-box"><code>git status
-On branch main
-Untracked files:
-  (use "git add &lt;file&gt;..." to include in what will be committed)
-        .gitignore
-
-nothing added to commit but untracked files present (use "git add" to track)</code></pre>
-<p>The subfolder “results” and it’s contents are ignored. This is handy for keeping all of your data in a single folder. You simply add the data folder to your .gitignore and the contents will not be accidentally pushed.</p>
-</section>
-<section id="pulling-changes-from-github" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="pulling-changes-from-github"><span class="header-section-number">3.5</span> Pulling changes from GitHub</h2>
+<section id="pulling-changes-from-github" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="pulling-changes-from-github"><span class="header-section-number">3.4</span> Pulling changes from GitHub</h2>
 <p>Git allows you to work collaboratively, with multiple people making changes to the same repo and sharing those changes through GitHub. We’ve seen how to create a repository and push changes to it; now we will see how to pull another person’s changes from Github.</p>
 <p>Start by opening a second terminal window. This window will represent your colleague, working on another computer. In the second window, navigate to the folder one level “up” in the directory tree from where you have your planets repository.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd c:/users/lfredric/intro-to-git</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre class="bash-output-box"><code>planets</code></pre>
 <p>You don’t want to overwrite your first version of planets.git, so you will clone the planets repository to a different location.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir collab</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd collab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir collab</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd collab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Clone the planets repo substituting in your Github user name:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>yourusername<span class="op">&gt;</span>/planets.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Clone the planets repo substituting in your GitHub user name. You can also find the URL from GitHub. Open the remote repository on GitHub, click on the <code>&lt;&gt; Code</code> button, and then copy the URL from there.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="../figures/clone-repo.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Cloning the repository from GitHub.</figcaption>
+</figure>
 </div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>your-GitHub-username<span class="op">&gt;</span>/planets.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre class="bash-output-box"><code>Cloning into 'planets'...
 remote: Enumerating objects: 10, done.
 remote: Counting objects: 100% (10/10), done.
@@ -522,26 +457,73 @@ Resolving deltas: 100% (2/2), done.</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Remote Add Origin vs.&nbsp;Clone
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You won’t need to give anyone access on GitHub, because GitHub will recognize both contributors as you.</p>
+<p>Note that when we clone a remote GitHub repository instead of connecting a blank repository to a local repository, we didn’t have to create a remote called origin: Git uses this name by default when we clone a repository into a new local location. (This is why origin was a sensible choice earlier when we were setting up remotes by hand.)</p>
+<p>You can check that the remote ‘origin’ repository has been properly set up using the <code>git remote -v</code> command again.</p>
 </div>
 </div>
-<p>You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file and save it in your cloned repository.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Giving Collaborators Access
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In this scenario, you won’t need to give anyone access on GitHub, because GitHub will recognize both contributors as you.</p>
+<p>However, typically you will need to allow access to other members of GitHub - otherwise anyone could go in and update your files at any point!</p>
+<p>To give collaborator access, navigate to the repository page on GitHub, and click the “Settings” button on the right of the banner. Then, click “Add people” and then enter the username of the person you wish to collaborate with.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="../figures/collab-access.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Adding a collaborator on GitHub.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>You should now have a new <code>planets</code> folder in the <code>collab</code> directory. Switch to this <code>planets</code> folder using the <code>cd</code> command. You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file (using your favourite text editing software) and save it to your cloned repository.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat pluto.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cat pluto.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>It is so a planet!</code></pre>
+<p>Once we are happy with the changes we have made to the project, we can commit each change locally.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add pluto.txt</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add notes about Pluto"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add pluto.txt</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Add notes about Pluto"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code> 1 file changed, 1 insertion(+)
  create mode 100644 pluto.txt</code></pre>
+<p>At this point, stop and compare the three repositories.</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><strong>Original Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── .git</code></pre>
+</div><div class="column" style="width:30%;">
+<p><strong>Cloned Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── pluto.txt ***
+|   ├── .git</code></pre>
+</div><div class="column" style="width:30%;">
+<p><strong>GitHub Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── .git</code></pre>
+</div>
+</div>
+<p>Notice how we only have the new pluto.txt file in the cloned repository. At this point, we have not yet told any of the other locations about the changes we have made. To communicate the changes and add them to our shared, source of truth, remote repository, we once again do a <code>git push</code> command. Note that because we cloned this repository from an already existing source, Git will already know that this <code>main</code> branch is set up to track the remote <code>main</code> branch, and so we do not need any further arguments:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
@@ -551,22 +533,31 @@ Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/&lt;yourusername&gt;/planets.git
    3abcea2..b792d59  main -&gt; main</code></pre>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Now our three work locations will look something like this:</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><strong>Original Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── .git</code></pre>
+</div><div class="column" style="width:30%;">
+<p><strong>Cloned Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── pluto.txt ***
+|   ├── .git</code></pre>
+</div><div class="column" style="width:30%;">
+<p><strong>GitHub Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── pluto.txt ***
+|   ├── .git</code></pre>
 </div>
-<div class="callout-title-container flex-fill">
-Note
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We didn’t have to create a remote called origin: Git uses this name by default when we clone a repository. (This is why origin was a sensible choice earlier when we were setting up remotes by hand.)</p>
-</div>
-</div>
-<p>To download the your changes from GitHub, switch back to the bash window (where you were working in your original repository) and enter:</p>
+<p>We have told (pushed) the remote repository that we have made changes, and sent them to the remote repo. However, the original repository is still unaware of the changes that have been made.</p>
+<p>To download your changes from GitHub, switch back to the bash window (where you were working in your original repository) and enter:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>From https://github.com/&lt;yourusername&gt;/planets
  * branch            main       -&gt; FETCH_HEAD
@@ -575,7 +566,192 @@ Fast-forward
  pluto.txt | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 pluto.txt</code></pre>
-<p>Now the three repositories (original local, second local, and the one on GitHub) are back in sync.</p>
+<p>The <code>git pull</code> command also takes two arguments: the name of the remote repository (<strong>origin</strong>) and the remote branch name (<strong>main</strong>). The full command will pull any new changes present on the <code>main</code> branch of the remote repository into the local <code>main</code> branch (and then further merge these changes into your current branch). We may also use <code>git pull</code> without specifying any arguments if we’ve already configured the upstream remote for the current branch.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+pull vs pull origin main??
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Just like with pushes, it can be confusing to remember if we need further arguments when pulling from the remote repository. As a good rule of thumb:</p>
+<ul>
+<li>If we have cloned the repository, and made sure that the remote repository is set up to be upstream from our own, <code>git pull</code> will suffice.
+<ul>
+<li>Note that this will not work if we have not yet set up a local branch to track an upstream remote branch. However, this is a more advanced topic that we will not get into for this course!</li>
+</ul></li>
+<li>If we explicitly want to merge the <code>main</code> branch of the remote repository into some other local branch of work, <code>git pull origin main</code> will be required.
+<ul>
+<li>Again, working off of multiple branches is a more complex method of work that we will not get into here. If you would like to learn more about branching in git, you can read the official documentation <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches">here.</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<p>After pulling all the changes from the remote repository back to the original, our three repositories should now look like this:</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><strong>Original Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── pluto.txt ***
+|   ├── .git</code></pre>
+</div><div class="column" style="width:30%;">
+<p><strong>Cloned Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── pluto.txt ***
+|   ├── .git</code></pre>
+</div><div class="column" style="width:30%;">
+<p><strong>GitHub Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── pluto.txt ***
+|   ├── .git</code></pre>
+</div>
+</div>
+<p>Now the three repositories (original local, second local, and the one on GitHub) are back in sync!</p>
+</section>
+<section id="a-typical-workflow" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="a-typical-workflow"><span class="header-section-number">3.5</span> A Typical Workflow</h2>
+<p>To this point, we have learned a lot of different git commands and workflows involved in tracking all of our changes, keeping our repositories up-to-date, and collaborating across computers using GitHub. While there are multiple levels of nuance that go into each of these steps, let’s lay out a typical workflow (i.e.&nbsp;a cheatsheet that even I will reference back to).</p>
+<table class="table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 30%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>order</th>
+<th>action …</th>
+<th>git command ……….</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 (Once Only)</td>
+<td>Create remote</td>
+<td><code>done on GitHub</code></td>
+</tr>
+<tr class="even">
+<td>2 (Once Only)</td>
+<td>Clone remote</td>
+<td><code>git clone https://github.com/path/to/remote</code></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Update local</td>
+<td><code>git pull origin main</code></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Make changes</td>
+<td><code>echo 100 &gt;&gt; numbers.txt</code></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Stage changes</td>
+<td><code>git add numbers.txt</code></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Commit changes</td>
+<td><code>git commit -m "Add 100 to numbers.txt"</code></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Update remote</td>
+<td><code>git push origin main</code></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Celebrate!</td>
+<td><code>brb afk ttfn</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ignoring-things" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="ignoring-things"><span class="header-section-number">3.6</span> Ignoring Things</h2>
+<p>What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.</p>
+<p>Let’s create a file called&nbsp;<code>a.csv</code>&nbsp;that contains some data about the Red Planet’s average temperature. Open a new csv using Excel and add two columns named ‘Time’ and ‘Temperature’. Add a few rows of data if you want and save it to the planets directory. Then check the output of git status.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="bash-output-box"><code>On branch main
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+    a.csv
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+<p>Putting data files under version control can be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of <strong>not pushing data to GitHub</strong>. We accomplish this by creating a file in the root directory of our project called a <strong>.gitignore</strong>.</p>
+<p><code>.gitignore</code> files are plain text files; you can open the file with your chosen text editor. Open up your favorite text editor and type the following line into the first line of the file:</p>
+<pre class="bash-output-box"><code>*.csv</code></pre>
+<p>Then save and close the file, naming it <code>.gitignore.</code> Don’t forget the dot at the beginning!</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+No .txt!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Although a .gitignore is a plain text file, it doesn’t carry the “.txt” extension. To be sure you aren’t saving a .gitignore.txt file, check the “Hidden Items” check box under Show/hide in your File Explorer Window.</p>
+</div>
+</div>
+<p>These patterns tell Git to ignore any file whose name ends in .csv. If any of these files were already being tracked, Git would continue to track them. So be sure to create your <code>.gitignore</code> early in the process!</p>
+<p>Once we have created this file, the output of git status is much cleaner:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="bash-output-box"><code>On branch main
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+    .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+<div class="{callout-note}">
+<p>On Unix-based operating system these files are called hidden files but on a PC they are not hidden. As Git Bash provides a Unix-like environments, to see your <code>.gitignore</code> in Git Bash, type “ls -a”.</p>
+</div>
+<p>And since everyone we are sharing our repository with will probably want to ignore the same things that we are ignoring, let’s add and commit our .gitignore:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .gitignore</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Ignore data file"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now if we try to add our csv files, <code>.gitignore</code> helps us avoid accidentally adding files to the repository that we don’t want to track. It also gives us a way to override the .gitignore with the -f flag.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add a.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>The following paths are ignored by one of your .gitignore files:
+a.csv
+Use -f if you really want to add them.</code></pre>
+<p>Go ahead and push your <code>.gitignore</code> to the remote so other people working on our project can use it too.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can also ignore full subfolders by adding the folder name to our .gitignore.</p>
+<p>Add another line to your <code>.gitignore</code> so it looks like:</p>
+<pre class="bash-output-box"><code>*.csv
+results/</code></pre>
+<p>Make a subfolder in planets:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And then add a .txt file to that subfolder. Again, open up your favorite text editor and add some text to a file and save your changes. Switch back to command line when you’re finished and check the git status.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre class="bash-output-box"><code>git status
+On branch main
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+<p>The subfolder “results” and it’s contents are ignored. This is handy for keeping all of your data in a single folder. You simply add the data folder to your <code>.gitignore</code> and the contents will not be accidentally pushed.</p>
 
 
 </section>

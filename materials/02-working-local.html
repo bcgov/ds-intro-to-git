@@ -266,10 +266,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="unnumbered">2. Working Locally with Git</h1>
 <section id="creating-a-repository" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="creating-a-repository"><span class="header-section-number">2.1</span> Creating a Repository</h2>
-<p>First, let’s create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile ownership H drive as a “safe” place for our work. We will start by opening a <code>git bash</code> terminal, changing to the C: drive, creating a new directory, and changing the current working directory to the newly created one:</p>
+<p>First, let’s create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile the H drive as a “safe” place for our work. We will start by opening a <code>git bash</code> terminal, changing to the C: drive, creating a new directory, and changing the current working directory to the newly created one:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd c:/users/lfredric</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir planets</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd planets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir intro-to-git</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd intro-to-git</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkdir planets</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd planets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -305,6 +307,7 @@ An aside on <strong>bash</strong> jargon
 <figcaption>The command line, and current working directory.</figcaption>
 </figure>
 </div>
+<p>One final note on command lines. For Windows computers, to paste any line into the open terminal, <kbd>Ctrl</kbd> + <kbd>v</kbd> sadly won’t work. Instead, you use <kbd>Shift</kbd> + <kbd>Insert</kbd>. For OSX, <kbd>Command</kbd> + <kbd>v</kbd> should still work.</p>
 </div>
 </div>
 </div>
@@ -319,6 +322,7 @@ Orienting yourself to bash
 </div>
 <div class="callout-body-container callout-body">
 <p>It is often useful to keep a File Explorer instance open while you are first learning to navigate through the world of the command line. This allows you to see, in real time, the new directories and files you are creating from the command line.</p>
+<p>If you get lost, you can also use File Explorer to open a Git bash terminal directly in the folder we wish to work in. Simply navigate to the parent folder, right click on the folder you wish to work in, and click <code>Open Git Bash here</code>.</p>
 </div>
 </div>
 <div class="quarto-figure quarto-figure-left">

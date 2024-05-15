@@ -1,59 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/slides/03-remote-hosting.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/slides/01-what-is-vc.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/index.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/course-outline.html</loc>
-    <lastmod>2024-05-15T18:27:04.774Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/materials/02-working-local.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/materials/04-bcgov-org.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/pre-workshop/assignment.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
-  </url>
-  <url>
     <loc>https://bcgov.github.io/ds-intro-to-git/CODE_OF_CONDUCT.html</loc>
-    <lastmod>2024-05-15T18:27:04.774Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/materials/01-what-is-vc.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
+    <lastmod>2024-05-15T22:58:32.804Z</lastmod>
   </url>
   <url>
     <loc>https://bcgov.github.io/ds-intro-to-git/materials/03-remote-hosting.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
+    <lastmod>2024-05-15T22:58:32.812Z</lastmod>
   </url>
   <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/CONTRIBUTING.html</loc>
-    <lastmod>2024-05-15T18:27:04.774Z</lastmod>
+    <loc>https://bcgov.github.io/ds-intro-to-git/materials/01-what-is-vc.html</loc>
+    <lastmod>2024-05-15T22:58:32.812Z</lastmod>
   </url>
   <url>
-    <loc>https://bcgov.github.io/ds-intro-to-git/slides/04-bcgov-org.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
+    <loc>https://bcgov.github.io/ds-intro-to-git/check_compliance.html</loc>
+    <lastmod>2024-05-15T22:58:32.804Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html</loc>
+    <lastmod>2024-05-15T22:58:32.816Z</lastmod>
   </url>
   <url>
     <loc>https://bcgov.github.io/ds-intro-to-git/slides/02-working-local.html</loc>
-    <lastmod>2024-05-15T18:27:04.782Z</lastmod>
+    <lastmod>2024-05-15T22:58:32.816Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/slides/04-bcgov-org.html</loc>
+    <lastmod>2024-05-15T22:58:32.816Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/CONTRIBUTING.html</loc>
+    <lastmod>2024-05-15T22:58:32.804Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/slides/01-what-is-vc.html</loc>
+    <lastmod>2024-05-15T22:58:32.816Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/slides/03-remote-hosting.html</loc>
+    <lastmod>2024-05-15T22:58:32.816Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/index.html</loc>
+    <lastmod>2024-05-15T22:58:32.812Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/pre-workshop/assignment.html</loc>
+    <lastmod>2024-05-15T22:58:32.816Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/course-outline.html</loc>
+    <lastmod>2024-05-15T22:58:32.804Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/materials/04-bcgov-org.html</loc>
+    <lastmod>2024-05-15T22:58:32.812Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bcgov.github.io/ds-intro-to-git/materials/02-working-local.html</loc>
+    <lastmod>2024-05-15T22:58:32.812Z</lastmod>
   </url>
 </urlset>

@@ -46,7 +46,7 @@ $ mkdir new_directory        # Create specified directory
 
 ```bash
 $ ls                         # List directories and files
-$ ls -a                      # List directorings and files, including hidden
+$ ls -a                      # List directories and files, including hidden
 ```
 
 Note that if you are ever unsure of which working directory you are in, it should be visible as part of the command prompt. If not visible, you can request it via the `pwd` bash command. 

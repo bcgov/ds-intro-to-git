@@ -11,3 +11,6 @@ index.html
 index_files
 
 /_freeze/
+
+config.txt
+.ipynb_checkpoints/

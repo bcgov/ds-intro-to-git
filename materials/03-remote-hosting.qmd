@@ -110,7 +110,7 @@ origin   https://github.com/<youusername>/planets.git (push)
 Now that authentication is setup, we can return to the remote. The `git push` command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.
 
 ```{bash}
-$ git push origin main
+$ git push -u origin main
 ```
 
 ``` bash-output-box
@@ -125,17 +125,17 @@ To https://github.com/<youusername>/planets.git
  * [new branch]      main -> main
 ```
 
-The `git push` command takes two arguments: the name of the remote repository (**origin**) and an optional branch name (**main**). Used without the branch name (`git push origin`) will push changes from all local branches to the remote. We may also use `git push` without specifying any arguments if we've already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.
+The `git push` command takes three arguments: the name of the remote repository (**origin**), the branch name (**main**) that you wish to push changes from, and `-u` to specify that the local `main` branch should track the remote `main` branch. Used without the branch name (`git push origin`) will push changes from all local branches to the remote. We may also use `git push` without specifying any arguments if we've already configured the remote for the current branch with the `-u` optoin. Git push will push only changes on our current branch to the remote.
 
 ::: {.callout-tip}
-### push vs push origin vs push origin main??
+### push vs push origin vs push origin main vs push -u origin main??
 
 It can get confusing trying to keep track of whether or not extra options are needed when pushing changes to the remote repository. As a good rule of thumb:
 
-* On the **first** push from a branch to the remote (origin), use the full call: `git push origin <branch-name>` so that the remote repository knows that the `main` branch from your local machine should track the `main` branch from the remote GitHub repository.   
+* On the **first** push from a branch to the remote (origin), use the full call: `git push -u origin main` so that the remote repository knows that the `main` branch from your local machine should track the `main` branch from the remote GitHub repository.   
   * This is called setting your remote repository to be the `upstream` repository. 
   * It is the source of truth, and all changes should flow downstream from the remote GitHub repository to every local repository. 
-* For every push after this, `git push` will be sufficient. 
+* For every push from the same branch after this, `git push` will be sufficient. 
 
 :::
 
@@ -241,11 +241,10 @@ At this point, stop and compare the three repositories.
 
 ::: {.column width='30%'}
 
-**Cloned Repository**
+**GitHub Repository**
 ```         
 ├── planets
 |   ├── mars.txt
-|   ├── pluto.txt ***
 |   ├── .git
 ```
 
@@ -253,10 +252,11 @@ At this point, stop and compare the three repositories.
 
 ::: {.column width='30%'}
 
-**GitHub Repository**
+**Cloned Repository**
 ```         
 ├── planets
 |   ├── mars.txt
+|   ├── pluto.txt ***
 |   ├── .git
 ```
 
@@ -297,7 +297,7 @@ Now our three work locations will look something like this:
 
 ::: {.column width='30%'}
 
-**Cloned Repository**
+**GitHub Repository**
 ```         
 ├── planets
 |   ├── mars.txt
@@ -309,7 +309,7 @@ Now our three work locations will look something like this:
 
 ::: {.column width='30%'}
 
-**GitHub Repository**
+**Cloned Repository**
 ```         
 ├── planets
 |   ├── mars.txt
@@ -346,8 +346,9 @@ The `git pull` command also takes two arguments: the name of the remote reposito
 
 Just like with pushes, it can be confusing to remember if we need further arguments when pulling from the remote repository. As a good rule of thumb:
 
-* If we have cloned the repository, and made sure that the remote repository is set up to be upstream from our own, `git pull` will suffice.
-  * Note that this will not work if we have not yet set up a local branch to track an upstream remote branch. However, this is a more advanced topic that we will not get into for this course! 
+* If we have cloned the repository, OR made sure that the remote branch is set up to be upstream from our own via a previous push, `git pull` will suffice.
+  * This will pull any remote changes on the branch you are currently using into your local copy of the same branch. 
+  * Note that this will not work if we have not yet set up a local branch to track an upstream remote branch. 
 * If we explicitly want to merge the `main` branch of the remote repository into some other local branch of work, `git pull origin main` will be required. 
   * Again, working off of multiple branches is a more complex method of work that we will not get into here. If you would like to learn more about branching in git, you can read the official documentation [here.](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) 
 
@@ -372,7 +373,7 @@ After pulling all the changes from the remote repository back to the original, o
 
 ::: {.column width='30%'}
 
-**Cloned Repository**
+**GitHub Repository**
 ```         
 ├── planets
 |   ├── mars.txt
@@ -384,7 +385,7 @@ After pulling all the changes from the remote repository back to the original, o
 
 ::: {.column width='30%'}
 
-**GitHub Repository**
+**Cloned Repository**
 ```         
 ├── planets
 |   ├── mars.txt

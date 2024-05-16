@@ -2,12 +2,4 @@
 title: "1. What is Version Control"
 ---
 
-## here's some code to copy
-
-```{r}
-#| echo: true
-#| code-copy: true
-rnorm(10)
-```
-
 ## 

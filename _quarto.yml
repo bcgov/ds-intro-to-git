@@ -13,17 +13,8 @@ website:
          - pre-workshop/assignment.qmd
       - text: "Slides"
         menu:
-        - text: "What is Version Control"
-          href: slides/01-what-is-vc.qmd
-          target: "_blank"
-        - text: "Working Locally with Git"
-          href: slides/02-working-local.qmd
-          target: "_blank"
-#        - text: "Remote Code Hosting and GitHub"
-#          href: slides/03-remote-hosting.qmd
-#          target: "_blank"
-        - text: "BCGOV GitHub Organization"
-          href: slides/04-bcgov-org.qmd
+        - text: "May 23, 2024"
+          href: slides/2024-05-03-bcstats-vc-git-hub.pptx
           target: "_blank"
   sidebar:
     style: "docked"

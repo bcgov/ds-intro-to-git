@@ -147,16 +147,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
         <li>
-    <a class="dropdown-item" href="../slides/01-what-is-vc.html" target="_blank">
- <span class="dropdown-text">What is Version Control</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../slides/02-working-local.html" target="_blank">
- <span class="dropdown-text">Working Locally with Git</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../slides/04-bcgov-org.html" target="_blank">
- <span class="dropdown-text">BCGOV GitHub Organization</span></a>
+    <a class="dropdown-item" href="../slides/2024-05-03-bcstats-vc-git-hub.pptx" target="_blank">
+ <span class="dropdown-text">May 23, 2024</span></a>
   </li>  
     </ul>
   </li>
@@ -388,7 +380,7 @@ origin   https://github.com/&lt;youusername&gt;/planets.git (push)</code></pre>
 <h2 data-number="3.3" class="anchored" data-anchor-id="push-local-changes-to-a-remote-repository"><span class="header-section-number">3.3</span> Push Local Changes to a Remote Repository</h2>
 <p>Now that authentication is setup, we can return to the remote. The <code>git push</code> command is used to upload local repository content to a remote repository. This command is how you transfer commits from your local repository to the repository on GitHub.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="bash-output-box"><code>Enumerating objects: 16, done.
 Counting objects: 100% (16/16), done.
@@ -399,25 +391,25 @@ Total 16 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), done.
 To https://github.com/&lt;youusername&gt;/planets.git
  * [new branch]      main -&gt; main</code></pre>
-<p>The <code>git push</code> command takes two arguments: the name of the remote repository (<strong>origin</strong>) and an optional branch name (<strong>main</strong>). Used without the branch name (<code>git push origin</code>) will push changes from all local branches to the remote. We may also use <code>git push</code> without specifying any arguments if we’ve already configured the remote for the current branch. Git push will push only changes on our current branch to the remote.</p>
+<p>The <code>git push</code> command takes three arguments: the name of the remote repository (<strong>origin</strong>), the branch name (<strong>main</strong>) that you wish to push changes from, and <code>-u</code> to specify that the local <code>main</code> branch should track the remote <code>main</code> branch. Used without the branch name (<code>git push origin</code>) will push changes from all local branches to the remote. We may also use <code>git push</code> without specifying any arguments if we’ve already configured the remote for the current branch with the <code>-u</code> optoin. Git push will push only changes on our current branch to the remote.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-push vs push origin vs push origin main??
+push vs push origin vs push origin main vs push -u origin main??
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>It can get confusing trying to keep track of whether or not extra options are needed when pushing changes to the remote repository. As a good rule of thumb:</p>
 <ul>
-<li>On the <strong>first</strong> push from a branch to the remote (origin), use the full call: <code>git push origin &lt;branch-name&gt;</code> so that the remote repository knows that the <code>main</code> branch from your local machine should track the <code>main</code> branch from the remote GitHub repository.
+<li>On the <strong>first</strong> push from a branch to the remote (origin), use the full call: <code>git push -u origin main</code> so that the remote repository knows that the <code>main</code> branch from your local machine should track the <code>main</code> branch from the remote GitHub repository.
 <ul>
 <li>This is called setting your remote repository to be the <code>upstream</code> repository.</li>
 <li>It is the source of truth, and all changes should flow downstream from the remote GitHub repository to every local repository.</li>
 </ul></li>
-<li>For every push after this, <code>git push</code> will be sufficient.</li>
+<li>For every push from the same branch after this, <code>git push</code> will be sufficient.</li>
 </ul>
 </div>
 </div>
@@ -509,15 +501,15 @@ Giving Collaborators Access
 |   ├── mars.txt
 |   ├── .git</code></pre>
 </div><div class="column" style="width:30%;">
+<p><strong>GitHub Repository</strong></p>
+<pre><code>├── planets
+|   ├── mars.txt
+|   ├── .git</code></pre>
+</div><div class="column" style="width:30%;">
 <p><strong>Cloned Repository</strong></p>
 <pre><code>├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
-|   ├── .git</code></pre>
-</div><div class="column" style="width:30%;">
-<p><strong>GitHub Repository</strong></p>
-<pre><code>├── planets
-|   ├── mars.txt
 |   ├── .git</code></pre>
 </div>
 </div>
@@ -541,13 +533,13 @@ To https://github.com/&lt;yourusername&gt;/planets.git
 |   ├── mars.txt
 |   ├── .git</code></pre>
 </div><div class="column" style="width:30%;">
-<p><strong>Cloned Repository</strong></p>
+<p><strong>GitHub Repository</strong></p>
 <pre><code>├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
 |   ├── .git</code></pre>
 </div><div class="column" style="width:30%;">
-<p><strong>GitHub Repository</strong></p>
+<p><strong>Cloned Repository</strong></p>
 <pre><code>├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
@@ -579,9 +571,10 @@ pull vs pull origin main??
 <div class="callout-body-container callout-body">
 <p>Just like with pushes, it can be confusing to remember if we need further arguments when pulling from the remote repository. As a good rule of thumb:</p>
 <ul>
-<li>If we have cloned the repository, and made sure that the remote repository is set up to be upstream from our own, <code>git pull</code> will suffice.
+<li>If we have cloned the repository, OR made sure that the remote branch is set up to be upstream from our own via a previous push, <code>git pull</code> will suffice.
 <ul>
-<li>Note that this will not work if we have not yet set up a local branch to track an upstream remote branch. However, this is a more advanced topic that we will not get into for this course!</li>
+<li>This will pull any remote changes on the branch you are currently using into your local copy of the same branch.</li>
+<li>Note that this will not work if we have not yet set up a local branch to track an upstream remote branch.</li>
 </ul></li>
 <li>If we explicitly want to merge the <code>main</code> branch of the remote repository into some other local branch of work, <code>git pull origin main</code> will be required.
 <ul>
@@ -599,13 +592,13 @@ pull vs pull origin main??
 |   ├── pluto.txt ***
 |   ├── .git</code></pre>
 </div><div class="column" style="width:30%;">
-<p><strong>Cloned Repository</strong></p>
+<p><strong>GitHub Repository</strong></p>
 <pre><code>├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
 |   ├── .git</code></pre>
 </div><div class="column" style="width:30%;">
-<p><strong>GitHub Repository</strong></p>
+<p><strong>Cloned Repository</strong></p>
 <pre><code>├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***

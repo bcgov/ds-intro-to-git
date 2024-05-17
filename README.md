@@ -2,7 +2,7 @@
 
 # Introduction To Version Control With Git and GitHub
 
-This is a repository to house materials for a 1/2 day workshop introducing participants to version control using git and the popular code hosting platform, GitHub.
+This is a repository to house materials for a 1/2 day workshop introducing participants to version control using [git](https://git-scm.com) and the popular code hosting platform, [GitHub](https://github.com).
 
 The goal of this workshop is to teach data professionals how to harness the power of version control by giving attendees a foundation in the fundamentals of version control with [git](https://git-scm.com).
 
@@ -16,19 +16,19 @@ By the end of this course, you will have gained a fundamental understanding of v
 -   Use git, popular command-line version control software, to track local file changes
 -   What are remote hosting platforms and why do we use them?
 -   Connect to GitHub, create a remote repository and push local changes to GitHub
--   Be familiar with the BC Gov Github Organization which has guidelines and requirements for hosting government developed open source repositories.
+-   Be familiar with the [public BC Gov GitHub organization](https://github.com/bcgov) which has guidelines and requirements for hosting government-developed open source repositories
 
-The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking relevent project files.
+The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking relevant project files.
 
 ## Who should take this course?
 
--   Anyone looking to solidify their foundational understanding of version control
+-   Anyone looking to solidify their understanding of version control
 -   Anyone keen to learn what git or GitHub is (**no prior experience necessary!**)
 -   Anyone wondering how version control can be used to manage and collaborate on software and code-based data science projects
 
 ## Workshop Schedule
 
-### Daily Schedule (**to be finalized**)
+### Approximate Timing
 
 | Activity      | Start Time | End Time |
 |---------------|------------|----------|
@@ -42,9 +42,9 @@ The workshop content will follow best practices for version control such as writ
 
 **Important!**
 
-Before the course starts, we ask that all attendees install git and GitBash and have a basic text editor such as Wordpad, Notepad++, or SublimeText. Instructions for how to install these tools are found in the [Introduction to git Section](). If anyone is having troubles getting the software up and running, please contact us **before** the course starts so that we can hit the ground running during the workshop.
+Before the course starts, we ask that all attendees install git and GitBash and have a basic text editor such as Wordpad, Notepad++, Visual Studio Code or Sublime Text. Instructions for how to install these tools are found in [Installation Instructions and Set-Up](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html). If anyone is having troubles getting the software up and running, please contact us **before** the course starts so that we can hit the ground running during the workshop.
 
-### Day 1
+### Content Schedule
 
 -   Section 1. What is version control?
 -   Section 2. Working locally with git

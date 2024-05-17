@@ -4,7 +4,7 @@
 
 This repository contains materials for the half day **Introduction To Version Control With Git and GitHub** workshop delivered to BC Stats. See <https://bcgov.github.io/ds-intro-to-git/> for rendered workshop materials.
 
-The goal of this workshop is to teach data professionals how to harness the power of version control by giving attendees a foundation in the fundamentals of version control with [git](https://git-scm.com) and GitHub, a widely-used platform for hosting and sharing code repositories and facilitating seamless collaboration among developers.
+The goal of this workshop is to teach data professionals how to harness the power of version control by giving attendees a foundation in the fundamentals of version control with [git](https://git-scm.com) and [GitHub](https://github.com), a widely-used platform for hosting and sharing code repositories and facilitating seamless collaboration among developers.
 
 ### Acknowledgements
 

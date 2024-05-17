@@ -23,8 +23,7 @@ Course Reference Material:
 
 ### Section 1. Introductions and What is Version Control?
 
-Learning Objective: Understand the value-add of using version control and the the basics of how automated version control systems work.\
-Slides: [Section 1 Slides](./slides/01-what-is-vc.html)
+Learning Objective: Understand the value-add of using version control and the the basics of how automated version control systems work.
 
 Topics:
 
@@ -36,10 +35,9 @@ Course Reference Material:
 
 -   [SW Carpentry Episode 1. Automated Version Control](https://swcarpentry.github.io/git-novice/01-basics.html)
 
-### Section 2. Working local with git
+### Section 2. Working Locally with Git
 
-Learning Objective: Use command-line git to track local file changes.\
-Slides: [Section 2 Slides](./slides/02-working-local.html)
+Learning Objective: Use command-line git to track local file changes.
 
 Topics:
 
@@ -61,8 +59,7 @@ Course Reference Material:
 
 ### Section 3. Remote Code Hosting and GitHub
 
-Learning Objective: What are remote hosting platforms and why do we use them?\
-Slides: [Section 3 Slides](./slides/03-remote-hosting.html)
+Learning Objective: What are remote hosting platforms and why do we use them?
 
 Topics:
 
@@ -81,17 +78,14 @@ Course Reference Material:
 -   [bcgov-r-geo-workshop Lesson 6](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/06-github.md)
 -   [Github: Keeping your Account and Data Secure](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
 
-### Section 4. BC Government GitHub Organization (bcgov)
+### Section 4. BCGov GitHub Organization
 
-Learning Objective: Understand how the bcgov framework, policy and related tools help B.C. government employees share code on GitHub\
-Slides: [Section 4 Slides](./slides/04-bcgov-org.html)
+Learning Objective: Understand how the bcgov framework, policy and related tools help B.C. government employees share code on GitHub
 
 Topics:
 
 -   what is the `bcgov` organization framework
 -   `bcgov` policy framework and licensing
--   code-sharing and teams
--   `bcgov-c`, `bcgov enterprise`
 
 Course Reference Material:
 

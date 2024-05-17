@@ -32,11 +32,11 @@ The workshop content will follow best practices for version control such as writ
 
 | Activity      | Start Time | End Time |
 |---------------|------------|----------|
-| **Session 1** | 8:45       | 9:15     |
-| **Session 2** | 9:15       | 10:30    |
-| Break         | 10:30      | 10:45    |
-| **Session 3** | 10:45      | 11:30    |
-| **Session 4** | 11:30      | 12:15    |
+| **Session 1** | 1:00       | 1:30     |
+| **Session 2** | 1:30       | 2:45    |
+| Break         | 2:45      | 3:00    |
+| **Session 3** | 3:00      | 4:00    |
+| **Session 4** | 4:00      | 4:30    |
 
 ### Pre-Course Work
 

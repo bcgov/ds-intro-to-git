@@ -237,7 +237,7 @@ nothing to commit, working tree clean
 
 it tells us everything is up to date.
 
-## Viewing the Commit History
+## Viewing and Restoring the Commit History
 
 If we want to know what we've done recently, we can ask Git to show us the project's history using `git log`:
 
@@ -287,6 +287,23 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 The last line is the key phrase: "no changes added to commit". We have changed this file, but we haven't told Git we will want to save those changes (which we do with `git add`) nor have we saved them (which we do with `git commit`).
 
+To explicitly identify what has changed between the last commit and any new, unstaged changes, we may use the `git diff` command. This will show us a list of what has changed between the most recent commit (the 'HEAD') and our local (but unstaged) changes for a given file (mars.txt).
+
+```bash
+$ git diff HEAD mars.txt
+```
+
+``` bash-output-box
+diff --git a/test.txt b/test.txt
+index df0654a..c73b558 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,3 @@
+ Cold and dry, but everything is my favorite color
++The two moons may be a problem for Wolfman.
+```
+
+
 After reviewing our change, it's time to commit it:
 
 ```{bash}
@@ -299,9 +316,33 @@ $ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
  1 file changed, 1 insertion(+)
 ```
 
-Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we're adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but *not* commit some of our work drafting the conclusion (which we haven't finished yet).
+Finally, we may have made multiple changes to a file that cause it to stop working as intended. This is incredibly common with code scripts, such as `.r` or `.py` files. More often than not, it can be incredibly difficult to identify what has actually broken, and we wish to simply revert to a copy of the code where we know that things were working as intended. This is one place that version control really shines. Let's add another line to our mars.txt file to simulate a 'broken' code script: 
+
+```bash
+$ cat mars.txt
+```
+
+``` bash-output-box
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+THIS LINE BREAKS EVERYTHING OH NO.
+```
+
+In order to revert the 'broken' script to a working version, we can use the `git restore` command:
+
+```bash
+git restore mars.txt
+cat mars.txt
+```
+
+``` bash-output-box
+Cold and dry, but everything is my favorite color
+The two moons may be a problem for Wolfman
+```
 
 ## The Staging Area
+
+As a final note, Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we're adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but *not* commit some of our work drafting the conclusion (which we haven't finished yet).
 
 To allow for this, Git has a special *staging area* where it keeps track of things that have been added to the current [changeset](https://swcarpentry.github.io/git-novice/reference.html#changeset) but not yet committed.
 

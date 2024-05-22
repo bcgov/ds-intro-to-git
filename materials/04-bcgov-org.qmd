@@ -8,65 +8,62 @@ format:
 
 ## What is it?
 
-The [BCGov](https://github.com/bcgov) GitHub organization on GitHub.com is the only approved venue for Open Source collaboration on Province of British Columbia files. OCIO, together with the BCDevExchange team established this GitHub organization in early 2014 as a method of sharing code and collaborating in the open. 
+The [BCGov GitHub organization](https://github.com/bcgov) on GitHub.com is the only approved venue for Open Source collaboration on Province of British Columbia files. OCIO, together with the BCDevExchange team established this GitHub organization in early 2014 as a method of sharing code and collaborating in the open.
 
-![The bcgov GitHub Organization](../figures/bcgov-org.png){fig-align='left' width=80%}
+![The bcgov GitHub Organization](../figures/bcgov-org.png){fig-align="left" width="80%"}
 
 ## BCGov Policy Framework
 
-![BC-Policy-Framework-For-GitHub](../figures/policy-framework.png){fig-align='left' width=50%}
+![BC-Policy-Framework-For-GitHub](../figures/policy-framework.png){fig-align="left" width="50%"}
 
-Joining the BCGov organization can be daunting. There are required files, teams to join, codes of conduct to follow, and standards and policies to remain compliant with. Luckily, there is a well documented repository, the [BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub) that contains guidelines for working within the organization. Here we'll touch on a few of the important points to know about when adding your project code to GitHub. 
+Contributing code to the BCGov organization can be daunting. There are required files, teams to join, codes of conduct to follow, and standards and policies to remain compliant with. Luckily, there is a well documented repository, the [BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub) that contains guidelines for working within the organization. Here we'll touch on a few of the important points to know about when adding your project code to GitHub.
 
 ### Joining
 
-To join the BCGov organization, a few steps are required:
+To contribute to the BCGov organization, a few steps are required:
 
-1. Make sure you have a GitHub account. 
+1.  Make sure you have a GitHub account.
 
-    * You must have a bcgov email address associated with the account (you can add a secondary email if needed). 
-    * You must enable 2-Factor authentication. 
+    -   You must have a bcgov email address associated with the account (you can add a secondary email if needed).
+    -   You must enable 2-Factor authentication.
 
-2. Get invited to the organization.
+2.  Be added to a BCGov repository to collaborate.
 
-    * This can be done by any existing member of the organization, using the [Just Ask tool.](https://just-ask.developer.gov.bc.ca/)
+3.  For those needing to open and manage repositories for BCGov teams, get invited to the organization.
 
-Once you have joined the bcgov organization, you may wish to be added to certain teams. This will allow for easier collaborations and project resilience. By adding full teams to repositories, they will not become stranded if a single member leaves.
+    -   This can be done by any existing member of the organization, using the [Just Ask tool.](https://just-ask.developer.gov.bc.ca/)
 
-![Teams in the bcgov organization](../figures/bcgov-teams.png){fig-align='left' width=80%}
-
-For more details on joining the organization, see the [joining how-to guide here](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Joining-the-BCGov-on-GitHub.md)
-
+For more details on joining the organization, see the [joining how-to guide here](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Joining-the-BCGov-on-GitHub.md).
 
 ### Mandatory Files
 
-![A bcgov repo](../figures/bcgov-repo.png){fig-align='left' width=80%}
+![A bcgov repo](../figures/bcgov-repo.png){fig-align="left" width="80%"}
 
 In addition to all your regular project files, every bcgov repository must have three additional files:
 
-1. LICENSE
+1.  LICENSE
 
-    * The default for bcgov repositories is to use the Apache 2.0 LICENSE
-        * The LICENSE file is added directly to the repository (can be selected upon creation)
-        * Boiler-plate for the Apache 2.0 LICENSE is added to the bottom of your README.md
-        * Boiler-plate for the Apache 2.0 LICENSE is added to the comments header of every source code file
-    * Other, non-code conduct may require a second license, such as the Creative Commons Attribution 4.0 International. 
-        * This can be added in a footer to your README.md
+    -   The default for bcgov repositories is to use the Apache 2.0 LICENSE
+        -   The LICENSE file is added directly to the repository (can be selected upon creation)
+        -   Boiler-plate for the Apache 2.0 LICENSE is added to the bottom of your README.md
+        -   Boiler-plate for the Apache 2.0 LICENSE is added to the comments header of every source code file
+    -   Other, non-code conduct may require a second license, such as the Creative Commons Attribution 4.0 International.
+        -   This can be added in a footer to your README.md
 
-2. README
+2.  README
 
-    * The `README.md` is the landing page for any repository. 
-    * If a repo has a README, it will be displayed automatically when a repo is opened. 
-    * This makes it the perfect place to include a brief description of what the project is, what requirements there might be, and any other useful information contributors might need.  
+    -   The `README.md` is the landing page for any repository.
+    -   If a repo has a README, it will be displayed automatically when a repo is opened.
+    -   This makes it the perfect place to include a brief description of what the project is, what requirements there might be, and any other useful information contributors might need.
 
-3. CONTRIBUTING
+3.  CONTRIBUTING
 
-  * This is a small file that encourages government employees, public, and members of the private sector to contribute to the repository, and gives guidelines on how to do that. 
+-   This is a small file that encourages government employees, public, and members of the private sector to contribute to the repository, and gives guidelines on how to do that.
 
-While not required, there is also a commonly included file called the CODE-OF-CONDUCT.md. This helps foster an open, kind, inclusive and cooperating environment where people can collaborate. 
+While not required, there is also a commonly included file called the CODE-OF-CONDUCT.md. This helps foster an open, kind, inclusive and cooperating environment where people can collaborate.
 
 Sample templates for all required, and the optional code of conduct, can be found in the [how-to guide](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/README.md)
 
 ### Cheatsheet
 
-This has only scratched the surface of the information available regarding working in the BCGov GitHub organization. The most useful tool you will find yourself coming back to is the [policy framework cheatsheet](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Cheatsheet.md), which details all of the above and more. This cheatsheet will help to make sure that any new repo you open is compliant with open data policies, and you can hit the ground running with your brand new version control tools! 
+This has only scratched the surface of the information available regarding working in the BCGov GitHub organization. The most useful tool you will find yourself coming back to is the [policy framework cheatsheet](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Cheatsheet.md), which details all of the above and more. This cheatsheet will help to make sure that any new repo you open is compliant with open data policies, and you can hit the ground running with your brand new version control tools!

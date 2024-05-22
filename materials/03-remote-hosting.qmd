@@ -10,12 +10,8 @@ format:
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-::: {layout-ncol=2}
+![Collaboration](../figures/git-gh-collab.png){fig-align="left" width="80%"}
 
-![A better way.](../figures/finaldoc.gif){fig-align='left' width=80%}
-
-![](../figures/finaldoc-revised-v2.png){width=85%}
-:::
 Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
 
 Systems like Git allow us to move work between two or more repositories. The repositories can live on separate computers or network locations. In practice, we often use one copy as a central hub, and keep it on the web rather than on someone’s laptop. This is your *source of truth* repository. Anything that lives here is what is then shared between collaborators. Each individual collaborating on the project will have a local version of this shared repository on their own computer. This is where you make changes, edits, and updates that you would eventually like to add to the rest of your shared work. Most programmers use a hosting service like GitHub to hold the central repositories; and this is true for many BC Government employees.
@@ -32,12 +28,12 @@ If you recall, in the pre-workshop, you created a GitHub account and associated 
 
 3.  Name your repository “planets”. Further down the page are other options available to us that can be toggled to suit the repository's purpose. For this workshop it's fine to create a "Public" repository. However, as this repository will be connected to a local repository, it needs to be empty. Therefore, leave “Add a README file” unchecked, and select “None” as options for both “Add .gitignore” and “Add a license.”
 
-::: {.callout-important}
+::: callout-important
 ## Creating Empty Repositories
 
-More often than not, you will want to include a README, a .gitignore, and a license. We will talk more about these pieces in [Part 4: bcgov GitHub Organization](04-bcgov-org.qmd). However, because we are connecting to a locally created git repository that already contains documents, we need to provide a blank repository to connect with. 
+More often than not, you will want to include a README, a .gitignore, and a license. We will talk more about these pieces in [Part 4: bcgov GitHub Organization](04-bcgov-org.qmd). However, because we are connecting to a locally created git repository that already contains documents, we need to provide a blank repository to connect with.
 
-For most projects, I strongly recommend starting with a remote repository **first** (with a README, .gitignore and license automatically included), and then `cloning` this remote repository into a local location. We will go over cloning a repository in [Section 3.5: Pulling changes from GitHub!](#pulling-changes-from-github) 
+For most projects, I strongly recommend starting with a remote repository **first** (with a README, .gitignore and license automatically included), and then `cloning` this remote repository into a local location. We will go over cloning a repository in [Section 3.5: Pulling changes from GitHub!](#pulling-changes-from-github)
 :::
 
 4.  Click "Create Repository". As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository.
@@ -127,29 +123,28 @@ To https://github.com/<youusername>/planets.git
 
 The `git push` command takes three arguments: the name of the remote repository (**origin**), the branch name (**main**) that you wish to push changes from, and `-u` to specify that the local `main` branch should track the remote `main` branch. Used without the branch name (`git push origin`) will push changes from all local branches to the remote. We may also use `git push` without specifying any arguments if we've already configured the remote for the current branch with the `-u` optoin. Git push will push only changes on our current branch to the remote.
 
-::: {.callout-tip}
+::: callout-tip
 ### push vs push origin vs push origin main vs push -u origin main??
 
 It can get confusing trying to keep track of whether or not extra options are needed when pushing changes to the remote repository. As a good rule of thumb:
 
-* On the **first** push from a branch to the remote (origin), use the full call: `git push -u origin main` so that the remote repository knows that the `main` branch from your local machine should track the `main` branch from the remote GitHub repository.   
-  * This is called setting your remote repository to be the `upstream` repository. 
-  * It is the source of truth, and all changes should flow downstream from the remote GitHub repository to every local repository. 
-* For every push from the same branch after this, `git push` will be sufficient. 
-
+-   On the **first** push from a branch to the remote (origin), use the full call: `git push -u origin main` so that the remote repository knows that the `main` branch from your local machine should track the `main` branch from the remote GitHub repository.
+    -   This is called setting your remote repository to be the `upstream` repository.
+    -   It is the source of truth, and all changes should flow downstream from the remote GitHub repository to every local repository.
+-   For every push from the same branch after this, `git push` will be sufficient.
 :::
 
 Now our repositories look like:
 
 ![](../materials/images/github-repo-after-first-push.svg)
 
-## Pulling changes from GitHub
+## Pulling changes from GitHub {#pulling-changes-from-github}
 
 Git allows you to work collaboratively, with multiple people making changes to the same repo and sharing those changes through GitHub. We've seen how to create a repository and push changes to it; now we will see how to pull another person's changes from Github.
 
 Start by opening a second terminal window. This window will represent your colleague, working on another computer. In the second window, navigate to the folder one level "up" in the directory tree from where you have your planets repository.
 
-```bash
+``` bash
 $ cd c:/users/lfredric/intro-to-git
 $ ls
 ```
@@ -167,9 +162,9 @@ $ cd collab
 
 Clone the planets repo substituting in your GitHub user name. You can also find the URL from GitHub. Open the remote repository on GitHub, click on the `<> Code` button, and then copy the URL from there.
 
-![Cloning the repository from GitHub.](../figures/clone-repo.png){fig-align='left' width=80%}
+![Cloning the repository from GitHub.](../figures/clone-repo.png){fig-align="left" width="80%"}
 
-```bash
+``` bash
 git clone https://github.com/<your-GitHub-username>/planets.git
 ```
 
@@ -185,21 +180,22 @@ Resolving deltas: 100% (2/2), done.
 
 ::: callout-note
 ## Remote Add Origin vs. Clone
+
 Note that when we clone a remote GitHub repository instead of connecting a blank repository to a local repository, we didn’t have to create a remote called origin: Git uses this name by default when we clone a repository into a new local location. (This is why origin was a sensible choice earlier when we were setting up remotes by hand.)
 
-You can check that the remote 'origin' repository has been properly set up using the `git remote -v` command again. 
+You can check that the remote 'origin' repository has been properly set up using the `git remote -v` command again.
 :::
 
-::: {.callout-note collapse='true'}
+::: {.callout-note collapse="true"}
 ## Giving Collaborators Access
 
 In this scenario, you won’t need to give anyone access on GitHub, because GitHub will recognize both contributors as you.
 
-However, typically you will need to allow access to other members of GitHub - otherwise anyone could go in and update your files at any point! 
+However, typically you will need to allow access to other members of GitHub - otherwise anyone could go in and update your files at any point!
 
 To give collaborator access, navigate to the repository page on GitHub, and click the "Settings" button on the right of the banner. Then, click "Add people" and then enter the username of the person you wish to collaborate with.
 
-![Adding a collaborator on GitHub.](../figures/collab-access.png){fig-align='left' width=80%}
+![Adding a collaborator on GitHub.](../figures/collab-access.png){fig-align="left" width="80%"}
 :::
 
 You should now have a new `planets` folder in the `collab` directory. Switch to this `planets` folder using the `cd` command. You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file (using your favourite text editing software) and save it to your cloned repository.
@@ -224,45 +220,40 @@ $ git commit -m "Add notes about Pluto"
  create mode 100644 pluto.txt
 ```
 
-At this point, stop and compare the three repositories. 
+At this point, stop and compare the three repositories.
 
-:::: {.columns}
-
-::: {.column width='30%'}
-
+::: columns
+::: {.column width="30%"}
 **Original Repository**
+
 ```         
 ├── planets
 |   ├── mars.txt
 |   ├── .git
 ```
-
 :::
 
-::: {.column width='30%'}
-
+::: {.column width="30%"}
 **GitHub Repository**
+
 ```         
 ├── planets
 |   ├── mars.txt
 |   ├── .git
 ```
-
 :::
 
-::: {.column width='30%'}
-
+::: {.column width="30%"}
 **Cloned Repository**
+
 ```         
 ├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
 |   ├── .git
 ```
-
 :::
-
-::::
+:::
 
 Notice how we only have the new pluto.txt file in the cloned repository. At this point, we have not yet told any of the other locations about the changes we have made. To communicate the changes and add them to our shared, source of truth, remote repository, we once again do a `git push` command. Note that because we cloned this repository from an already existing source, Git will already know that this `main` branch is set up to track the remote `main` branch, and so we do not need any further arguments:
 
@@ -280,48 +271,44 @@ Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/<yourusername>/planets.git
    3abcea2..b792d59  main -> main
 ```
+
 Now our three work locations will look something like this:
 
-:::: {.columns}
-
-::: {.column width='30%'}
-
+::: columns
+::: {.column width="30%"}
 **Original Repository**
+
 ```         
 ├── planets
 |   ├── mars.txt
 |   ├── .git
 ```
-
 :::
 
-::: {.column width='30%'}
-
+::: {.column width="30%"}
 **GitHub Repository**
+
 ```         
 ├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
 |   ├── .git
 ```
-
 :::
 
-::: {.column width='30%'}
-
+::: {.column width="30%"}
 **Cloned Repository**
+
 ```         
 ├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
 |   ├── .git
 ```
-
+:::
 :::
 
-::::
-
-We have told (pushed) the remote repository that we have made changes, and sent them to the remote repo. However, the original repository is still unaware of the changes that have been made. 
+We have told (pushed) the remote repository that we have made changes, and sent them to the remote repo. However, the original repository is still unaware of the changes that have been made.
 
 To download your changes from GitHub, switch back to the bash window (where you were working in your original repository) and enter:
 
@@ -339,63 +326,56 @@ Fast-forward
  create mode 100644 pluto.txt
 ```
 
-The `git pull` command also takes two arguments: the name of the remote repository (**origin**) and the remote branch name (**main**). The full command will pull any new changes present on the `main` branch of the remote repository into the local `main` branch (and then further merge these changes into your current branch). We may also use `git pull` without specifying any arguments if we've already configured the upstream remote for the current branch. 
+The `git pull` command also takes two arguments: the name of the remote repository (**origin**) and the remote branch name (**main**). The full command will pull any new changes present on the `main` branch of the remote repository into the local `main` branch (and then further merge these changes into your current branch). We may also use `git pull` without specifying any arguments if we've already configured the upstream remote for the current branch.
 
-::: {.callout-tip}
+::: callout-tip
 ### pull vs pull origin main??
 
 Just like with pushes, it can be confusing to remember if we need further arguments when pulling from the remote repository. As a good rule of thumb:
 
-* If we have cloned the repository, OR made sure that the remote branch is set up to be upstream from our own via a previous push, `git pull` will suffice.
-  * This will pull any remote changes on the branch you are currently using into your local copy of the same branch. 
-  * Note that this will not work if we have not yet set up a local branch to track an upstream remote branch. 
-* If we explicitly want to merge the `main` branch of the remote repository into some other local branch of work, `git pull origin main` will be required. 
-  * Again, working off of multiple branches is a more complex method of work that we will not get into here. If you would like to learn more about branching in git, you can read the official documentation [here.](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) 
-
+-   If we have cloned the repository, OR made sure that the remote branch is set up to be upstream from our own via a previous push, `git pull` will suffice.
+    -   This will pull any remote changes on the branch you are currently using into your local copy of the same branch.
+    -   Note that this will not work if we have not yet set up a local branch to track an upstream remote branch.
+-   If we explicitly want to merge the `main` branch of the remote repository into some other local branch of work, `git pull origin main` will be required.
+    -   Again, working off of multiple branches is a more complex method of work that we will not get into here. If you would like to learn more about branching in git, you can read the official documentation [here.](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 :::
-
 
 After pulling all the changes from the remote repository back to the original, our three repositories should now look like this:
 
-:::: {.columns}
-
-::: {.column width='30%'}
-
+::: columns
+::: {.column width="30%"}
 **Original Repository**
+
 ```         
 ├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
 |   ├── .git
 ```
-
 :::
 
-::: {.column width='30%'}
-
+::: {.column width="30%"}
 **GitHub Repository**
+
 ```         
 ├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
 |   ├── .git
 ```
-
 :::
 
-::: {.column width='30%'}
-
+::: {.column width="30%"}
 **Cloned Repository**
+
 ```         
 ├── planets
 |   ├── mars.txt
 |   ├── pluto.txt ***
 |   ├── .git
 ```
-
 :::
-
-::::
+:::
 
 Now the three repositories (original local, second local, and the one on GitHub) are back in sync!
 
@@ -403,16 +383,16 @@ Now the three repositories (original local, second local, and the one on GitHub)
 
 To this point, we have learned a lot of different git commands and workflows involved in tracking all of our changes, keeping our repositories up-to-date, and collaborating across computers using GitHub. While there are multiple levels of nuance that go into each of these steps, let's lay out a typical workflow (i.e. a cheatsheet that even I will reference back to).
 
-| order | action ... | git command .......... |
-| ----- | ---------- | ------------------ |
-| 1 (Once Only)    | Create remote  | `done on GitHub`|
-| 2 (Once Only)    | Clone remote   | `git clone https://github.com/path/to/remote` |
-| 3                | Update local   | `git pull origin main` |
-| 4                | Make changes   | `echo 100 >> numbers.txt` |
-| 5                | Stage changes  | `git add numbers.txt` |
-| 6                | Commit changes | `git commit -m "Add 100 to numbers.txt"` |
-| 7                | Update remote  | `git push origin main` |
-| 8                | Celebrate!     | `brb afk ttfn` | 
+| order         | action ...     | git command ..........                        |
+|----------------|--------------------|------------------------------------|
+| 1 (Once Only) | Create remote  | `done on GitHub`                              |
+| 2 (Once Only) | Clone remote   | `git clone https://github.com/path/to/remote` |
+| 3             | Update local   | `git pull origin main`                        |
+| 4             | Make changes   | `echo 100 >> numbers.txt`                     |
+| 5             | Stage changes  | `git add numbers.txt`                         |
+| 6             | Commit changes | `git commit -m "Add 100 to numbers.txt"`      |
+| 7             | Update remote  | `git push origin main`                        |
+| 8             | Celebrate!     | `brb afk ttfn`                                |
 
 ## Ignoring Things
 
@@ -420,7 +400,7 @@ What if we have files that we do not want Git to track for us, like backup files
 
 Let's create a file called `a.csv` that contains some data about the Red Planet's average temperature. Open a new csv using Excel and add two columns named 'Time' and 'Temperature'. Add a few rows of data if you want and save it to the planets directory. Then check the output of git status.
 
-```bash
+``` bash
 $ git status
 ```
 
@@ -434,11 +414,9 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Putting data files under version control can be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of **not pushing data to GitHub**. We accomplish this by creating a file in the root directory of our project called a **.gitignore**.  
+Putting data files under version control can be a waste of disk space and may put privacy at risk. As many BC Stats projects involve data with PI or other sensitive information, we generally follow a best practice of **not pushing data to GitHub**. We accomplish this by creating a file in the root directory of our project called a **.gitignore**.
 
-
-
-`.gitignore` files are plain text files; you can open the file with your chosen text editor.  Open up your favorite text editor and type the following line into the first line of the file:
+`.gitignore` files are plain text files; you can open the file with your chosen text editor. Open up your favorite text editor and type the following line into the first line of the file:
 
 ``` bash-output-box
 *.csv
@@ -446,18 +424,17 @@ Putting data files under version control can be a waste of disk space and may pu
 
 Then save and close the file, naming it `.gitignore.` Don't forget the dot at the beginning!
 
+::: callout-note
+## No .txt!
 
-::: {.callout-note}
-## No .txt! 
-
-Although a .gitignore is a plain text file, it doesn't carry the ".txt" extension.  To be sure you aren't saving a .gitignore.txt file, check the "Hidden Items" check box under Show/hide in your File Explorer Window.
+Although a .gitignore is a plain text file, it doesn't carry the ".txt" extension. To be sure you aren't saving a .gitignore.txt file, check the "Hidden Items" check box under Show/hide in your File Explorer Window.
 :::
 
-These patterns tell Git to ignore any file whose name ends in .csv. If any of these files were already being tracked, Git would continue to track them. So be sure to create your `.gitignore` early in the process! 
+These patterns tell Git to ignore any file whose name ends in .csv. If any of these files were already being tracked, Git would continue to track them. So be sure to create your `.gitignore` early in the process!
 
 Once we have created this file, the output of git status is much cleaner:
 
-```bash
+``` bash
 $ git status
 ```
 
@@ -470,8 +447,9 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+
 ::: {callout-note}
-On Unix-based operating system these files are called hidden files but on a PC they are not hidden.  As Git Bash provides a Unix-like environments, to see your `.gitignore` in Git Bash, type "ls -a".
+On Unix-based operating system these files are called hidden files but on a PC they are not hidden. As Git Bash provides a Unix-like environments, to see your `.gitignore` in Git Bash, type "ls -a".
 :::
 
 And since everyone we are sharing our repository with will probably want to ignore the same things that we are ignoring, let's add and commit our .gitignore:
@@ -492,6 +470,7 @@ The following paths are ignored by one of your .gitignore files:
 a.csv
 Use -f if you really want to add them.
 ```
+
 Go ahead and push your `.gitignore` to the remote so other people working on our project can use it too.
 
 ```{bash}
@@ -530,5 +509,3 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 The subfolder "results" and it's contents are ignored. This is handy for keeping all of your data in a single folder. You simply add the data folder to your `.gitignore` and the contents will not be accidentally pushed.
-
-

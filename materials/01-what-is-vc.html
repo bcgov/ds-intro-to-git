@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Version Control</title>
+<title>Introduction to Version Control with Git &amp; GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Introduction to Version Control</span>
+    <span class="navbar-title">Introduction to Version Control with Git &amp; GitHub</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">About The Workshop</span></a>
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-pre-workshop-materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -107,17 +107,17 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Slides</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
-        <li>
-    <a class="dropdown-item" href="../slides/2024-05-03-bcstats-vc-git-hub.pptx" target="_blank">
- <span class="dropdown-text">May 23, 2024</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../slides/2024-05-03-bcstats-vc-git-hub.pptx"> 
+<span class="menu-text">Slides</span></a>
   </li>  
-    </ul>
-  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/bcgov/ds-intro-to-git"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">GitHub</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -141,32 +141,21 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Getting Started</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../course-outline.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course Outline</span></a>
   </div>
 </li>
-      </ul>
-  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Course Sections</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../materials/01-what-is-vc.html" class="sidebar-item-text sidebar-link active">
@@ -223,9 +212,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><img src="../figures/finaldoc.gif" class="img-fluid figure-img"></p>
-<figcaption>Not this…</figcaption>
+<figcaption>https://phdcomics.com/comics.php?f=1531</figcaption>
 </figure>
 </div>
+<p>Not this.</p>
 <section id="what-is-version-control-1" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="what-is-version-control-1"><span class="header-section-number">1.1</span> What is Version Control?</h2>
 <p><strong>Version control</strong>, also known as source control, is the practice of tracking and managing changes to software code. <strong>Version control systems</strong> are software tools that are used to help individuals and software development teams manage changes to code/documents over time.</p>
@@ -270,6 +260,19 @@ Note
 <p>Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Related Reading
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Excuse me, do you have a moment to talk about version control? Jenny Bryan <a href="https://peerj.com/preprints/3159/" class="uri">https://peerj.com/preprints/3159/</a></p>
+</div>
+</div>
 </section>
 <section id="what-is-a-version-control-repository" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="what-is-a-version-control-repository"><span class="header-section-number">1.3</span> What is a Version Control Repository?</h2>
@@ -289,7 +292,8 @@ Note
 |   │   ├── images
 |   ├── plots
 |   ├── code
-|   ├── .git      &lt;------------------------ THIS MAKES IT A GIT REPOSITORY!</code></pre>
+|   ├── .git      &lt;------------------------ THIS MAKES IT A GIT REPOSITORY!
+|   ├── .gitignore &lt;-------------- FILES listed here are ignored by git (not tracked, e.g., csv files)</code></pre>
 
 
 </section>

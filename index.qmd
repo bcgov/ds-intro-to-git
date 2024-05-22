@@ -36,7 +36,7 @@ The workshop content will follow best practices for version control such as writ
 |-----------------------------------------------|------------|----------|
 | **Session 1. What is version control?**       | 1:00       | 1:30     |
 | **Session 2. Working locally with git**       | 1:30       | 2:30     |
-| BREAK ☕                                       | 2:30       | 2:45     |
+| BREAK ☕                                      | 2:30       | 2:45     |
 | **Session 3. Working remotely with GitHub**   | 2:45       | 3:45     |
 | **Session 4. The BC Gov GitHub Organization** | 3:45       | 4:15     |
 | Wrap Up & Questions                           | 4:15       | 4:30     |

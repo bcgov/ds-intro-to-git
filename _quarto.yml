@@ -36,7 +36,7 @@ format:
     number-sections: true
     number-depth: 3
 
-editor: visual
+editor: source
 
 execute:
   freeze: auto

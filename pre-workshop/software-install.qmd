@@ -72,7 +72,7 @@ Git is a set of command line utility programs that are designed to execute on a 
 #### Windows
 
 1.  Search for "Git Bash" in your start menu to see if Git/GitBash are installed on your computer already.\
-2.  If not, navigate to [Git for Windows](https://gitforwindows.org) and click "Download" to download Git/GitBash bundled software.
+2.  If not, navigate to [Git for Windows](https://git-scm.com/download/win) and click "Click here to download" to download Git/GitBash bundled software. Choose the first link, that will download the latest 64-bit version of Git for Windows. 
 3.  When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation. The default options are pretty sensible for most users.
 
 #### MacOS

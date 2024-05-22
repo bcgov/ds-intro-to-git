@@ -5,7 +5,12 @@ format:
 ---
 
 # 1. What is Version Control {.unnumbered}
-![Not this...](../figures/finaldoc.gif){fig-align="left"}
+
+![https://phdcomics.com/comics.php?f=1531](../figures/finaldoc.gif){fig-align="left"}
+
+
+Not this.
+
 
 ## What is Version Control?
 
@@ -43,6 +48,13 @@ Version control is better than sharing files back and forth because:
 Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).
 :::
 
+::: callout-tip
+## Related Reading
+Excuse me, do you have a moment to talk about version control?
+Jenny Bryan 
+<https://peerj.com/preprints/3159/>
+:::
+
 ## What is a Version Control Repository?
 
 In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Some of the metadata that a repository contains includes, among other things, a historical record of changes in the repository, a set of commit objects, and a set of references to commit objects, called heads.
@@ -66,4 +78,6 @@ Using the WES analysis example above, you and your colleagues may choose to stru
 |   ├── plots
 |   ├── code
 |   ├── .git      <------------------------ THIS MAKES IT A GIT REPOSITORY!
+|   ├── .gitignore <-------------- FILES listed here are ignored by git (not tracked, e.g., csv files)
 ```
+

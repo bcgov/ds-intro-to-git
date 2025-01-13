@@ -1,0 +1,63 @@
+---
+title: "Version Control using Git + GitHub"
+subtitle: "BC Stats Workshop"
+date: 03/07/2005
+date-format: long
+format:
+    revealjs: 
+        slide-number: true
+        chalkboard: 
+          buttons: false
+        preview-links: auto
+        #logo: images/quarto.png
+        css: styles.css
+    pptx:
+        css: styles.css
+resources:
+  - demo.pdf
+---
+
+## Territorial Acknowledgement {footer=false}
+
+![](/figures/territorial-ack.png)
+
+
+## Housekeeping  {footer=false scrollable=true}
+:::: {.columns}
+
+::: {.column width="70%"}
+-   Best practices for learning virtually
+    - Cameras on
+    - Microphones on mute
+    - Getting disconnected
+    - What to do with questions?
+- Live coding event – not being recorded
+- Our request: try your best
+- Our presenters: all kinds of awesome
+:::
+
+::: {.column width="30%"}
+![](/figures/housekeeping.png){fig-pos='t' width=60% }
+:::
+
+::::
+
+
+::: footer
+Materials: [https://bcgov.github.io/ds-intro-to-git](https://bcgov.github.io/ds-intro-to-git)
+:::
+
+## Workshop Code of Conduct
+- We aim to make this a welcoming and supportive environment for everyone, regardless of background
+- We encourage respectful discussion and questions throughout the course
+- Please be fully present and engaged during the session (that email can wait!) 
+
+
+::: footer
+Learn more: [Standards of Conduct for BC Public Service employees](https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/ethics-standards-of-conduct/standards-of-conduct)
+:::
+
+
+::: {.notes}
+Speaker notes go here.
+:::

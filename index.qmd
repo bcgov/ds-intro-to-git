@@ -45,4 +45,4 @@ The workshop content will follow best practices for version control such as writ
 
 **Important!**
 
-Before the course starts, we ask that all attendees install git and GitBash and have a basic text editor such as Wordpad, Notepad++, Visual Basic Code or Sublime Text. Instructions for how to install these tools are found in [Installation Instructions and Set-Up](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html). If anyone is having troubles getting the software up and running, please contact us **before** the course starts so that we can hit the ground running during the workshop.
+Before the course begins, we kindly ask all attendees to install Git and GitBash, and to have a basic text editor installed, such as Wordpad, Notepad++, Visual Studio Code, or Sublime Text. Detailed installation instructions can be found in the [Installation Instructions and Set-Up](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html) document. If you encounter any issues with the installation or setup, please reach out to us **prior** to the course start so we can ensure a smooth and productive workshop experience.

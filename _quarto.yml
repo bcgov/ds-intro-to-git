@@ -11,7 +11,7 @@ website:
         menu:
          - pre-workshop/software-install.qmd
          - pre-workshop/assignment.qmd
-      - href: slides/2024-05-03-bcstats-vc-git-hub.pptx
+      - href: slides/slides.qmd
         text: "Slides"
     right:     
       - icon: github

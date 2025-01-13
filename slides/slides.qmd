@@ -26,22 +26,26 @@ resources:
 :::: {.columns}
 
 ::: {.column width="70%"}
+
 -   Best practices for learning virtually
     - Cameras on
     - Microphones on mute
     - Getting disconnected
     - What to do with questions?
-- Live coding event – not being recorded
-- Our request: try your best
-- Our presenters: all kinds of awesome
+
 :::
 
 ::: {.column width="30%"}
+
 ![](/figures/housekeeping.png){fig-pos='t' width=60% }
+
 :::
 
 ::::
 
+- Live coding event – not being recorded
+- Our request: try your best
+- Our presenters: all kinds of awesome
 
 ::: footer
 Materials: [https://bcgov.github.io/ds-intro-to-git](https://bcgov.github.io/ds-intro-to-git)
@@ -59,5 +63,164 @@ Learn more: [Standards of Conduct for BC Public Service employees](https://www2.
 
 
 ::: {.notes}
-Speaker notes go here.
+Include talk about how teaching virtual is hard – never taught this one before virtually (have taught variants before) – stick with us! 
+:::
+
+## To Code Along: Installation & Set Up
+- Install Git (comes with Git Bash): [https://git-scm.com/download/win](https://git-scm.com/download/win)
+- Configure Git: [follow these steps](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
+- Create [GitHub account](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account) (can do over break if needed)
+    - Log-in
+    - Set-up 2MFA
+    - Create a Personal Access Token
+
+
+::: footer
+Learn more: [Software Installation Guide](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html)
+:::
+
+
+::: {.notes}
+To code along, you need software and account set up.
+:::
+
+## To Code Along: Installation & Set Up {fig.align=center}
+
+![](/figures/cartoon1.png){fig-pos='t' fig-align=center}
+
+::: footer
+Source: [https://phdcomics.com/comics.php?f=1531](https://phdcomics.com/comics.php?f=1531)
+:::
+
+::: {.notes}
+We’ve all been in this situation before: it seems ridiculous to have multiple nearly-identical versions of the same document – either by yourself or spread around among colleagues.
+It’s difficult to tell the difference between files, and what was changed when, by whom, and why?
+:::
+
+## What about code? 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](/figures/code1.png){fig-pos='t'}
+
+:::
+
+::: {.column width="50%"}
+
+BC Stats has A LOT of source code that make: 
+
+- aggregate / “tidy” data tables
+- figures/plots & maps
+- PDF reports
+- dashboards & applications
+- prediction models
+- provincial statistics
+
+
+:::
+
+::::
+
+
+::: footer
+Source: [https://commons.wikimedia.org/wiki/File:Programming_code.jpg
+](https://commons.wikimedia.org/wiki/File:Programming_code.jpg
+)
+:::
+
+::: {.notes}
+Same and maybe worse with code?
+:::
+
+## Workshop Outline
+
+- Why version control for code?
+- Setting up our first Git repository ![](/figures/git-logo.png){fig-pos='H' width=10%}
+- Sharing code on GitHub
+- Open-source code with BCGov GitHub ![](/figures/github-logo.png){fig-pos='H' width=10%}
+
+Course Materials: [https://bcgov.github.io/ds-intro-to-git](https://bcgov.github.io/ds-intro-to-git) 
+
+## 
+::::: {.columns}
+::: {.column width="40%"}
+![](/figures/git-logo.png){fig-pos='t' width=75% fig-align=right}
+:::
+::: {.column width="20%"}
+![](/figures/plus-sign.png){fig-pos='t' width=30% fig-align=center}
+:::
+::: {.column width="40%"}
+![](/figures/github-mark.png){fig-pos='t' width=25% fig-align=left}
+:::
+::::
+
+
+![](/figures/plus-sign.png){fig-pos='t' width=10% fig-align=center}
+
+![](/figures/bc-public-service.png){fig-pos='t' width=80% fig-align=center}
+
+
+::: {.notes}
+Git is one of the most widely used version control tools in the field of data science (and software development)
+
+Git's integration with code hosting platforms like GitHub provides robust collaboration features, including pull requests, issue tracking, and continuous integration/continuous deployment (CI/CD) pipelines.
+
+2014 Exchange Lab created bcgov GitHub
+:::
+
+## Why these tools? 
+
+
+## Enter Version Control
+
+![](/figures/git-logo.png){fig-pos='t'}
+
+![](/figures/git-circles.png){fig-pos='t'}
+
+::: footer
+Source: [https://git-scm.com/about](https://git-scm.com/about)
+:::
+
+::: {.notes}
+A version control system is a tool that keeps track of changes for us. There are several options; we are going to talk about git. It keeps track of snapshots in time You decide which changes make up  each snapshot, and git stores those changes and keeps useful metadata about them.
+You store all of your project files in a folder.
+All of the files, plus the complete history for all the files in a that folder make up a repository (“repo”).
+Repositories can be kept in sync across different computers facilitating collaboration among different people.
+
+From Git website: Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+
+:::
+
+## Title
+
+::: footer
+
+:::
+
+::: {.notes}
+
+:::
+
+## Title
+
+::: footer
+
+:::
+
+::: {.notes}
+
+:::
+
+## Title
+
+::: footer
+
+:::
+
+::: {.notes}
+
 :::

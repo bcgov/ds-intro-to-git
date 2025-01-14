@@ -1,0 +1,15 @@
+---
+title: "Version Control using Git + GitHub"
+subtitle: "BC Stats Workshop"
+date: 01/29/2025
+date-format: long
+format:
+    revealjs: 
+        slide-number: true
+        chalkboard: 
+          buttons: false
+        preview-links: auto
+        #logo: images/quarto.png
+        theme: [white, custom.scss]
+---
+

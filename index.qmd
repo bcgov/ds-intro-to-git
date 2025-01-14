@@ -19,8 +19,21 @@ By the end of this course, you will have gained a fundamental understanding of v
 -   Understand the basics of how automated version control systems work
 -   Use git—popular command-line version control software—to track local file changes
 -   Understand remote hosting platforms and why we use them
--   Connect to GitHub, create a remote repository and push local changes to GitHub
+-   Connect to GitHub, create a remote repository and clone a local version to your PC
 -   Be familiar with the [public BC Gov GitHub organization](https://github.com/bcgov) which has guidelines and requirements for hosting government developed open source repositories
+
+You will be able to follow a standard Git workflow to manage your work under existing version control using the following steps:
+
+| Order          | Action           | Git Command                                   |
+|----------------|------------------|-----------------------------------------------| 
+| 1              | Update local     | `git pull origin main`                        |
+| 2              | Make changes     | (Done in editor)                              |
+| 3              | Stage changes    | `git add numbers.txt`                         |
+| 4              | Commit changes   | `git commit -m "Add 100 to numbers.txt"`      |
+| 5              | Update remote    | `git push origin main`                        |
+
+
+
 
 The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking relevant project files.
 
@@ -34,15 +47,15 @@ The workshop content will follow best practices for version control such as writ
 
 | Activity                                      | Start Time | End Time |
 |-----------------------------------------------|------------|----------|
-| **Session 1. What is version control?**       | 1:00       | 1:30     |
-| **Session 2. Working locally with git**       | 1:30       | 2:30     |
-| BREAK ☕                                      | 2:30       | 2:45     |
-| **Session 3. Working remotely with GitHub**   | 2:45       | 3:45     |
-| **Session 4. The BC Gov GitHub Organization** | 3:45       | 4:15     |
-| Wrap Up & Questions                           | 4:15       | 4:30     |
+| **Session 1. What is version control?**       | 9:00       | 9:30     |
+| **Session 2. Working locally with git**       | 9:30       | 10:30    |
+| BREAK ☕                                      | 10:30      | 10:45    |
+| **Session 3. Working remotely with GitHub**   | 10:45      | 11:45    |
+| **Session 4. The BC Gov GitHub Organization** | 11:45      | 12:15    |
+| Wrap Up & Questions                           | 12:15      | 12:30    |
 
 ## Pre-Course Work
 
 **Important!**
 
-Before the course starts, we ask that all attendees install git and GitBash and have a basic text editor such as Wordpad, Notepad++, Visual Basic Code or Sublime Text. Instructions for how to install these tools are found in [Installation Instructions and Set-Up](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html). If anyone is having troubles getting the software up and running, please contact us **before** the course starts so that we can hit the ground running during the workshop.
+Before the course begins, we ask that all attendees install Git and GitBash, and have a basic text editor installed, such as Wordpad, Notepad++, Visual Studio Code, or Sublime Text. Detailed installation instructions can be found at the [Installation Instructions and Set-Up](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html) page. If you encounter any issues with the installation or setup, please reach out **prior** to the course start so we can ensure a smooth and productive workshop experience.

@@ -13,3 +13,54 @@ format:
         theme: [white, custom.scss]
 ---
 
+## Territorial Acknowledgement
+
+![](/figures/mystic-beach-vi.jpg)
+
+::: footer
+Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg#file) © 2018 by [Michal Klajban](https://commons.wikimedia.org/wiki/User:Podzemnik) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1) 
+:::
+
+::: notes
+I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I are grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for millennia.
+:::
+
+## Housekeeping {footer="false" scrollable="true"}
+
+::::: columns
+::: {.column width="70%"}
+-   Best practices for learning virtually
+    -   Cameras on
+    -   Microphones on mute
+    -   Getting disconnected
+    -   What to do with questions?
+:::
+
+::: {.column width="30%"}
+![](/figures/housekeeping.png){fig-pos="t" width="60%"}
+:::
+:::::
+
+-   Live coding event: (not being recorded)
+-   Our request: try your best
+-   Our presenters: all kinds of awesome
+-   Course Materials: <https://bcgov.github.io/ds-intro-to-git>
+
+::: notes
+Keep cameras on and microphones on mute.
+If you are disconnected and having trouble reconnecting then 
+:::
+
+## Workshop Code of Conduct
+
+-   We aim to make this a welcoming and supportive environment for everyone, regardless of background
+-   We encourage respectful discussion and questions throughout the course
+-   Please be fully present and engaged during the session (that email can wait!)
+
+::: footer
+Learn more: [Standards of Conduct for BC Public Service employees](https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/ethics-standards-of-conduct/standards-of-conduct)
+:::
+
+::: notes
+Include talk about how teaching virtual is hard – never taught this one before virtually (have taught variants before) – stick with us!
+:::

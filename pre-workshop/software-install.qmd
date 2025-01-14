@@ -27,7 +27,7 @@ When we sign in to GitHub on the web, we are signing into our application accoun
 
 As of 2023 all GitHub accounts are required to have multi-factor authentication (2FA) configured for extra security. Several options exist for setting up 2FA, the simplest is via text message described below.
 
-1.  In the upper-right corner of any page, click on your profile photo and select Settings.
+1.  In the upper-right corner of any page, click on your profile photo/avatar and select Settings.
 2.  In the "Access" section of the sidebar, click on Password and authentication.
 3.  Scroll down to "Two-factor authentication" section of the page and click Enable two-factor authentication.
 4.  At the bottom of the page, next to "SMS authentication", click Select.
@@ -71,9 +71,12 @@ Git is a set of command line utility programs that are designed to execute on a 
 
 #### Windows
 
-1.  Search for "Git Bash" in your start menu to see if Git/GitBash are installed on your computer already.\
-2.  If not, navigate to [Git for Windows](https://git-scm.com/download/win) and click "Click here to download" to download Git/GitBash bundled software. Choose the first link, that will download the latest 64-bit version of Git for Windows. 
-3.  When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation. The default options are pretty sensible for most users.
+1.  Search for "Git Bash" in your start menu to check if Git/GitBash are already installed on your computer.
+2.  If Git/GitBash are not installed, navigate to [Git for Windows](https://git-scm.com/download/win) and click "Click here to download" to download the latest 64-bit version of Git for Windows software. This software includes GitBash
+3.  After the download is complete, double click on it to run the installer. The Git Setup wizard will appear. Follow the on-screen prompts by clicking "Next" and "Finish" to complete the installation.  The default options are suitable for most users with the following exceptions:
+    - Select Notepad++, Notepad or Wordpad to use as your default editor.
+    - Adjust the name of the initial branch in new repositories.  Override the default to use “main” instead of “master”.  
+
 
 #### MacOS
 

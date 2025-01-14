@@ -26,6 +26,4 @@ Your GitHub handle is in bold font above your account name.
 
 ![Your GitHub Handle](../figures/github-handle2.png){width=50% fig-align="left"}
 
-Typically, your GitHub handle is similar to your account name, but this is not strictly required.
-
-Capture a screen shot of your GitHub handle.
+Generally, your GitHub handle will be similar to your account name (FirstnameLastname), but this is not strictly required.

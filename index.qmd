@@ -14,7 +14,7 @@ GitHub is a widely-used platform for hosting and sharing code repositories, faci
 
 By the end of this course, you will have gained a fundamental understanding of version control, enabling you to:
 
--   Set up a GitHub account and install the software git (pre-workshop)
+-   Set up a GitHub account and install the software, git (see pre-workshop assignment)
 -   Understand the value-add of using version control to manage software and code-based data science projects
 -   Understand the basics of how automated version control systems work
 -   Use git—popular command-line version control software—to track local file changes
@@ -22,7 +22,7 @@ By the end of this course, you will have gained a fundamental understanding of v
 -   Connect to GitHub, create a remote repository and clone a local version to your PC
 -   Be familiar with the [public BC Gov GitHub organization](https://github.com/bcgov) which has guidelines and requirements for hosting government developed open source repositories
 
-You will be able to follow a standard Git workflow to manage your work under existing version control using the following steps:
+You will also be able to follow a standard Git workflow to manage your work under existing version control using the following steps:
 
 | Order          | Action           | Git Command                                   |
 |----------------|------------------|-----------------------------------------------| 
@@ -33,8 +33,6 @@ You will be able to follow a standard Git workflow to manage your work under exi
 | 5              | Update remote    | `git push origin main`                        |
 
 
-
-
 The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking relevant project files.
 
 ## Who should take this course?
@@ -43,7 +41,9 @@ The workshop content will follow best practices for version control such as writ
 -   Anyone keen to learn what git or GitHub is (**no prior experience necessary!**)
 -   Anyone wondering how version control can be used to manage and collaborate on software and code-based data science projects
 
-## Workshop Schedule
+## Workshop Schedule 
+
+When: January 29, 2025, 9:00 - 12:30 
 
 | Activity                                      | Start Time | End Time |
 |-----------------------------------------------|------------|----------|

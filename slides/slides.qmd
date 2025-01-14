@@ -1,7 +1,7 @@
 ---
 title: "Version Control using Git + GitHub"
 subtitle: "BC Stats Workshop"
-date: 03/07/2005
+date: 01/29/2025
 date-format: long
 format:
     revealjs: 
@@ -13,9 +13,17 @@ format:
         theme: white
 ---
 
-## Territorial Acknowledgement {footer="false"}
+## Territorial Acknowledgement
 
-![](/figures/territorial-ack.png)
+![](/figures/mystic-beach-vi.jpg)
+
+::: footer
+Photo Source: Mystic Beach, Vancouver Island, Canada 10 © 2018 by Michal Klajban is licensed under CC BY-SA 4.0 
+:::
+
+::: notes
+I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I are grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for millennia.
+:::
 
 ## Housekeeping {footer="false" scrollable="true"}
 

@@ -301,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="1.3" class="anchored" data-anchor-id="configure-multi-factor-authentication-2fa"><span class="header-section-number">1.3</span> Configure Multi-Factor authentication (2FA)</h3>
 <p>As of 2023 all GitHub accounts are required to have multi-factor authentication (2FA) configured for extra security. Several options exist for setting up 2FA, the simplest is via text message described below.</p>
 <ol type="1">
-<li>In the upper-right corner of any page, click on your profile photo and select Settings.</li>
+<li>In the upper-right corner of any page, click on your profile photo/avatar and select Settings.</li>
 <li>In the “Access” section of the sidebar, click on Password and authentication.</li>
 <li>Scroll down to “Two-factor authentication” section of the page and click Enable two-factor authentication.</li>
 <li>At the bottom of the page, next to “SMS authentication”, click Select.</li>
@@ -344,10 +344,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="windows" class="level4">
 <h4 class="anchored" data-anchor-id="windows">Windows</h4>
 <ol type="1">
-<li>Search for “Git Bash” in your start menu to see if Git/GitBash are installed on your computer already.<br>
-</li>
-<li>If not, navigate to <a href="https://git-scm.com/download/win">Git for Windows</a> and click “Click here to download” to download Git/GitBash bundled software. Choose the first link, that will download the latest 64-bit version of Git for Windows.</li>
-<li>When you’ve successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation. The default options are pretty sensible for most users.</li>
+<li>Search for “Git Bash” in your start menu to check if Git/GitBash are already installed on your computer.</li>
+<li>If Git/GitBash are not installed, navigate to <a href="https://git-scm.com/download/win">Git for Windows</a> and click “Click here to download” to download the latest 64-bit version of Git for Windows software. This software includes GitBash</li>
+<li>After the download is complete, double click on it to run the installer. The Git Setup wizard will appear. Follow the on-screen prompts by clicking “Next” and “Finish” to complete the installation. The default options are suitable for most users with the following exceptions:
+<ul>
+<li>Select Notepad++, Notepad or Wordpad to use as your default editor.</li>
+<li>Adjust the name of the initial branch in new repositories. Override the default to use “main” instead of “master”.</li>
+</ul></li>
 </ol>
 </section>
 <section id="macos" class="level4">

@@ -2,7 +2,7 @@
 title: "About The Workshop"
 ---
 
-## Introduction To Version Control With Git and GitHub
+## Introduction To Version Control With Git and GitHub {.unnumbered}
 
 This is a 1/2 day workshop introducing participants to version control using git and the popular code hosting platform, GitHub.
 
@@ -10,7 +10,7 @@ The goal of this workshop is to teach data professionals how to harness the powe
 
 GitHub is a widely-used platform for hosting and sharing code repositories, facilitating seamless collaboration among developers. Git, on the other hand, is a popular version control system that enables you to track changes in your code, collaborate with team members, and maintain a history of your project's development.
 
-## Learning Outcomes
+## Learning Outcomes {.unnumbered}
 
 By the end of this course, you will have gained a fundamental understanding of version control, enabling you to:
 
@@ -35,13 +35,13 @@ You will also be able to follow a standard Git workflow to manage your work unde
 
 The workshop content will follow best practices for version control such as writing descriptive commit messages, including a .gitignore file and tracking relevant project files.
 
-## Who should take this course?
+## Who should take this course? {.unnumbered}
 
 -   Anyone looking to solidify their understanding of version control
 -   Anyone keen to learn what git or GitHub is (**no prior experience necessary!**)
 -   Anyone wondering how version control can be used to manage and collaborate on software and code-based data science projects
 
-## Workshop Schedule 
+## Workshop Schedule {.unnumbered}
 
 When: January 29, 2025, 9:00 - 12:30 
 
@@ -54,7 +54,7 @@ When: January 29, 2025, 9:00 - 12:30
 | **Session 4. The BC Gov GitHub Organization** | 11:45      | 12:15    |
 | Wrap Up & Questions                           | 12:15      | 12:30    |
 
-## Pre-Course Work
+## Pre-Course Work {.unnumbered}
 
 **Important!**
 

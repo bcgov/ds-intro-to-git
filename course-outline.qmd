@@ -2,7 +2,7 @@
 title: "Course Outline"
 ---
 
-### Pre-Workshop Installation and Set Up
+### Pre-Workshop Installation and Set Up {.unnumbered}
 
 Learning Objective: Set up a GitHub account and install git (pre-workshop).\
 Instructions: [Installation and Set-Up](./pre-workshop/software-install.html)\
@@ -21,7 +21,7 @@ Course Reference Material:
 -   [SW Carpentry Episode 2. Setting Up Git](https://swcarpentry.github.io/git-novice/)
 -   [bcgov-r-geo-workshop Lesson 1](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/01-setup.md)
 
-### Section 1. Introductions and What is Version Control?
+### Section 1. Introductions and What is Version Control? {.unnumbered}
 
 Learning Objective: Understand the value-add of using version control and the the basics of how automated version control systems work.
 
@@ -35,7 +35,7 @@ Course Reference Material:
 
 -   [SW Carpentry Episode 1. Automated Version Control](https://swcarpentry.github.io/git-novice/01-basics.html)
 
-### Section 2. Working Locally with Git
+### Section 2. Working Locally with Git {.unnumbered}
 
 Learning Objective: Use command-line git to track local file changes.
 
@@ -57,7 +57,7 @@ Course Reference Material:
 -   [bcgov-r-geo-workshop Lesson 3](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/03-changes.md)
 -   [bcgov-r-geo-workshop Lesson 5](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/05-ignore.md)
 
-### Section 3. Remote Code Hosting and GitHub
+### Section 3. Remote Code Hosting and GitHub {.unnumbered}
 
 Learning Objective: What are remote hosting platforms and why do we use them?
 
@@ -78,7 +78,7 @@ Course Reference Material:
 -   [bcgov-r-geo-workshop Lesson 6](https://github.com/bcgov/bcgov-r-geo-workshop/blob/master/20191105_Day_1_PM_Intro/lessons/06-github.md)
 -   [Github: Keeping your Account and Data Secure](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
 
-### Section 4. BCGov GitHub Organization
+### Section 4. BCGov GitHub Organization {.unnumbered}
 
 Learning Objective: Understand how the bcgov framework, policy and related tools help B.C. government employees share code on GitHub
 

@@ -2,9 +2,9 @@
 title: "Installation Instructions and Set-Up"
 ---
 
-## Getting Started with GitHub
+## Getting Started with GitHub {.unnumbered}
 
-### Create your GitHub Account
+## Create your GitHub Account
 
 As part of this workshop we will be connecting and pushing some sample code to GitHub, therefore you'll need to create a GitHub account. In general, creating a GitHub account can be a great way to collaborate on open-source projects, showcase your work, and learn from others.
 
@@ -16,14 +16,14 @@ As part of this workshop we will be connecting and pushing some sample code to G
 
 Optional reading: [Configuring your GitHub account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account#part-1-configuring-your-github-account)
 
-### Login to your GitHub Account
+## Login to your GitHub Account
 
 When we sign in to GitHub on the web, we are signing into our application account created in step 1. This is where we manage our profile settings, set our passwords, and browse repositories. It is possible to edit repository content from GitHub although editing is often performed in a local application such as RStudio, VS Code or a text editor. We will go into more detail on that in the course workshop.
 
 1.  Go to [https://github.com/](https://github.com) and click "Sign In" (top right corner).\
 2.  Enter either your username or your email address, and password created in Step 1.
 
-### Configure Multi-Factor authentication (2FA)
+## Configure Multi-Factor authentication (2FA)
 
 As of 2023 all GitHub accounts are required to have multi-factor authentication (2FA) configured for extra security. Several options exist for setting up 2FA, the simplest is via text message described below.
 
@@ -40,7 +40,7 @@ As of 2023 all GitHub accounts are required to have multi-factor authentication 
 
 Optional reading: [Other 2FA configurations](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication).
 
-### Create a Personal Access Token
+## Create a Personal Access Token
 
 To keep your account secure, you must authenticate before you can access certain resources on GitHub. When we access resources via a browser (as in Step 2) we are authenticating with our username and password and two-factor authentication. In the workshop we will also be accessing GitHub resources via the REST API. You can authenticate with the API in different ways, but the simplest way is with a Classic Personal Access Token (PAT).
 
@@ -65,7 +65,7 @@ Then create your PAT:
 
 Optional reading: [Authenticating to the REST API](https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28)
 
-### Install Git (and GitBash) {.tabset}
+## Install Git (and GitBash) {.tabset}
 
 Git is a set of command line utility programs that are designed to execute on a *Unix style command-line environment*. Linux and MacOS both include built-in Unix command line terminals. Most likely you are working on a Windows operating system and will require Git Bash, an application for Windows environments which provides an emulation layer for a Git command line experience.
 
@@ -82,9 +82,9 @@ Git is a set of command line utility programs that are designed to execute on a 
 
 Please visit: [Installing Git](https://www.atlassian.com/git/tutorials/install-git) and follow the instructions for installing git for MacOSX.
 
-### Configure Git
+## Configure Git
 
-#### Git Set Up
+### Git Set Up
 
 When we use Git on a new computer for the first time, we need to configure a few things. Below are a few examples of configurations we will set as we get started with Git:
 
@@ -93,7 +93,7 @@ When we use Git on a new computer for the first time, we need to configure a few
 
 On a command line, Git commands are written as `git verb options`, where `verb` is what we actually want to do and `options` is additional optional information which may be needed for the `verb`.
 
-#### Set user.name & user.email
+### Set user.name & user.email
 
 In this workshop, we'll be working with [GitHub](https://github.com/), and it's important to ensure that the name and email address you configure on your local computer matches the one associated with your GitHub account. For most participants, this will be your government email address.
 
@@ -108,7 +108,7 @@ $ git config --global user.email "your_email@gmail.com"
 
 If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private](https://help.github.com/articles/keeping-your-email-address-private/).
 
-#### Global Settings
+### Check Global Settings
 
 The two commands we just ran only need to be run once. The flag `--global` tells Git to use the settings for every project on this computer.
 
@@ -120,7 +120,7 @@ $ git config --list
 
 You can change your configuration as many times as you want: use the same commands to update your name or email address.
 
-#### Git Help and Manual
+### Access Git Help and Manual
 
 If you forget a `git` command, you can access a list of available commands by appending a `-h`. You can access the Git manual for a command by appending `--help` :
 
@@ -131,7 +131,7 @@ $ git config --help
 
 While viewing the manual, you may see `:` near the cursor at the bottom of the screen.  This is a prompt waiting for further commands such as <kbd>Q</kbd>, which you can use to exit the manual.
 
-## Additional Resources
+## Additional Resources {.unnumbered}
 
 <https://github.com/bcgov/BC-Policy-Framework-For-GitHub>
 

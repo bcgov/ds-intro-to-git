@@ -165,14 +165,21 @@
     "href": "pre-workshop/assignment.html",
     "title": "Pre-Workshop Assignment",
     "section": "",
-    "text": "To make the most of our time together on the day of the workshop, we would like you to show up ready-to-go with the proper software installed and configured correctly on your local machine. After working through the installation instructions, please include the following in a single Word or PDF document.\n\n\nOpen the application Git Bash on your local computer and enter the following commands at the command prompt.\n$ git config -–list\nTake a screen shot of the command-line output.\n\n\n\nYou can find this by signing in to GitHub and clicking on your avatar at the top right. Your GitHub handle is in bold font above your name.\n\n\n\nYour GitHub Handle"
+    "text": "To maximize our time together on the day of the workshop, we ask that you come prepared with the necessary software installed and correctly configured on your local machine. First, ensure you have thoroughly reviewed and completed the steps outlined in the Installation Instructions and Set-Up Guide, which can be found under Pre-Workshop Materials in the top menu bar.\nNext, compile the following information into a single Word or PDF document and submit it to the course facilitator(s) via email."
   },
   {
-    "objectID": "pre-workshop/assignment.html#pre-workshop-assignment",
-    "href": "pre-workshop/assignment.html#pre-workshop-assignment",
+    "objectID": "pre-workshop/assignment.html#a-screen-shot-of-your-git-configurations",
+    "href": "pre-workshop/assignment.html#a-screen-shot-of-your-git-configurations",
     "title": "Pre-Workshop Assignment",
-    "section": "",
-    "text": "To make the most of our time together on the day of the workshop, we would like you to show up ready-to-go with the proper software installed and configured correctly on your local machine. After working through the installation instructions, please include the following in a single Word or PDF document.\n\n\nOpen the application Git Bash on your local computer and enter the following commands at the command prompt.\n$ git config -–list\nTake a screen shot of the command-line output.\n\n\n\nYou can find this by signing in to GitHub and clicking on your avatar at the top right. Your GitHub handle is in bold font above your name.\n\n\n\nYour GitHub Handle"
+    "section": "1 A screen shot of your git configurations",
+    "text": "1 A screen shot of your git configurations\nOpen the application Git Bash on your local computer and enter the following commands at the command prompt.\n$ git config -–list\nCapture a screen shot of the command-line output."
+  },
+  {
+    "objectID": "pre-workshop/assignment.html#a-screen-shot-of-your-github-handle.",
+    "href": "pre-workshop/assignment.html#a-screen-shot-of-your-github-handle.",
+    "title": "Pre-Workshop Assignment",
+    "section": "2 A screen shot of your GitHub handle.",
+    "text": "2 A screen shot of your GitHub handle.\nSign in to GitHub and right-click on your avatar in the top right corner.\n\n\n\nYour GitHub Avatar\n\n\nYour GitHub handle is in bold font above your account name.\n\n\n\nYour GitHub Handle\n\n\nTypically, your GitHub handle is similar to your account name, but this is not strictly required.\nCapture a screen shot of your GitHub handle."
   },
   {
     "objectID": "course-outline.html",

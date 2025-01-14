@@ -2,11 +2,11 @@
 title: "Pre-Workshop Assignment"
 ---
 
-## Pre-workshop Assignment
+To maximize our time together on the day of the workshop, we ask that you come prepared with the necessary software installed and correctly configured on your local machine. First, ensure you have thoroughly reviewed and completed the steps outlined in the **Installation Instructions and Set-Up Guide**, which can be found under **Pre-Workshop Materials** in the top menu bar.
 
-To make the most of our time together on the day of the workshop, we would like you to show up ready-to-go with the proper software installed and configured correctly on your local machine. After working through the installation instructions, please include the following in a single Word or PDF document.
+Next, compile the following information into a single Word or PDF document and submit it to the course facilitator(s) via email.
 
-#### A screen shot of your git configurations
+## A screen shot of your git configurations
 
 Open the application Git Bash on your local computer and enter the following commands at the command prompt.
 
@@ -14,10 +14,18 @@ Open the application Git Bash on your local computer and enter the following com
 $ git config -–list
 ```
 
-Take a screen shot of the command-line output.
+Capture a screen shot of the command-line output.
 
-#### Your GitHub handle.
+## A screen shot of your GitHub handle.
 
-You can find this by signing in to GitHub and clicking on your avatar at the top right. Your GitHub handle is in bold font above your name.
+Sign in to GitHub and right-click on your avatar in the top right corner. 
 
-![Your GitHub Handle](../figures/github-handle.png){width=50% fig-align="left"}
+![Your GitHub Avatar](../figures/github-avatar.png){width=50% fig-align="left"}
+
+Your GitHub handle is in bold font above your account name. 
+
+![Your GitHub Handle](../figures/github-handle2.png){width=50% fig-align="left"}
+
+Typically, your GitHub handle is similar to your account name, but this is not strictly required.
+
+Capture a screen shot of your GitHub handle.

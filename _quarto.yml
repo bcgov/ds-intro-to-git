@@ -5,14 +5,18 @@ website:
   title: "Introduction to Version Control with Git & GitHub"
   navbar:
     left:
-      - href: index.qmd
-        text: About
+      - text: About
+        href: index.qmd
       - text: "Pre-Workshop Materials"  
         menu:
          - pre-workshop/software-install.qmd
          - pre-workshop/assignment.qmd
-      - href: slides/2024-05-03-bcstats-vc-git-hub.pptx
-        text: "Slides"
+      - text: "Slides"
+        menu:
+         - text: "Current Workshop - Spring 2025"
+           href: slides/slides.qmd
+         - text: "Previous Workshop - Fall 2023"
+           href: slides/2024-05-03-bcstats-vc-git-hub.pptx
     right:     
       - icon: github
         href: https://github.com/bcgov/ds-intro-to-git

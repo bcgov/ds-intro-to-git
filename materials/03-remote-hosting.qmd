@@ -381,18 +381,23 @@ Now the three repositories (original local, second local, and the one on GitHub)
 
 ## A Typical Workflow
 
-To this point, we have learned a lot of different git commands and workflows involved in tracking all of our changes, keeping our repositories up-to-date, and collaborating across computers using GitHub. While there are multiple levels of nuance that go into each of these steps, let's lay out a typical workflow (i.e. a cheatsheet that even I will reference back to).
+To this point, we have learned a lot of different git commands and workflows involved in tracking all of our changes, keeping our repositories up-to-date, and collaborating across computers using GitHub. While there are multiple levels of nuance that go into each of these steps, let's lay out a typical workflow. 
 
-| order         | action ...     | git command ..........                        |
-|----------------|--------------------|------------------------------------|
-| 1 (Once Only) | Create remote  | `done on GitHub`                              |
-| 2 (Once Only) | Clone remote   | `git clone https://github.com/path/to/remote` |
-| 3             | Update local   | `git pull origin main`                        |
-| 4             | Make changes   | `echo 100 >> numbers.txt`                     |
-| 5             | Stage changes  | `git add numbers.txt`                         |
-| 6             | Commit changes | `git commit -m "Add 100 to numbers.txt"`      |
-| 7             | Update remote  | `git push origin main`                        |
-| 8             | Celebrate!     | `brb afk ttfn`                                |
+::: {.callout-tip}
+## Tip
+The table below doubles as a handy cheatsheet; take a screenshot and save for future reference!
+:::
+
+
+| Order          | Action           | Git Command                                   |
+|----------------|------------------|-----------------------------------------------|
+| 1 (Once Only)  | Create remote    | (Done on GitHub)                              |
+| 2 (Once Only)  | Clone remote     | `git clone https://github.com/path/to/remote` |
+| 3              | Update local     | `git pull origin main`                        |
+| 4              | Make changes     | (Done in editor)                              |
+| 5              | Stage changes    | `git add numbers.txt`                         |
+| 6              | Commit changes   | `git commit -m "Add 100 to numbers.txt"`      |
+| 7              | Update remote    | `git push origin main`                        |
 
 ## Ignoring Things
 

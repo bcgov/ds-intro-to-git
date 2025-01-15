@@ -54,38 +54,14 @@ Source: <https://git-scm.com/about>
 ::: notes
 A version control system is a tool that keeps track of changes for us. There are several options; we are going to talk about git. It keeps track of snapshots in time.
 
-You decide which changes make up each snapshot, and git stores those changes and keeps useful metadata about them. You store all of your project files in a folder. All of the files, plus the complete history for all the files in a that folder make up a repository (“repo”). Repositories can be kept in sync across different computers facilitating collaboration among different people.
+You decide which changes make up each sna+shot, and git stores those changes and keeps useful metadata about them. You store all of your project files in a folder. All of the files, plus the complete history for all the files in a that folder make up a repository (“repo”). Repositories can be kept in sync across different computers facilitating collaboration among different people.
 
 From Git website: Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
 :::
 
-## Bash Jargon
 
-``` bash {eval=false}
-$ cd path/to/directory          # Go to specified directory - "quotes" are needed if there are spaces 
-$ cd ..                         # Go up one directory level
-$ mkdir new_directory           # Create specified directory
-$ ls                            # List directories and files
-$ ls -a                         # List directories and files, including hidden
-```
-
-::: notes
-:::
-
-## Bash Jargon
-
-``` bash {eval=false}
-#| class-output: output
-$ git init					        # initiate a repository in the current directory
-$ git status				        # indicate if there are any changes to files
-$ git add <filename>		    	# add a new file/change to the staging area
-$ git commit –m “commit message”	# commit all staged changes to the repository
-$ git log					        # view commit history
-$ git diff					        # show changes between commits
-$ git restore				        # restore file/s to previous commit
-```
 
 ::: notes
 :::

@@ -15,9 +15,7 @@ knitr::opts_chunk$set(eval = FALSE)
 First, let's create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile the H drive as a "safe" place for our work. We will start by opening a `git bash` terminal, changing to the C: drive, creating a new directory, and changing the current working directory to the newly created one:
 
 ```bash
-$ cd c:/users/lfredric
-$ mkdir intro-to-git
-$ cd intro-to-git
+$ cd c:/users/bashcrof
 $ mkdir planets
 $ cd planets
 ```
@@ -64,7 +62,7 @@ It is often useful to keep a File Explorer instance open while you are first lea
 If you get lost, you can also use File Explorer to open a Git bash terminal directly in the folder we wish to work in. Simply navigate to the parent folder, right click on the folder you wish to work in, and click `Open Git Bash here`.
 :::
 
-![New folder in the user/username directory.](../figures/mkdir-planets.png){width=60% fig-align="left"}
+![New folder in the user/username directory.](../figures/mkdir-planets2.png){width=60% fig-align="left"}
 
 Then we tell Git to make `planets` a [repository](https://swcarpentry.github.io/git-novice/reference.html#repository) -- a place where Git can store versions of our files:
 
@@ -125,12 +123,12 @@ If you are using a different version of `git`, the exact wording of the output 
 First let's make sure we're still in the right directory. You should be in the `planets` directory.
 
 ```bash
-$ cd c:/users/lfredric/planets
+$ cd c:/users/bashcrof/planets
 ```
 
 Note that you can also tell you are in a Git repository, and not a regular directory, from the Git Bash command prompt. The very last part of the prompt (before the $) should contain, in brackets, the name of the `branch` we are on. Don't worry about branches right now, but having `main` present in the command prompt tells us we are in a Git repository!
 
-![Repository vs Directory.](../figures/check-in-repo.png){width=70% fig-align="left"}
+![Repository vs Directory.](../figures/check-in-repo-ba.png){width=70% fig-align="left"}
 
 Let's create a file called `mars.txt` that contains some notes about the Red Planet's suitability as a base. Open a new document named `mars.txt` using a plain text editor such as Notepad++. Add the following line to `mars.txt` and save the file.
 

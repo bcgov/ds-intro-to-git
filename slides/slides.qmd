@@ -204,7 +204,6 @@ Unless multiple users make changes to the same section of the document - a confl
 #| echo: true
 #| eval: false
 #| code-line-numbers: "2"
-#| attr.source=`.numberLines`
 
 WES Project Folder
 ├── wes-analysis
@@ -243,7 +242,6 @@ In this folder you'll see several subfolders
 #| echo: true
 #| eval: false
 #| code-line-numbers: "9"
-#| attr.source=`.numberLines`
 
 WES Project Folder
 ├── wes-analysis
@@ -313,5 +311,31 @@ Fork Command: No direct Git command; done via hosting services like GitHub. Defi
 
 ##  {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
 
-Create our first repository!
+Let's create our first repository!
 
+
+## Bash Jargon Review
+
+``` bash {eval=false}
+$ cd path/to/directory          # Go to specified directory - "quotes" are needed if there are spaces 
+$ cd ..                         # Go up one directory level
+$ mkdir new_directory           # Create specified directory
+$ ls                            # List directories and files
+$ ls -a                         # List directories and files, including hidden
+```
+
+::: notes
+:::
+
+## Bash Jargon Review
+
+``` bash {eval=false}
+#| class-output: output
+$ git init					        # initiate a repository in the current directory
+$ git status				        # indicate if there are any changes to files
+$ git add <filename>		    	# add a new file/change to the staging area
+$ git commit –m “commit message”	# commit all staged changes to the repository
+$ git log					        # view commit history
+$ git diff					        # show changes between commits
+$ git restore				        # restore file/s to previous commit
+```

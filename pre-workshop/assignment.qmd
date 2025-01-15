@@ -18,7 +18,7 @@ Capture a screen shot of the command-line output.
 
 ## A screen shot of your GitHub handle.
 
-Sign in to GitHub and right-click on your avatar in the top right corner. 
+Sign in to GitHub and left-click on your avatar in the top right corner. 
 
 ![Your GitHub Avatar](../figures/github-avatar.png){width=50% fig-align="left"}
 

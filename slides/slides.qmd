@@ -18,7 +18,7 @@ format:
 ![](/figures/mystic-beach-vi.jpg)
 
 ::: footer
-Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg#file) © 2018 by [Michal Klajban](https://commons.wikimedia.org/wiki/User:Podzemnik) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1) 
+Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg) © [Michal Klajban](https://commons.wikimedia.org/wiki/User:Podzemnik), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
 :::
 
 ::: notes
@@ -47,8 +47,7 @@ I acknowledge with respect the Coast Salish Peoples on whose traditional lands a
 -   Course Materials: <https://bcgov.github.io/ds-intro-to-git>
 
 ::: notes
-Keep cameras on and microphones on mute.
-If you are disconnected and having trouble reconnecting then reach out to Lindsay, 
+Keep cameras on and microphones on mute. If you are disconnected and having trouble reconnecting then reach out to Lindsay,
 :::
 
 ## Workshop Code of Conduct
@@ -62,7 +61,257 @@ Learn more: [Standards of Conduct for BC Public Service employees](https://www2.
 :::
 
 ::: notes
-Teaching and learning in a virtual environment is hard. Lindsay is the only one of us who as taught this workshop before virtually (have taught variants before) – stick with us!
+Teaching and learning in a virtual environment is hard.
 
-While much of the course is concept-based and fairly high-level, it is still technical and you can fall behind and find it hard to catch up if you're multitasking.  So we ask you to remaim present and engaged to the best of your abilites and stick it out, even through the boring parts.  Your hard-work will pay off!
+And while much of the course is concept-based and fairly high-level, it is still technical and you can fall behind and find it hard to catch up if you're multitasking. So we ask you to remaim present and engaged to the best of your abilites and stick it out, even through the boring parts. Your hard-work will pay off!
 :::
+
+## Workshop Outline
+
+-   What is version control for code (and why do we want to use it?)
+-   Working locally with Git: Setting up our first Git repository ![](/figures/git-logo.png){fig-pos="H" width="10%"}
+-   Remote code-hosting and GitHub: Sharing code on GitHub
+-   Open-source code with the BCGov GitHub Organization ![](/figures/github-logo.png){fig-pos="H" width="10%"}
+
+::: footer
+Course Materials: <https://bcgov.github.io/ds-intro-to-git>
+:::
+
+::: notes
+Bonnie: consider the time it will take to walk through the materials. Discuss it here, and rejig times as needed. Also, time the slides leaving extra room as needed.
+:::
+
+## Installation & Set Up Review
+
+-   Installed Git (includes Git Bash): <https://git-scm.com/download/win>
+-   Configured Git: [steps here](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
+-   Created a [GitHub account](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
+    -   Set-up 2MFA
+    -   Created a Personal Access Token
+
+::: footer
+Learn more: [Software Installation Guide](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html)
+:::
+
+::: notes
+To code along, you need software and a GitHub account set up.
+
+Everyone will have had the opportunity to download git in the pre-workshop assignment. Git Bash was also downloaded and we'll be using this software in the course to send commands to git.
+
+You will also have configured your email and user name so that git can connect to GitHub. Most of you did this in Git Bash software so hopefully it's familiar.
+
+During your account set up you will have created your PAT, and set up 2MFA which is required for all GitHub accounts now, as of March 2023.
+
+Question for Bonnie: do we want to check configuration at some point?
+:::
+
+## What are these tools?
+
+:::::: columns
+::: {.column width="40%"}
+![](/figures/git-logo.png){fig-pos="t" width="75%" fig-align="right"}
+:::
+
+::: {.column width="20%"}
+![](/figures/plus-sign.png){fig-pos="t" width="30%" fig-align="center"}
+:::
+
+::: {.column width="40%"}
+![](/figures/github-mark.png){fig-pos="t" width="25%" fig-align="left"}
+:::
+::::::
+
+![](/figures/plus-sign.png){fig-pos="t" width="10%" fig-align="center"}
+
+![](/figures/bc-public-service.png){fig-pos="t" width="80%" fig-align="center"}
+
+::: notes
+Git is one of the most widely used version control tools in the field of data science (and software development)
+
+Git's integration with code hosting platforms like GitHub provides robust collaboration features, including pull requests, issue tracking, and continuous integration/continuous deployment (CI/CD) pipelines.
+
+2014 Exchange Lab created bcgov GitHub organization (Bonnie to add what it is and what it does for us)
+:::
+
+## What is Version Control? {fig.align="center"}
+
+![](/figures/cartoon1.png){fig-pos="t" fig-align="center"}
+
+::: footer
+Source: [notFinal.doc](https://phdcomics.com/comics.php?f=1531) by Jorge Cham © 2012
+:::
+
+::: notes
+Not this.
+
+Version control is the practice of tracking and managing changes to software code. Version control systems are software tools that are used to help teams manage changes to code/documents over time.
+
+Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.
+
+We’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document – either by yourself or spread around among colleagues. It’s difficult to tell the difference between files, and what was changed when, by whom, and why?
+:::
+
+## Changes saved sequentially {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+<br> <br> ![](/figures/sequential.png){fig-pos="H"}
+
+::: notes
+Git keeps track of snapshots in time – each document or file starts with a base version and thenyou tell git to save just the changes you made at each step of the way.
+
+You decide which changes make up the each snapshot, and git stores those changes and keeps useful metadata about them.
+
+You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.
+
+Each snapshot is called a ‘commit’.
+:::
+
+## Branching {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+<br> ![](/figures/branching.png){fig-pos="t" width="50%" fig-align="center"}
+
+::: notes
+For example, two users can make independent sets of changes on the same document.
+
+Each can, on their own copy, head off on a different track and work on it independently while keeping the master copy intact.
+
+When it's working....
+:::
+
+## Collaborating {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+::::: columns
+::: {.column width="50%"}
+-   Multiple users: different people work on their own copy
+-   Compare and merge contributions from multiple people
+:::
+
+::: {.column width="50%"}
+![](/figures/collaborating.png){fig-pos="t" fig-align="center"}
+:::
+:::::
+
+::: notes
+.... the changes that work can be merged back into the original. If not, throw it out.
+
+Documents/Repositories can be kept in sync across different computers facilitating collaboration among different people.
+
+Unless multiple users make changes to the same section of the document - a conflict - you can incorporate two sets of changes into the same base document.
+:::
+
+## Repository {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "2"
+#| attr.source=`.numberLines`
+
+WES Project Folder
+├── wes-analysis
+  ├── data
+  │ ├── wes-results
+  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
+  │ │ ├── wes-results-2020.csv
+  │ │ ├── wes-results-2021.csv
+  │ | |── wes-results-2022.csv
+  ├── doc
+  ├── ref
+  │ ├── references
+  │ ├── images
+  ├── plots
+  ├── code
+  ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
+  ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
+
+```
+
+::: notes
+In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure, as well as a historical record of changes to the to repository.
+
+So You store all of your project files in a folder.
+
+All of the files, plus the complete history for all the files in a that folder make up a repository (repo).
+
+Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:
+
+In this folder you'll see several subfolders
+:::
+
+## Repository {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "9"
+#| attr.source=`.numberLines`
+
+WES Project Folder
+├── wes-analysis
+  ├── data
+  │ ├── wes-results
+  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
+  │ │ ├── wes-results-2020.csv
+  │ │ ├── wes-results-2021.csv
+  │ | |── wes-results-2022.csv
+  ├── doc
+  ├── ref
+  │ ├── references
+  │ ├── images
+  ├── plots
+  ├── code
+  ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
+  ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
+```
+
+::: notes
+In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure, as well as a historical record of changes to the to repository.
+
+So You store all of your project files in a folder.
+
+All of the files, plus the complete history for all the files in a that folder make up a repository (repo).
+
+Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:
+
+In this folder you'll see several subfolders
+:::
+
+## Jargon {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+::::: columns
+::: {.column width="50%"}
+-   Repository (repo)
+-   Stage/Add
+-   Commit
+-   Push
+-   Pull
+:::
+
+::: {.column width="50%"}
+-   Clone
+-   Branch
+-   Fork
+:::
+:::::
+
+::: notes
+Stage/Add Usage: `git add [file/directory]` Definition: Moves changes (new files, modifications, or deletions) in your working directory to the staging area, preparing them to be included in the next commit. Purpose: Allows you to select which changes will be committed.
+
+Commit Usage: `git commit m "message"` Definition: Records the changes in the staging area to the repository's history as a new snapshot. Each commit includes a unique ID and a descriptive message to explain the changes. Purpose: Saves a version of your work, making it easier to track and revert to if necessary.
+
+Push Usage: `git push [remote] [branch]` Definition: Uploads your local commits to a remote repository (e.g., on GitHub, GitLab, or Bitbucket) so others can access them. Purpose: Synchronizes your work with the remote repository.
+
+Pull Usage: `git pull [remote] [branch]` Definition: Fetches changes from a remote repository and integrates them into your local branch. This is a combination of git fetch (retrieve changes) and git merge (apply changes). Purpose: Ensures your local repository is up-to-date with the remote one.
+
+Clone Usage: `git clone [repositoryurl]` Definition: Creates a copy of an existing remote repository on your local machine, including all files, branches, and commit history. Purpose: Allows you to work on a project locally by copying it from a remote source like GitHub.
+
+Branch Usage: `git branch [branchname]` (to create a branch)\
+`git checkout [branchname]` (to switch to a branch)\
+`git switch [branchname]` (alternative to `checkout`) Definition: Represents an independent line of development within a repository. Branches allow you to work on new features or fixes without affecting the main project until changes are ready to be merged. Purpose: Facilitates parallel development and experimentation while keeping the main codebase stable.
+
+Fork Command: No direct Git command; done via hosting services like GitHub. Definition: Creates a personal copy of someone else's repository in your own GitHub (or similar service) account. This is independent of the original repository, allowing you to make changes without affecting the source project. Purpose: Enables you to contribute to opensource projects or customize a repository for your own use while keeping the original repository intact. Contributions can be shared back via **pull requests**.
+:::
+
+##  {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+Create our first repository!
+

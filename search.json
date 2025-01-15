@@ -158,7 +158,7 @@
     "href": "pre-workshop/assignment.html#a-screen-shot-of-your-github-handle.",
     "title": "Pre-Workshop Assignment",
     "section": "2 A screen shot of your GitHub handle.",
-    "text": "2 A screen shot of your GitHub handle.\nSign in to GitHub and right-click on your avatar in the top right corner.\n\n\n\nYour GitHub Avatar\n\n\nYour GitHub handle is in bold font above your account name.\n\n\n\nYour GitHub Handle\n\n\nGenerally, your GitHub handle will be similar to your account name (FirstnameLastname), but this is not strictly required."
+    "text": "2 A screen shot of your GitHub handle.\nSign in to GitHub and left-click on your avatar in the top right corner.\n\n\n\nYour GitHub Avatar\n\n\nYour GitHub handle is in bold font above your account name.\n\n\n\nYour GitHub Handle\n\n\nGenerally, your GitHub handle will be similar to your account name (FirstnameLastname), but this is not strictly required."
   },
   {
     "objectID": "course-outline.html",
@@ -542,13 +542,13 @@
     "href": "slides/slides.html#housekeeping",
     "title": "Version Control using Git + GitHub",
     "section": "Housekeeping",
-    "text": "Housekeeping\n\n\n\nBest practices for learning virtually\n\nCameras on\nMicrophones on mute\nGetting disconnected\nWhat to do with questions?\n\n\n\n\n\n\nLive coding event: (not being recorded)\nOur request: try your best\nOur presenters: all kinds of awesome\nCourse Materials: https://bcgov.github.io/ds-intro-to-git\n\n\nKeep cameras on and microphones on mute. If you are disconnected and having trouble reconnecting then"
+    "text": "Housekeeping\n\n\n\nBest practices for learning virtually\n\nCameras on\nMicrophones on mute\nGetting disconnected\nWhat to do with questions?\n\n\n\n\n\n\nLive coding event: (not being recorded)\nOur request: try your best\nOur presenters: all kinds of awesome\nCourse Materials: https://bcgov.github.io/ds-intro-to-git\n\n\nKeep cameras on and microphones on mute. If you are disconnected and having trouble reconnecting then reach out to Lindsay,"
   },
   {
     "objectID": "slides/slides.html#workshop-code-of-conduct",
     "href": "slides/slides.html#workshop-code-of-conduct",
     "title": "Version Control using Git + GitHub",
     "section": "Workshop Code of Conduct",
-    "text": "Workshop Code of Conduct\n\nWe aim to make this a welcoming and supportive environment for everyone, regardless of background\nWe encourage respectful discussion and questions throughout the course\nPlease be fully present and engaged during the session (that email can wait!)\n\n\nLearn more: Standards of Conduct for BC Public Service employees\n\n\nInclude talk about how teaching virtual is hard – never taught this one before virtually (have taught variants before) – stick with us!"
+    "text": "Workshop Code of Conduct\n\nWe aim to make this a welcoming and supportive environment for everyone, regardless of background\nWe encourage respectful discussion and questions throughout the course\nPlease be fully present and engaged during the session (that email can wait!)\n\n\nLearn more: Standards of Conduct for BC Public Service employees\n\n\nTeaching and learning in a virtual environment is hard. Lindsay is the only one of us who as taught this workshop before virtually (have taught variants before) – stick with us!\nWhile much of the course is concept-based and fairly high-level, it is still technical and you can fall behind and find it hard to catch up if you’re multitasking. So we ask you to remaim present and engaged to the best of your abilites and stick it out, even through the boring parts. Your hard-work will pay off!"
   }
 ]

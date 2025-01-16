@@ -314,7 +314,7 @@ Fork Command: No direct Git command; done via hosting services like GitHub. Defi
 Let's create our first repository!
 
 
-## Bash Jargon Review
+## Bash Jargon Review {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ``` bash {eval=false}
 $ cd path/to/directory          # Go to specified directory - "quotes" are needed if there are spaces 
@@ -327,7 +327,7 @@ $ ls -a                         # List directories and files, including hidden
 ::: notes
 :::
 
-## Bash Jargon Review
+## Git Jargon Review {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ``` bash {eval=false}
 #| class-output: output
@@ -339,3 +339,151 @@ $ git log					        # view commit history
 $ git diff					        # show changes between commits
 $ git restore				        # restore file/s to previous commit
 ```
+
+## Local Repository {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+![](/figures/local-repository.png){fig-pos="t" fig-align="center"}
+
+::: notes
+Repository is just “your” folder under version control
+:::
+
+## GitHub
+:::::::: columns
+::: {.column width="50%"}
+![](/figures/github-mark.png){fig-pos="t" fig-align="center" width=250%}
+:::
+
+::: {.column width="50%"}
+- Hosting service for git repositories
+- Greatly facilitates collaboration
+
+Git: Version Control +
+Hub: Centralized repos & 
+networking/collaborating
+:::
+::::::::
+
+::: notes
+GitHub is a platform that hosts Git repositories in the web and provides a web interface to interact with repos.
+Main Function is to host the ‘remote’ or main copy of a git repository (project)
+:::
+
+# 
+
+![](/figures/git-gh-collab2.png){fig-pos="t" fig-align="center"}
+
+::: notes
+Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
+:::
+
+## Remote Repository  {background-image="/figures/github-mark.png" background-size="10%" background-position="85% 6%"}
+
+Bonnie to add image for remote repo
+
+::: notes
+Think of the remote as the “authoritative” version/source/copy
+:::
+
+## 
+
+:::::::: columns
+::: {.column width="50%"}
+![](/figures/github-mark.png){fig-pos="t" fig-align="center"}
+:::
+
+::: {.column width="50%"}
+Create your first remote repository! 
+:::
+::::::::
+
+::: notes
+Let’s make our first repository
+:::
+
+## A Collaborative Workflow {background-image="/figures/github-mark.png" background-size="10%" background-position="85% 6%"}
+
+:::::::: columns
+::: {.column width="33%"}
+::: {.fragment fragment-index=1}
+Original Repository
+
+|── planets
+
+  | |──.git
+
+  | |── mars.txt
+
+:::
+::: {.fragment fragment-index=7}
+
+  | |── pluto.txt
+:::
+:::
+::: {.column width="33%"}
+::: {.fragment fragment-index=2}
+GitHub Repository
+
+|── planets
+
+  | |── .git
+:::
+::: {.fragment fragment-index=3}
+
+  | |── mars.txt
+:::
+::: {.fragment fragment-index=6}
+
+  | |── pluto.txt
+:::
+
+:::
+::: {.column width="33%"}
+::: {.fragment fragment-index=4}
+Cloned Repository
+
+|── planets
+
+  | |── .git
+
+  | |── mars.txt
+
+:::
+::: {.fragment fragment-index=5}
+
+  | |── pluto.txt
+:::
+:::
+::::::::
+
+<br>
+<br>
+<br>
+
+:::::::: columns
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+1. Initial repository set up
+:::
+::: {.fragment fragment-index=2}
+2. Remote repository created & linked 
+:::
+::: {.fragment fragment-index=3}
+3. Local changes pushed to remote
+:::
+::: {.fragment fragment-index=4}
+4.  Remote repository cloned by collaborator
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment fragment-index=5}
+5. Collaborator makes additions
+:::
+::: {.fragment fragment-index=6}
+6. Collaborator updates remote with changes
+:::
+::: {.fragment fragment-index=7}
+7. Collaborator changes pulled back to original
+:::
+:::
+::::::::

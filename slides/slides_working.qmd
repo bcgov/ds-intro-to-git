@@ -13,7 +13,6 @@ format:
         theme: [white, custom.scss]
 ---
 
-
 ## Why Version Control?
 
 BC Stats has A LOT of source code that make:
@@ -38,7 +37,7 @@ Photo source: [Programming Code](https://commons.wikimedia.org/wiki/File:Program
 :::
 
 ::: notes
-BC Stats has a lot of source code that make both final products and intermediate artifacts such clean tables of data. And the multitude of verisons and copies of scripts that we handle in a project can start to get overwhelming and messy.  We can loose track of a change we made, or seek out creative ways to keep from losing track of our work as we share files around.
+BC Stats has a lot of source code that make both final products and intermediate artifacts such clean tables of data. And the multitude of verisons and copies of scripts that we handle in a project can start to get overwhelming and messy. We can loose track of a change we made, or seek out creative ways to keep from losing track of our work as we share files around.
 :::
 
 ## What is Version Control?
@@ -61,30 +60,133 @@ From Git website: Git is a free and open source distributed version control sy
 Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
 :::
 
-
-
 ::: notes
 :::
 
+## A Collaborative Workflow {background-image="/figures/github-mark.png" background-size="10%" background-position="85% 6%"}
 
+::::::::::::: columns
+::::: {.column width="33%"}
+:::: {.fragment fragment-index="1"}
+::: {.fragment .highlight-current-blue fragment-index="1"}
+Original Repository
 
-## {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+\|── planets
 
-::: notes
+\| \|──.git
 
+\| \|── mars.txt
 :::
+::::
 
-
-
-## {background-image="/figures/github-mark.png" background-size="10%" background-position="85% 6%"}
-
-::: notes
-
+:::: {.fragment fragment-index="7"}
+::: {.fragment .highlight-current-blue fragment-index="2"}
+\| \|── pluto.txt
 :::
+::::
+:::::
 
-## {background-image="/figures/github-mark.png" background-size="10%" background-position="85% 6%"}
+:::::: {.column width="33%"}
+:::: {.fragment fragment-index="2"}
+::: {.fragment .highlight-current-blue fragment-index="2"}
+GitHub Repository
 
-::: notes
+\|── planets
 
+\| \|── .git
 :::
+::::
+
+:::: {.fragment fragment-index="3"}
+::: {.fragment .highlight-current-blue fragment-index="3"}
+\| \|── mars.txt
+:::
+::::
+
+:::: {.fragment fragment-index="6"}
+::: {.fragment .highlight-current-blue fragment-index="6"}
+\| \|── pluto.txt
+:::
+::::
+::::::
+
+::::: {.column width="33%"}
+:::: {.fragment fragment-index="4"}
+::: {.fragment .highlight-current-blue fragment-index="4"}
+Cloned Repository
+
+\|── planets
+
+\| \|── .git
+
+\| \|── mars.txt
+:::
+::::
+
+:::: {.fragment fragment-index="5"}
+::: {.fragment .highlight-current-blue fragment-index="5"}
+\| \|── pluto.txt
+:::
+::::
+:::::
+:::::::::::::
+
+<br> <br> <br>
+
+
+::::::: columns
+:::::::: {style="font-size: 80%"}
+:::::::: {style="line-height: 80%"}
+:::::: {.column width="50%"}
+
+:::: {.fragment fragment-index="1"}
+::: {.fragment .highlight-current-blue fragment-index="1"}
+1.  Initial repository set up
+:::
+::::
+
+:::: {.fragment fragment-index="2"}
+::: {.fragment .highlight-current-blue fragment-index="2"}
+2.  Remote repository created & linked
+:::
+::::
+
+:::: {.fragment fragment-index="3"}
+::: {.fragment .highlight-current-blue fragment-index="3"}
+3.  Local changes pushed to remote
+:::
+::::
+
+:::: {.fragment fragment-index="4"}
+::: {.fragment .highlight-current-blue fragment-index="4"}
+4.  Remote repository cloned by collaborator
+:::
+::::
+
+::::::
+
+:::::: {.column width="50%"}
+:::: {.fragment fragment-index="5"}
+::: {.fragment .highlight-current-blue fragment-index="5"}
+5.  Collaborator makes additions
+:::
+::::
+
+:::: {.fragment fragment-index="6"}
+::: {.fragment .highlight-current-blue fragment-index="6"}
+6.  Collaborator updates remote with changes
+:::
+::::
+
+:::: {.fragment fragment-index="7"}
+::: {.fragment .highlight-current-blue fragment-index="7"}
+7.  Collaborator changes pulled back to original
+:::
+::::
+::::::
+::::::::
+::::::::
+:::::::
+
+
 

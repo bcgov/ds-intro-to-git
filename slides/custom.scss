@@ -16,7 +16,11 @@ $presentation-h2-font-size: 1.6em;
   padding-left: 0.5em;
 }*/
 
-.console-output {
-  color: green;
-  background-color: black;
+
+.reveal h2 {
+  padding: 10px 0px 80px 20px;
+}
+
+.extrapad p {
+  color: #eee8d5 !important;
 }

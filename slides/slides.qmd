@@ -19,10 +19,12 @@ format:
 
 ::: footer
 Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg) © [Michal Klajban](https://commons.wikimedia.org/wiki/User:Podzemnik), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+
 :::
 
 ::: notes
 I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I are grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for millennia.
+
 :::
 
 ## Housekeeping {footer="false" scrollable="true"}
@@ -38,7 +40,9 @@ I acknowledge with respect the Coast Salish Peoples on whose traditional lands a
 
 ::: {.column width="30%"}
 ![](/figures/housekeeping.png){fig-pos="t" width="60%"}
+
 :::
+
 :::::
 
 -   Live coding event: (not being recorded)
@@ -48,6 +52,7 @@ I acknowledge with respect the Coast Salish Peoples on whose traditional lands a
 
 ::: notes
 Keep cameras on and microphones on mute. If you are disconnected and having trouble reconnecting then reach out to Lindsay,
+
 :::
 
 ## Workshop Code of Conduct
@@ -58,12 +63,14 @@ Keep cameras on and microphones on mute. If you are disconnected and having trou
 
 ::: footer
 Learn more: [Standards of Conduct for BC Public Service employees](https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/ethics-standards-of-conduct/standards-of-conduct)
+
 :::
 
 ::: notes
 Teaching and learning in a virtual environment is hard.
 
 And while much of the course is concept-based and fairly high-level, it is still technical and you can fall behind and find it hard to catch up if you're multitasking. So we ask you to remaim present and engaged to the best of your abilites and stick it out, even through the boring parts. Your hard-work will pay off!
+
 :::
 
 ## Workshop Outline
@@ -75,10 +82,12 @@ And while much of the course is concept-based and fairly high-level, it is still
 
 ::: footer
 Course Materials: <https://bcgov.github.io/ds-intro-to-git>
+
 :::
 
 ::: notes
 Bonnie: consider the time it will take to walk through the materials. Discuss it here, and rejig times as needed. Also, time the slides leaving extra room as needed.
+
 :::
 
 ## Installation & Set Up Review
@@ -91,6 +100,7 @@ Bonnie: consider the time it will take to walk through the materials. Discuss it
 
 ::: footer
 Learn more: [Software Installation Guide](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html)
+
 :::
 
 ::: notes
@@ -103,6 +113,7 @@ You will also have configured your email and user name so that git can connect t
 During your account set up you will have created your PAT, and set up 2MFA which is required for all GitHub accounts now, as of March 2023.
 
 Question for Bonnie: do we want to check configuration at some point?
+
 :::
 
 ## Our Tools
@@ -133,6 +144,7 @@ Git's integration with code hosting platforms like GitHub provides robust collab
 
 ::: footer
 Source: [notFinal.doc](https://phdcomics.com/comics.php?f=1531) by Jorge Cham © 2012
+
 :::
 
 ::: notes
@@ -143,11 +155,12 @@ Version control is the practice of tracking and managing changes to software cod
 Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.
 
 We’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document – either by yourself or spread around among colleagues. It’s difficult to tell the difference between files, and what was changed when, by whom, and why?
+
 :::
 
 ## Changes saved sequentially {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
 
-<br> <br> ![](/figures/sequential.png){fig-pos="H"}
+![](/figures/sequential.png){fig-pos="H"}
 
 ::: notes
 Git keeps track of snapshots in time – each document or file starts with a base version and then you tell git to save just the changes you made at each step of the way.
@@ -157,27 +170,32 @@ You decide which changes make up the each snapshot, and git stores those changes
 You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.
 
 Each snapshot is called a ‘commit’.
+
 :::
 
-## Collaborating: Branching {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Collaborating Branching {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
 
-::::: columns
+:::: columns
+
 ::: {.column width="50%"}
 ![](/figures/branching.png){fig-pos="t" fig-align="center"}
 :::
 
 ::: {.column width="50%"}
--   Multiple users: different people work on their own copy
--   Each can branch off the original work independently
+ -   Multiple users: different people work on their own copy
+ -   Each can branch off the original work independently
+
 :::
-:::::
+
+::::
 
 ::: notes
 In this example, two users can make independent sets of changes on the same document.
 
 Each can, on their own copy, head off on a different track and work on it independently while keeping the main copy intact.
 
-When it's working....
+When it's working...
+
 :::
 
 ## Collaborating: Merging {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
@@ -186,19 +204,23 @@ When it's working....
 ::: {.column width="50%"}
 -   Multiple users: different people work on their own copy
 -   Compare and merge contributions from multiple people
+
 :::
 
 ::: {.column width="50%"}
 ![](/figures/collaborating.png){fig-pos="t" fig-align="center"}
 :::
+
 :::::
 
 ::: notes
-.... the changes that work can be merged back into the original. If not, throw it out.
+
+the changes that work can be merged back into the original. If not, throw it out.
 
 Documents/Repositories can be kept in sync across different computers facilitating collaboration among different people.
 
-Unless multiple users make changes to the same section of the document - a conflict - you can incorporate two sets of changes into the same base document.
+Unless multiple users make changes to the same section of the document (a conflict) you can incorporate two sets of changes into the same base document.
+
 :::
 
 ## Repository {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
@@ -295,6 +317,7 @@ Intermediate Commands
 -   Clone
 -   Branch
 -   Fork
+
 :::
 :::::
 
@@ -314,6 +337,7 @@ Branch Usage: `git branch [branchname]` (to create a branch)\
 `git switch [branchname]` (alternative to `checkout`) Definition: Represents an independent line of development within a repository. Branches allow you to work on new features or fixes without affecting the main project until changes are ready to be merged. Purpose: Facilitates parallel development and experimentation while keeping the main codebase stable.
 
 Fork Command: No direct Git command; done via hosting services like GitHub. Definition: Creates a personal copy of someone else's repository in your own GitHub (or similar service) account. This is independent of the original repository, allowing you to make changes without affecting the source project. Purpose: Enables you to contribute to opensource projects or customize a repository for your own use while keeping the original repository intact. Contributions can be shared back via **pull requests**.
+
 :::
 
 ##  {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
@@ -352,36 +376,40 @@ $ git restore                       # restore file/s to previous commit
 
 ::: notes
 Repository is just “your” folder under version control. At this point, they may not have heard of staging area (see section 2.5)
+
 :::
 
 ## GitHub
 
-::::: columns
+:::: columns
 ::: {.column width="50%"}
 ![](/figures/github-mark.png){fig-pos="t" fig-align="center" width="250%"}
+
 :::
 
 ::: {.column width="50%"}
-
 -   Hosting service for git repositories
 -   Greatly facilitates collaboration
 
-**Git:** Version Control **+**
-
-**Hub:** Centralized repos & networking/collaborating
+__Git:__ Version Control __+__
+__Hub:__ Centralized repos & networking/collaborating
 :::
-:::::
+
+::::
 
 ::: notes
-GitHub is a platform that hosts Git repositories in the web and provides a web interface to interact with repos. Main Function is to host the ‘remote’ or main copy of a git repository (project)
+GitHub is a platform that hosts Git repositories in the web and provides a web interface to interact with repos. Main Function is to host the 'remote' or main copy of a git repository (project)
+
 :::
 
-# 
+
+## 
 
 ![](/figures/git-gh-collab2.png){fig-pos="t" fig-align="center"}
 
 ::: notes
 Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
+
 :::
 
 ## Remote Repository {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
@@ -390,6 +418,7 @@ Version control really comes into its own when we begin to collaborate with othe
 
 ::: notes
 Think of the remote as the “authoritative” version/source/copy
+
 :::
 
 ##  {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
@@ -398,9 +427,10 @@ Let's create our first remote repository!
 
 ::: notes
 Let’s make our first repository 
+
 :::
 
-## A Collaborative Workflow {background-image="/figures/github-mark.png" background-size="10%" background-position="85% 6%"}
+## A Collaborative Workflow {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
 
 ::::::::::::: columns
 ::::: {.column width="33%"}
@@ -413,12 +443,15 @@ Original Repository
 \| \|──.git
 
 \| \|── mars.txt
+
 :::
+
 ::::
 
 :::: {.fragment fragment-index="7"}
 ::: {.fragment .highlight-current-blue fragment-index="2"}
 \| \|── pluto.txt
+
 :::
 ::::
 :::::
@@ -431,18 +464,21 @@ GitHub Repository
 \|── planets
 
 \| \|── .git
+
 :::
 ::::
 
 :::: {.fragment fragment-index="3"}
 ::: {.fragment .highlight-current-blue fragment-index="3"}
 \| \|── mars.txt
+
 :::
 ::::
 
 :::: {.fragment fragment-index="6"}
 ::: {.fragment .highlight-current-blue fragment-index="6"}
 \| \|── pluto.txt
+
 :::
 ::::
 ::::::
@@ -457,12 +493,14 @@ Cloned Repository
 \| \|── .git
 
 \| \|── mars.txt
+
 :::
 ::::
 
 :::: {.fragment fragment-index="5"}
 ::: {.fragment .highlight-current-blue fragment-index="5"}
 \| \|── pluto.txt
+
 :::
 ::::
 :::::
@@ -471,7 +509,7 @@ Cloned Repository
 <br> <br> <br>
 
 
-::::::: columns
+:::::::: columns
 :::::::: {style="font-size: 80%"}
 :::::::: {style="line-height: 80%"}
 :::::: {.column width="50%"}
@@ -479,24 +517,28 @@ Cloned Repository
 :::: {.fragment fragment-index="1"}
 ::: {.fragment .highlight-current-blue fragment-index="1"}
 1.  Initial repository set up
+
 :::
 ::::
 
 :::: {.fragment fragment-index="2"}
 ::: {.fragment .highlight-current-blue fragment-index="2"}
 2.  Remote repository created & linked
+
 :::
 ::::
 
 :::: {.fragment fragment-index="3"}
 ::: {.fragment .highlight-current-blue fragment-index="3"}
 3.  Local changes pushed to remote
+
 :::
 ::::
 
 :::: {.fragment fragment-index="4"}
 ::: {.fragment .highlight-current-blue fragment-index="4"}
 4.  Remote repository cloned by collaborator
+
 :::
 ::::
 
@@ -506,31 +548,35 @@ Cloned Repository
 :::: {.fragment fragment-index="5"}
 ::: {.fragment .highlight-current-blue fragment-index="5"}
 5.  Collaborator makes additions
+
 :::
 ::::
 
 :::: {.fragment fragment-index="6"}
 ::: {.fragment .highlight-current-blue fragment-index="6"}
 6.  Collaborator updates remote with changes
+
 :::
 ::::
 
 :::: {.fragment fragment-index="7"}
 ::: {.fragment .highlight-current-blue fragment-index="7"}
 7.  Collaborator changes pulled back to original
+
 :::
 ::::
 ::::::
 ::::::::
 ::::::::
-:::::::
+::::::::
 
 
-## A Typical Workflow
+## A Typical Workflow {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
 
 The table below doubles as a handy cheatsheet; take a screenshot and save for future reference!
 
 ::: {style="font-size: 0.75em;"}
+
 | Order         | Action         | Git Command                                   |
 |------------------|------------------|------------------------------------|
 | 1 (Once Only) | Create remote  | (Done on GitHub)                              |
@@ -540,13 +586,15 @@ The table below doubles as a handy cheatsheet; take a screenshot and save for fu
 | 5             | Stage changes  | `git add numbers.txt`                         |
 | 6             | Commit changes | `git commit -m "Add 100 to numbers.txt"`      |
 | 7             | Update remote  | `git push origin main`                        |
+
 :::
 
 ::: notes
 To this point, we have learned a lot of different git commands and workflows involved in tracking all of our changes, keeping our repositories up-to-date, and collaborating across computers using GitHub. While there are multiple levels of nuance that go into each of these steps, let's lay out a typical workflow.
+
 :::
 
-## What about our data? (Ignoring things)
+## What about our data? (Ignoring things) {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
 
 :::::: columns
 ::::: {.column width="50%"}
@@ -560,26 +608,29 @@ Original Repository
 \| \|── mars.txt
 
 \| \|── pluto.txt
+
 :::
 
 ::: {.fragment .fade-up fragment-index="3"}
 ::: {.fragment .highlight-current-blue fragment-index="3"}
 \| \|── data.csv
+
 :::
 :::
 
 ::: {.fragment .fade-up fragment-index="4"}
 ::: {.fragment .highlight-current-blue fragment-index="4"}
 \| \|── .gitignore
-:::
-:::
 
+:::
+:::
 :::::
 
 ::::: {.column width="50%"}
 
 ::: {.fragment .fade-left fragment-index="2"}
 ![](/figures/data.png){fig-pos="t" fig-align="center" width="75%"}
+
 :::
 
 :::::
@@ -589,9 +640,10 @@ Original Repository
 Ignore data files! .gitignore
 
 What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.
+
 :::
 
-## BCGov GitHub Organization {transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
+## BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
@@ -604,16 +656,18 @@ What if we have files that we do not want Git to track for us, like backup files
 
 ::: footer
 BCGov: [https://github.com/bcgov](https://github.com/bcgov)
+
 :::
 
-## BC Developer Guide {transition="fade-in fade-out"}
+## BC Developer Guide {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in fade-out"}
 ![](/figures/section-4-bcgov/bcgov-org-sign-up.png)
 
 ::: footer
 BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#directions-to-sign-up-and-link-your-account-for-bcgov)
+
 :::
 
-## BCGov GitHub Organization {transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
+## BCGov GitHub Organization {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
@@ -628,14 +682,15 @@ BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/do
 BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 :::
 
-## BCGov GitHub Policy Framework {transition="fade-in slide-out"}
+## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out"}
 ![](/figures/section-4-bcgov/bcgov-policy.png)
 
 ::: footer
 BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub)
+
 :::
 
-## BC-Policy-Framework-For-GitHub
+## BC-Policy-Framework-For-GitHub {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out"}
 
 - Joining
 - Opening & Contents of Repositories
@@ -644,7 +699,7 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 - Appropriate Use
 - How to’s
 
-## {transition="fade-in slide-out"}
+## Repo Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out"}
 ![](/figures/section-4-bcgov/all-the-files.png)
 
 ::: notes

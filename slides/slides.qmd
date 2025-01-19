@@ -530,7 +530,7 @@ Cloned Repository
 
 The table below doubles as a handy cheatsheet; take a screenshot and save for future reference!
 
-::: {style="font-size: 1em;"}
+::: {style="font-size: 0.75em;"}
 | Order         | Action         | Git Command                                   |
 |------------------|------------------|------------------------------------|
 | 1 (Once Only) | Create remote  | (Done on GitHub)                              |
@@ -548,8 +548,8 @@ To this point, we have learned a lot of different git commands and workflows inv
 
 ## What about our data? (Ignoring things)
 
-::::::::::: columns
-:::::::: {.column width="50%"}
+:::::: columns
+::::: {.column width="50%"}
 ::: {.fragment fragment-index="1"}
 Original Repository
 
@@ -562,28 +562,100 @@ Original Repository
 \| \|── pluto.txt
 :::
 
-:::: {.fragment .fade-up fragment-index="3"}
+::: {.fragment .fade-up fragment-index="3"}
 ::: {.fragment .highlight-current-blue fragment-index="3"}
 \| \|── data.csv
 :::
-::::
+:::
 
-:::: {.fragment .fade-up fragment-index="4"}
+::: {.fragment .fade-up fragment-index="4"}
 ::: {.fragment .highlight-current-blue fragment-index="4"}
 \| \|── .gitignore
 :::
-::::
-::::::::
+:::
 
-:::: {.column width="50%"}
+:::::
+
+::::: {.column width="50%"}
+
 ::: {.fragment .fade-left fragment-index="2"}
 ![](/figures/data.png){fig-pos="t" fig-align="center" width="75%"}
 :::
-::::
-:::::::::::
+
+:::::
+::::::
 
 ::: notes
 Ignore data files! .gitignore
 
 What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.
+:::
+
+## BCGov GitHub Organization {transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
+
+![](/figures/section-4-bcgov/bcgov-org2.png)
+
+::: {.absolute top=625 left=265}
+::: {.fragment .fade-up fragment-index="2"}
+::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 100px; height: 5px;"}
+:::
+:::
+:::
+
+::: footer
+BCGov: [https://github.com/bcgov](https://github.com/bcgov)
+:::
+
+## BC Developer Guide {transition="fade-in fade-out"}
+![](/figures/section-4-bcgov/bcgov-org-sign-up.png)
+
+::: footer
+BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#directions-to-sign-up-and-link-your-account-for-bcgov)
+:::
+
+## BCGov GitHub Organization {transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
+
+![](/figures/section-4-bcgov/bcgov-org2.png)
+
+::: {.absolute top=310 left=280}
+::: {.fragment .fade-up fragment-index="2"}
+::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 140px; height: 5px;"}
+:::
+:::
+:::
+
+::: footer
+BCGov: [https://github.com/bcgov](https://github.com/bcgov)
+:::
+
+## BCGov GitHub Policy Framework {transition="fade-in slide-out"}
+![](/figures/section-4-bcgov/bcgov-policy.png)
+
+::: footer
+BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub)
+:::
+
+## BC-Policy-Framework-For-GitHub
+
+- Joining
+- Opening & Contents of Repositories
+- Licensing
+- Privacy, Security, Copyright
+- Appropriate Use
+- How to’s
+
+## {transition="fade-in slide-out"}
+![](/figures/section-4-bcgov/all-the-files.png)
+
+::: notes
+3 Mandatory files:
+LICENSE
+README – what is in this project
+Contributing – encourage government employees, public and members of the private sector are encouraged to contribute to the repository and how to do that
+
+
+To foster a kind, inclusive, cooperative, and harassment-free open source BCGov community -> Optional Code-of-Conduct. 
+
+Open Source space in general has had its struggles with conduct and one approach to improving  this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all.
+
 :::

@@ -27,28 +27,34 @@ I acknowledge with respect the Coast Salish Peoples on whose traditional lands a
 
 :::
 
-## Housekeeping {footer="false" scrollable="true"}
+## Housekeeping
 
-::::: columns
-::: {.column width="70%"}
--   Best practices for learning virtually
-    -   Cameras on
-    -   Microphones on mute
-    -   Getting disconnected
-    -   What to do with questions?
-:::
+:::: columns
 
-::: {.column width="30%"}
-![](/figures/housekeeping.png){fig-pos="t" width="60%"}
+::: {.column width="40%"}
+![](/figures/housekeeping.png){fig-pos="t" width="75%"}
 
 :::
 
-:::::
+::: {.column width="60%" .incremental} 
+- Live coding event: (not being recorded)
+- Course Materials
+- Best practices for learning virtually
+    - Cameras on
+    - Microphones on mute
+    - Getting disconnected
+    - What to do with questions?
+- Our request: try your best
+- Our presenters: all kinds of awesome
 
--   Live coding event: (not being recorded)
--   Our request: try your best
--   Our presenters: all kinds of awesome
--   Course Materials: <https://bcgov.github.io/ds-intro-to-git>
+:::
+
+::::
+
+::: footer
+Course Materials: <https://bcgov.github.io/ds-intro-to-git>
+
+:::
 
 ::: notes
 Keep cameras on and microphones on mute. If you are disconnected and having trouble reconnecting then reach out to Lindsay,
@@ -57,9 +63,11 @@ Keep cameras on and microphones on mute. If you are disconnected and having trou
 
 ## Workshop Code of Conduct
 
+::: {.incremental} 
 -   We aim to make this a welcoming and supportive environment for everyone, regardless of background
 -   We encourage respectful discussion and questions throughout the course
 -   Please be fully present and engaged during the session (that email can wait!)
+:::
 
 ::: footer
 Learn more: [Standards of Conduct for BC Public Service employees](https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/ethics-standards-of-conduct/standards-of-conduct)
@@ -75,10 +83,13 @@ And while much of the course is concept-based and fairly high-level, it is still
 
 ## Workshop Outline
 
--   What is version control for code (and why do we want to use it?)
--   Working locally with Git: Setting up our first Git repository ![](/figures/git-logo.png){fig-pos="H" width="10%"}
--   Remote code-hosting and GitHub: Sharing code on GitHub ![](/figures/github-logo.png){fig-pos="H" width="10%"}
--   Open-source code with the BCGov GitHub Organization
+::: {.incremental} 
+-   Section 1: What is version control for code (and why do we want to use it?)
+-   Section 2: Working locally with Git: Setting up our first Git repository ![](/figures/git-logo.png){fig-pos="H" width="10%"}
+-   Section 3: Remote code-hosting and GitHub: Sharing code on GitHub ![](/figures/github-logo.png){fig-pos="H" width="10%"}
+-   Section 4: Open-source code with the BCGov GitHub Organization
+
+:::
 
 ::: footer
 Course Materials: <https://bcgov.github.io/ds-intro-to-git>
@@ -690,7 +701,7 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 
 :::
 
-## BC-Policy-Framework-For-GitHub {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out"}
+## BC-Policy-Framework-For-GitHub
 
 - Joining
 - Opening & Contents of Repositories

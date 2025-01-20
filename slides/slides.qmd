@@ -176,7 +176,7 @@ We’ve all been in this situation before: it seems unnecessary to have multiple
 
 ## Changes saved sequentially {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
-![](/figures/section-1-vc/sequential.png){fig-pos="H"}
+![](/figures/section-2-git/sequential.png){fig-pos="H"}
 
 ::: notes
 Git keeps track of snapshots in time – each document or file starts with a base version and then you tell git to save just the changes you made at each step of the way.
@@ -194,7 +194,7 @@ Each snapshot is called a ‘commit’.
 :::: columns
 
 ::: {.column width="50%"}
-![](/figures/section-1-vc/branching.png){fig-pos="t" fig-align="center"}
+![](/figures/section-2-git/branching.png){fig-pos="t" fig-align="center"}
 :::
 
 ::: {.column width="50%"}
@@ -228,7 +228,7 @@ When it's working...
 :::
 
 ::: {.column width="50%"}
-![](/figures/section-1-vc/collaborating.png){fig-pos="t" fig-align="center"}
+![](/figures/section-2-git/collaborating.png){fig-pos="t" fig-align="center"}
 :::
 
 :::::
@@ -392,7 +392,7 @@ $ git restore                       # restore file/s to previous commit
 
 ## Review: Local Repository {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
-![](/figures/section-1-vc/local-repository.png){fig-pos="t" fig-align="center"}
+![](/figures/section-2-git/local-repository.png){fig-pos="t" fig-align="center"}
 
 ::: notes
 Repository is just “your” folder under version control. At this point, they may not have heard of staging area (see section 2.5)

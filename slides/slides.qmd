@@ -783,15 +783,7 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 :::
 
 ## Repo Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
-
-
-## Credits
-
-version control icon: <a href="https://www.flaticon.com/free-icons/version-control" title="version control icons">Version control icons created by juicy_fish - Flaticon</a>
-
-git logo: https://git-scm.com/downloads/logos
-
-github logo: https://github.com/logos
+![](/figures/section-4-bcgov/all-the-files.png)
 
 ::: notes
 3 Mandatory files:
@@ -803,5 +795,16 @@ Contributing – encourage government employees, public and members of the priva
 To foster a kind, inclusive, cooperative, and harassment-free open source BCGov community -> Optional Code-of-Conduct. 
 
 Open Source space in general has had its struggles with conduct and one approach to improving  this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all.
+
+:::
+
+## Credits
+
+::: notes
+version control icon: <a href="https://www.flaticon.com/free-icons/version-control" title="version control icons">Version control icons created by juicy_fish - Flaticon</a>
+
+git logo: https://git-scm.com/downloads/logos
+
+github logo: https://github.com/logos
 
 :::

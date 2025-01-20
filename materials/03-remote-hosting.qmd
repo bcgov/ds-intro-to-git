@@ -60,7 +60,7 @@ HTTP operates very similarly to the SSH protocol but runs over standard HTTPS po
 
 If you remember back to the earlier episode where we added and committed our earlier work on mars.txt, we had a diagram of the local repository which looked like this:
 
-![](../figures/tracking-changes.png)
+![](../materials/images/tracking-changes.png)
 
 Now that we have two repositories, we need a diagram like this
 

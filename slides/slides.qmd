@@ -102,19 +102,39 @@ By following these principles, we can create a space where everyone feels comfor
 
 ## Workshop Outline
 
+:::: {.columns}
+::: {.column width="75%"}
+
+::: {.fragment}
 ::: {.incremental} 
 - Section 1: What is version control for code
   - Why do we want to use it?
 - Section 2: Working locally with Git
   - Setting up our first Git repository 
-  - ![](/figures/section-2-git/git-logo.png){fig-pos="H" width="10%"}
 - Section 3: Remote code-hosting and GitHub: 
   - Sharing code on GitHub 
-  - ![](/figures/section-3-github/github-mark.png){fig-pos="H" width="10%"}
 - Section 4: BCGov GitHub Organization
   - Coding in the open 
-  - ![](/figures/section-4-bcgov/bcgov-logo.png){fig-pos="H" width="10%"}
+  
 :::
+:::
+:::
+
+::: {.column width="25%"}
+::: {.fragment}
+  ![](/figures/section-1-vc/version-control.png){fig-pos="H" width="25%"}
+<br>
+  ![](/figures/section-2-git/git-logo.png){fig-pos="H" width="30%"}
+<br>
+<br>
+  ![](/figures/section-3-github/github-mark.png){fig-pos="H" width="25%"}
+<br>
+<br>
+  ![](/figures/section-4-bcgov/bcgov-logo.png){fig-pos="H" width="25%"}
+
+:::
+:::
+:::: 
 
 ::: footer
 Course Materials: <https://bcgov.github.io/ds-intro-to-git>
@@ -137,6 +157,7 @@ Section 4: BCGov GitHub Organization
 Finally, we’ll discuss coding in the open, leveraging the BCGov GitHub organization to manage and share projects effectively.
 
 This structured approach will guide us step-by-step from foundational concepts to practical applications, ensuring you gain both understanding and hands-on experience.
+
 :::
 
 ## Installation & Set Up Review

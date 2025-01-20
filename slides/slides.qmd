@@ -87,9 +87,9 @@ And while much of the course is concept-based and fairly high-level, it is still
 - Section 1: What is version control for code
   - Why do we want to use it?
 - Section 2: Working locally with Git
-  - Setting up our first Git repository ![](/figures/git-logo.png){fig-pos="H" width="10%"}
+  - Setting up our first Git repository ![](/figures/section-2-git/git-logo.png){fig-pos="H" width="10%"}
 - Section 3: Remote code-hosting and GitHub: 
-  - Sharing code on GitHub ![](/figures/github-mark.png){fig-pos="H" width="10%"}
+  - Sharing code on GitHub ![](/figures/section-3-github/github-mark.png){fig-pos="H" width="10%"}
 - Section 4: BCGov GitHub Organization
   - Coding in the open ![](/figures/section-4-bcgov/bcgov-logo.png){fig-pos="H" width="8%"}
 :::
@@ -136,15 +136,15 @@ Question for Bonnie: do we want to check configuration at some point?
 
 ::::: columns
 ::: {.column width="50%"}
-![](/figures/git-logo.png){fig-pos="t" width="50%" fig-align="center"}
+![](/figures/section-2-git/git-logo.png){fig-pos="t" width="50%" fig-align="center"}
 :::
 
 ::: {.column width="50%"}
-![](/figures/github-mark.png){fig-pos="t" width="25%" fig-align="center"}
+![](/figures/section-3-github/github-mark.png){fig-pos="t" width="25%" fig-align="center"}
 :::
 :::::
 
-![](/figures/bc-public-service.png){fig-pos="t" width="80%" fig-align="center"}
+![](/figures/section-4-bcgov/bc-public-service.png){fig-pos="t" width="80%" fig-align="center"}
 
 ::: notes
 Git is one of the most widely used version control tools in the field of data science (and software development)
@@ -174,7 +174,7 @@ We’ve all been in this situation before: it seems unnecessary to have multiple
 
 :::
 
-## Changes saved sequentially {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Changes saved sequentially {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ![](/figures/section-1-vc/sequential.png){fig-pos="H"}
 
@@ -189,7 +189,7 @@ Each snapshot is called a ‘commit’.
 
 :::
 
-## Collaborating Branching {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Collaborating Branching {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 :::: columns
 
@@ -216,7 +216,7 @@ When it's working...
 
 :::
 
-## Collaborating: Merging {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Collaborating: Merging {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -243,7 +243,7 @@ Unless multiple users make changes to the same section of the document (a confli
 
 :::
 
-## Repository {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Repository {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ```{r}
 #| echo: true
@@ -281,7 +281,7 @@ Using the WES analysis example above, you and your colleagues may choose to stru
 In this folder you'll see several subfolders
 :::
 
-## Repository {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Repository {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ```{r}
 #| echo: true
@@ -318,7 +318,7 @@ Using the WES analysis example above, you and your colleagues may choose to stru
 In this folder you'll see several subfolders
 :::
 
-## Jargon {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -360,11 +360,11 @@ Fork Command: No direct Git command; done via hosting services like GitHub. Defi
 
 :::
 
-##  {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+##  {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 Let's create our first repository!
 
-## Review: Bash Jargon {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Review: Bash Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ``` {.bash eval="false"}
 $ cd path/to/directory          # Go to specified directory - "quotes" are needed if there are spaces 
@@ -377,7 +377,7 @@ $ ls -a                         # List directories and files, including hidden
 ::: notes
 :::
 
-## Review: Git Jargon {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Review: Git Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ``` {.bash eval="false"}
 #| class-output: output
@@ -390,7 +390,7 @@ $ git diff                          # show changes between commits
 $ git restore                       # restore file/s to previous commit
 ```
 
-## Review: Local Repository {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Review: Local Repository {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ![](/figures/section-1-vc/local-repository.png){fig-pos="t" fig-align="center"}
 
@@ -403,7 +403,7 @@ Repository is just “your” folder under version control. At this point, they 
 
 :::: columns
 ::: {.column width="50%"}
-![](/figures/github-mark.png){fig-pos="t" fig-align="center" width="250%"}
+![](/figures/section-3-github/github-mark.png){fig-pos="t" fig-align="center" width="250%"}
 
 :::
 
@@ -437,7 +437,7 @@ Version control really comes into its own when we begin to collaborate with othe
 
 :::
 
-## Remote Repository {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
+## Remote Repository {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
 
 ![](/figures/section-3-github/remote-repository-final.png){fig-pos="t" fig-align="center"}
 
@@ -446,7 +446,7 @@ Think of the remote as the “authoritative” version/source/copy
 
 :::
 
-##  {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
+##  {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
 
 Let's create our first remote repository!
 
@@ -455,7 +455,7 @@ Let’s make our first repository
 
 :::
 
-## A Collaborative Workflow {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
+## A Collaborative Workflow {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
 
 ::::::::::::: columns
 ::::: {.column width="33%"}
@@ -596,7 +596,7 @@ Cloned Repository
 ::::::::
 
 
-## A Typical Workflow {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
+## A Typical Workflow {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
 
 The table below doubles as a handy cheatsheet; take a screenshot and save for future reference!
 
@@ -619,7 +619,7 @@ To this point, we have learned a lot of different git commands and workflows inv
 
 :::
 
-## Ignoring things {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
+## Ignoring things {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
 
 :::::: columns
 ::::: {.column width="50%"}
@@ -743,17 +743,6 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 ::: footer
 BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub)
 
-:::
-
-## BC-Policy-Framework-For-GitHub
-
-::: {.incremental}
-- Joining
-- Opening & Contents of Repositories
-- Licensing
-- Privacy, Security, Copyright
-- Appropriate Use
-- How to’s
 :::
 
 ## Repo Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}

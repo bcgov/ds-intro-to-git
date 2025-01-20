@@ -102,10 +102,12 @@ By following these principles, we can create a space where everyone feels comfor
 
 ## Workshop Outline
 
-:::: {.columns}
+::::: {.columns}
+
 ::: {.column width="75%"}
 
 ::: {.fragment}
+
 ::: {.incremental} 
 - Section 1: What is version control for code
   - Why do we want to use it?
@@ -115,12 +117,14 @@ By following these principles, we can create a space where everyone feels comfor
   - Sharing code on GitHub 
 - Section 4: BCGov GitHub Organization
   - Coding in the open 
-  
 :::
+
 :::
+
 :::
 
 ::: {.column width="25%"}
+
 ::: {.fragment}
   ![](/figures/section-1-vc/version-control.png){fig-pos="H" width="25%"}
 <br>
@@ -133,8 +137,10 @@ By following these principles, we can create a space where everyone feels comfor
   ![](/figures/section-4-bcgov/bcgov-logo.png){fig-pos="H" width="25%"}
 
 :::
+
 :::
-:::: 
+
+:::::
 
 ::: footer
 Course Materials: <https://bcgov.github.io/ds-intro-to-git>
@@ -214,7 +220,7 @@ Git's integration with code hosting platforms like GitHub provides robust collab
 2014 Exchange Lab created bcgov GitHub organization (Bonnie to add what it is and what it does for us)
 :::
 
-## What is Version Control? (Not This)
+## What is Version Control? (Not This) {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ![](/figures/section-1-vc/cartoon1.png){fig-pos="t" fig-align="center"}
 
@@ -232,7 +238,7 @@ Consider the following scenario. You and your colleagues have been asked to do a
 
 :::
 
-## Changes saved sequentially {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Changes saved sequentially {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ![](/figures/section-2-git/sequential.png){fig-pos="H"}
 
@@ -247,7 +253,7 @@ Each snapshot is called a ‘commit’.
 
 :::
 
-## Collaborating Branching {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Collaborating Branching {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 :::: columns
 
@@ -274,7 +280,7 @@ When it's working...
 
 :::
 
-## Collaborating: Merging {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Collaborating: Merging {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -301,7 +307,7 @@ Unless multiple users make changes to the same section of the document (a confli
 
 :::
 
-## Repository {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ```{r}
 #| echo: true
@@ -339,7 +345,7 @@ Using the WES analysis example above, you and your colleagues may choose to stru
 In this folder you'll see several subfolders
 :::
 
-## Repository {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ```{r}
 #| echo: true
@@ -376,7 +382,7 @@ Using the WES analysis example above, you and your colleagues may choose to stru
 In this folder you'll see several subfolders
 :::
 
-## Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Jargon {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -418,7 +424,7 @@ Fork Command: No direct Git command; done via hosting services like GitHub. Defi
 
 :::
 
-##  {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Git {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 Let's create our first repository!
 

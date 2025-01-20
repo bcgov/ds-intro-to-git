@@ -84,10 +84,14 @@ And while much of the course is concept-based and fairly high-level, it is still
 ## Workshop Outline
 
 ::: {.incremental} 
--   Section 1: What is version control for code (and why do we want to use it?)
--   Section 2: Working locally with Git: Setting up our first Git repository ![](/figures/git-logo.png){fig-pos="H" width="10%"}
--   Section 3: Remote code-hosting and GitHub: Sharing code on GitHub ![](/figures/github-logo.png){fig-pos="H" width="10%"}
--   Section 4: Open-source code with the BCGov GitHub Organization
+- Section 1: What is version control for code
+  - Why do we want to use it?
+- Section 2: Working locally with Git
+  - Setting up our first Git repository ![](/figures/git-logo.png){fig-pos="H" width="10%"}
+- Section 3: Remote code-hosting and GitHub: 
+  - Sharing code on GitHub ![](/figures/github-mark.png){fig-pos="H" width="10%"}
+- Section 4: BCGov GitHub Organization
+  - Coding in the open ![](/figures/section-4-bcgov/bcgov-logo.png){fig-pos="H" width="8%"}
 
 :::
 
@@ -103,11 +107,14 @@ Bonnie: consider the time it will take to walk through the materials. Discuss it
 
 ## Installation & Set Up Review
 
+::: {.incremental} 
 -   Installed Git (includes Git Bash): <https://git-scm.com/download/win>
 -   Configured Git: [steps here](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
 -   Created a [GitHub account](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
     -   Set-up 2MFA
     -   Created a Personal Access Token
+
+:::
 
 ::: footer
 Learn more: [Software Installation Guide](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html)
@@ -193,9 +200,11 @@ Each snapshot is called a ‘commit’.
 :::
 
 ::: {.column width="50%"}
+::: {.incremental} 
  -   Multiple users: different people work on their own copy
  -   Each can branch off the original work independently
 
+:::
 :::
 
 ::::
@@ -213,9 +222,11 @@ When it's working...
 
 ::::: columns
 ::: {.column width="50%"}
+::: {.incremental} 
 -   Multiple users: different people work on their own copy
 -   Compare and merge contributions from multiple people
 
+:::
 :::
 
 ::: {.column width="50%"}
@@ -399,11 +410,16 @@ Repository is just “your” folder under version control. At this point, they 
 :::
 
 ::: {.column width="50%"}
+<br>
+<br>
+
+::: {.incremental} 
 -   Hosting service for git repositories
 -   Greatly facilitates collaboration
+- __Git:__ Version Control __+__
+- __Hub:__ Centralized repos & networking/collaborating
+:::
 
-__Git:__ Version Control __+__
-__Hub:__ Centralized repos & networking/collaborating
 :::
 
 ::::
@@ -414,7 +430,7 @@ GitHub is a platform that hosts Git repositories in the web and provides a web i
 :::
 
 
-## 
+## Git+GitHub: Working Collaboratively
 
 ![](/figures/git-gh-collab2.png){fig-pos="t" fig-align="center"}
 
@@ -605,7 +621,7 @@ To this point, we have learned a lot of different git commands and workflows inv
 
 :::
 
-## What about our data? (Ignoring things) {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
+## Ignoring things {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
 
 :::::: columns
 ::::: {.column width="50%"}
@@ -654,7 +670,7 @@ What if we have files that we do not want Git to track for us, like backup files
 
 :::
 
-## BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
+## BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
@@ -670,7 +686,7 @@ BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 
 :::
 
-## BC Developer Guide {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in fade-out"}
+## BC Developer Guide {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out"}
 ![](/figures/section-4-bcgov/bcgov-org-sign-up.png)
 
 ::: footer
@@ -678,7 +694,7 @@ BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/do
 
 :::
 
-## BCGov GitHub Organization {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
+## BCGov GitHub Organization {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
@@ -693,7 +709,7 @@ BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/do
 BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 :::
 
-## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out"}
+## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
 ![](/figures/section-4-bcgov/bcgov-policy.png)
 
 ::: footer
@@ -703,14 +719,16 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 
 ## BC-Policy-Framework-For-GitHub
 
+::: {.incremental}
 - Joining
 - Opening & Contents of Repositories
 - Licensing
 - Privacy, Security, Copyright
 - Appropriate Use
 - How to’s
+:::
 
-## Repo Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="10%" background-position="85% 6%" transition="fade-in slide-out"}
+## Repo Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
 ![](/figures/section-4-bcgov/all-the-files.png)
 
 ::: notes

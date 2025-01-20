@@ -3,6 +3,8 @@ title: "Version Control using Git + GitHub"
 subtitle: "BC Stats Workshop"
 date: 01/29/2025
 date-format: long
+title-slide-attributes: 
+  data-notes: Good morning, everyone! Welcome, and thank you for taking the time to join us today. I’m really excited to have the opportunity to share this workshop with you and explore Version Control, git and GitHub together.
 format:
     revealjs: 
         slide-number: true
@@ -12,6 +14,7 @@ format:
         #logo: images/quarto.png
         theme: [white, custom.scss]
 ---
+
 
 ## Territorial Acknowledgement
 
@@ -23,7 +26,7 @@ Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikime
 :::
 
 ::: notes
-I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I are grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for millennia.
+Let's start with our territorial acknowledgement.  I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I are grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for millennia.
 
 :::
 
@@ -38,14 +41,14 @@ I acknowledge with respect the Coast Salish Peoples on whose traditional lands a
 
 ::: {.column width="60%" .incremental} 
 - Live coding event: (not being recorded)
-- Course Materials
 - Best practices for learning virtually
-    - Cameras on
-    - Microphones on mute
-    - Getting disconnected
-    - What to do with questions?
+  - What to do with questions?
+  - Microphones on mute
+  - Getting disconnected
+  - Cameras on at first.
 - Our request: try your best
 - Our presenters: all kinds of awesome
+- Course Materials
 
 :::
 
@@ -57,7 +60,18 @@ Course Materials: <https://bcgov.github.io/ds-intro-to-git>
 :::
 
 ::: notes
-Keep cameras on and microphones on mute. If you are disconnected and having trouble reconnecting then reach out to Lindsay,
+As part of today’s workshop, we’ll be coding in real time, working through concepts together on the fly. This approach lets us explore the process interactively. While this can be dynamic and fun, it also means there may be moments where we need to debug or adjust as we go. 
+
+Since we’ll be coding in real time, it’s important that everyone feels comfortable and engaged. To keep things running smoothly in our virtual setting, let’s go over a few best practices:
+
+If you have questions, please feel free to drop them in the chat or use the ‘raise hand’ feature—we’ll address them as we go.  Your engagement and questions will make this experience even more valuable, so don’t hesitate to share your thoughts along the way!
+Keep your microphones on mute unless speaking to minimize background noise. 
+And if we get disconnected, don’t worry! You can rejoin using the same meeting link, and Lindsay will let you back in.
+Cameras on for the first bit so the faciliators get to know who you are and can put a face to a name.  
+
+These simple steps will help ensure we all get the most out of today’s session, so let’s dive in!
+
+The link to the course materials was sent with the pre-workshop assignment and installation instructions.  For your convenience the link is at the bottom of the slide.
 
 :::
 
@@ -75,9 +89,14 @@ Learn more: [Standards of Conduct for BC Public Service employees](https://www2.
 :::
 
 ::: notes
-Teaching and learning in a virtual environment is hard.
 
-And while much of the course is concept-based and fairly high-level, it is still technical and you can fall behind and find it hard to catch up if you're multitasking. So we ask you to remaim present and engaged to the best of your abilites and stick it out, even through the boring parts. Your hard-work will pay off!
+Before we begin, I’d like to take a moment to outline our workshop code of conduct. These guidelines are in place to ensure this session remains a positive and productive space for everyone:
+
+First and foremost, we aim to create a welcoming and supportive environment for all participants, regardless of background.
+We encourage respectful discussion and questions throughout the session. Healthy dialogue enriches the learning experience, but it’s important to maintain a tone of mutual respect as teaching and learning in a virtual environment can be hard.
+Finally, we ask that you be fully present and engaged during the workshop. Multitasking can wait—this is your opportunity to focus and get the most out of our time together.
+
+By following these principles, we can create a space where everyone feels comfortable and valued. Thanks in advance for your cooperation.
 
 :::
 
@@ -87,11 +106,14 @@ And while much of the course is concept-based and fairly high-level, it is still
 - Section 1: What is version control for code
   - Why do we want to use it?
 - Section 2: Working locally with Git
-  - Setting up our first Git repository ![](/figures/section-2-git/git-logo.png){fig-pos="H" width="10%"}
+  - Setting up our first Git repository 
+  - ![](/figures/section-2-git/git-logo.png){fig-pos="H" width="10%"}
 - Section 3: Remote code-hosting and GitHub: 
-  - Sharing code on GitHub ![](/figures/section-3-github/github-mark.png){fig-pos="H" width="10%"}
+  - Sharing code on GitHub 
+  - ![](/figures/section-3-github/github-mark.png){fig-pos="H" width="10%"}
 - Section 4: BCGov GitHub Organization
-  - Coding in the open ![](/figures/section-4-bcgov/bcgov-logo.png){fig-pos="H" width="8%"}
+  - Coding in the open 
+  - ![](/figures/section-4-bcgov/bcgov-logo.png){fig-pos="H" width="10%"}
 :::
 
 ::: footer
@@ -100,8 +122,21 @@ Course Materials: <https://bcgov.github.io/ds-intro-to-git>
 :::
 
 ::: notes
-Bonnie: consider the time it will take to walk through the materials. Discuss it here, and rejig times as needed. Also, time the slides leaving extra room as needed.
+To give you a clear picture of what we’ll be covering today, here’s an outline of our workshop:
 
+Section 1: What is Version Control for Code
+We’ll start by exploring the concept of version control: what it is and why it’s an essential practice in modern coding.
+
+Section 2: Working Locally with Git
+Next, we’ll dive into Git, learning how to set up and work with our first Git repository.
+
+Section 3: Remote Code-Hosting and GitHub
+In this section, we’ll focus on using GitHub to share and collaborate on code.
+
+Section 4: BCGov GitHub Organization
+Finally, we’ll discuss coding in the open, leveraging the BCGov GitHub organization to manage and share projects effectively.
+
+This structured approach will guide us step-by-step from foundational concepts to practical applications, ensuring you gain both understanding and hands-on experience.
 :::
 
 ## Installation & Set Up Review
@@ -120,19 +155,23 @@ Learn more: [Software Installation Guide](https://bcgov.github.io/ds-intro-to-gi
 :::
 
 ::: notes
-To code along, you need software and a GitHub account set up.
+Before diving into today’s workshop, let’s quickly review the foundational steps you’ve already completed in preparation
 
-Everyone will have had the opportunity to download git in the pre-workshop assignment. Git Bash was also downloaded and we'll be using this software in the course to send commands to git.
+Installed Git (including Git Bash): You’ve downloaded and installed Git from git-scm.com. This included Git Bash, a terminal that allows you to interact with Git through command-line commands.
 
-You will also have configured your email and user name so that git can connect to GitHub. Most of you did this in Git Bash software so hopefully it's familiar.
+Configured Git: You configured Git by setting up your username and email address, which ensures that every change you commit is associated with your identity. If you need a refresher, the configuration steps can be found here.
 
-During your account set up you will have created your PAT, and set up 2MFA which is required for all GitHub accounts now, as of March 2023.
+Created a GitHub Account: You set up a GitHub account, which will allow you to store and collaborate on code projects in a cloud-based repository. As part of this process you enabled Two-Factor Authentication (2MFA) to enhance account security. You also created a Personal Access Token to allow Git to authenticate securely with your GitHub account for operations like pushing or pulling code.
+
+These steps provided the groundwork for today’s workshop, ensuring you have the tools and configurations necessary to follow along effectively. If you encounter any challenges related to these steps, feel free to drop a question into the chat for assistance.
+
+You will also have configured your email and user name so that git can connect to GitHub. Most of you did this in Git Bash terminal.
 
 Question for Bonnie: do we want to check configuration at some point?
 
 :::
 
-## Our Tools
+## 
 
 ::::: columns
 ::: {.column width="50%"}
@@ -164,13 +203,11 @@ Source: [notFinal.doc](https://phdcomics.com/comics.php?f=1531) by Jorge Cham ©
 :::
 
 ::: notes
-Not this.
+Not this.  But we’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document – either by yourself or spread around among colleagues. It’s difficult to tell the difference between files, and what was changed when, by whom, and why?
 
 Version control is the practice of tracking and managing changes to software code. Version control systems are software tools that are used to help teams manage changes to code/documents over time.
 
 Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.
-
-We’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document – either by yourself or spread around among colleagues. It’s difficult to tell the difference between files, and what was changed when, by whom, and why?
 
 :::
 
@@ -746,7 +783,15 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 :::
 
 ## Repo Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
-![](/figures/section-4-bcgov/all-the-files.png)
+
+
+## Credits
+
+version control icon: <a href="https://www.flaticon.com/free-icons/version-control" title="version control icons">Version control icons created by juicy_fish - Flaticon</a>
+
+git logo: https://git-scm.com/downloads/logos
+
+github logo: https://github.com/logos
 
 ::: notes
 3 Mandatory files:

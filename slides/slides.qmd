@@ -668,13 +668,13 @@ What if we have files that we do not want Git to track for us, like backup files
 
 :::
 
-## BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
+## BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
-::: {.absolute top=625 left=265}
-::: {.fragment .fade-up fragment-index="2"}
-::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 100px; height: 5px;"}
+::: {.absolute top=575 left=265}
+::: {.fragment .fade-up fragment-index="1"}
+::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 125px; height: 5px;"}
 :::
 :::
 :::
@@ -683,6 +683,7 @@ What if we have files that we do not want Git to track for us, like backup files
 BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 
 :::
+
 
 ## BC Developer Guide {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out"}
 ![](/figures/section-4-bcgov/bcgov-org-sign-up.png)
@@ -696,9 +697,9 @@ BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/do
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
-::: {.absolute top=310 left=280}
+::: {.absolute top=280 left=425}
 ::: {.fragment .fade-up fragment-index="2"}
-::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 140px; height: 5px;"}
+::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 120px; height: 5px;"}
 :::
 :::
 :::
@@ -707,8 +708,37 @@ BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/do
 BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 :::
 
-## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
+## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out"}
 ![](/figures/section-4-bcgov/bcgov-policy.png)
+
+::: footer
+BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub)
+
+:::
+
+
+
+## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
+
+::::: columns
+
+:::: {.column width="70%"}
+![](/figures/section-4-bcgov/bcgov-policy-scroll-readme.png)
+::::
+
+:::: {.column width="30%"}
+::: {.incremental}
+- Joining
+- Opening & Contents of Repositories
+- Licensing
+- Privacy, Security, Copyright
+- Appropriate Use
+- How to’s
+:::
+::::
+
+:::::
+
 
 ::: footer
 BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub)

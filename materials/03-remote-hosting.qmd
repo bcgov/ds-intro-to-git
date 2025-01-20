@@ -162,7 +162,7 @@ $ cd collab
 
 Clone the planets repo substituting in your GitHub user name. You can also find the URL from GitHub. Open the remote repository on GitHub, click on the `<> Code` button, and then copy the URL from there.
 
-![Cloning the repository from GitHub.](../figures/clone-repo.png){fig-align="left" width="80%"}
+![Cloning the repository from GitHub.](../materials/images/clone-repo.png){fig-align="left" width="80%"}
 
 ``` bash
 git clone https://github.com/<your-GitHub-username>/planets.git
@@ -195,7 +195,7 @@ However, typically you will need to allow access to other members of GitHub - ot
 
 To give collaborator access, navigate to the repository page on GitHub, and click the "Settings" button on the right of the banner. Then, click "Add people" and then enter the username of the person you wish to collaborate with.
 
-![Adding a collaborator on GitHub.](../figures/collab-access.png){fig-align="left" width="80%"}
+![Adding a collaborator on GitHub.](../materials/images/collab-access.png){fig-align="left" width="80%"}
 :::
 
 You should now have a new `planets` folder in the `collab` directory. Switch to this `planets` folder using the `cd` command. You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file (using your favourite text editing software) and save it to your cloned repository.

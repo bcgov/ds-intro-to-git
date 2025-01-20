@@ -15,7 +15,7 @@ format:
 
 ## Territorial Acknowledgement
 
-![](/figures/mystic-beach-vi.jpg)
+![](/figures/section-1-vc/mystic-beach-vi.jpg)
 
 ::: footer
 Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg) © [Michal Klajban](https://commons.wikimedia.org/wiki/User:Podzemnik), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
@@ -32,7 +32,7 @@ I acknowledge with respect the Coast Salish Peoples on whose traditional lands a
 :::: columns
 
 ::: {.column width="40%"}
-![](/figures/housekeeping.png){fig-pos="t" width="75%"}
+![](/figures/section-1-vc/housekeeping.png){fig-pos="t" width="75%"}
 
 :::
 
@@ -92,7 +92,6 @@ And while much of the course is concept-based and fairly high-level, it is still
   - Sharing code on GitHub ![](/figures/github-mark.png){fig-pos="H" width="10%"}
 - Section 4: BCGov GitHub Organization
   - Coding in the open ![](/figures/section-4-bcgov/bcgov-logo.png){fig-pos="H" width="8%"}
-
 :::
 
 ::: footer
@@ -113,7 +112,6 @@ Bonnie: consider the time it will take to walk through the materials. Discuss it
 -   Created a [GitHub account](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
     -   Set-up 2MFA
     -   Created a Personal Access Token
-
 :::
 
 ::: footer
@@ -158,7 +156,7 @@ Git's integration with code hosting platforms like GitHub provides robust collab
 
 ## What is Version Control? (Not This)
 
-![](/figures/cartoon1.png){fig-pos="t" fig-align="center"}
+![](/figures/section-1-vc/cartoon1.png){fig-pos="t" fig-align="center"}
 
 ::: footer
 Source: [notFinal.doc](https://phdcomics.com/comics.php?f=1531) by Jorge Cham © 2012
@@ -178,7 +176,7 @@ We’ve all been in this situation before: it seems unnecessary to have multiple
 
 ## Changes saved sequentially {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
 
-![](/figures/sequential.png){fig-pos="H"}
+![](/figures/section-1-vc/sequential.png){fig-pos="H"}
 
 ::: notes
 Git keeps track of snapshots in time – each document or file starts with a base version and then you tell git to save just the changes you made at each step of the way.
@@ -196,7 +194,7 @@ Each snapshot is called a ‘commit’.
 :::: columns
 
 ::: {.column width="50%"}
-![](/figures/branching.png){fig-pos="t" fig-align="center"}
+![](/figures/section-1-vc/branching.png){fig-pos="t" fig-align="center"}
 :::
 
 ::: {.column width="50%"}
@@ -230,7 +228,7 @@ When it's working...
 :::
 
 ::: {.column width="50%"}
-![](/figures/collaborating.png){fig-pos="t" fig-align="center"}
+![](/figures/section-1-vc/collaborating.png){fig-pos="t" fig-align="center"}
 :::
 
 :::::
@@ -394,7 +392,7 @@ $ git restore                       # restore file/s to previous commit
 
 ## Review: Local Repository {background-image="/figures/git-logo.png" background-size="10%" background-position="85% 6%"}
 
-![](/figures/local-repository.png){fig-pos="t" fig-align="center"}
+![](/figures/section-1-vc/local-repository.png){fig-pos="t" fig-align="center"}
 
 ::: notes
 Repository is just “your” folder under version control. At this point, they may not have heard of staging area (see section 2.5)
@@ -432,7 +430,7 @@ GitHub is a platform that hosts Git repositories in the web and provides a web i
 
 ## Git+GitHub: Working Collaboratively
 
-![](/figures/git-gh-collab2.png){fig-pos="t" fig-align="center"}
+![](/figures/section-3-github/git-gh-collab2.png/){fig-pos="t" fig-align="center"}
 
 ::: notes
 Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
@@ -441,7 +439,7 @@ Version control really comes into its own when we begin to collaborate with othe
 
 ## Remote Repository {background-image="/figures/github-mark.png" background-size="8%" background-position="85% 6%"}
 
-![](/figures/remote-repository-final.png){fig-pos="t" fig-align="center"}
+![](/figures/section-3-github/remote-repository-final.png){fig-pos="t" fig-align="center"}
 
 ::: notes
 Think of the remote as the “authoritative” version/source/copy
@@ -656,7 +654,7 @@ Original Repository
 ::::: {.column width="50%"}
 
 ::: {.fragment .fade-left fragment-index="2"}
-![](/figures/data.png){fig-pos="t" fig-align="center" width="75%"}
+![](/figures/section-3-github/data.png){fig-pos="t" fig-align="center" width="75%"}
 
 :::
 

@@ -10,11 +10,11 @@ format:
 
 The [BCGov GitHub organization](https://github.com/bcgov) on GitHub.com is the only approved venue for Open Source collaboration on Province of British Columbia files. OCIO, together with the BCDevExchange team established this GitHub organization in early 2014 as a method of sharing code and collaborating in the open.
 
-![The bcgov GitHub Organization](../figures/bcgov-org.png){fig-align="left" width="80%"}
+![The bcgov GitHub Organization](../materials/images/bcgov-org.png){fig-align="left" width="80%"}
 
 ## BCGov Policy Framework
 
-![BC-Policy-Framework-For-GitHub](../figures/policy-framework.png){fig-align="left" width="50%"}
+![BC-Policy-Framework-For-GitHub](../materials/images/policy-framework.png){fig-align="left" width="50%"}
 
 Contributing code to the BCGov organization can be daunting. There are required files, teams to join, codes of conduct to follow, and standards and policies to remain compliant with. Luckily, there is a well documented repository, the [BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub) that contains guidelines for working within the organization. Here we'll touch on a few of the important points to know about when adding your project code to GitHub.
 
@@ -37,7 +37,7 @@ For more details on joining the organization, see the [joining how-to guide here
 
 ### Mandatory Files
 
-![A bcgov repo](../figures/bcgov-repo.png){fig-align="left" width="80%"}
+![A bcgov repo](../materials/images/bcgov-repo.png){fig-align="left" width="80%"}
 
 In addition to all your regular project files, every bcgov repository must have three additional files:
 

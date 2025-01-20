@@ -654,7 +654,7 @@ Original Repository
 ::::: {.column width="50%"}
 
 ::: {.fragment .fade-left fragment-index="2"}
-![](/figures/section-3-github/data.png){fig-pos="t" fig-align="center" width="75%"}
+![](/figures/section-3-github/data2.png){fig-pos="t" fig-align="center" width="75%"}
 
 :::
 

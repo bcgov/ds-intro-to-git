@@ -198,29 +198,7 @@ Question for Bonnie: do we want to check configuration at some point?
 
 :::
 
-## 
-
-::::: columns
-::: {.column width="50%"}
-![](/figures/section-2-git/git-logo.png){fig-pos="t" width="50%" fig-align="center"}
-:::
-
-::: {.column width="50%"}
-![](/figures/section-3-github/github-mark.png){fig-pos="t" width="25%" fig-align="center"}
-:::
-:::::
-
-![](/figures/section-4-bcgov/bc-public-service.png){fig-pos="t" width="80%" fig-align="center"}
-
-::: notes
-Git is one of the most widely used version control tools in the field of data science (and software development)
-
-Git's integration with code hosting platforms like GitHub provides robust collaboration features, including pull requests, issue tracking, and continuous integration/continuous deployment (CI/CD) pipelines.
-
-2014 Exchange Lab created bcgov GitHub organization (Bonnie to add what it is and what it does for us)
-:::
-
-## What is Version Control? (Not This) {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+## Section 1: What is Version Control? {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ![](/figures/section-1-vc/cartoon1.png){fig-pos="t" fig-align="center"}
 
@@ -237,6 +215,7 @@ Version control is the practice of tracking and managing changes to software cod
 Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.
 
 :::
+
 
 ## Changes saved sequentially {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
@@ -307,7 +286,7 @@ Unless multiple users make changes to the same section of the document (a confli
 
 :::
 
-## Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ```{r}
 #| echo: true
@@ -345,7 +324,8 @@ Using the WES analysis example above, you and your colleagues may choose to stru
 In this folder you'll see several subfolders
 :::
 
-## Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ```{r}
 #| echo: true
@@ -382,7 +362,34 @@ Using the WES analysis example above, you and your colleagues may choose to stru
 In this folder you'll see several subfolders
 :::
 
-## Jargon {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+## Section 2: Git 
+:::: columns
+::: {.column width="60%"}
+<br>
+<br>
+![](/figures/section-2-git/git-logo.svg){fig-pos="t" fig-align="left" width="75%"}
+
+:::
+
+::: {.column width="40%"}
+
+::: {.incremental} 
+- Bullet 1
+- Bullet 2
+- Bullet 3
+- Bullet 4
+:::
+
+:::
+
+::::
+
+::: notes
+Git is
+
+:::
+
+## Git Jargon {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -424,8 +431,15 @@ Fork Command: No direct Git command; done via hosting services like GitHub. Defi
 
 :::
 
-## Git {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
+
+
+
+## Hands-On Practice {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+<br>
+<br>
+<br>
+<br>
 Let's create our first repository!
 
 ## Review: Bash Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
@@ -463,7 +477,7 @@ Repository is just “your” folder under version control. At this point, they 
 
 :::
 
-## GitHub
+## Section 3: GitHub
 
 :::: columns
 ::: {.column width="50%"}
@@ -492,16 +506,16 @@ GitHub is a platform that hosts Git repositories in the web and provides a web i
 :::
 
 
-## Git+GitHub: Working Collaboratively
+## Git + GitHub: Working Collaboratively {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
 
-![](/figures/section-3-github/git-gh-collab2.png/){fig-pos="t" fig-align="center"}
+![](/figures/section-3-github/git-gh-collab2.png){fig-pos="t" fig-align="center"}
 
 ::: notes
 Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
 
 :::
 
-## Remote Repository {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
+## Remote Repository {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
 
 ![](/figures/section-3-github/remote-repository-final.png){fig-pos="t" fig-align="center"}
 
@@ -510,16 +524,22 @@ Think of the remote as the “authoritative” version/source/copy
 
 :::
 
-##  {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
+## Hands-On Practice {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
 
+<br>
+<br>
+<br>
+<br>
 Let's create our first remote repository!
+
+
 
 ::: notes
 Let’s make our first repository 
 
 :::
 
-## A Collaborative Workflow {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
+## A Collaborative Workflow {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
 
 ::::::::::::: columns
 ::::: {.column width="33%"}
@@ -660,7 +680,7 @@ Cloned Repository
 ::::::::
 
 
-## A Typical Workflow {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
+## A Typical Workflow {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
 
 The table below doubles as a handy cheatsheet; take a screenshot and save for future reference!
 
@@ -683,7 +703,7 @@ To this point, we have learned a lot of different git commands and workflows inv
 
 :::
 
-## Ignoring things {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 6%"}
+## Ignoring things {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
 
 :::::: columns
 ::::: {.column width="50%"}
@@ -732,7 +752,7 @@ What if we have files that we do not want Git to track for us, like backup files
 
 :::
 
-## BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
+## Section 4: BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
@@ -809,7 +829,7 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 
 :::
 
-## Repo Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
+## Mandatory Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
 ![](/figures/section-4-bcgov/all-the-files.png)
 
 ::: notes

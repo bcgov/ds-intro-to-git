@@ -8,10 +8,11 @@ title-slide-attributes:
 format:
     revealjs: 
         slide-number: true
+        transition: fade
+        background-transition: fade
         chalkboard: 
           buttons: false
         preview-links: auto
-        #logo: images/quarto.png
         theme: [white, custom.scss]
 ---
 
@@ -896,7 +897,7 @@ BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 :::
 
 
-## BC Developer Guide {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out"}
+## BC Developer Guide {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="slide-in fade-out"}
 ![](/figures/section-4-bcgov/bcgov-org-sign-up.png)
 
 ::: footer
@@ -904,7 +905,7 @@ BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/do
 
 :::
 
-## BCGov GitHub Organization {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out" style="padding: 0px 0px 0px 0px;"}
+## BCGov GitHub Organization {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
@@ -919,7 +920,7 @@ BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/do
 BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 :::
 
-## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out"}
+## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="slide-in fade-out"}
 ![](/figures/section-4-bcgov/bcgov-policy.png)
 
 ::: footer

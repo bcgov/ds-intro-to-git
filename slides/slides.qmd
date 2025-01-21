@@ -255,7 +255,7 @@ In this example, two users can make independent sets of changes on the same docu
 
 Each can, on their own copy, head off on a different track and work on it independently while keeping the main copy intact.
 
-When it's working...
+When they are finished making changes to their own copy...
 
 :::
 
@@ -264,8 +264,8 @@ When it's working...
 ::::: columns
 ::: {.column width="50%"}
 ::: {.incremental} 
--   Multiple users: different people work on their own copy
--   Compare and merge contributions from multiple people
+- Merge changes made by each person back into the same base document.
+- Documents kept in sync across different computers
 
 :::
 :::
@@ -278,12 +278,28 @@ When it's working...
 
 ::: notes
 
-the changes that work can be merged back into the original. If not, throw it out.
-
-Documents/Repositories can be kept in sync across different computers facilitating collaboration among different people.
+the changes they want to keep can be merged back into the original. If they don't like the result, the changes can be discarded.
 
 Unless multiple users make changes to the same section of the document (a conflict) you can incorporate two sets of changes into the same base document.
 
+Documents/Repositories can be kept in sync across different computers facilitating collaboration among different people.
+
+:::
+
+
+## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+<br>
+<br>
+*A repository is a data structure that stores **metadata** for a set of files or directory structure, as well as a **historical record of changes** to the to repository.*
+
+::: notes
+In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure, as well as a historical record of changes to the to repository.
+
+You store all of your project files in a folder.
+
+All of the files, plus the complete history for all the files in a that folder make up a repository (repo).
+
 :::
 
 ## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
@@ -291,37 +307,74 @@ Unless multiple users make changes to the same section of the document (a confli
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "2"
+#| code-line-numbers: "2,3,4,5,6,7,8"
 
 WES Project Folder
 ├── wes-analysis
-  ├── data
-  │ ├── wes-results
-  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
-  │ │ ├── wes-results-2020.csv
-  │ │ ├── wes-results-2021.csv
-  │ | |── wes-results-2022.csv
   ├── doc
   ├── ref
   │ ├── references
   │ ├── images
   ├── plots
   ├── code
+  ├── data
+  │ ├── wes-results
+  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
+  │ │ ├── wes-results-2020.csv
+  │ │ ├── wes-results-2021.csv
+  │ | |── wes-results-2022.csv
   ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
   ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
 
 ```
 
 ::: notes
-In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure, as well as a historical record of changes to the to repository.
 
-So You store all of your project files in a folder.
+This slide illustrates the structure of a typical Git repository. Let me walk you through its key components:
 
-All of the files, plus the complete history for all the files in a that folder make up a repository (repo).
+At the top level, we have the wes-analysis folder, which is the root directory of this repository. This is where all our files and folders for the project are organized.
 
-Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:
+Inside this folder you likely have other project-realted folders such
 
-In this folder you'll see several subfolders
+doc contains documentation files such as a list of acronyms or reports.
+
+ref holds reference materials and could store articles and images for visual documentation or presentations.
+
+plots is where visual outputs like graphs or charts from the analysis are saved.
+
+code houses the scripts or programming files you're working on, forming the core of the project’s logic.
+
+:::
+
+## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "9,10,11,12,13,14"
+
+WES Project Folder
+├── wes-analysis
+  ├── doc
+  ├── ref
+  │ ├── references
+  │ ├── images
+  ├── plots
+  ├── code
+  ├── data
+  │ ├── wes-results
+  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
+  │ │ ├── wes-results-2020.csv
+  │ │ ├── wes-results-2021.csv
+  │ | |── wes-results-2022.csv
+  ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
+  ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
+
+```
+
+::: notes
+data contains the raw data files in this hypothetical project.  It’s worth noting that sensitive or private data, like these CSV files, won’t become public as we will give explicit instructions to git to ignore them.
+
 :::
 
 
@@ -330,54 +383,88 @@ In this folder you'll see several subfolders
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "9"
+#| code-line-numbers: "15"
 
 WES Project Folder
 ├── wes-analysis
-  ├── data
-  │ ├── wes-results
-  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
-  │ │ ├── wes-results-2020.csv
-  │ │ ├── wes-results-2021.csv
-  │ | |── wes-results-2022.csv
   ├── doc
   ├── ref
   │ ├── references
   │ ├── images
   ├── plots
   ├── code
+  ├── data
+  │ ├── wes-results
+  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
+  │ │ ├── wes-results-2020.csv
+  │ │ ├── wes-results-2021.csv
+  │ | |── wes-results-2022.csv
   ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
   ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
 ```
 
 ::: notes
-In version control systems, a repository is a data structure that stores metadata for a set of files or directory structure, as well as a historical record of changes to the to repository.
+Two important files help manage this repository:
 
-So You store all of your project files in a folder.
+The .git directory is hidden by default and is what makes this a Git repository. It tracks changes to files, allowing us to manage versions of our code and content.
 
-All of the files, plus the complete history for all the files in a that folder make up a repository (repo).
-
-Using the WES analysis example above, you and your colleagues may choose to structure your version control project like this:
-
-In this folder you'll see several subfolders
 :::
+
+## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "16"
+
+WES Project Folder
+├── wes-analysis
+  ├── doc
+  ├── ref
+  │ ├── references
+  │ ├── images
+  ├── plots
+  ├── code
+  ├── data
+  │ ├── wes-results
+  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
+  │ │ ├── wes-results-2020.csv
+  │ │ ├── wes-results-2021.csv
+  │ | |── wes-results-2022.csv
+  ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
+  ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
+```
+
+::: notes
+The .gitignore file lists files or patterns we don’t want Git to track—like large data files such as the CSVs. This is a common practice to keep repositories clean and focused on the essential project elements.
+
+Together, this structure keeps our work organized and ensures that the repository is ready for version control and collaboration.
+
+:::
+
 
 ## Section 2: Working locally with Git 
 :::: columns
-::: {.column width="60%"}
+::: {.column width="40%"}
 <br>
 <br>
-![](/figures/section-2-git/git-logo.svg){fig-pos="t" fig-align="left" width="75%"}
+![](/figures/section-2-git/git-logo.svg){fig-pos="t" fig-align="left" width="100%"}
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="50%"}
 
 ::: {.incremental} 
-- Bullet 1
-- Bullet 2
-- Bullet 3
-- Bullet 4
+- Track changes in files
+  - Source code
+- Manage versions of your work
+- Facilitates collaboration
+- Branching and merging
+- Distributed model
 :::
 
 :::
@@ -385,7 +472,24 @@ In this folder you'll see several subfolders
 ::::
 
 ::: notes
-Git is
+
+Git is a distributed version control system designed to track changes in files, particularly source code. 
+
+Git helps manage versions of your work, making it easy to revert to earlier states or identify when and why changes were made.
+
+It enables multiple people to collaborate on projects while maintaining a detailed history of all changes.  It enables contributors to work simultaneously without overwriting each other’s work.
+
+Git supports parallel development, allowing teams to work on different features or fixes without interference.  This is done through Branching and Merging which we will review shortly.
+
+Distributed Model: Every user has a full copy of the repository, meaning most operations require only local files and resources.  (This makes Git extremely fast and reliable).
+
+Unlike many version control systems that treat data as a list of file changes over time, Git thinks of data as a series of snapshots of a miniature filesystem. Every time you commit, Git essentially takes a snapshot of your project’s state and stores a reference to it.
+
+Reliability and Integrity:
+
+It’s impossible to change files or directories without Git detecting it. This ensures you don’t lose information in transit or encounter undetected file corruption.
+
+Once a snapshot is committed to Git, it’s incredibly hard to lose, especially if you regularly push your changes to a remote repository.
 
 :::
 
@@ -395,7 +499,7 @@ Git is
 ::: {.column width="50%"}
 Basic Commands
 
--   Repository (repo)
+-   repo (Repository)
 -   Stage/Add
 -   Commit
 -   Push

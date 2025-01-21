@@ -307,7 +307,7 @@ All of the files, plus the complete history for all the files in a that folder m
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "2,3,4,5,6,7,8"
+#| code-line-numbers: "|2-8|9-14|15-16|15|16|"
 
 WES Project Folder
 ├── wes-analysis
@@ -332,111 +332,15 @@ WES Project Folder
 
 This slide illustrates the structure of a typical Git repository. Let me walk you through its key components:
 
-At the top level, we have the wes-analysis folder, which is the root directory of this repository. This is where all our files and folders for the project are organized.
+At the top level, we have the wes-analysis folder, which is the root directory of this repository. This is where all our files and folders for the project are organized.Inside this folder you likely have other project-realted folders such **doc**, which contains documentation files such as a list of acronyms or reports.  **ref** holds reference materials and could store articles and images for visual documentation or presentations. **plots** is where visual outputs like graphs or charts from the analysis are saved. **code** houses the scripts or programming files you're working on, forming the core of the project’s logic.
 
-Inside this folder you likely have other project-realted folders such
+**data** contains the raw data files in this hypothetical project.  It’s worth noting that sensitive or private data, like these CSV files, won’t become public as we will give explicit instructions to git to ignore them.
 
-doc contains documentation files such as a list of acronyms or reports.
+Two important files help manage this repository
 
-ref holds reference materials and could store articles and images for visual documentation or presentations.
+The **.git** *directory* is hidden by default and is what makes this a Git repository. It tracks changes to files, allowing us to manage versions of our code and content.
 
-plots is where visual outputs like graphs or charts from the analysis are saved.
-
-code houses the scripts or programming files you're working on, forming the core of the project’s logic.
-
-:::
-
-## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
-
-```{r}
-#| echo: true
-#| eval: false
-#| code-line-numbers: "9,10,11,12,13,14"
-
-WES Project Folder
-├── wes-analysis
-  ├── doc
-  ├── ref
-  │ ├── references
-  │ ├── images
-  ├── plots
-  ├── code
-  ├── data
-  │ ├── wes-results
-  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
-  │ │ ├── wes-results-2020.csv
-  │ │ ├── wes-results-2021.csv
-  │ | |── wes-results-2022.csv
-  ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
-  ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
-
-```
-
-::: notes
-data contains the raw data files in this hypothetical project.  It’s worth noting that sensitive or private data, like these CSV files, won’t become public as we will give explicit instructions to git to ignore them.
-
-:::
-
-
-## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
-
-```{r}
-#| echo: true
-#| eval: false
-#| code-line-numbers: "15"
-
-WES Project Folder
-├── wes-analysis
-  ├── doc
-  ├── ref
-  │ ├── references
-  │ ├── images
-  ├── plots
-  ├── code
-  ├── data
-  │ ├── wes-results
-  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
-  │ │ ├── wes-results-2020.csv
-  │ │ ├── wes-results-2021.csv
-  │ | |── wes-results-2022.csv
-  ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
-  ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
-```
-
-::: notes
-Two important files help manage this repository:
-
-The .git directory is hidden by default and is what makes this a Git repository. It tracks changes to files, allowing us to manage versions of our code and content.
-
-:::
-
-## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
-
-```{r}
-#| echo: true
-#| eval: false
-#| code-line-numbers: "16"
-
-WES Project Folder
-├── wes-analysis
-  ├── doc
-  ├── ref
-  │ ├── references
-  │ ├── images
-  ├── plots
-  ├── code
-  ├── data
-  │ ├── wes-results
-  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
-  │ │ ├── wes-results-2020.csv
-  │ │ ├── wes-results-2021.csv
-  │ | |── wes-results-2022.csv
-  ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
-  ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
-```
-
-::: notes
-The .gitignore file lists files or patterns we don’t want Git to track—like large data files such as the CSVs. This is a common practice to keep repositories clean and focused on the essential project elements.
+The **.gitignore** *file* lists files or patterns we don’t want Git to track—like large data files such as the CSVs. This is a common practice to keep repositories clean and focused on the essential project elements.
 
 Together, this structure keeps our work organized and ensures that the repository is ready for version control and collaboration.
 

@@ -497,39 +497,51 @@ Once a snapshot is committed to Git, it’s incredibly hard to lose, especially 
 
 ::::: columns
 ::: {.column width="50%"}
-Basic Commands
+Basic
 
 -   repo (Repository)
--   Stage/Add
--   Commit
--   Push
--   Pull
+-   stage/add
+-   commit
+-   push
+-   pull
 :::
 
 ::: {.column width="50%"}
-Intermediate Commands
+Intermediate
 
--   Clone
--   Branch
--   Fork
+-   clone
+-   branch
+-   fork
 
 :::
 :::::
 
 ::: notes
-Stage/Add Usage: `git add [file/directory]` Definition: Moves changes (new files, modifications, or deletions) in your working directory to the staging area, preparing them to be included in the next commit. Purpose: Allows you to select which changes will be committed.
+Stage/Add Usage: `git add [file/directory]` 
+Purpose: Allows you to select which changes will be committed.  
+Definition: Moves changes (new files, modifications, or deletions) in your working directory to the staging area, preparing them to be included in the next commit. 
 
-Commit Usage: `git commit m "message"` Definition: Records the changes in the staging area to the repository's history as a new snapshot. Each commit includes a unique ID and a descriptive message to explain the changes. Purpose: Saves a version of your work, making it easier to track and revert to if necessary.
+Commit Usage: `git commit m "message"` 
+Purpose: Saves a version of your work, making it easier to track and revert to if necessary. 
+Definition: Records the changes in the staging area to the repository's history as a new snapshot. Each commit includes a unique ID and a descriptive message to explain the changes. 
 
-Push Usage: `git push [remote] [branch]` Definition: Uploads your local commits to a remote repository (e.g., on GitHub, GitLab, or Bitbucket) so others can access them. Purpose: Synchronizes your work with the remote repository.
+Push Usage: `git push [remote] [branch]` 
+Purpose: Synchronizes your work with the remote repository. 
+Definition: Uploads your local commits to a remote repository (e.g., on GitHub, GitLab, or Bitbucket) so others can access them. 
 
-Pull Usage: `git pull [remote] [branch]` Definition: Fetches changes from a remote repository and integrates them into your local branch. This is a combination of git fetch (retrieve changes) and git merge (apply changes). Purpose: Ensures your local repository is up-to-date with the remote one.
+Pull Usage: `git pull [remote] [branch]` 
+Purpose: Ensures your local repository is up-to-date with the remote one.
+Definition: Fetches changes from a remote repository and integrates them into your local branch. This is a combination of git fetch (retrieve changes) and git merge (apply changes). 
 
-Clone Usage: `git clone [repositoryurl]` Definition: Creates a copy of an existing remote repository on your local machine, including all files, branches, and commit history. Purpose: Allows you to work on a project locally by copying it from a remote source like GitHub.
+Clone Usage: `git clone [repositoryurl]`  
+Purpose: Allows you to work on a project locally by copying it from a remote source like GitHub.
+Definition: Creates a copy of an existing remote repository on your local machine, including all files, branches, and commit history.
 
 Branch Usage: `git branch [branchname]` (to create a branch)\
 `git checkout [branchname]` (to switch to a branch)\
-`git switch [branchname]` (alternative to `checkout`) Definition: Represents an independent line of development within a repository. Branches allow you to work on new features or fixes without affecting the main project until changes are ready to be merged. Purpose: Facilitates parallel development and experimentation while keeping the main codebase stable.
+`git switch [branchname]` (alternative to `checkout`) 
+Purpose: Facilitates parallel development and experimentation while keeping the main codebase stable.
+Definition: Represents an independent line of development within a repository. Branches allow you to work on new features or fixes without affecting the main project until changes are ready to be merged. 
 
 Fork Command: No direct Git command; done via hosting services like GitHub. Definition: Creates a personal copy of someone else's repository in your own GitHub (or similar service) account. This is independent of the original repository, allowing you to make changes without affecting the source project. Purpose: Enables you to contribute to opensource projects or customize a repository for your own use while keeping the original repository intact. Contributions can be shared back via **pull requests**.
 

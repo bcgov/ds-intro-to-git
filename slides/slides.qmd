@@ -113,7 +113,7 @@ By following these principles, we can create a space where everyone feels comfor
   - Why do we want to use it?
 - Section 2: Working locally with Git
   - Setting up our first Git repository 
-- Section 3: Remote code-hosting and GitHub: 
+- Section 3: Remote code-hosting and GitHub
   - Sharing code on GitHub 
 - Section 4: BCGov GitHub Organization
   - Coding in the open 
@@ -362,7 +362,7 @@ Using the WES analysis example above, you and your colleagues may choose to stru
 In this folder you'll see several subfolders
 :::
 
-## Section 2: Git 
+## Section 2: Working locally with Git 
 :::: columns
 ::: {.column width="60%"}
 <br>
@@ -477,7 +477,7 @@ Repository is just “your” folder under version control. At this point, they 
 
 :::
 
-## Section 3: GitHub
+## Section 3: Remote code-hosting and GitHub
 
 :::: columns
 ::: {.column width="50%"}

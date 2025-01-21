@@ -401,22 +401,24 @@ Once a snapshot is committed to Git, it’s incredibly hard to lose, especially 
 
 ::::: columns
 ::: {.column width="50%"}
+::: {.incremental} 
 Basic
-
 -   repo (Repository)
 -   stage/add
 -   commit
 -   push
 -   pull
 :::
+:::
 
 ::: {.column width="50%"}
 Intermediate
 
+::: {.incremental} 
 -   clone
 -   branch
 -   fork
-
+:::
 :::
 :::::
 

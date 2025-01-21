@@ -545,12 +545,27 @@ These commands form the backbone of working with Git. As you use them, you’ll 
 
 :::
 
-## Review: Local Repository {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+## The Staging Area {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ![](/figures/section-2-git/local-repository.png){fig-pos="t" fig-align="center"}
 
 ::: notes
-Repository is just “your” folder under version control. At this point, they may not have heard of staging area (see section 2.5)
+Your local repository is just “your” folder under version control. 
+
+As a final note, Git requires us to explicitly add files to a **staging area** before committing them. This lets us organize our work and commit changes in logical portions rather than committing everything at once.  
+For example, if you’re working on a thesis, you might want to commit newly added citations and bibliography entries separately from unfinished work in the conclusion.  
+
+Think of Git as taking snapshots of your project’s history.  
+     **`git add`** tells Git what will be included in the next snapshot by placing files into the staging area.  
+     **`git commit`** actually takes the snapshot and makes a permanent record of it.  
+
+If you type `git commit` without staging anything, Git will prompt you to use options like `git commit -a` or `git commit --all`.  which is kind of like gathering everyone to take a group photo.  While these commands gather all changes at once, it’s better to stage manually with `git add`instead of accidentally including changes you didn’t mean to commit.
+
+**Best Practices:**  
+   - Always stage changes explicitly to maintain control over what goes into each commit.  
+   - This practice helps you avoid mistakes and keeps your project history clean and well-organized.  
+
+By staging changes, you’re breaking down your work into manageable, logical pieces—an approach that makes your version control workflow much more efficient."  
 
 :::
 

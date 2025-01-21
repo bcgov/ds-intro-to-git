@@ -466,7 +466,11 @@ Let's create our first repository!
 
 ## Review: Bash Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
-``` {.bash eval="false"}
+``` {bash}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "1|2|3|4|5|"
+
 $ cd path/to/directory          # Go to specified directory - "quotes" are needed if there are spaces 
 $ cd ..                         # Go up one directory level
 $ mkdir new_directory           # Create specified directory
@@ -475,12 +479,35 @@ $ ls -a                         # List directories and files, including hidden
 ```
 
 ::: notes
+Let’s review some common Bash commands that you’ll use frequently when working with Git and navigating your file system.  
+
+**cd path/to/directory**
+   - This command lets you navigate to a specific directory. Think of it as ‘changing your location’ in the file system.  
+   - If the directory path includes spaces, make sure to enclose it in quotes, like `cd "My Folder"`.  
+
+**`cd ..`**  
+   - The `..` represents the parent directory. Using this command moves you up one level in the directory hierarchy. For example, if you’re in a folder called `projects`, `cd ..` will take you back to its parent folder.  
+
+**`mkdir new_directory`**  
+   - This creates a new directory with the specified name. It’s a quick way to organize your files into new folders directly from the command line.  
+
+**`ls`**  
+   - This lists the contents of the current directory, showing all files and subdirectories. It’s a handy way to see where you are and what’s in your folder.  
+
+**`ls -a`**  
+   - Adding the `-a` flag shows all files, including hidden ones. Hidden files usually start with a dot (`.`), like `.git`, and they’re essential for tasks like managing Git repositories.  
+
+These commands form the foundation of navigating and organizing your files in the terminal, which is key to working effectively with Git."  
+
 :::
 
 ## Review: Git Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
-``` {.bash eval="false"}
-#| class-output: output
+``` {bash}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "1|2|3|4|5|6|7|"
+
 $ git init                          # initiate a repository in the current directory
 $ git status                        # indicate if there are any changes to files
 $ git add <filename>                # add a new file/change to the staging area
@@ -489,6 +516,34 @@ $ git log                           # view commit history
 $ git diff                          # show changes between commits
 $ git restore                       # restore file/s to previous commit
 ```
+
+::: notes
+"Now, let’s review some essential Git commands you’ll use when working with repositories.  
+
+**`git init`**  
+- This command initializes a Git repository in the current directory. It creates a hidden `.git` folder, which Git uses to track changes to your files. You only need to do this once per project to start version control.  
+
+**`git status`**  
+- Running this command gives you a snapshot of your repository’s current state. It will show any changes to files, whether they’ve been staged for commit, and if there are untracked files. It’s like your ‘to-do list’ for what’s happening in Git.  
+
+**`git add <filename>`**  
+- This stages a file or changes to a file, adding it to the next commit. Replace `<filename>` with the name of the file you want to add. If you want to stage all changes at once, you can use `git add .`. 
+   
+   **`git commit -m "commit message"`**  
+- This command takes all the changes in the staging area and commits them to your repository, creating a new snapshot. The `-m` flag allows you to add a message describing the changes, which is critical for understanding your history later.  
+
+**`git log`** 
+- Use this command to view the commit history of your repository. It shows who made the changes, when they were made, and the commit messages. It’s an excellent way to review the progress of your project.  
+
+**`git diff`**  
+- This displays the changes between commits or the differences between your working directory and the last commit. It’s useful for checking exactly what has changed before committing.  
+   
+**`git restore`**  
+- This restores files to a previous commit, effectively undoing changes. It’s handy if you want to discard changes or return a file to a specific version.  
+
+These commands form the backbone of working with Git. As you use them, you’ll develop a deeper understanding of how Git tracks and manages your work."  
+
+:::
 
 ## Review: Local Repository {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 

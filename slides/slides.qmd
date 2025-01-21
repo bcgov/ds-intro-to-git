@@ -594,6 +594,23 @@ By staging changes, you’re breaking down your work into manageable, logical pi
 
 ::: notes
 GitHub is a platform that hosts Git repositories in the web and provides a web interface to interact with repos. Main Function is to host the 'remote' or main copy of a git repository (project)
+Here are speaking notes for your points:  
+
+Let’s take a closer look at **GitHub**, one of the most widely used hosting services for Git repositories:  
+
+ **Hosting Service for Git Repositories:**   
+ At its core, GitHub is a platform for storing and managing Git repositories in the cloud.  It acts as a central hub where your project lives online, making it accessible to team members and collaborators anywhere in the world.  
+
+**Facilitates Collaboration:**  
+GitHub simplifies working together by enabling multiple people to contribute to the same project seamlessly.  
+With features like pull requests, code reviews, and issue tracking, it ensures that teams can work efficiently and stay organized, even when working remotely.  
+
+**Breaking Down the Name – Git + Hub:**  
+**Git:** The powerful version control system that tracks changes in your project, keeping a detailed history of your work.  
+**Hub:** A central place for repositories where networking and collaboration happen. Think of it as the meeting point where all your team’s work comes together.  
+
+With GitHub, you’re not just managing your code; you’re enabling teamwork, encouraging innovation, and building a shared space for your projects to thrive. 
+
 
 :::
 
@@ -603,16 +620,34 @@ GitHub is a platform that hosts Git repositories in the web and provides a web i
 ![](/figures/section-3-github/git-gh-collab2.png){fig-pos="t" fig-align="center"}
 
 ::: notes
-Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
+
+
+Version control really comes into its own when we begin to collaborate with other people. We already have much of the machinery we need to do this; what we are missing is something that allows us to copy changes from one repository to another.
+
+ Imagine this: instead of passing files back and forth, Git allows us to seamlessly share and sync our work across multiple repositories. The magic happens with a central repository—your single source of truth—that lives on the web, in platforms like GitHub. Everyone involved in the project keeps a local copy of this shared repository, making changes and updates on their own computers.  The changes are merged into our source of truth repository in GitHub.
+
+In the pre-workshop you created a GitHub account, linked it with a personal access token (PAT), and configured your system to connect to GitHub. This setup will allow us to create a remote repository, sync it with our local work, and share our progress with collaborators—or even the world."  
 
 :::
 
 ## Remote Repository {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
 
-![](/figures/section-3-github/remote-repository-final.png){fig-pos="t" fig-align="center"}
+::: {.fragment}
+![](/figures/section-3-github/remote-repository-final1a.png){.absolute top=125px left=0px}
+:::
+
+::: {.fragment}
+![](/figures/section-3-github/remote-repository-final1b.png){.absolute top=425px left=0px}
+:::
 
 ::: notes
-Think of the remote as the “authoritative” version/source/copy
+Think of the remote as the “authoritative” version/source/copy. 
+
+If you remember back to the earlier episode where we added and committed our earlier work on mars.txt, we had a diagram of the local repository which looked like this:
+
+Now that we have two repositories, we need a diagram like this:
+
+Our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
 
 :::
 

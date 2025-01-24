@@ -952,11 +952,6 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 :::::
 
 
-::: footer
-BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub)
-
-:::
-
 ## Mandatory Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
 ![](/figures/section-4-bcgov/all-the-files.png)
 

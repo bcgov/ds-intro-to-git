@@ -410,6 +410,7 @@ Basic
 -   commit
 -   push
 -   pull
+
 :::
 :::
 
@@ -420,6 +421,7 @@ Intermediate
 -   clone
 -   branch
 -   fork
+
 :::
 :::
 :::::
@@ -651,6 +653,8 @@ Now that we have two repositories, we need a diagram like this:
 
 Our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
 
+Now that we have two repositories, we need a diagram like this:
+
 :::
 
 ## Hands-On Practice {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
@@ -808,6 +812,25 @@ Cloned Repository
 ::::::::
 ::::::::
 
+::: notes
+
+At this point, stop and compare the three repositories.  (next)
+
+1. We started with our initial repository called planets.  Created our hidden .git directory and mars.txt and commited these to our local repository.  (next)
+2. We then created a remote repository on GitHub which was initialized with a .git directory.   (next)
+3. We pushed our local changes (our new file mars.txt) to our remote on GitHub.   (next)
+4. Our colleague, working on another computer, clone the planets repo (along with text file and hidden git directory) to their local machine.  
+
+We now have three identicale repositories in three locations. Our colleague wants to: 
+
+5. add a new file with information on Pluto.  (next)
+
+Let's go ahead and try this out.  (flip to bash terminal)
+
+6. With pluto.txt file in the cloned repository we communicated the (by pushing) the changes to our source of truth remote repository (next)
+7. After pulling all the changes from the remote repository back to the original, our three repositories (original local, second local, and the one on GitHub) are back in sync!
+
+:::
 
 ## A Typical Workflow {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
 
@@ -875,9 +898,18 @@ Original Repository
 ::::::
 
 ::: notes
-Ignore data files! .gitignore
 
-What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.
+What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.  (next) 
+
+AND We KNOW many BC Stats projects involve data with PI or other sensitive information. (next)
+
+We generally follow a best practice of not pushing data to GitHub.  (next)
+
+We accomplish this by creating a file in the root directory of our project called a .gitignore.
+
+.gitignore files are plain text files; you can open the file with your chosen text editor and add the names of any files or folder you don't want to commit and therefore push to GitHub.
+
+Let's try this. (flip over to Git Bash)
 
 :::
 

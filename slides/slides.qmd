@@ -929,6 +929,32 @@ BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 
 :::
 
+::: notes
+
+Now let's talk about how the B.C. Government is embracing open collaboration through the **BCGov GitHub organization** or for short, bcgov github, or just bcgov. Found on GitHub.com, it is the official platform for open-source projects within Provincial Government of BC.
+
+- Let me give you a little backstory:  
+  - This organization was set up in **early 2014** by the Office of the Chief Information Officer, in collaboration with the **BCDevExchange team** within the Ministry of Citizen's Services.  
+  - Why? Because we recognized the need to share code and work transparently—and GitHub was the perfect platform to make that happen!  
+
+- Our **Digital Principles for the B.C. Government** urges all government product teams to work *in the open*. GitHub makes this easier by providing tools to:  
+  - Collaborate with the open-source community.  
+  - Share and control versions of our code.  
+  - Manage teams and projects efficiently.  
+  - Automate processes.  
+  - And, of course, track and resolve issues effectively.  
+
+The primary organization, **bcgov**, houses open-source code developed by government teams. This includes projects with both open-source and inner-source contribution models, with over 1,000 repositories available.  
+
+For confidential code, developers use the **bcgov-c** organization, ensuring secure storage and management.
+
+The **BCGov GitHub organization** Overview page has change recently.  If you navigate to this page (url is at the bottom of the screen).  You will find a README speaking to the organization's:
+- Purpose and Vision:
+- Role of Developers:
+- Support Resources and
+- Joining Instructions: Guidance on how to become part of the GitHub organization
+
+:::
 
 ## BC Developer Guide {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="slide-in fade-out"}
 ![](/figures/section-4-bcgov/bcgov-org-sign-up.png)
@@ -937,6 +963,8 @@ BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#directions-to-sign-up-and-link-your-account-for-bcgov)
 
 :::
+
+
 
 ## BCGov GitHub Organization {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
 

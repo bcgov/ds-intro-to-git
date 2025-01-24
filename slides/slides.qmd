@@ -992,6 +992,10 @@ It contains a section that
 BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 :::
 
+::: notes
+At the top of bcgov github overview page is a link to BCGov GitHub Policy Framework
+:::
+
 ## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="slide-in fade-out"}
 ![](/figures/section-4-bcgov/bcgov-policy.png)
 
@@ -1000,6 +1004,13 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 
 :::
 
+::: notes
+At the top of bcgov github overview page is a link to BCGov GitHub Policy Framework
+
+Scrolling down to the bottom the README text:
+
+
+:::
 
 ## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
 
@@ -1022,20 +1033,31 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 
 :::::
 
+::: notes 
+you'll find 
+Links to HOW TO - A list of tips, tricks and best practices for using GitHub as a code repository for government projects.
+Link to Employee Guide - A guide for developing in GitHub for BC Government employees. Licensing, Conflict of interest, Appropriate Use policy
+Cheatsheet - with resources for joining BCGOV, using git, adding required files
+How to License the Contents of a Repository
+ 
+:::
 
 ## Mandatory Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
 ![](/figures/section-4-bcgov/all-the-files.png)
 
 ::: notes
-3 Mandatory files:
-LICENSE
-README – what is in this project
-Contributing – encourage government employees, public and members of the private sector are encouraged to contribute to the repository and how to do that
+Let’s take a look at the mandatory files you’ll typically find in most GitHub repositories. These files aren’t just important—they’re essential for ensuring a well-organized and collaborative project:
 
+LICENSE:
+The license file specifies the terms under which others can use, modify, or distribute the project.
+It’s crucial because it makes clear what permissions are granted. For example, is this code free to use? Can someone adapt it for their own work? Without a license, your project defaults to being fully restricted, which can limit its usability.
 
-To foster a kind, inclusive, cooperative, and harassment-free open source BCGov community -> Optional Code-of-Conduct. 
+README:
+This is the front page of your repository. It’s often the first thing anyone sees when visiting your project.
+It explains what the project is about, what problem it solves, how to use it, and sometimes even a roadmap for future development. Think of it as your project’s introduction and user guide rolled into one.
 
-Open Source space in general has had its struggles with conduct and one approach to improving  this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all.
+CONTRIBUTING:
+This file encourages and guides others who want to contribute to your repository.  Open Source space in general has had its struggles with conduct and one approach to improving  this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all. It emphasizes fostering a kind, inclusive, cooperative, and harassment-free open source BCGov community
 
 :::
 

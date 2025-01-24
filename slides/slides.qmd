@@ -17,6 +17,7 @@ format:
 ---
 
 
+
 ## Territorial Acknowledgement
 
 ![](/figures/section-1-vc/mystic-beach-vi.jpg)

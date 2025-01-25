@@ -28,8 +28,9 @@ Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikime
 :::
 
 ::: notes
-Let's start with our territorial acknowledgement.  I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I are grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for millennia.
+Let's start with our territorial acknowledgement.  
 
+I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I am grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for a millennia.  (next slide)
 :::
 
 ## Housekeeping
@@ -49,7 +50,6 @@ Let's start with our territorial acknowledgement.  I acknowledge with respect th
   - Getting disconnected
   - Cameras on at first.
 - Our request: try your best
-- Our presenters: all kinds of awesome
 - Course Materials
 
 :::
@@ -62,18 +62,28 @@ Course Materials: <https://bcgov.github.io/ds-intro-to-git>
 :::
 
 ::: notes
-As part of today’s workshop, we’ll be coding in real time, working through concepts together on the fly. This approach lets us explore the process interactively. While this can be dynamic and fun, it also means there may be moments where we need to debug or adjust as we go. 
+Let's move on to some housekeeping! (next)
 
-Since we’ll be coding in real time, it’s important that everyone feels comfortable and engaged. To keep things running smoothly in our virtual setting, let’s go over a few best practices:
+As part of today’s workshop, we’ll be coding in real time, working through concepts together on the fly. This approach lets us explore the process interactively. While this can be dynamic and fun, it also means there may be moments where we need to debug or adjust as we go. (next)
 
-If you have questions, please feel free to drop them in the chat or use the ‘raise hand’ feature—we’ll address them as we go.  Your engagement and questions will make this experience even more valuable, so don’t hesitate to share your thoughts along the way!
-Keep your microphones on mute unless speaking to minimize background noise. 
-And if we get disconnected, don’t worry! You can rejoin using the same meeting link, and Lindsay will let you back in.
-Cameras on for the first bit so the faciliators get to know who you are and can put a face to a name.  
+Since we’ll be coding in real time, it’s important that everyone feels comfortable and engaged. To keep things running smoothly in our virtual setting, let’s go over a few best practices: (next)
 
-These simple steps will help ensure we all get the most out of today’s session, so let’s dive in!
+1. If you have questions, please feel free to drop them in the chat or use the ‘raise hand’ feature—we’ll address them as we go.  Your engagement and questions will make this experience even more valuable, so don’t hesitate to share your thoughts along the way! (next)
+2. Keep your microphones on mute unless speaking to minimize background noise. (next)
+3. And if we get disconnected, don’t worry! You can rejoin using the same meeting link, and Lindsay will let you back in. (next)
+4. Cameras on for the first bit so the faciliators get to know who you are and can put a face to a name.  (next)
 
-The link to the course materials was sent with the pre-workshop assignment and installation instructions.  For your convenience the link is at the bottom of the slide.
+The link to the course materials was sent with the pre-workshop assignment and installation instructions.  For your convenience the link is at the bottom of the slide. (next) 
+
+We have one request and that is to try your best.
+
+We’re all learning together. Git and GitHub can feel a little overwhelming at first, but the goal isn’t perfection — it’s progress.
+
+Mistakes are part of the process, and they’re a great way to learn. Don’t hesitate to experiment, ask questions, or even mess something up—that’s how we figure things out. Remember, no one here expects you to know everything right away, and we have great people assisting to help guide you through it.
+
+So let’s dive in with curiosity and determination, and remember: every step forward is a win!"
+
+(next slide)
 
 :::
 
@@ -92,13 +102,17 @@ Learn more: [Standards of Conduct for BC Public Service employees](https://www2.
 
 ::: notes
 
-Before we begin, I’d like to take a moment to outline our workshop code of conduct. These guidelines are in place to ensure this session remains a positive and productive space for everyone:
+Before we begin, I’d like to take a moment to outline our workshop code of conduct. These guidelines are in place to ensure this session remains a positive and productive space for everyone: (next)
 
-First and foremost, we aim to create a welcoming and supportive environment for all participants, regardless of background.
-We encourage respectful discussion and questions throughout the session. Healthy dialogue enriches the learning experience, but it’s important to maintain a tone of mutual respect as teaching and learning in a virtual environment can be hard.
-Finally, we ask that you be fully present and engaged during the workshop. Multitasking can wait—this is your opportunity to focus and get the most out of our time together.
+First and foremost, we aim to create a welcoming and supportive environment for all participants, regardless of background. (next)
+
+We encourage respectful discussion and questions throughout the session. Healthy dialogue enriches the learning experience, but it’s important to maintain a tone of mutual respect as teaching and learning in a virtual environment can be hard. (next)
+
+Finally, we ask that you be fully present and engaged during the workshop. Multitasking can wait—this is your opportunity to focus and get the most out of our time together. (next)
 
 By following these principles, we can create a space where everyone feels comfortable and valued. Thanks in advance for your cooperation.
+
+(next slide)
 
 :::
 
@@ -150,32 +164,38 @@ Course Materials: <https://bcgov.github.io/ds-intro-to-git>
 :::
 
 ::: notes
-To give you a clear picture of what we’ll be covering today, here’s an outline of our workshop:
+To give you a clear picture of what we’ll be covering today, here’s an outline of our workshop: (next)
 
-Section 1: What is Version Control for Code
-We’ll start by exploring the concept of version control: what it is and why it’s an essential practice in modern coding.
+Section 1: What is Version Control for Code. (next)
+We’ll start by exploring the concept of version control, what it is and why it’s an essential practice in modern coding. (next)
 
-Section 2: Working Locally with Git
-Next, we’ll dive into Git, learning how to set up and work with our first Git repository.
+Section 2: Working Locally with Git. (next)
+We’ll dive into Git, learning how to set up and work with our first Git repository. (next)
 
-Section 3: Remote Code-Hosting and GitHub
-In this section, we’ll focus on using GitHub to share and collaborate on code.
+Section 3: Remote Code-Hosting and GitHub. (next)
+In this section, we’ll focus on using GitHub to share and collaborate on code. (next)
 
-Section 4: BCGov GitHub Organization
-Finally, we’ll discuss coding in the open, leveraging the BCGov GitHub organization to manage and share projects effectively.
+Section 4: BCGov GitHub Organization. (next)
+Finally, we’ll discuss coding in the open, leveraging the BCGov GitHub organization to manage and share projects effectively. (next)
 
-This structured approach will guide us step-by-step from foundational concepts to practical applications, ensuring you gain both understanding and hands-on experience.
+These icons shown here on the right hand-side of the slide will represent our sections.  You'll see them at the top right hand-side of most of the presentation slides.  This way you'll know which topic or skill we are working on as we progress through the course.
+
+This structured approach will guide us step-by-step from foundational concepts to practical applications, ensuring you gain both understanding and hands-on experience. 
+
+(next slide)
 
 :::
 
 ## Installation & Set Up Review
 
 ::: {.incremental} 
--   Installed Git (includes Git Bash): <https://git-scm.com/download/win>
--   Configured Git: [steps here](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
--   Created a [GitHub account](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
+-   Installed Git (including Git Bash): [Git Download](<https://git-scm.com/download/win>)
+-   Configured Git: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
+-   Created a [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
     -   Set-up 2MFA
     -   Created a Personal Access Token
+- Configured your email and user name
+
 :::
 
 ::: footer
@@ -184,17 +204,17 @@ Learn more: [Software Installation Guide](https://bcgov.github.io/ds-intro-to-gi
 :::
 
 ::: notes
-Before diving into today’s workshop, let’s quickly review the foundational steps you’ve already completed in preparation
+Before diving into today’s workshop, let’s quickly review the foundational steps you’ve already completed in preparation for this course. (next)
 
-Installed Git (including Git Bash): You’ve downloaded and installed Git from git-scm.com. This included Git Bash, a terminal that allows you to interact with Git through command-line commands.
+1. You’ve downloaded and installed Git from git-scm.com. This included Git Bash, a terminal that allows you to interact with Git through command-line commands. (next)
 
-Configured Git: You configured Git by setting up your username and email address, which ensures that every change you commit is associated with your identity. If you need a refresher, the configuration steps can be found here.
+2. You configured Git by setting up your username and email address, which ensures that every change you commit is associated with your identity. If you need a refresher, the configuration steps can be found here. (next)
 
-Created a GitHub Account: You set up a GitHub account, which will allow you to store and collaborate on code projects in a cloud-based repository. As part of this process you enabled Two-Factor Authentication (2MFA) to enhance account security. You also created a Personal Access Token to allow Git to authenticate securely with your GitHub account for operations like pushing or pulling code.
+3. You set up a GitHub account, which will allow you to store and collaborate on code projects in a cloud-based repository. As part of this process you enabled Two-Factor Authentication (2MFA) to enhance account security. You also created a Personal Access Token to allow Git to authenticate securely with your GitHub account for operations like pushing or pulling code. (next)
 
-These steps provided the groundwork for today’s workshop, ensuring you have the tools and configurations necessary to follow along effectively. If you encounter any challenges related to these steps, feel free to drop a question into the chat for assistance.
+4. These steps provided the groundwork for today’s workshop, ensuring you have the tools and configurations necessary to follow along effectively. If you encounter any challenges related to these steps, feel free to drop a question into the chat for assistance. (next)
 
-You will also have configured your email and user name so that git can connect to GitHub. Most of you did this in Git Bash terminal.
+5. You will also have configured your email and user name so that git can connect to GitHub. Most of you did this in Git Bash terminal. (next)
 
 Question for Bonnie: do we want to check configuration at some point?
 
@@ -1051,13 +1071,22 @@ Let’s take a look at the mandatory files you’ll typically find in most GitHu
 LICENSE:
 The license file specifies the terms under which others can use, modify, or distribute the project.
 It’s crucial because it makes clear what permissions are granted. For example, is this code free to use? Can someone adapt it for their own work? Without a license, your project defaults to being fully restricted, which can limit its usability.
+Generally, for bcgov repositories we use the Apache 2.0 LICENSE: 
+- This can be added directly to the repository
+- Boiler-plate for the Apache 2.0 LICENSE is added to the bottom of your README.md
+- Boiler-plate for the Apache 2.0 LICENSE is added to the comments header of every source code file
+
+Other, non-code conduct may require a second license, such as the Creative Commons Attribution 4.0 International.
+This can be added in a footer to your README.md
 
 README:
 This is the front page of your repository. It’s often the first thing anyone sees when visiting your project.
 It explains what the project is about, what problem it solves, how to use it, and sometimes even a roadmap for future development. Think of it as your project’s introduction and user guide rolled into one.
 
 CONTRIBUTING:
-This file encourages and guides others who want to contribute to your repository.  Open Source space in general has had its struggles with conduct and one approach to improving  this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all. It emphasizes fostering a kind, inclusive, cooperative, and harassment-free open source BCGov community
+This file guides others who want to contribute to your repository.  
+
+CODE-OF-CONDUCT: Open Source space in general has had its struggles with conduct and one approach to improving  this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all. It emphasizes fostering a kind, inclusive, cooperative, and harassment-free open source BCGov community
 
 :::
 

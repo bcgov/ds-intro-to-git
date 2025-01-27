@@ -79,9 +79,9 @@ We have one request and that is to try your best.
 
 We’re all learning together. Git and GitHub can feel a little overwhelming at first, but the goal isn’t perfection — it’s progress.
 
-Mistakes are part of the process, and they’re a great way to learn. Don’t hesitate to experiment, ask questions, or even mess something up—that’s how we figure things out. Remember, no one here expects you to know everything right away, and we have great people assisting to help guide you through it.
+Mistakes are part of the process, and they’re a great way to learn. Don’t hesitate to experiment, ask questions, or even mess something up—that’s how we figure things out.  Remember, no one here expects you to know everything right away, and we have great people assisting to help guide you through it.
 
-So let’s dive in with curiosity and determination, and remember: every step forward is a win!"
+So let’s dive in with curiosity and determination, and remember - every small step in learning builds a stronger future you.
 
 (next slide)
 
@@ -106,7 +106,7 @@ Let us take a moment to share our workshop code of conduct. These guidelines are
 
 First and foremost, we aim to create a welcoming and supportive environment for all participants, regardless of background. (next)
 
-We encourage respectful discussion and questions throughout the session. Healthy dialogue enriches the learning experience, but it’s important to maintain a tone of mutual respect as teaching and learning in a virtual environment can be hard. (next)
+We encourage respectful discussion and questions throughout the session. Healthy dialogue enriches the learning experience, but it’s important to maintain a tone of mutual respect as teaching and learning in a virtual environment can be hard. Remember to be kind not only to others but also to yourself—mistakes and misunderstandings are part of the learning process. Let’s focus on building each other up and avoiding criticism, so everyone feels supported and encouraged to grow. (next)
 
 Finally, we ask that you be fully present and engaged during the workshop. Multitasking can wait—this is your opportunity to focus and get the most out of our time together.
 
@@ -191,7 +191,7 @@ This structured approach will guide us step-by-step from foundational concepts t
 ::: {.incremental} 
 -   Installed Git (including Git Bash): [Git Download](<https://git-scm.com/download/win>)
 -   Configured Git: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
--   Created a [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
+-   Created a GitHub account: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
     -   Set-up 2MFA
     -   Created a Personal Access Token
 - Configured your email and user name
@@ -320,6 +320,9 @@ Documents and repositories can be kept in sync across different computers facili
 *A repository is a data structure that stores **metadata** for a set of files or directory structure, as well as a **historical record of changes** to the repository.*
 
 ::: notes
+
+How does git accomplish this? It leverages something called a repository (or repo, for short)
+
 In version control systems, a **repository** is a data structure that stores metadata for a set of files or directory structure, as well as a historical record of changes to the repository.
 
 You store all of your project files in a folder.
@@ -409,15 +412,17 @@ Together, this structure keeps our work organized and ensures that the repositor
 
 (next)
 
-Git is a distributed version control system designed to track changes in files, (next)particularly source code. (next)
+Git is a distributed version control system designed to track changes in files (next). 
+
+Particularly source code. (next)
 
 Git helps us manage versions of our work, making it easy to revert to earlier states or identify when and why changes were made. (next)
 
 It enables multiple people to collaborate on projects while maintaining a detailed history of all changes.  It enables contributors to work simultaneously without overwriting each other’s work. (next)
 
-Git supports parallel development, allowing teams to work on different features or fixes without interference.  This is done through Branching and Merging which we will review shortly. (next)
+Git supports parallel development, allowing teams to work on different features or fixes without interference.  This is done through branching and merging which we introduced earlier and will review shortly. (next)
 
-Git is a distributed Model, meaning every user has a full copy of the repository.  The benefit here is that operations require only local files and resources.  (This makes Git extremely fast and reliable). (next)
+Git is a distributed model, meaning every user has a full copy of the repository.  The benefit here is that operations require only local files and resources.  This makes Git extremely fast and reliable. (next)
 
 Unlike many version control systems that treat data as a list of file changes over time, Git thinks of data as a series of snapshots of a miniature filesystem. Every time you commit, Git essentially takes a snapshot of your project’s state and stores a reference to it.
 
@@ -432,7 +437,7 @@ Once a snapshot is committed to Git, it’s incredibly hard to lose, especially 
 ::::: columns
 ::: {.column width="50%"}
 ::: {.incremental} 
-Basic
+
 
 -   repo
 -   stage/add
@@ -444,7 +449,6 @@ Basic
 :::
 
 ::: {.column width="50%"}
-Intermediate
 
 ::: {.incremental} 
 -   clone
@@ -457,35 +461,26 @@ Intermediate
 
 ::: notes
 
-Before we move into live coding, let's preview a few Bash commands.  The commands in the Basic column are ones that we'll use in the workshop.
+Here are a few Bash commands you will see in this workshop, along with a few that you may hear about.  Let's start with the ones we'll use in the workshop.
 
-Stage/Add Usage: `git add [file/directory]` 
-Purpose: Allows you to select which changes will be committed.  
-Definition: Moves changes (new files, modifications, or deletions) in your working directory to the staging area, preparing them to be included in the next commit. 
+A repo (short for repository) is like a folder where your project’s files and their history are stored. It tracks all the changes you make, letting you see the past versions and collaborate with others. You can have a local repo on your computer or a remote one on a platform like GitHub.
 
-Commit Usage: `git commit m "message"` 
-Purpose: Saves a version of your work, making it easier to track and revert to if necessary. 
-Definition: Records the changes in the staging area to the repository's history as a new snapshot. Each commit includes a unique ID and a descriptive message to explain the changes. 
+`add` a git command used to stage files. it is like putting changes into a "ready-to-go" box. It tells Git which changes (new files, edits, or deletions) you want to save in your next snapshot (commit). You’re just preparing them; they aren’t saved yet.
 
-Push Usage: `git push [remote] [branch]` 
-Purpose: Synchronizes your work with the remote repository. 
-Definition: Uploads your local commits to a remote repository (e.g., on GitHub, GitLab, or Bitbucket) so others can access them. 
+`commit -m "message` a git command used to take a picture of your work at this moment. It saves the changes you've prepared (staged) into Git's history. The message you add is like a caption, helping you remember what this "snapshot" is about.
 
-Pull Usage: `git pull [remote] [branch]` 
-Purpose: Ensures your local repository is up-to-date with the remote one.
-Definition: Fetches changes from a remote repository and integrates them into your local branch. This is a combination of git fetch (retrieve changes) and git merge (apply changes). 
+`push [remote] [branch]` a git command used to send your saved work (commits) from your computer to an online storage space (remote repository). This lets others see or work with your updates.
 
-Clone Usage: `git clone [repositoryurl]`  
-Purpose: Allows you to work on a project locally by copying it from a remote source like GitHub.
-Definition: Creates a copy of an existing remote repository on your local machine, including all files, branches, and commit history.
+`pull [remote] [branch]` a git command used to grab the latest updates from the online version of your project and adding them to your work. It makes sure you're working with the most up-to-date version.
 
-Branch Usage: `git branch [branchname]` (to create a branch)\
-`git checkout [branchname]` (to switch to a branch)\
-`git switch [branchname]` (alternative to `checkout`) 
-Purpose: Facilitates parallel development and experimentation while keeping the main codebase stable.
-Definition: Represents an independent line of development within a repository. Branches allow you to work on new features or fixes without affecting the main project until changes are ready to be merged. 
+Some others you may hear about but we won't be directly going over today.
 
-Fork Command: No direct Git command; done via hosting services like GitHub. Definition: Creates a personal copy of someone else's repository in your own GitHub (or similar service) account. This is independent of the original repository, allowing you to make changes without affecting the source project. Purpose: Enables you to contribute to opensource projects or customize a repository for your own use while keeping the original repository intact. Contributions can be shared back via **pull requests**.
+`clone [repositoryurl]` a git command used to download a full copy of a project from an online source (like GitHub) to your computer so you can work on it. It brings all the files and the project’s history with it.
+
+`branch [branchname]` is like a new "workspace" where you can try new ideas or work on features without messing with the main project.  Branches keep your main project safe while you experiment or build new things, and you can later combine your changes when they’re ready.
+
+`fork`: No direct Git command as forking is done through GitHub platform,. It’s like making your own personal copy of someone else’s project, so you can change it without affecting their original work. You can use it to contribute to open-source projects or customize things for your own needs. Once you're happy with your changes, you can share them back with the original project through a pull request.
+
 
 :::
 
@@ -493,14 +488,7 @@ Fork Command: No direct Git command; done via hosting services like GitHub. Defi
 
 
 
-## Hands-On Practice {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
-<br>
-<br>
-<br>
-<br>
-Let's create our first repository!
-
-## Review: Bash Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+## Preview: Bash Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
 ``` {bash}
 #| echo: true
@@ -533,6 +521,14 @@ These commands form the foundation of navigating and organizing your files in th
 (next slide)
 
 :::
+
+## Hands-On Practice {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+<br>
+<br>
+<br>
+<br>
+Let's create our first repository!
+
 
 ## Review: Git Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
@@ -851,7 +847,7 @@ At this point, stop and compare the three repositories.  (next)
 3. We pushed our local changes (our new file mars.txt) to our remote on GitHub.   (next)
 4. Our colleague, working on another computer, clone the planets repo (along with text file and hidden git directory) to their local machine.  
 
-We now have three identicale repositories in three locations. Our colleague wants to: 
+We now have three identical repositories in three locations. Our colleague wants to: 
 
 5. add a new file with information on Pluto.  (next)
 
@@ -945,6 +941,39 @@ Let's try this. (flip over to Git Bash)
 
 ## Section 4: BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
 
+::: {.incremental}
+- set up in early 2014
+- OCIO + BCDevExchange team
+- *Digital Principles for the B.C. Government*: "work in the open"
+- **bcgov**: open-source code
+- **bcgov-c**: confidential code 
+
+:::
+
+::: notes
+
+Now let's talk about how the B.C. Government is embracing open collaboration through the **BCGov GitHub organization** or for short, bcgov github, or just bcgov. Found on GitHub.com, it is the official platform for open-source projects within Provincial Government of BC.
+
+- Let me give you a little backstory:  
+  - This organization was set up in early 2014 by the Office of the Chief Information Officer, in collaboration with the BCDevExchange team within the Ministry of Citizen's Services.  
+  - Why? Because we recognized the need to share code and work transparently—and GitHub was the perfect platform to make that happen!  
+
+- Our Digital Principles for the B.C. Government urges all government product teams to work *in the open*. GitHub makes this easier by providing tools to:  
+  - Collaborate with the open-source community.  
+  - Share and control versions of our code.  
+  - Manage teams and projects efficiently.  
+  - Automate processes.  
+  - And, of course, track and resolve issues effectively.  
+
+The primary organization, bcgov, houses open-source code developed by government teams. This includes projects with both open-source and inner-source contribution models, with over 1,000 repositories available.  
+
+For confidential code, developers use the bcgov-c organization, ensuring secure storage and management.
+
+:::
+
+
+## Section 4: BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
+
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
 ::: {.absolute top=575 left=265}
@@ -961,28 +990,12 @@ BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 
 ::: notes
 
-Now let's talk about how the B.C. Government is embracing open collaboration through the **BCGov GitHub organization** or for short, bcgov github, or just bcgov. Found on GitHub.com, it is the official platform for open-source projects within Provincial Government of BC.
+The BCGov GitHub organization overview page has change recently.  If you navigate to this page on GitHub (the url is at the bottom of the screen).  You will be presented with a README speaking to the organization's:
 
-- Let me give you a little backstory:  
-  - This organization was set up in **early 2014** by the Office of the Chief Information Officer, in collaboration with the **BCDevExchange team** within the Ministry of Citizen's Services.  
-  - Why? Because we recognized the need to share code and work transparently—and GitHub was the perfect platform to make that happen!  
-
-- Our **Digital Principles for the B.C. Government** urges all government product teams to work *in the open*. GitHub makes this easier by providing tools to:  
-  - Collaborate with the open-source community.  
-  - Share and control versions of our code.  
-  - Manage teams and projects efficiently.  
-  - Automate processes.  
-  - And, of course, track and resolve issues effectively.  
-
-The primary organization, **bcgov**, houses open-source code developed by government teams. This includes projects with both open-source and inner-source contribution models, with over 1,000 repositories available.  
-
-For confidential code, developers use the **bcgov-c** organization, ensuring secure storage and management.
-
-The **BCGov GitHub organization** Overview page has change recently.  If you navigate to this page (url is at the bottom of the screen).  You will find a README speaking to the organization's:
 - Purpose and Vision:
 - Role of Developers:
-- Support Resources and
-- Joining Instructions: Guidance on how to become part of the GitHub organization
+- Support Resources and (next)
+- several other links including one to Joining Instructions.  This link takes us to...
 
 :::
 
@@ -995,15 +1008,15 @@ BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/do
 :::
 
 ::: notes
-The BC Developer guide is a living guide to application development for the B.C government, updated regularly by the Developer Experience team. Written for all ministries, use it to guide your team's technical decisions and as a reference throughout the software lifecycle.
+...the BC Developer guide, which is a living guide to application development for the B.C government, updated regularly by the Developer Experience team. Written for all ministries, use it to guide your team's technical decisions and as a reference throughout the software lifecycle.
 
 It contains a section that  
 
-  - gives an **Overview of GitHub Organizations**, (bcgov and bcgov-c) and details the purpose and access rules for each organization.  
-  - Describes the SSO setup process for **bcgov** and **bcgov-c** organizations, including requirements for IDIR accounts and steps for linking accounts.  
-  - Step-by-step guides for signing up and linking GitHub accounts to **bcgov** and **bcgov-c**.  
-  - Highlights key requirements like two-factor devices, personal logins, and IDIR credentials.  
-  - Access to supplementary guides, video tutorials, and support request options. 
+  - gives an Overview of GitHub Organizations, (bcgov and bcgov-c) and details the purpose and access rules for each organization.  
+  - Describes the SSO setup process for bcgov and bcgov-c organizations, including requirements for IDIR accounts and steps for linking accounts.  
+  - What I want to highlight is the step-by-step guides for signing up and linking GitHub accounts to bcgov and bcgov-c.  
+  - The step-by-step instructions outline key requirements like two-factor devices, personal logins, and IDIR credentials.  
+  - List links to supplementary guides, video tutorials, and support request options. 
 
 :::
 
@@ -1023,7 +1036,7 @@ BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 :::
 
 ::: notes
-At the top of bcgov github overview page is a link to BCGov GitHub Policy Framework
+Going back to the bcgov github overview page, at the top is a link to BCGov GitHub Policy Framework
 :::
 
 ## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="slide-in fade-out"}
@@ -1035,9 +1048,7 @@ BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub
 :::
 
 ::: notes
-At the top of bcgov github overview page is a link to BCGov GitHub Policy Framework
-
-Scrolling down to the bottom the README text:
+Scrolling down to the bottom you will find a README.
 
 
 :::
@@ -1064,15 +1075,16 @@ Scrolling down to the bottom the README text:
 :::::
 
 ::: notes 
-you'll find 
-Links to HOW TO - A list of tips, tricks and best practices for using GitHub as a code repository for government projects.
-Link to Employee Guide - A guide for developing in GitHub for BC Government employees. Licensing, Conflict of interest, Appropriate Use policy
-Cheatsheet - with resources for joining BCGOV, using git, adding required files
-How to License the Contents of a Repository
+In that README you'll find links to:
+
+- A HOW-TO, containing a list of tips, tricks and best practices for using GitHub as a code repository for government projects.
+- An employee guide.  Which is a guide for developing in GitHub for BC Government employees. This contains information on licensing, conflict of interest and appropriate use policy
+- Also a cheatsheet with resources for joining BCGOV, using git, adding required files, how to properly license the contents of a repository
  
 :::
 
 ## Mandatory Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
+
 ![](/figures/section-4-bcgov/all-the-files.png)
 
 ::: notes
@@ -1099,6 +1111,7 @@ This file guides others who want to contribute to your repository.
 CODE-OF-CONDUCT: Open Source space in general has had its struggles with conduct and one approach to improving  this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all. It emphasizes fostering a kind, inclusive, cooperative, and harassment-free open source BCGov community
 
 :::
+
 
 ## Credits
 

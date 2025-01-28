@@ -443,7 +443,7 @@ Once a snapshot is committed to Git, it’s incredibly hard to lose, especially 
 
 -   repo
 -   stage/add
--   commit
+-   commit/commit message
 -   push
 -   pull
 
@@ -463,25 +463,25 @@ Once a snapshot is committed to Git, it’s incredibly hard to lose, especially 
 
 ::: notes
 
-Here are a few Bash commands you will see in this workshop, along with a few that you may hear about.  Let's start with the ones we'll use in the workshop.
+Let's preview a bit of git Bash jargon.  Much of it you will be introduced to in this workshop as many of these are commands that we enter at command-line.  Let's start with the ones we'll use in the workshop. (next)
 
-A repo (short for repository) is like a folder where your project’s files and their history are stored. It tracks all the changes you make, letting you see the past versions and collaborate with others. You can have a local repo on your computer or a remote one on a platform like GitHub.
+A repo (short for repository) is like a folder where your project’s files and their history are stored. It tracks all the changes you make, letting you see the past versions and collaborate with others. You can have a local repo on your computer or a remote one on a platform like GitHub. (next)
 
-`add` a git command used to stage files. it is like putting changes into a "ready-to-go" box. It tells Git which changes (new files, edits, or deletions) you want to save in your next snapshot (commit). You’re just preparing them; they aren’t saved yet.
+**`add`** a git command used to stage files. it is like putting changes into a "ready-to-go" box. It tells Git which changes (new files, edits, or deletions) you want to save in your next snapshot (commit). You’re just preparing them; they aren’t saved yet. (next)
 
-`commit -m "message` a git command used to take a picture of your work at this moment. It saves the changes you've prepared (staged) into Git's history. The message you add is like a caption, helping you remember what this "snapshot" is about.
+**`commit -m "message`** a git command used to take a picture of your work at this moment. It saves the changes you've prepared (staged) into Git's history. The message you add is like a caption, helping you remember what this "snapshot" is about. (next)
 
-`push [remote] [branch]` a git command used to send your saved work (commits) from your computer to an online storage space (remote repository). This lets others see or work with your updates.
+**`push [remote] [branch]`** a git command used to send your saved work (commits) from your computer to an online storage space (remote repository). This lets others see or work with your updates. (next)
 
-`pull [remote] [branch]` a git command used to grab the latest updates from the online version of your project and adding them to your work. It makes sure you're working with the most up-to-date version.
+**`pull [remote] [branch]`** a git command used to grab the latest updates from the online version of your project and adding them to your work. It makes sure you're working with the most up-to-date version. (next)
 
 Some others you may hear about but we won't be directly going over today.
 
-`clone [repositoryurl]` a git command used to download a full copy of a project from an online source (like GitHub) to your computer so you can work on it. It brings all the files and the project’s history with it.
+**`clone [repositoryurl]`** a git command used to download a full copy of a project from an online source (like GitHub) to your computer so you can work on it. It brings all the files and the project’s history with it. (next)
 
-`branch [branchname]` is like a new "workspace" where you can try new ideas or work on features without messing with the main project.  Branches keep your main project safe while you experiment or build new things, and you can later combine your changes when they’re ready.
+**`branch [branchname]`** is like a new "workspace" where you can try new ideas or work on features without messing with the main project.  Branches keep your main project safe while you experiment or build new things, and you can later combine your changes when they’re ready. (next)
 
-`fork`: No direct Git command as forking is done through GitHub platform,. It’s like making your own personal copy of someone else’s project, so you can change it without affecting their original work. You can use it to contribute to open-source projects or customize things for your own needs. Once you're happy with your changes, you can share them back with the original project through a pull request.
+`fork`: No direct Git command as forking is done through GitHub platform,. It’s like making your own personal copy of someone else’s project, so you can change it without affecting their original work. You can use it to contribute to open-source projects or customize things for your own needs. Once you're happy with your changes, you can share them back with the original project through a pull request. (next)
 
 
 :::
@@ -495,7 +495,7 @@ Some others you may hear about but we won't be directly going over today.
 ``` {bash}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "1|2|3|4|5|"
+#| code-line-numbers: "|1|2|3|4|5|"
 
 $ cd path/to/directory          # Go to specified directory - "quotes" are needed if there are spaces 
 $ cd ..                         # Go up one directory level
@@ -505,20 +505,19 @@ $ ls -a                         # List directories and files, including hidden
 ```
 
 ::: notes
-Let’s review some common Bash commands that you’ll use frequently when working with Git and navigating your file system.  
+Let’s review some common Bash commands that you’ll use frequently when working with Git and navigating your file system. (next)  
 
-**cd path/to/directory**: This command lets you navigate to a specific directory. Think of it as ‘changing your location’ in the file system.  (next)
-   - If the directory path includes spaces, make sure to enclose it in quotes, like `cd "My Folder"`.  (next)
+**cd path/to/directory**: This command lets you navigate to a specific directory. Think of it as ‘changing your location’ in the file system.  If the directory path includes spaces, make sure to enclose it in quotes, like **cd "My Folder"**.  (next)
 
-**`cd ..`**: The `..` represents the parent directory. Using this command moves you up one level in the directory hierarchy. For example, if you’re in a folder called `projects`, `cd ..` will take you back to its parent folder.  (next)
+**cd ..**: The `..` represents the parent directory. Using this command moves you up one level in the directory hierarchy. For example, if you’re in a folder called *projects*, **cd ..** will take you back to its parent folder.  (next)
 
-**`mkdir new_directory`** :This creates a new directory with the specified name. It’s a quick way to organize your files into new folders directly from the command line.  (next)
+**mkdir new_directory** :This creates a new directory with the specified name. It’s a quick way to organize your files into new folders directly from the command line.  (next)
 
-**`ls`**: This lists the contents of the current directory, showing all files and subdirectories. It’s a handy way to see where you are and what’s in your folder.  (next)
+**ls**: This lists the contents of the current directory, showing all files and subdirectories. It’s a handy way to see where you are and what’s in your folder.  (next)
 
-**`ls -a`** Adding the `-a` flag shows all files, including hidden ones. Hidden files usually start with a dot (`.`), like `.git`, and they’re essential for tasks like managing Git repositories.  (next)
+Adding the **-a** flag shows all files, including hidden ones. Hidden files usually start with a dot, like **.git**, and they’re essential for tasks like managing Git repositories.  (next)
 
-These commands form the foundation of navigating and organizing your files in the terminal, which is key to working effectively with Git."  
+These commands form the foundation of navigating and organizing your files in the terminal, which is key to working effectively with Git.
 
 (next slide)
 
@@ -530,47 +529,6 @@ These commands form the foundation of navigating and organizing your files in th
 <br>
 <br>
 Let's create our first repository!
-
-
-## Review: Git Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
-
-``` {bash}
-#| echo: true
-#| eval: false
-#| code-line-numbers: "1|2|3|4|5|6|7|"
-
-$ git init                          # initiate a repository in the current directory
-$ git status                        # indicate if there are any changes to files
-$ git add <filename>                # add a new file/change to the staging area
-$ git commit –m “commit message”    # commit all staged changes to the repository
-$ git log                           # view commit history
-$ git diff                          # show changes between commits
-$ git restore                       # restore file/s to previous commit
-```
-
-::: notes
-"Now, let’s review some essential Git commands you’ll use when working with repositories.  
-
-**`git init`**: This command initializes a Git repository in the current directory. It creates a hidden `.git` folder, which Git uses to track changes to your files. You only need to do this once per project to start version control.  (next)
-
-**`git status`**: Running this command gives you a snapshot of your repository’s current state. It will show any changes to files, whether they’ve been staged for commit, and if there are untracked files. It’s like your ‘to-do list’ for what’s happening in Git.  (next) 
-
-**`git add <filename>`** : This stages a file or changes to a file, adding it to the next commit. Replace `<filename>` with the name of the file you want to add. If you want to stage all changes at once, you can use `git add .`. (next)
-   
-   **`git commit -m "commit message"`**  
-- This command takes all the changes in the staging area and commits them to your repository, creating a new snapshot. The `-m` flag allows you to add a message describing the changes, which is critical for understanding your history later.  
-
-**`git log`**: Use this command to view the commit history of your repository. It shows who made the changes, when they were made, and the commit messages. It’s an excellent way to review the progress of your project.  (next)
-
-**`git diff`**:  This displays the changes between commits or the differences between your working directory and the last commit. It’s useful for checking exactly what has changed before committing.  (next)
-   
-**`git restore`**:  This restores files to a previous commit, effectively undoing changes. It’s handy if you want to discard changes or return a file to a specific version.  (next)
-
-These commands form the backbone of working with Git. As you use them, you’ll develop a deeper understanding of how Git tracks and manages your work."  
-
-(next slide)
-
-:::
 
 ## The Staging Area {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
 
@@ -586,7 +544,7 @@ These commands form the backbone of working with Git. As you use them, you’ll 
 :::
 
 ::: notes
-(next) diagram should be showing
+(next)
 
 As a final note, Git requires us to explicitly add files to a **staging area** before committing them. This lets us organize our work and commit changes in logical portions rather than committing everything at once.  
 For example, if you’re working on a thesis, you might want to commit newly added citations and bibliography entries separately from unfinished work in the conclusion.  
@@ -603,6 +561,47 @@ If you type **`git commit`** without staging anything, Git will prompt you to us
    - This practice helps you avoid mistakes and keeps your project history clean and well-organized.  
 
 By staging changes, you’re breaking down your work into manageable, logical pieces—an approach that makes your version control workflow much more efficient. 
+
+:::
+
+
+## Review: Git Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+``` {bash}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "|1|2|3|4|5|6|7|"
+
+$ git init                          # initiate a repository in the current directory
+$ git status                        # indicate if there are any changes to files
+$ git add <filename>                # add a new file/change to the staging area
+$ git commit –m “commit message”    # commit all staged changes to the repository
+$ git log                           # view commit history
+$ git diff                          # show changes between commits
+$ git restore                       # restore file/s to previous commit
+```
+
+
+::: notes
+At that point, let's review some of the essential Git commands we've seen..  
+
+**`git init`**: This command initialized a Git repository in the current directory. It created a hidden `.git` folder, which Git used to track changes to files. This only needed to be done once per project to start version control.  
+
+**`git status`**: Running this command gave a snapshot of the repository’s current state. It showed any changes to files, whether they had been staged for commit, and if there were untracked files. It was like a ‘to-do list’ for what was happening in Git.  
+
+**`git add mars.txt`**: This staged a file or changes to a file, staging it for the next commit. 
+
+**`git commit -m "commit message"`**:  This command took all the changes in the staging area and committed them to the repository, creating a new snapshot. The `-m` flag allowed us to add a message describing the changes, which was critical for understanding the history later.  
+
+**`git log`**: This command was used to view the commit history of the repository. It showed who made the changes, when they were made, and the commit messages. Generally, this is an excellent way to review the progress of a project.  
+
+**`git diff`**: This displayed the changes between commits or the differences between the working directory and the last commit (the HEAD). It was useful for checking exactly what had changed before committing.  
+
+**`git restore`**: This restored mars.txt to our previous commit, effectively undoing changes. It was handy for discarding changes or returning a file to a specific version. 
+
+These commands form the backbone of working with Git. As you use them, you’ll develop a deeper understanding of how Git tracks and manages your work."  
+
+(next slide)
 
 :::
 
@@ -630,7 +629,7 @@ By staging changes, you’re breaking down your work into manageable, logical pi
 ::::
 
 ::: notes
-In this section we are going to take a closer look at **GitHub**, one of the most widely used hosting services for Git repositories.  Then we'll create a remote repository for our local planets repo and cconnect the two. (next)
+In this section we are going to take a closer look at **GitHub**, one of the most widely used hosting services for Git repositories.  Then we'll create a remote repository for our local planets repo and cconnect the two. 
 
 GitHub is a platform that hosts Git repositories in the web and provides a web interface to interact with repos. It's main function is to host the 'remote' or main copy of a git repository (next) 
 
@@ -642,7 +641,9 @@ GitHub simplifies working together by enabling multiple people to contribute to 
 With features like pull requests, code reviews, and issue tracking, it ensures that teams can work efficiently and stay organized, even when working remotely.  (next)
 
 Let's breaking down the name – Git + Hub:  
+
 **Git:** The powerful version control system that tracks changes in your project, keeping a detailed history of your work.  (next)
+
 **Hub:** A central place for repositories where networking and collaboration happen. Think of it as the meeting point where all your team’s work comes together. 
 
 With GitHub, you’re not just managing your code; you’re enabling teamwork, encouraging innovation, and building a shared space for your projects to thrive. 
@@ -661,7 +662,7 @@ Version control really comes into its own when we begin to collaborate with othe
 
 Imagine this: instead of passing files back and forth, Git allows us to seamlessly share and sync our work across multiple repositories. The magic happens with a central repository—your single source of truth—that lives on the web, in platforms like GitHub. Everyone involved in the project keeps a local copy of this shared repository, making changes and updates on their own computers.  The changes are merged into our source of truth repository in GitHub.
 
-In the pre-workshop you created a GitHub account, linked it with a personal access token (PAT), and configured your system to connect to GitHub. This setup will allow us to create a remote repository, sync it with our local work, and share our progress with collaborators—or even the world.
+In the pre-workshop you created a GitHub account, linked it with a personal access token (PAT) and MFA, thereby configuring your system to connect to GitHub. This setup will allow us to create a remote repository, sync it with our local work, and share our progress with collaborators—or even the world.
 
 :::
 
@@ -955,7 +956,7 @@ Let's try this. (flip over to Git Bash)
 
 ::: notes
 
-In section 4 , we're going to talk about how the B.C. Government is embracing open collaboration through the **BCGov GitHub organization** or for short, bcgov github, or just bcgov. Found on GitHub.com, it is the official platform for open-source projects within Provincial Government of BC.
+In this final section, we're going to talk about how the B.C. Government is embracing open collaboration through the **BCGov GitHub organization** or for short, bcgov github, or just bcgov. The BCGov GitHub organization is the official platform for open-source projects within Provincial Government of BC.
 
 - Let me give you a little backstory:  (next)
   - The bcgov organization was set up in early 2014 by the OCIO, in collaboration with the BCDevExchange team within the Ministry of Citizen's Services.  (next)
@@ -964,9 +965,8 @@ In section 4 , we're going to talk about how the B.C. Government is embracing op
 - Our Digital Principles for the B.C. Government urges all government product teams to work *in the open*. GitHub makes this easier by providing tools to:  
   - Collaborate with the open-source community.  
   - Share and control versions of our code.  
-  - Manage teams and projects efficiently.  
   - Automate processes.  
-  - And, of course, track and resolve issues effectively.  (next)
+  - And, of course, track and resolve issues.  (next)
 
 The primary organization, bcgov, houses open-source code developed by government teams. This includes projects with both open-source and inner-source contribution models, with over 1,000 repositories available.  (next)
 
@@ -1045,7 +1045,9 @@ BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 :::
 
 ::: notes
-Going back to the bcgov github overview page, at the top is a link to BCGov GitHub Policy Framework
+Going back to the bcgov github overview page (next)
+At the top is a link to BCGov GitHub Policy Framework
+(next slide)
 :::
 
 ## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="slide-in fade-out"}

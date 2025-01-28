@@ -74,7 +74,7 @@ Since we’ll be coding in real time, it’s important that everyone feels comfo
 3. And if we get disconnected, don’t worry! You can rejoin using the same meeting link, and Lindsay will let you back in. (next)
 4. Cameras on for the first bit so the faciliators get to know who you are and can put a face to a name.  (next)
 
-The link to the course materials was sent with the pre-workshop assignment and installation instructions.  For your convenience the link is at the bottom of the slide. (next) 
+The link to the course materials was sent with the pre-workshop assignment and installation instructions.  For your convenience the link is at the bottom of the slide. I can drop it in the chat as well https://bcgov.github.io/ds-intro-to-git. (next)
 
 We have one request and that is to try your best.
 
@@ -191,11 +191,11 @@ This structured approach will guide us step-by-step from foundational concepts t
 
 ::: {.incremental} 
 -   Installed Git (including Git Bash): [Git Download](<https://git-scm.com/download/win>)
--   Configured Git: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
 -   Created a GitHub account: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
     -   Set-up 2MFA
     -   Created a Personal Access Token
-- Configured your email and user name
+  -   Configured Git: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
+
 :::
 
 ::: footer
@@ -208,17 +208,17 @@ Before diving into today’s workshop, let’s quickly review the foundational s
 
 You’ve downloaded and installed Git from the Git website. This included Git Bash, a terminal that allows you to interact with Git through command-line commands. (next)
 
-You configured Git by setting up your username and email address, which ensures that every change you commit is associated with your identity. Most of you did this in Git Bash terminal. If you need a refresher, the configuration steps can be found here. (next)
-
 You set up a GitHub account, which will allow you to store and collaborate on code projects in a cloud-based repository. (next) 
 
 As part of this process you enabled Two-Factor Authentication (2MFA) to enhance account security. (next) 
 
 You also created a Personal Access Token to allow Git to authenticate securely with your GitHub account for operations like pushing or pulling code. (next)
 
-These steps provided the groundwork for today’s workshop, ensuring you have the tools and configurations necessary to follow along effectively. If you encounter any challenges related to these steps, feel free to drop a question into the chat for assistance. (next)
+You also configured Git by setting up your username and email address, which ensures that every change you commit is associated with your identity. Most of you did this in Git Bash terminal. If you need a refresher, the configuration steps can be found in the pre-workshop materials. (next)
 
-Question: Do we want to check configuration at some point?
+I'd like everyone to please take a minute to check your configurations. 
+
+These steps provided the groundwork for today’s workshop, ensuring you have the tools and configurations necessary to follow along effectively. If you encounter any challenges related to these steps, feel free to drop a question into the chat for assistance. (next)
 
 :::
 
@@ -660,7 +660,7 @@ With GitHub, you’re not just managing your code; you’re enabling teamwork, e
 
 Version control really comes into its own when we begin to collaborate with other people. We already have much of the machinery we need to do this; what we are missing is something that allows us to copy changes from one repository to another.
 
-Imagine this: instead of passing files back and forth, Git allows us to seamlessly share and sync our work across multiple repositories. The magic happens with a central repository—your single source of truth—that lives on the web, in platforms like GitHub. Everyone involved in the project keeps a local copy of this shared repository, making changes and updates on their own computers.  The changes are merged into our source of truth repository in GitHub.
+In this scenario, multiple people are working on their own copies of a single repository.  Instead of passing files back and forth, Git allows them to seamlessly share and sync their work across multiple repositories. The magic happens with a central repository—the single source of truth—that lives on the web, in GitHub. Everyone involved in the project keeps a local copy of the shared repository, making changes and updates on their own computers.  The changes are merged into our source of truth repository in GitHub.
 
 In the pre-workshop you created a GitHub account, linked it with a personal access token (PAT) and MFA, thereby configuring your system to connect to GitHub. This setup will allow us to create a remote repository, sync it with our local work, and share our progress with collaborators—or even the world.
 

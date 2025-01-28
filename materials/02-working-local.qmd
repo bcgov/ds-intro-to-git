@@ -12,6 +12,8 @@ knitr::opts_chunk$set(eval = FALSE)
 
 ## Creating a Repository
 
+*Scenario: Wolfman and Dracula have been hired to investigate if it is possible to send a planetary lander to Mars. They want to be able to make notes and collect some data together, but have run into problems doing this in the past.  if they take turns, each one will spend a lot of time waiting for the other to finish, but if they work on their own copies and email changes back and forth things will be lost, overwritten, or duplicated. Therefore, they are going to use Git with Github to work on their plans at the same time, then merge their changes*
+
 First, let's create a new directory on the C drive for our work. Your user profile on the C drive is the best place to create a repository for now. Git does not know how to reconcile the H drive as a "safe" place for our work. We will start by opening a `git bash` terminal, changing to the C: drive, creating a new directory, and changing the current working directory to the newly created one:
 
 ```bash

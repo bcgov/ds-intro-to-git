@@ -31,6 +31,7 @@ Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikime
 I'd like to open today's workshop with a territorial acknowledgement.  
 
 I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I am grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for a millennia.  (pause and next slide)
+
 :::
 
 ## Housekeeping
@@ -195,7 +196,6 @@ This structured approach will guide us step-by-step from foundational concepts t
     -   Set-up 2MFA
     -   Created a Personal Access Token
 - Configured your email and user name
-
 :::
 
 ::: footer
@@ -210,7 +210,11 @@ You’ve downloaded and installed Git from the Git website. This included Git Ba
 
 You configured Git by setting up your username and email address, which ensures that every change you commit is associated with your identity. Most of you did this in Git Bash terminal. If you need a refresher, the configuration steps can be found here. (next)
 
-You set up a GitHub account, which will allow you to store and collaborate on code projects in a cloud-based repository. (next) As part of this process you enabled Two-Factor Authentication (2MFA) to enhance account security. (next) You also created a Personal Access Token to allow Git to authenticate securely with your GitHub account for operations like pushing or pulling code. (next)
+You set up a GitHub account, which will allow you to store and collaborate on code projects in a cloud-based repository. (next) 
+
+As part of this process you enabled Two-Factor Authentication (2MFA) to enhance account security. (next) 
+
+You also created a Personal Access Token to allow Git to authenticate securely with your GitHub account for operations like pushing or pulling code. (next)
 
 These steps provided the groundwork for today’s workshop, ensuring you have the tools and configurations necessary to follow along effectively. If you encounter any challenges related to these steps, feel free to drop a question into the chat for assistance. (next)
 
@@ -232,7 +236,7 @@ What's version control?
 
 Not this.  But we’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document – either by yourself or spread around among colleagues. It’s difficult to tell the difference between files, and what was changed when, by whom, and why?
 
-Version control is the practice of tracking and managing changes to software code. Version control systems (like Git) are software tools that are used to help teams manage changes to code/documents over time.
+Version control is the practice of tracking and managing changes to software code. Version control systems (like Git) are software tools that are used to help teams manage changes to code and documents over time.
 
 Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.
 
@@ -336,7 +340,7 @@ All of the files, plus the complete history for the files in that folder make up
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "|2-8|9-14|15-16|15|16|"
+#| code-line-numbers: "|2|3-6|7|8|9-14|15|16|"
 
 WES Project Folder
 ├── wes-analysis
@@ -367,7 +371,7 @@ At the top level, we have the wes-analysis folder, which is the root directory o
 - **plots** is where visual outputs like graphs or charts from the analysis are saved.
 - **code** houses the scripts or programming files you're working on, forming the core of the project’s logic. (next)
 
-- **data** contains the raw data files in this hypothetical project.  It’s worth noting that sensitive or private data, like these CSV files, won’t become public as we will give explicit instructions to git to ignore them. (next)
+- **data** contains the raw data files in this hypothetical project.  It’s worth noting that sensitive or private data, like these CSV files, won’t become public as we will give explicit instructions to git to ignore them.
 
 Two important files help manage this repository (next)
 
@@ -410,11 +414,9 @@ Together, this structure keeps our work organized and ensures that the repositor
 
 ::: notes
 
-(next)
+(next)  (next)
 
-Git is a distributed version control system designed to track changes in files (next). 
-
-Particularly source code. (next)
+Git is a distributed version control system designed to track changes in files, particularly source code. (next)
 
 Git helps us manage versions of our work, making it easy to revert to earlier states or identify when and why changes were made. (next)
 
@@ -422,7 +424,7 @@ It enables multiple people to collaborate on projects while maintaining a detail
 
 Git supports parallel development, allowing teams to work on different features or fixes without interference.  This is done through branching and merging which we introduced earlier and will review shortly. (next)
 
-Git is a distributed model, meaning every user has a full copy of the repository.  The benefit here is that operations require only local files and resources.  This makes Git extremely fast and reliable. (next)
+Git is a distributed model, meaning every user has a full copy of the repository.  The benefit here is that operations require only local files and resources.  This makes Git extremely fast and reliable.
 
 Unlike many version control systems that treat data as a list of file changes over time, Git thinks of data as a series of snapshots of a miniature filesystem. Every time you commit, Git essentially takes a snapshot of your project’s state and stores a reference to it.
 
@@ -579,12 +581,12 @@ These commands form the backbone of working with Git. As you use them, you’ll 
 **Best Practice Workflow:**  
 
 - stage and commit changes explicitly
-- **git add \<filename>** and **git commit -m 'message'**
+- **git add \<filename>** followed by **git commit -m 'message'**
 
 :::
 
 ::: notes
-Your local repository is just “your” folder under version control. 
+(next) diagram should be showing
 
 As a final note, Git requires us to explicitly add files to a **staging area** before committing them. This lets us organize our work and commit changes in logical portions rather than committing everything at once.  
 For example, if you’re working on a thesis, you might want to commit newly added citations and bibliography entries separately from unfinished work in the conclusion.  
@@ -593,13 +595,14 @@ Think of Git as taking snapshots of your project’s history.
      **`git add`** tells Git what will be included in the next snapshot by placing files into the staging area.  
      **`git commit`** actually takes the snapshot and makes a permanent record of it.  
 
-If you type `git commit` without staging anything, Git will prompt you to use options like `git commit -a` or `git commit --all`.  which is kind of like gathering everyone to take a group photo.  While these commands gather all changes at once, it’s better to stage manually with `git add`instead of accidentally including changes you didn’t mean to commit. (next)
+If you type **`git commit`** without staging anything, Git will prompt you to use options like **`git commit -a`** or **`git commit --all`**  which is kind of like gathering everyone to take a group photo.  While these commands gather all changes at once, it’s better to stage manually with `git add`instead of accidentally including changes you didn’t mean to commit. (next)
 
-**Best Practices:**  
+**Best Practices:** 
+
    - Always stage changes explicitly to maintain control over what goes into each commit.  
    - This practice helps you avoid mistakes and keeps your project history clean and well-organized.  
 
-By staging changes, you’re breaking down your work into manageable, logical pieces—an approach that makes your version control workflow much more efficient."  
+By staging changes, you’re breaking down your work into manageable, logical pieces—an approach that makes your version control workflow much more efficient. 
 
 :::
 
@@ -627,7 +630,7 @@ By staging changes, you’re breaking down your work into manageable, logical pi
 ::::
 
 ::: notes
-Let’s take a closer look at **GitHub**, one of the most widely used hosting services for Git repositories:  
+In this section we are going to take a closer look at **GitHub**, one of the most widely used hosting services for Git repositories.  Then we'll create a remote repository for our local planets repo and cconnect the two. (next)
 
 GitHub is a platform that hosts Git repositories in the web and provides a web interface to interact with repos. It's main function is to host the 'remote' or main copy of a git repository (next) 
 
@@ -638,8 +641,8 @@ GitHub is a platform that hosts Git repositories in the web and provides a web i
 GitHub simplifies working together by enabling multiple people to contribute to the same project seamlessly.  
 With features like pull requests, code reviews, and issue tracking, it ensures that teams can work efficiently and stay organized, even when working remotely.  (next)
 
-**Breaking Down the Name – Git + Hub:**  
-**Git:** The powerful version control system that tracks changes in your project, keeping a detailed history of your work.  
+Let's breaking down the name – Git + Hub:  
+**Git:** The powerful version control system that tracks changes in your project, keeping a detailed history of your work.  (next)
 **Hub:** A central place for repositories where networking and collaboration happen. Think of it as the meeting point where all your team’s work comes together. 
 
 With GitHub, you’re not just managing your code; you’re enabling teamwork, encouraging innovation, and building a shared space for your projects to thrive. 
@@ -933,8 +936,8 @@ We generally follow a best practice of not pushing data to GitHub.  (next)
 
 We accomplish this by creating a file in the root directory of our project called a .gitignore.
 
-.gitignore files are plain text files; you can open the file with your chosen text editor and add the names of any files or folder you don't want to commit and therefore push to GitHub.
 
+.gitignore files are plain text files; you can open the file with your chosen text editor and add the names of any files or folder you don't want to commit and therefore they won't accidently get pushed to GitHub.
 Let's try this. (flip over to Git Bash)
 
 :::
@@ -952,20 +955,20 @@ Let's try this. (flip over to Git Bash)
 
 ::: notes
 
-Now let's talk about how the B.C. Government is embracing open collaboration through the **BCGov GitHub organization** or for short, bcgov github, or just bcgov. Found on GitHub.com, it is the official platform for open-source projects within Provincial Government of BC.
+In section 4 , we're going to talk about how the B.C. Government is embracing open collaboration through the **BCGov GitHub organization** or for short, bcgov github, or just bcgov. Found on GitHub.com, it is the official platform for open-source projects within Provincial Government of BC.
 
-- Let me give you a little backstory:  
-  - This organization was set up in early 2014 by the Office of the Chief Information Officer, in collaboration with the BCDevExchange team within the Ministry of Citizen's Services.  
-  - Why? Because we recognized the need to share code and work transparently—and GitHub was the perfect platform to make that happen!  
+- Let me give you a little backstory:  (next)
+  - The bcgov organization was set up in early 2014 by the OCIO, in collaboration with the BCDevExchange team within the Ministry of Citizen's Services.  (next)
+  - Why? Because we recognized the need to share code and work transparently—and GitHub was the perfect platform to make that happen!  (next)
 
 - Our Digital Principles for the B.C. Government urges all government product teams to work *in the open*. GitHub makes this easier by providing tools to:  
   - Collaborate with the open-source community.  
   - Share and control versions of our code.  
   - Manage teams and projects efficiently.  
   - Automate processes.  
-  - And, of course, track and resolve issues effectively.  
+  - And, of course, track and resolve issues effectively.  (next)
 
-The primary organization, bcgov, houses open-source code developed by government teams. This includes projects with both open-source and inner-source contribution models, with over 1,000 repositories available.  
+The primary organization, bcgov, houses open-source code developed by government teams. This includes projects with both open-source and inner-source contribution models, with over 1,000 repositories available.  (next)
 
 For confidential code, developers use the bcgov-c organization, ensuring secure storage and management.
 
@@ -976,9 +979,9 @@ For confidential code, developers use the bcgov-c organization, ensuring secure 
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
-::: {.absolute top=575 left=265}
+::: {.absolute top=580 left=340}
 ::: {.fragment .fade-up fragment-index="1"}
-::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 125px; height: 5px;"}
+::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 80px; height: 5px;"}
 :::
 :::
 :::
@@ -990,12 +993,18 @@ BCGov: [https://github.com/bcgov](https://github.com/bcgov)
 
 ::: notes
 
-The BCGov GitHub organization overview page has change recently.  If you navigate to this page on GitHub (the url is at the bottom of the screen).  You will be presented with a README speaking to the organization's:
+The BCGov GitHub organization overview page has changed recently.  If you navigate to this page on GitHub (the url is at the bottom of the screen), you will be presented with a README.  (zoom in, alt right-click)
+
+The README speaks to the organization's:
 
 - Purpose and Vision:
 - Role of Developers:
 - Support Resources and (next)
-- several other links including one to Joining Instructions.  This link takes us to...
+- several other links including one for instructions on how to join the community.  
+
+(zoom out, alt+right-click) 
+
+This link takes us to...
 
 :::
 
@@ -1008,11 +1017,11 @@ BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/do
 :::
 
 ::: notes
-...the BC Developer guide, which is a living guide to application development for the B.C government, updated regularly by the Developer Experience team. Written for all ministries, use it to guide your team's technical decisions and as a reference throughout the software lifecycle.
+...the BC Developer guide, which is a living guide to application development for the B.C government, updated regularly by the Developer Experience team. It's written for all ministries as a guide for your team's technical decisions and as a reference throughout your coding products.
 
 It contains a section that  
 
-  - gives an Overview of GitHub Organizations, (bcgov and bcgov-c) and details the purpose and access rules for each organization.  
+  - gives an overview of the different GitHub Organizations, (bcgov and bcgov-c) and details the purpose and access rules for each organization.  
   - Describes the SSO setup process for bcgov and bcgov-c organizations, including requirements for IDIR accounts and steps for linking accounts.  
   - What I want to highlight is the step-by-step guides for signing up and linking GitHub accounts to bcgov and bcgov-c.  
   - The step-by-step instructions outline key requirements like two-factor devices, personal logins, and IDIR credentials.  
@@ -1024,7 +1033,7 @@ It contains a section that
 
 ![](/figures/section-4-bcgov/bcgov-org2.png)
 
-::: {.absolute top=280 left=425}
+::: {.absolute top=298 left=350}
 ::: {.fragment .fade-up fragment-index="2"}
 ::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 120px; height: 5px;"}
 :::
@@ -1094,11 +1103,12 @@ LICENSE:
 The license file specifies the terms under which others can use, modify, or distribute the project.
 It’s crucial because it makes clear what permissions are granted. For example, is this code free to use? Can someone adapt it for their own work? Without a license, your project defaults to being fully restricted, which can limit its usability.
 Generally, for bcgov repositories we use the Apache 2.0 LICENSE: 
+
 - This can be added directly to the repository
 - Boiler-plate for the Apache 2.0 LICENSE is added to the bottom of your README.md
 - Boiler-plate for the Apache 2.0 LICENSE is added to the comments header of every source code file
 
-Other, non-code conduct may require a second license, such as the Creative Commons Attribution 4.0 International.
+Other, non-code files may require a second license, such as the Creative Commons Attribution 4.0 International.
 This can be added in a footer to your README.md
 
 README:

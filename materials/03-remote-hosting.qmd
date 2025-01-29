@@ -10,7 +10,7 @@ format:
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-![Collaboration](../figures/git-gh-collab.png){fig-align="left" width="80%"}
+![Collaboration](../materials/images/git-gh-collab2.png){fig-align="left" width="80%"}
 
 Version control really comes into its own when we begin to collaborate with other people. We already have most of the machinery we need to do this; the only thing missing is to copy changes from one repository to another.
 
@@ -60,7 +60,7 @@ HTTP operates very similarly to the SSH protocol but runs over standard HTTPS po
 
 If you remember back to the earlier episode where we added and committed our earlier work on mars.txt, we had a diagram of the local repository which looked like this:
 
-![](../figures/tracking-changes.png)
+![](../materials/images/tracking-changes.png)
 
 Now that we have two repositories, we need a diagram like this
 
@@ -145,7 +145,7 @@ Git allows you to work collaboratively, with multiple people making changes to t
 Start by opening a second terminal window. This window will represent your colleague, working on another computer. In the second window, navigate to the folder one level "up" in the directory tree from where you have your planets repository.
 
 ``` bash
-$ cd c:/users/lfredric/intro-to-git
+$ cd c:/users/bashcrof
 $ ls
 ```
 
@@ -162,7 +162,7 @@ $ cd collab
 
 Clone the planets repo substituting in your GitHub user name. You can also find the URL from GitHub. Open the remote repository on GitHub, click on the `<> Code` button, and then copy the URL from there.
 
-![Cloning the repository from GitHub.](../figures/clone-repo.png){fig-align="left" width="80%"}
+![Cloning the repository from GitHub.](../materials/images/clone-repo.png){fig-align="left" width="80%"}
 
 ``` bash
 git clone https://github.com/<your-GitHub-username>/planets.git
@@ -195,7 +195,7 @@ However, typically you will need to allow access to other members of GitHub - ot
 
 To give collaborator access, navigate to the repository page on GitHub, and click the "Settings" button on the right of the banner. Then, click "Add people" and then enter the username of the person you wish to collaborate with.
 
-![Adding a collaborator on GitHub.](../figures/collab-access.png){fig-align="left" width="80%"}
+![Adding a collaborator on GitHub.](../materials/images/collab-access.png){fig-align="left" width="80%"}
 :::
 
 You should now have a new `planets` folder in the `collab` directory. Switch to this `planets` folder using the `cd` command. You can now make a change in your clone of the original repository, exactly the same way as we’ve been doing before. Add a line of text to a .txt file (using your favourite text editing software) and save it to your cloned repository.

@@ -3,66 +3,1124 @@ title: "Version Control using Git + GitHub"
 subtitle: "BC Stats Workshop"
 date: 01/29/2025
 date-format: long
+title-slide-attributes: 
+  data-notes: Good morning, everyone! Welcome, and thank you for taking the time to join us today. I’m really excited to have the opportunity to share this workshop with you and explore Version Control, git and GitHub together.
 format:
     revealjs: 
         slide-number: true
+        transition: fade
+        background-transition: fade
         chalkboard: 
           buttons: false
         preview-links: auto
-        #logo: images/quarto.png
         theme: [white, custom.scss]
 ---
 
+
+
 ## Territorial Acknowledgement
 
-![](/figures/mystic-beach-vi.jpg)
+![](/figures/section-1-vc/mystic-beach-vi.jpg)
 
 ::: footer
-Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg#file) © 2018 by [Michal Klajban](https://commons.wikimedia.org/wiki/User:Podzemnik) is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1) 
+Photo Source: [Mystic Beach, Vancouver Island, Canada 10](https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg) © [Michal Klajban](https://commons.wikimedia.org/wiki/User:Podzemnik), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+
 :::
 
 ::: notes
-I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I are grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for millennia.
+I'd like to open today's workshop with a territorial acknowledgement.  
+
+I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I am grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for a millennia.  (pause and next slide)
+
 :::
 
-## Housekeeping {footer="false" scrollable="true"}
+## Housekeeping
 
-::::: columns
-::: {.column width="70%"}
--   Best practices for learning virtually
-    -   Cameras on
-    -   Microphones on mute
-    -   Getting disconnected
-    -   What to do with questions?
+:::: columns
+
+::: {.column width="40%"}
+![](/figures/section-1-vc/housekeeping.png){fig-pos="t" width="75%"}
+
 :::
 
-::: {.column width="30%"}
-![](/figures/housekeeping.png){fig-pos="t" width="60%"}
-:::
-:::::
+::: {.column width="60%" .incremental} 
+- Live coding event: (not being recorded)
+- Best practices for learning virtually
+  - What to do with questions?
+  - Microphones on mute
+  - Getting disconnected
+  - Cameras on at first.
+- Course materials
+- Our request: try your best
 
--   Live coding event: (not being recorded)
--   Our request: try your best
--   Our presenters: all kinds of awesome
--   Course Materials: <https://bcgov.github.io/ds-intro-to-git>
+:::
+
+::::
+
+::: footer
+Course Materials: <https://bcgov.github.io/ds-intro-to-git>
+
+:::
 
 ::: notes
-Keep cameras on and microphones on mute.
-If you are disconnected and having trouble reconnecting then reach out to Lindsay, 
+First, some housekeeping! (next)
+
+As part of today’s workshop, we’ll be coding in real time, working through concepts together on the fly. This approach lets us explore the process interactively. While this can be dynamic and fun, it also means there may be moments where we need to debug or adjust as we go. (next)
+
+Since we’ll be coding in real time, it’s important that everyone feels comfortable and engaged. To keep things running smoothly in our virtual setting, let’s go over a few best practices: (next)
+
+1. If you have questions, please feel free to drop them in the chat or use the ‘raise hand’ feature—we’ll address them as we go.  Your engagement and questions will make this experience even more valuable, so don’t hesitate to share your thoughts along the way! (next)
+2. Keep your microphones on mute unless speaking to minimize background noise. (next)
+3. And if we get disconnected, don’t worry! You can rejoin using the same meeting link, and Lindsay will let you back in. (next)
+4. Cameras on for the first bit so the faciliators get to know who you are and can put a face to a name.  (next)
+
+The link to the course materials was sent with the pre-workshop assignment and installation instructions.  For your convenience the link is at the bottom of the slide. I can drop it in the chat as well https://bcgov.github.io/ds-intro-to-git. (next)
+
+We have one request and that is to try your best.
+
+We’re all learning together. Git and GitHub can feel a little overwhelming at first, but the goal isn’t perfection — it’s progress.
+
+Mistakes are part of the process, and they’re a great way to learn. Don’t hesitate to experiment, ask questions, or even mess something up—that’s how we figure things out.  Remember, no one here expects you to know everything right away, and we have great people assisting to help guide you through it.
+
+So let’s dive in with curiosity and determination, and remember - every small step in learning builds a stronger future you.
+
+(next slide)
+
 :::
 
 ## Workshop Code of Conduct
 
+::: {.incremental} 
 -   We aim to make this a welcoming and supportive environment for everyone, regardless of background
 -   We encourage respectful discussion and questions throughout the course
 -   Please be fully present and engaged during the session (that email can wait!)
+:::
 
 ::: footer
 Learn more: [Standards of Conduct for BC Public Service employees](https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/ethics-standards-of-conduct/standards-of-conduct)
+
 :::
 
 ::: notes
-Teaching and learning in a virtual environment is hard. Lindsay is the only one of us who as taught this workshop before virtually (have taught variants before) – stick with us!
 
-While much of the course is concept-based and fairly high-level, it is still technical and you can fall behind and find it hard to catch up if you're multitasking.  So we ask you to remaim present and engaged to the best of your abilites and stick it out, even through the boring parts.  Your hard-work will pay off!
+Let us take a moment to share our workshop code of conduct. These guidelines are in place to ensure this session remains a positive and productive space for everyone: (next)
+
+First and foremost, we aim to create a welcoming and supportive environment for all participants, regardless of background. (next)
+
+We encourage respectful discussion and questions throughout the session. Healthy dialogue enriches the learning experience, but it’s important to maintain a tone of mutual respect as teaching and learning in a virtual environment can be hard. Remember to be kind not only to others but also to yourself—mistakes and misunderstandings are part of the learning process. Let’s focus on building each other up and avoiding criticism, so everyone feels supported and encouraged to grow. (next)
+
+Finally, we ask that you be fully present and engaged during the workshop. Multitasking can wait—this is your opportunity to focus and get the most out of our time together.
+
+By following these principles, we can create a space where everyone feels comfortable and valued. Thanks in advance for your cooperation.
+
+(next slide)
+
 :::
+
+## Workshop Outline
+
+::::: {.columns}
+
+::: {.column width="75%"}
+
+::: {.fragment}
+
+::: {.incremental} 
+- Section 1: What is version control for code
+  - Why do we want to use it?
+- Section 2: Working locally with Git
+  - Setting up our first Git repository 
+- Section 3: Remote code-hosting and GitHub
+  - Sharing code on GitHub 
+- Section 4: BCGov GitHub Organization
+  - Coding in the open 
+:::
+
+:::
+
+:::
+
+::: {.column width="25%"}
+
+::: {.fragment}
+  ![](/figures/section-1-vc/version-control.png){fig-pos="H" width="25%"}
+<br>
+  ![](/figures/section-2-git/git-logo.png){fig-pos="H" width="30%"}
+<br>
+<br>
+  ![](/figures/section-3-github/github-mark.png){fig-pos="H" width="25%"}
+<br>
+<br>
+  ![](/figures/section-4-bcgov/bcgov-logo.png){fig-pos="H" width="25%"}
+
+:::
+
+:::
+
+:::::
+
+::: footer
+Course Materials: <https://bcgov.github.io/ds-intro-to-git>
+
+:::
+
+::: notes
+To give you a clear picture of what we’ll be covering today, here’s an outline of our workshop.  This also can be found in our course materials. (next)
+
+Section 1: What is Version Control for Code. (next)
+We’ll start by exploring the concept of version control, what it is and why it’s an essential practice in modern coding. (next)
+
+Section 2: Working Locally with Git. (next)
+We’ll dive into Git, learning how to set up and work with our first Git repository. (next)
+
+Section 3: Remote Code-Hosting and GitHub. (next)
+In this section, we’ll focus on using GitHub to share and collaborate on code. (next)
+
+Section 4: BCGov GitHub Organization. (next)
+In this section we’ll discuss coding in the open, leveraging the BCGov GitHub organization to manage and share projects effectively. (next)
+
+These icons represent our sections.  You'll see them at the top right hand-side of most of the presentation slides.  If you get lost these are here to to cue you which topic or skill we are working on as we progress through the course.
+
+This structured approach will guide us step-by-step from foundational concepts to practical applications, ensuring you gain both understanding and hands-on experience. 
+
+(next slide)
+
+:::
+
+## Installation & Set Up Review
+
+::: {.incremental} 
+-   Installed Git (including Git Bash): [Git Download](<https://git-scm.com/download/win>)
+-   Created a GitHub account: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
+    -   Set-up 2MFA
+    -   Created a Personal Access Token
+  -   Configured Git: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
+
+:::
+
+::: footer
+Learn more: [Software Installation Guide](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html)
+
+:::
+
+::: notes
+Before diving into today’s workshop, let’s quickly review the foundational steps you’ve already completed in preparation for this course. (next)
+
+You’ve downloaded and installed Git from the Git website. This included Git Bash, a terminal that allows you to interact with Git through command-line commands. (next)
+
+You set up a GitHub account, which will allow you to store and collaborate on code projects in a cloud-based repository. (next) 
+
+As part of this process you enabled Two-Factor Authentication (2MFA) to enhance account security. (next) 
+
+You also created a Personal Access Token to allow Git to authenticate securely with your GitHub account for operations like pushing or pulling code. (next)
+
+You also configured Git by setting up your username and email address, which ensures that every change you commit is associated with your identity. Most of you did this in Git Bash terminal. If you need a refresher, the configuration steps can be found in the pre-workshop materials. (next)
+
+I'd like everyone to please take a minute to check your configurations. 
+
+These steps provided the groundwork for today’s workshop, ensuring you have the tools and configurations necessary to follow along effectively. If you encounter any challenges related to these steps, feel free to drop a question into the chat for assistance. (next)
+
+:::
+
+## Section 1: What is Version Control? {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+![](/figures/section-1-vc/cartoon1.png){fig-pos="t" fig-align="center"}
+
+::: footer
+Source: [notFinal.doc](https://phdcomics.com/comics.php?f=1531) by Jorge Cham © 2012
+
+:::
+
+::: notes
+What's version control?
+
+Not this.  But we’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document – either by yourself or spread around among colleagues. It’s difficult to tell the difference between files, and what was changed when, by whom, and why?
+
+Version control is the practice of tracking and managing changes to software code. Version control systems (like Git) are software tools that are used to help teams manage changes to code and documents over time.
+
+Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.
+
+
+:::
+
+
+## Changes saved sequentially {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+![](/figures/section-2-git/sequential.png){fig-pos="H"}
+
+::: notes
+She mentions she uses Git and provides you an online link. You decide to do some light reading.  You find out git  keeps track of snapshots in time – each document or file starts with a base version and then you tell git to save just the changes you made at each step of the way.
+
+You decide which changes make up the each snapshot, and git stores those changes and keeps useful metadata about them.
+
+You can think of it as a recording of your progress: you can rewind to start at the base document (the one on the left) and play back each change you made, eventually arriving at your more recent version (the one on the right).
+
+Each of these three snapshot are called a ‘commit’.
+
+:::
+
+## Collaborating Branching {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+:::: columns
+
+::: {.column width="50%"}
+![](/figures/section-2-git/branching.png){fig-pos="t" fig-align="center"}
+:::
+
+::: {.column width="50%"}
+::: {.incremental} 
+ -   Multiple users: different people work on their own copy
+ -   Each can branch off the original work independently
+
+:::
+:::
+
+::::
+
+::: notes
+
+But git also allows independent users to make changes on the same document. (next) (next)
+
+Each can, on their own copy, head off on a different track and work on it independently while keeping the main copy intact. 
+
+In this diagram person green takes a copy and person red also takes a copy.  They add some lines and when they are finished making changes to their own copy...
+
+(next slide)
+
+:::
+
+## Collaborating: Merging {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+::::: columns
+::: {.column width="50%"}
+::: {.incremental} 
+- Merge changes made by each person back into the same base document.
+- Documents kept in sync across different computers
+
+:::
+:::
+
+::: {.column width="50%"}
+![](/figures/section-2-git/collaborating.png){fig-pos="t" fig-align="center"}
+:::
+
+:::::
+
+::: notes
+
+the changes they want to keep can be merged back into the original. If they don't like the result, the changes can be discarded. (next) 
+
+Unless multiple users make changes to the same section of the document (a conflict) you can incorporate two sets of changes into the same base document.  (next)
+
+Documents and repositories can be kept in sync across different computers facilitating collaboration among different people.
+
+:::
+
+
+## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+<br>
+<br>
+*A repository is a data structure that stores **metadata** for a set of files or directory structure, as well as a **historical record of changes** to the repository.*
+
+::: notes
+
+How does git accomplish this? It leverages something called a repository (or repo, for short)
+
+In version control systems, a **repository** is a data structure that stores metadata for a set of files or directory structure, as well as a historical record of changes to the repository.
+
+You store all of your project files in a folder.
+
+All of the files, plus the complete history for the files in that folder make up a repository (repo).
+
+:::
+
+## Version Control Repository {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "|2|3-6|7|8|9-14|15|16|"
+
+WES Project Folder
+├── wes-analysis
+  ├── doc
+  ├── ref
+  │ ├── references
+  │ ├── images
+  ├── plots
+  ├── code
+  ├── data
+  │ ├── wes-results
+  │ │ ├── wes-results-2019.csv <– DON’T WORRY, THESE WON’T BECOME PUBLIC!
+  │ │ ├── wes-results-2020.csv
+  │ │ ├── wes-results-2021.csv
+  │ | |── wes-results-2022.csv
+  ├── .git <———————— THIS MAKES IT A GIT REPOSITORY!
+  ├── .gitignore <————– FILES listed here are ignored by git not tracked, e.g., csv files
+
+```
+
+::: notes
+
+This slide illustrates the structure of a typical Git repository. Let me walk you through its key components: (next)
+
+At the top level, we have the wes-analysis folder, which is the root directory of this repository. This is where all our files and folders for the project are organized.  Inside this folder you likely have other project-related subfolders such as: 
+ 
+ - **doc** and **ref** containin files such as a list of acronyms, reports, reference materials and possibly articles and images for visual documentation or presentations. This is very much project-dependent. 
+- **plots** is where visual outputs like graphs or charts from the analysis are saved.
+- **code** houses the scripts or programming files you're working on, forming the core of the project’s logic. (next)
+
+- **data** contains the raw data files in this hypothetical project.  It’s worth noting that sensitive or private data, like these CSV files, won’t become public as we will give explicit instructions to git to ignore them.
+
+Two important files help manage this repository (next)
+
+The **.git** *directory* is hidden by default and is what makes this a Git repository. It tracks changes to files, allowing us to manage versions of our code and content. (next)
+
+The **.gitignore** *file* lists files or patterns we don’t want Git to track—like large data files such as the CSVs. This is a common practice to keep repositories clean and focused on the essential project elements. (next)
+
+Together, this structure keeps our work organized and ensures that the repository is ready for version control and collaboration.
+
+:::
+
+
+## Section 2: Working locally with Git 
+:::: columns
+::: {.column width="40%"}
+<br>
+<br>
+![](/figures/section-2-git/git-logo.svg){fig-pos="t" fig-align="left" width="100%"}
+
+:::
+
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="50%"}
+
+::: {.incremental} 
+- Track changes in files
+  - Source code
+- Manage versions of your work
+- Facilitates collaboration
+- Branching and merging
+- Distributed model
+:::
+
+:::
+
+::::
+
+::: notes
+
+(next)  (next)
+
+Git is a distributed version control system designed to track changes in files, particularly source code. (next)
+
+Git helps us manage versions of our work, making it easy to revert to earlier states or identify when and why changes were made. (next)
+
+It enables multiple people to collaborate on projects while maintaining a detailed history of all changes.  It enables contributors to work simultaneously without overwriting each other’s work. (next)
+
+Git supports parallel development, allowing teams to work on different features or fixes without interference.  This is done through branching and merging which we introduced earlier and will review shortly. (next)
+
+Git is a distributed model, meaning every user has a full copy of the repository.  The benefit here is that operations require only local files and resources.  This makes Git extremely fast and reliable.
+
+Unlike many version control systems that treat data as a list of file changes over time, Git thinks of data as a series of snapshots of a miniature filesystem. Every time you commit, Git essentially takes a snapshot of your project’s state and stores a reference to it.
+
+It’s impossible to change files or directories without Git detecting it. This ensures you don’t lose information in transit or encounter undetected file corruption.
+
+Once a snapshot is committed to Git, it’s incredibly hard to lose, especially if you regularly push your changes to a remote repository.
+
+:::
+
+## Preview: Git Jargon {background-image="/figures/section-1-vc/version-control.png" background-size="6%" background-position="85% 6%"}
+
+::::: columns
+::: {.column width="50%"}
+::: {.incremental} 
+
+
+-   repo
+-   stage/add
+-   commit/commit message
+-   push
+-   pull
+
+:::
+:::
+
+::: {.column width="50%"}
+
+::: {.incremental} 
+-   clone
+-   branch
+-   fork
+
+:::
+:::
+:::::
+
+::: notes
+
+Let's preview a bit of git Bash jargon.  Much of it you will be introduced to in this workshop as many of these are commands that we enter at command-line.  Let's start with the ones we'll use in the workshop. (next)
+
+A repo (short for repository) is like a folder where your project’s files and their history are stored. It tracks all the changes you make, letting you see the past versions and collaborate with others. You can have a local repo on your computer or a remote one on a platform like GitHub. (next)
+
+**`add`** a git command used to stage files. it is like putting changes into a "ready-to-go" box. It tells Git which changes (new files, edits, or deletions) you want to save in your next snapshot (commit). You’re just preparing them; they aren’t saved yet. (next)
+
+**`commit -m "message`** a git command used to take a picture of your work at this moment. It saves the changes you've prepared (staged) into Git's history. The message you add is like a caption, helping you remember what this "snapshot" is about. (next)
+
+**`push [remote] [branch]`** a git command used to send your saved work (commits) from your computer to an online storage space (remote repository). This lets others see or work with your updates. (next)
+
+**`pull [remote] [branch]`** a git command used to grab the latest updates from the online version of your project and adding them to your work. It makes sure you're working with the most up-to-date version. (next)
+
+Some others you may hear about but we won't be directly going over today.
+
+**`clone [repositoryurl]`** a git command used to download a full copy of a project from an online source (like GitHub) to your computer so you can work on it. It brings all the files and the project’s history with it. (next)
+
+**`branch [branchname]`** is like a new "workspace" where you can try new ideas or work on features without messing with the main project.  Branches keep your main project safe while you experiment or build new things, and you can later combine your changes when they’re ready. (next)
+
+`fork`: No direct Git command as forking is done through GitHub platform,. It’s like making your own personal copy of someone else’s project, so you can change it without affecting their original work. You can use it to contribute to open-source projects or customize things for your own needs. Once you're happy with your changes, you can share them back with the original project through a pull request. (next)
+
+
+:::
+
+
+
+
+
+## Preview: Bash Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+``` {bash}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "|1|2|3|4|5|"
+
+$ cd path/to/directory          # Go to specified directory - "quotes" are needed if there are spaces 
+$ cd ..                         # Go up one directory level
+$ mkdir new_directory           # Create specified directory
+$ ls                            # List directories and files
+$ ls -a                         # List directories and files, including hidden
+```
+
+::: notes
+Let’s review some common Bash commands that you’ll use frequently when working with Git and navigating your file system. (next)  
+
+**cd path/to/directory**: This command lets you navigate to a specific directory. Think of it as ‘changing your location’ in the file system.  If the directory path includes spaces, make sure to enclose it in quotes, like **cd "My Folder"**.  (next)
+
+**cd ..**: The `..` represents the parent directory. Using this command moves you up one level in the directory hierarchy. For example, if you’re in a folder called *projects*, **cd ..** will take you back to its parent folder.  (next)
+
+**mkdir new_directory** :This creates a new directory with the specified name. It’s a quick way to organize your files into new folders directly from the command line.  (next)
+
+**ls**: This lists the contents of the current directory, showing all files and subdirectories. It’s a handy way to see where you are and what’s in your folder.  (next)
+
+Adding the **-a** flag shows all files, including hidden ones. Hidden files usually start with a dot, like **.git**, and they’re essential for tasks like managing Git repositories.  (next)
+
+These commands form the foundation of navigating and organizing your files in the terminal, which is key to working effectively with Git.
+
+(next slide)
+
+:::
+
+## Hands-On Practice {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+<br>
+<br>
+<br>
+<br>
+Let's create our first repository!
+
+## The Staging Area {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+::: {.fragment}
+![](/figures/section-2-git/local-repository.png){fig-pos="t" fig-align="center"}
+:::
+::: {.fragment}
+**Best Practice Workflow:**  
+
+- stage and commit changes explicitly
+- **git add \<filename>** followed by **git commit -m 'message'**
+
+:::
+
+::: notes
+(next)
+
+As a final note, Git requires us to explicitly add files to a **staging area** before committing them. This lets us organize our work and commit changes in logical portions rather than committing everything at once.  
+For example, if you’re working on a thesis, you might want to commit newly added citations and bibliography entries separately from unfinished work in the conclusion.  
+
+Think of Git as taking snapshots of your project’s history.  
+     **`git add`** tells Git what will be included in the next snapshot by placing files into the staging area.  
+     **`git commit`** actually takes the snapshot and makes a permanent record of it.  
+
+If you type **`git commit`** without staging anything, Git will prompt you to use options like **`git commit -a`** or **`git commit --all`**  which is kind of like gathering everyone to take a group photo.  While these commands gather all changes at once, it’s better to stage manually with `git add`instead of accidentally including changes you didn’t mean to commit. (next)
+
+**Best Practices:** 
+
+   - Always stage changes explicitly to maintain control over what goes into each commit.  
+   - This practice helps you avoid mistakes and keeps your project history clean and well-organized.  
+
+By staging changes, you’re breaking down your work into manageable, logical pieces—an approach that makes your version control workflow much more efficient. 
+
+:::
+
+
+## Review: Git Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
+
+``` {bash}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "|1|2|3|4|5|6|7|"
+
+$ git init                          # initiate a repository in the current directory
+$ git status                        # indicate if there are any changes to files
+$ git add <filename>                # add a new file/change to the staging area
+$ git commit –m “commit message”    # commit all staged changes to the repository
+$ git log                           # view commit history
+$ git diff                          # show changes between commits
+$ git restore                       # restore file/s to previous commit
+```
+
+
+::: notes
+At that point, let's review some of the essential Git commands we've seen..  
+
+**`git init`**: This command initialized a Git repository in the current directory. It created a hidden `.git` folder, which Git used to track changes to files. This only needed to be done once per project to start version control.  
+
+**`git status`**: Running this command gave a snapshot of the repository’s current state. It showed any changes to files, whether they had been staged for commit, and if there were untracked files. It was like a ‘to-do list’ for what was happening in Git.  
+
+**`git add mars.txt`**: This staged a file or changes to a file, staging it for the next commit. 
+
+**`git commit -m "commit message"`**:  This command took all the changes in the staging area and committed them to the repository, creating a new snapshot. The `-m` flag allowed us to add a message describing the changes, which was critical for understanding the history later.  
+
+**`git log`**: This command was used to view the commit history of the repository. It showed who made the changes, when they were made, and the commit messages. Generally, this is an excellent way to review the progress of a project.  
+
+**`git diff`**: This displayed the changes between commits or the differences between the working directory and the last commit (the HEAD). It was useful for checking exactly what had changed before committing.  
+
+**`git restore`**: This restored mars.txt to our previous commit, effectively undoing changes. It was handy for discarding changes or returning a file to a specific version. 
+
+These commands form the backbone of working with Git. As you use them, you’ll develop a deeper understanding of how Git tracks and manages your work."  
+
+(next slide)
+
+:::
+
+## Section 3: Remote code-hosting and GitHub
+
+:::: columns
+::: {.column width="50%"}
+![](/figures/section-3-github/github-mark.png){fig-pos="t" fig-align="center" width="250%"}
+
+:::
+
+::: {.column width="50%"}
+<br>
+<br>
+
+::: {.incremental} 
+-   Hosting service for git repositories
+-   Greatly facilitates collaboration
+- __Git:__ Version Control __+__
+- __Hub:__ Centralized repos & networking/collaborating
+:::
+
+:::
+
+::::
+
+::: notes
+In this section we are going to take a closer look at **GitHub**, one of the most widely used hosting services for Git repositories.  Then we'll create a remote repository for our local planets repo and cconnect the two. 
+
+GitHub is a platform that hosts Git repositories in the web and provides a web interface to interact with repos. It's main function is to host the 'remote' or main copy of a git repository (next) 
+
+ **Hosting Service for Git Repositories:**   
+ At its core, GitHub is a platform for storing and managing Git repositories in the cloud.  It acts as a central hub where your project lives online, making it accessible to team members and collaborators anywhere in the world.  (next)
+
+**Facilitates Collaboration:**  
+GitHub simplifies working together by enabling multiple people to contribute to the same project seamlessly.  
+With features like pull requests, code reviews, and issue tracking, it ensures that teams can work efficiently and stay organized, even when working remotely.  (next)
+
+Let's breaking down the name – Git + Hub:  
+
+**Git:** The powerful version control system that tracks changes in your project, keeping a detailed history of your work.  (next)
+
+**Hub:** A central place for repositories where networking and collaboration happen. Think of it as the meeting point where all your team’s work comes together. 
+
+With GitHub, you’re not just managing your code; you’re enabling teamwork, encouraging innovation, and building a shared space for your projects to thrive. 
+
+
+:::
+
+
+## Git + GitHub: Working Collaboratively {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
+
+![](/figures/section-3-github/git-gh-collab2.png){fig-pos="t" fig-align="center"}
+
+::: notes
+
+Version control really comes into its own when we begin to collaborate with other people. We already have much of the machinery we need to do this; what we are missing is something that allows us to copy changes from one repository to another.
+
+In this scenario, multiple people are working on their own copies of a single repository.  Instead of passing files back and forth, Git allows them to seamlessly share and sync their work across multiple repositories. The magic happens with a central repository—the single source of truth—that lives on the web, in GitHub. Everyone involved in the project keeps a local copy of the shared repository, making changes and updates on their own computers.  The changes are merged into our source of truth repository in GitHub.
+
+In the pre-workshop you created a GitHub account, linked it with a personal access token (PAT) and MFA, thereby configuring your system to connect to GitHub. This setup will allow us to create a remote repository, sync it with our local work, and share our progress with collaborators—or even the world.
+
+:::
+
+## Remote Repository {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
+
+::: {.fragment}
+![](/figures/section-3-github/remote-repository-final1a.png){.absolute top=125px left=0px}
+:::
+
+::: {.fragment}
+![](/figures/section-3-github/remote-repository-final1b.png){.absolute top=425px left=0px}
+:::
+
+::: notes
+Think of the remote as the “authoritative” version/source/copy. 
+
+If you remember back to the earlier episode where we added and committed our earlier work on mars.txt, we had a diagram of the local repository which looked like this: (next)
+
+Now that we have two repositories, we need a diagram like this: (next)
+
+Our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.
+
+:::
+
+## Hands-On Practice {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
+
+<br>
+<br>
+<br>
+<br>
+Let's create our first remote repository!
+
+
+
+::: notes
+Let’s make our first remote repository 
+
+:::
+
+## A Collaborative Workflow {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
+
+::::::::::::: columns
+::::: {.column width="33%"}
+:::: {.fragment fragment-index="1"}
+::: {.fragment .highlight-current-blue fragment-index="1"}
+Original Repository
+
+\|── planets
+
+\| \|──.git
+
+\| \|── mars.txt
+
+:::
+
+::::
+
+:::: {.fragment fragment-index="7"}
+::: {.fragment .highlight-current-blue fragment-index="2"}
+\| \|── pluto.txt
+
+:::
+::::
+:::::
+
+:::::: {.column width="33%"}
+:::: {.fragment fragment-index="2"}
+::: {.fragment .highlight-current-blue fragment-index="2"}
+GitHub Repository
+
+\|── planets
+
+\| \|── .git
+
+:::
+::::
+
+:::: {.fragment fragment-index="3"}
+::: {.fragment .highlight-current-blue fragment-index="3"}
+\| \|── mars.txt
+
+:::
+::::
+
+:::: {.fragment fragment-index="6"}
+::: {.fragment .highlight-current-blue fragment-index="6"}
+\| \|── pluto.txt
+
+:::
+::::
+::::::
+
+::::: {.column width="33%"}
+:::: {.fragment fragment-index="4"}
+::: {.fragment .highlight-current-blue fragment-index="4"}
+Cloned Repository
+
+\|── planets
+
+\| \|── .git
+
+\| \|── mars.txt
+
+:::
+::::
+
+:::: {.fragment fragment-index="5"}
+::: {.fragment .highlight-current-blue fragment-index="5"}
+\| \|── pluto.txt
+
+:::
+::::
+:::::
+:::::::::::::
+
+<br> <br> <br>
+
+
+:::::::: columns
+:::::::: {style="font-size: 80%"}
+:::::::: {style="line-height: 80%"}
+:::::: {.column width="50%"}
+
+:::: {.fragment fragment-index="1"}
+::: {.fragment .highlight-current-blue fragment-index="1"}
+1.  Initial repository set up
+
+:::
+::::
+
+:::: {.fragment fragment-index="2"}
+::: {.fragment .highlight-current-blue fragment-index="2"}
+2.  Remote repository created & linked
+
+:::
+::::
+
+:::: {.fragment fragment-index="3"}
+::: {.fragment .highlight-current-blue fragment-index="3"}
+3.  Local changes pushed to remote
+
+:::
+::::
+
+:::: {.fragment fragment-index="4"}
+::: {.fragment .highlight-current-blue fragment-index="4"}
+4.  Remote repository cloned by collaborator
+
+:::
+::::
+
+::::::
+
+:::::: {.column width="50%"}
+:::: {.fragment fragment-index="5"}
+::: {.fragment .highlight-current-blue fragment-index="5"}
+5.  Collaborator makes additions
+
+:::
+::::
+
+:::: {.fragment fragment-index="6"}
+::: {.fragment .highlight-current-blue fragment-index="6"}
+6.  Collaborator updates remote with changes
+
+:::
+::::
+
+:::: {.fragment fragment-index="7"}
+::: {.fragment .highlight-current-blue fragment-index="7"}
+7.  Collaborator changes pulled back to original
+
+:::
+::::
+::::::
+::::::::
+::::::::
+::::::::
+
+::: notes
+
+At this point, stop and compare the three repositories.  (next)
+
+1. We started with our initial repository called planets.  Created our hidden .git directory and mars.txt and commited these to our local repository.  (next)
+2. We then created a remote repository on GitHub which was initialized with a .git directory.   (next)
+3. We pushed our local changes (our new file mars.txt) to our remote on GitHub.   (next)
+4. Our colleague, working on another computer, clone the planets repo (along with text file and hidden git directory) to their local machine.  
+
+We now have three identical repositories in three locations. Our colleague wants to: 
+
+5. add a new file with information on Pluto.  (next)
+
+Let's go ahead and try this out.  (flip to bash terminal)
+
+6. With pluto.txt file in the cloned repository we communicated the (by pushing) the changes to our source of truth remote repository (next)
+7. After pulling all the changes from the remote repository back to the original, our three repositories (original local, second local, and the one on GitHub) are back in sync!
+
+:::
+
+## A Typical Workflow {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
+
+The table below doubles as a handy cheatsheet; take a screenshot and save for future reference!
+
+::: {style="font-size: 0.75em;"}
+
+| Order         | Action         | Git Command                                   |
+|------------------|------------------|------------------------------------|
+| 1 (Once Only) | Create remote  | (Done on GitHub)                              |
+| 2 (Once Only) | Clone remote   | `git clone https://github.com/path/to/remote` |
+| 3             | Update local   | `git pull origin main`                        |
+| 4             | Make changes   | (Done in editor)                              |
+| 5             | Stage changes  | `git add numbers.txt`                         |
+| 6             | Commit changes | `git commit -m "Add 100 to numbers.txt"`      |
+| 7             | Update remote  | `git push origin main`                        |
+
+:::
+
+::: notes
+To this point, we have learned a lot of different git commands and workflows involved in tracking all of our changes, keeping our repositories up-to-date, and collaborating across computers using GitHub. While there are multiple levels of nuance that go into each of these steps, let's lay out a typical workflow.
+
+:::
+
+## Ignoring things {background-image="/figures/section-3-github/github-mark.png" background-size="8%" background-position="85% 5%"}
+
+:::::: columns
+::::: {.column width="50%"}
+::: {.fragment fragment-index="1"}
+Original Repository
+
+\|── planets
+
+\| \|──.git
+
+\| \|── mars.txt
+
+\| \|── pluto.txt
+
+:::
+
+::: {.fragment .fade-up fragment-index="3"}
+::: {.fragment .highlight-current-blue fragment-index="3"}
+\| \|── data.csv
+
+:::
+:::
+
+::: {.fragment .fade-up fragment-index="4"}
+::: {.fragment .highlight-current-blue fragment-index="4"}
+\| \|── .gitignore
+
+:::
+:::
+:::::
+
+::::: {.column width="50%"}
+
+::: {.fragment .fade-left fragment-index="2"}
+![](/figures/section-3-github/data2.png){fig-pos="t" fig-align="center" width="75%"}
+
+:::
+
+:::::
+::::::
+
+::: notes
+
+What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects.  (next) 
+
+AND We KNOW many BC Stats projects involve data with PI or other sensitive information. (next)
+
+We generally follow a best practice of not pushing data to GitHub.  (next)
+
+We accomplish this by creating a file in the root directory of our project called a .gitignore.
+
+
+.gitignore files are plain text files; you can open the file with your chosen text editor and add the names of any files or folder you don't want to commit and therefore they won't accidently get pushed to GitHub.
+Let's try this. (flip over to Git Bash)
+
+:::
+
+## Section 4: BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
+
+::: {.incremental}
+- set up in early 2014
+- OCIO + BCDevExchange team
+- *Digital Principles for the B.C. Government*: "work in the open"
+- **bcgov**: open-source code
+- **bcgov-c**: confidential code 
+
+:::
+
+::: notes
+
+In this final section, we're going to talk about how the B.C. Government is embracing open collaboration through the **BCGov GitHub organization** or for short, bcgov github, or just bcgov. The BCGov GitHub organization is the official platform for open-source projects within Provincial Government of BC.
+
+- Let me give you a little backstory:  (next)
+  - The bcgov organization was set up in early 2014 by the OCIO, in collaboration with the BCDevExchange team within the Ministry of Citizen's Services.  (next)
+  - Why? Because we recognized the need to share code and work transparently—and GitHub was the perfect platform to make that happen!  (next)
+
+- Our Digital Principles for the B.C. Government urges all government product teams to work *in the open*. GitHub makes this easier by providing tools to:  
+  - Collaborate with the open-source community.  
+  - Share and control versions of our code.  
+  - Automate processes.  
+  - And, of course, track and resolve issues.  (next)
+
+The primary organization, bcgov, houses open-source code developed by government teams. This includes projects with both open-source and inner-source contribution models, with over 1,000 repositories available.  (next)
+
+For confidential code, developers use the bcgov-c organization, ensuring secure storage and management.
+
+:::
+
+
+## Section 4: BCGov GitHub Organization  {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
+
+![](/figures/section-4-bcgov/bcgov-org2.png)
+
+::: {.absolute top=580 left=340}
+::: {.fragment .fade-up fragment-index="1"}
+::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 80px; height: 5px;"}
+:::
+:::
+:::
+
+::: footer
+BCGov: [https://github.com/bcgov](https://github.com/bcgov)
+
+:::
+
+::: notes
+
+The BCGov GitHub organization overview page has changed recently.  If you navigate to this page on GitHub (the url is at the bottom of the screen), you will be presented with a README.  (zoom in, alt right-click)
+
+The README speaks to the organization's:
+
+- Purpose and Vision:
+- Role of Developers:
+- Support Resources and (next)
+- several other links including one for instructions on how to join the community.  
+
+(zoom out, alt+right-click) 
+
+This link takes us to...
+
+:::
+
+## BC Developer Guide {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="slide-in fade-out"}
+![](/figures/section-4-bcgov/bcgov-org-sign-up.png)
+
+::: footer
+BC Developer Guide: [https://developer.gov.bc.ca](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#directions-to-sign-up-and-link-your-account-for-bcgov)
+
+:::
+
+::: notes
+...the BC Developer guide, which is a living guide to application development for the B.C government, updated regularly by the Developer Experience team. It's written for all ministries as a guide for your team's technical decisions and as a reference throughout your coding products.
+
+It contains a section that  
+
+  - gives an overview of the different GitHub Organizations, (bcgov and bcgov-c) and details the purpose and access rules for each organization.  
+  - Describes the SSO setup process for bcgov and bcgov-c organizations, including requirements for IDIR accounts and steps for linking accounts.  
+  - What I want to highlight is the step-by-step guides for signing up and linking GitHub accounts to bcgov and bcgov-c.  
+  - The step-by-step instructions outline key requirements like two-factor devices, personal logins, and IDIR credentials.  
+  - List links to supplementary guides, video tutorials, and support request options. 
+
+:::
+
+## BCGov GitHub Organization {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;"}
+
+![](/figures/section-4-bcgov/bcgov-org2.png)
+
+::: {.absolute top=298 left=350}
+::: {.fragment .fade-up fragment-index="2"}
+::: {data-id="box2" auto-animate-delay="0.2" style="background:  #e83e8c ; width: 120px; height: 5px;"}
+:::
+:::
+:::
+
+::: footer
+BCGov: [https://github.com/bcgov](https://github.com/bcgov)
+:::
+
+::: notes
+Going back to the bcgov github overview page (next)
+At the top is a link to BCGov GitHub Policy Framework
+(next slide)
+:::
+
+## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="slide-in fade-out"}
+![](/figures/section-4-bcgov/bcgov-policy.png)
+
+::: footer
+BCGov Policy Framework: [https://github.com/bcgov/BC-Policy-Framework-For-GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub)
+
+:::
+
+::: notes
+Scrolling down to the bottom you will find a README.
+
+
+:::
+
+## BCGov GitHub Policy Framework {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
+
+::::: columns
+
+:::: {.column width="70%"}
+![](/figures/section-4-bcgov/bcgov-policy-scroll-readme.png)
+::::
+
+:::: {.column width="30%"}
+::: {.incremental}
+- Joining
+- Opening & Contents of Repositories
+- Licensing
+- Privacy, Security, Copyright
+- Appropriate Use
+- How to’s
+:::
+::::
+
+:::::
+
+::: notes 
+In that README you'll find links to:
+
+- A HOW-TO, containing a list of tips, tricks and best practices for using GitHub as a code repository for government projects.
+- An employee guide.  Which is a guide for developing in GitHub for BC Government employees. This contains information on licensing, conflict of interest and appropriate use policy
+- Also a cheatsheet with resources for joining BCGOV, using git, adding required files, how to properly license the contents of a repository
+ 
+:::
+
+## Mandatory Content {background-image="/figures/section-4-bcgov/bcgov-logo.png" background-size="8%" background-position="85% 6%" transition="fade-in slide-out"}
+
+![](/figures/section-4-bcgov/all-the-files.png)
+
+::: notes
+Let’s take a look at the mandatory files you’ll typically find in most GitHub repositories. These files aren’t just important—they’re essential for ensuring a well-organized and collaborative project:
+
+LICENSE:
+The license file specifies the terms under which others can use, modify, or distribute the project.
+It’s crucial because it makes clear what permissions are granted. For example, is this code free to use? Can someone adapt it for their own work? Without a license, your project defaults to being fully restricted, which can limit its usability.
+Generally, for bcgov repositories we use the Apache 2.0 LICENSE: 
+
+- This can be added directly to the repository
+- Boiler-plate for the Apache 2.0 LICENSE is added to the bottom of your README.md
+- Boiler-plate for the Apache 2.0 LICENSE is added to the comments header of every source code file
+
+Other, non-code files may require a second license, such as the Creative Commons Attribution 4.0 International.
+This can be added in a footer to your README.md
+
+README:
+This is the front page of your repository. It’s often the first thing anyone sees when visiting your project.
+It explains what the project is about, what problem it solves, how to use it, and sometimes even a roadmap for future development. Think of it as your project’s introduction and user guide rolled into one.
+
+CONTRIBUTING:
+This file guides others who want to contribute to your repository.  
+
+CODE-OF-CONDUCT: Open Source space in general has had its struggles with conduct and one approach to improving  this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all. It emphasizes fostering a kind, inclusive, cooperative, and harassment-free open source BCGov community
+
+:::
+i

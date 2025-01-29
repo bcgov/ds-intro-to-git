@@ -20,10 +20,10 @@ Capture a screen shot of the command-line output.
 
 Sign in to GitHub and left-click on your avatar in the top right corner. 
 
-![Your GitHub Avatar](../figures/github-avatar.png){width=50% fig-align="left"}
+![Your GitHub Avatar](../figures/pre-workshop-assignment/github-avatar.png){width=50% fig-align="left"}
 
 Your GitHub handle is in bold font above your account name. 
 
-![Your GitHub Handle](../figures/github-handle2.png){width=50% fig-align="left"}
+![Your GitHub Handle](../figures/pre-workshop-assignment/github-handle2.png){width=50% fig-align="left"}
 
 Generally, your GitHub handle will be similar to your account name (FirstnameLastname), but this is not strictly required.

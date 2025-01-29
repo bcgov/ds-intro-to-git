@@ -695,7 +695,9 @@ Let's create our first remote repository!
 
 
 ::: notes
-Let’s make our first remote repository 
+Let’s make our first remote repository! 
+
+(flip to section 3.1)
 
 :::
 

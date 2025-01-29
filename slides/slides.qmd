@@ -192,8 +192,8 @@ This structured approach will guide us step-by-step from foundational concepts t
 ::: {.incremental} 
 -   Installed Git (including Git Bash): [Git Download](<https://git-scm.com/download/win>)
 -   Created a GitHub account: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account)
-    -   Set-up 2MFA
-    -   Created a Personal Access Token
+    - Set-up 2FA/MFA
+    - Created a Personal Access Token
   -   Configured Git: [Pre-Workshop Materials](https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git)
 
 :::
@@ -1123,4 +1123,3 @@ This file guides others who want to contribute to your repository.
 CODE-OF-CONDUCT: Open Source space in general has had its struggles with conduct and one approach to improving  this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all. It emphasizes fostering a kind, inclusive, cooperative, and harassment-free open source BCGov community
 
 :::
-i

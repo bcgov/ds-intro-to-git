@@ -145,7 +145,7 @@ Git allows you to work collaboratively, with multiple people making changes to t
 Start by opening a second terminal window. This window will represent your colleague, working on another computer. In the second window, navigate to the folder one level "up" in the directory tree from where you have your planets repository.
 
 ``` bash
-$ cd c:/users/lfredric/intro-to-git
+$ cd c:/users/bashcrof
 $ ls
 ```
 

@@ -28,8 +28,73 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-8639fb22a558d99a48fa25195d256c81.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-df88dea4bf54d2361e3c758ca3bc776c.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -128,7 +193,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-notes="Good morning, everyone! Welcome, and thank you for taking the time to join us today. I’m really excited to have the opportunity to share this workshop with you and explore Version Control, git and GitHub together." class="quarto-title-block center">
   <h1 class="title">Version Control using Git + GitHub</h1>
   <p class="subtitle">BC Stats Workshop</p>
 
@@ -140,11 +205,12 @@
 <section id="territorial-acknowledgement" class="slide level2">
 <h2>Territorial Acknowledgement</h2>
 
-<img data-src="../figures/mystic-beach-vi.jpg" class="r-stretch"><div class="footer">
-<p>Photo Source: <a href="https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg#file">Mystic Beach, Vancouver Island, Canada 10</a> © 2018 by <a href="https://commons.wikimedia.org/wiki/User:Podzemnik">Michal Klajban</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1">CC BY-SA 4.0</a></p>
+<img data-src="../figures/section-1-vc/mystic-beach-vi.jpg" class="r-stretch"><div class="footer">
+<p>Photo Source: <a href="https://commons.wikimedia.org/wiki/File:Mystic_Beach,_Vancouver_Island,_Canada_10.jpg">Mystic Beach, Vancouver Island, Canada 10</a> © <a href="https://commons.wikimedia.org/wiki/User:Podzemnik">Michal Klajban</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>.</p>
 </div>
 <aside class="notes">
-<p>I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I are grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for millennia.</p>
+<p>I’d like to open today’s workshop with a territorial acknowledgement.</p>
+<p>I acknowledge with respect the Coast Salish Peoples on whose traditional lands and waterways we live, learn and play. I am grateful for the opportunity to share in this beautiful region, and I aspire to healthy and respectful relationships with those who have lived on and cared for these lands for a millennia. (pause and next slide)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -157,30 +223,44 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="housekeeping" class="slide level2" data-footer="false" data-scrollable="true">
+<section id="housekeeping" class="slide level2">
 <h2>Housekeeping</h2>
 <div class="columns">
-<div class="column" style="width:70%;">
+<div class="column" style="width:40%;">
+<p><img data-src="../figures/section-1-vc/housekeeping.png" style="width:75.0%" data-fig-pos="t"></p>
+</div><div class="column" style="width:60%;">
 <ul>
-<li>Best practices for learning virtually
+<li class="fragment">Live coding event: (not being recorded)</li>
+<li class="fragment">Best practices for learning virtually
 <ul>
-<li>Cameras on</li>
-<li>Microphones on mute</li>
-<li>Getting disconnected</li>
-<li>What to do with questions?</li>
+<li class="fragment">What to do with questions?</li>
+<li class="fragment">Microphones on mute</li>
+<li class="fragment">Getting disconnected</li>
+<li class="fragment">Cameras on at first.</li>
 </ul></li>
+<li class="fragment">Course materials</li>
+<li class="fragment">Our request: try your best</li>
 </ul>
-</div><div class="column" style="width:30%;">
-<p><img data-src="../figures/housekeeping.png" style="width:60.0%" data-fig-pos="t"></p>
 </div></div>
-<ul>
-<li>Live coding event: (not being recorded)</li>
-<li>Our request: try your best</li>
-<li>Our presenters: all kinds of awesome</li>
-<li>Course Materials: <a href="https://bcgov.github.io/ds-intro-to-git" class="uri">https://bcgov.github.io/ds-intro-to-git</a></li>
-</ul>
+<div class="footer">
+<p>Course Materials: <a href="https://bcgov.github.io/ds-intro-to-git" class="uri">https://bcgov.github.io/ds-intro-to-git</a></p>
+</div>
 <aside class="notes">
-<p>Keep cameras on and microphones on mute. If you are disconnected and having trouble reconnecting then reach out to Lindsay,</p>
+<p>First, some housekeeping! (next)</p>
+<p>As part of today’s workshop, we’ll be coding in real time, working through concepts together on the fly. This approach lets us explore the process interactively. While this can be dynamic and fun, it also means there may be moments where we need to debug or adjust as we go. (next)</p>
+<p>Since we’ll be coding in real time, it’s important that everyone feels comfortable and engaged. To keep things running smoothly in our virtual setting, let’s go over a few best practices: (next)</p>
+<ol type="1">
+<li>If you have questions, please feel free to drop them in the chat or use the ‘raise hand’ feature—we’ll address them as we go. Your engagement and questions will make this experience even more valuable, so don’t hesitate to share your thoughts along the way! (next)</li>
+<li>Keep your microphones on mute unless speaking to minimize background noise. (next)</li>
+<li>And if we get disconnected, don’t worry! You can rejoin using the same meeting link, and Lindsay will let you back in. (next)</li>
+<li>Cameras on for the first bit so the faciliators get to know who you are and can put a face to a name. (next)</li>
+</ol>
+<p>The link to the course materials was sent with the pre-workshop assignment and installation instructions. For your convenience the link is at the bottom of the slide. I can drop it in the chat as well https://bcgov.github.io/ds-intro-to-git. (next)</p>
+<p>We have one request and that is to try your best.</p>
+<p>We’re all learning together. Git and GitHub can feel a little overwhelming at first, but the goal isn’t perfection — it’s progress.</p>
+<p>Mistakes are part of the process, and they’re a great way to learn. Don’t hesitate to experiment, ask questions, or even mess something up—that’s how we figure things out. Remember, no one here expects you to know everything right away, and we have great people assisting to help guide you through it.</p>
+<p>So let’s dive in with curiosity and determination, and remember - every small step in learning builds a stronger future you.</p>
+<p>(next slide)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -195,17 +275,23 @@
 </section>
 <section id="workshop-code-of-conduct" class="slide level2">
 <h2>Workshop Code of Conduct</h2>
+<div>
 <ul>
-<li>We aim to make this a welcoming and supportive environment for everyone, regardless of background</li>
-<li>We encourage respectful discussion and questions throughout the course</li>
-<li>Please be fully present and engaged during the session (that email can wait!)</li>
+<li class="fragment">We aim to make this a welcoming and supportive environment for everyone, regardless of background</li>
+<li class="fragment">We encourage respectful discussion and questions throughout the course</li>
+<li class="fragment">Please be fully present and engaged during the session (that email can wait!)</li>
 </ul>
+</div>
 <div class="footer">
 <p>Learn more: <a href="https://www2.gov.bc.ca/gov/content/careers-myhr/about-the-bc-public-service/ethics-standards-of-conduct/standards-of-conduct">Standards of Conduct for BC Public Service employees</a></p>
 </div>
 <aside class="notes">
-<p>Teaching and learning in a virtual environment is hard. Lindsay is the only one of us who as taught this workshop before virtually (have taught variants before) – stick with us!</p>
-<p>While much of the course is concept-based and fairly high-level, it is still technical and you can fall behind and find it hard to catch up if you’re multitasking. So we ask you to remaim present and engaged to the best of your abilites and stick it out, even through the boring parts. Your hard-work will pay off!</p>
+<p>Let us take a moment to share our workshop code of conduct. These guidelines are in place to ensure this session remains a positive and productive space for everyone: (next)</p>
+<p>First and foremost, we aim to create a welcoming and supportive environment for all participants, regardless of background. (next)</p>
+<p>We encourage respectful discussion and questions throughout the session. Healthy dialogue enriches the learning experience, but it’s important to maintain a tone of mutual respect as teaching and learning in a virtual environment can be hard. Remember to be kind not only to others but also to yourself—mistakes and misunderstandings are part of the learning process. Let’s focus on building each other up and avoiding criticism, so everyone feels supported and encouraged to grow. (next)</p>
+<p>Finally, we ask that you be fully present and engaged during the workshop. Multitasking can wait—this is your opportunity to focus and get the most out of our time together.</p>
+<p>By following these principles, we can create a space where everyone feels comfortable and valued. Thanks in advance for your cooperation.</p>
+<p>(next slide)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -217,6 +303,1055 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="workshop-outline" class="slide level2">
+<h2>Workshop Outline</h2>
+<div class="columns">
+<div class="column" style="width:75%;">
+<div class="fragment">
+<div>
+<ul>
+<li class="fragment">Section 1: What is version control for code
+<ul>
+<li class="fragment">Why do we want to use it?</li>
+</ul></li>
+<li class="fragment">Section 2: Working locally with Git
+<ul>
+<li class="fragment">Setting up our first Git repository</li>
+</ul></li>
+<li class="fragment">Section 3: Remote code-hosting and GitHub
+<ul>
+<li class="fragment">Sharing code on GitHub</li>
+</ul></li>
+<li class="fragment">Section 4: BCGov GitHub Organization
+<ul>
+<li class="fragment">Coding in the open</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="fragment">
+<p><img data-src="../figures/section-1-vc/version-control.png" style="width:25.0%" data-fig-pos="H"> <br> <img data-src="../figures/section-2-git/git-logo.png" style="width:30.0%" data-fig-pos="H"> <br> <br> <img data-src="../figures/section-3-github/github-mark.png" style="width:25.0%" data-fig-pos="H"> <br> <br> <img data-src="../figures/section-4-bcgov/bcgov-logo.png" style="width:25.0%" data-fig-pos="H"></p>
+</div>
+</div></div>
+<div class="footer">
+<p>Course Materials: <a href="https://bcgov.github.io/ds-intro-to-git" class="uri">https://bcgov.github.io/ds-intro-to-git</a></p>
+</div>
+<aside class="notes">
+<p>To give you a clear picture of what we’ll be covering today, here’s an outline of our workshop. This also can be found in our course materials. (next)</p>
+<p>Section 1: What is Version Control for Code. (next) We’ll start by exploring the concept of version control, what it is and why it’s an essential practice in modern coding. (next)</p>
+<p>Section 2: Working Locally with Git. (next) We’ll dive into Git, learning how to set up and work with our first Git repository. (next)</p>
+<p>Section 3: Remote Code-Hosting and GitHub. (next) In this section, we’ll focus on using GitHub to share and collaborate on code. (next)</p>
+<p>Section 4: BCGov GitHub Organization. (next) In this section we’ll discuss coding in the open, leveraging the BCGov GitHub organization to manage and share projects effectively. (next)</p>
+<p>These icons represent our sections. You’ll see them at the top right hand-side of most of the presentation slides. If you get lost these are here to to cue you which topic or skill we are working on as we progress through the course.</p>
+<p>This structured approach will guide us step-by-step from foundational concepts to practical applications, ensuring you gain both understanding and hands-on experience.</p>
+<p>(next slide)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="installation-set-up-review" class="slide level2">
+<h2>Installation &amp; Set Up Review</h2>
+<div>
+<ul>
+<li class="fragment">Installed Git (including Git Bash): <a href="https://git-scm.com/download/win">Git Download</a></li>
+<li class="fragment">Created a GitHub account: <a href="https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account">Pre-Workshop Materials</a>
+<ul>
+<li class="fragment">Set-up 2MFA</li>
+<li class="fragment">Created a Personal Access Token</li>
+</ul></li>
+<li class="fragment">Configured Git: <a href="https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git">Pre-Workshop Materials</a></li>
+</ul>
+</div>
+<div class="footer">
+<p>Learn more: <a href="https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html">Software Installation Guide</a></p>
+</div>
+<aside class="notes">
+<p>Before diving into today’s workshop, let’s quickly review the foundational steps you’ve already completed in preparation for this course. (next)</p>
+<p>You’ve downloaded and installed Git from the Git website. This included Git Bash, a terminal that allows you to interact with Git through command-line commands. (next)</p>
+<p>You set up a GitHub account, which will allow you to store and collaborate on code projects in a cloud-based repository. (next)</p>
+<p>As part of this process you enabled Two-Factor Authentication (2MFA) to enhance account security. (next)</p>
+<p>You also created a Personal Access Token to allow Git to authenticate securely with your GitHub account for operations like pushing or pulling code. (next)</p>
+<p>You also configured Git by setting up your username and email address, which ensures that every change you commit is associated with your identity. Most of you did this in Git Bash terminal. If you need a refresher, the configuration steps can be found in the pre-workshop materials. (next)</p>
+<p>I’d like everyone to please take a minute to check your configurations.</p>
+<p>These steps provided the groundwork for today’s workshop, ensuring you have the tools and configurations necessary to follow along effectively. If you encounter any challenges related to these steps, feel free to drop a question into the chat for assistance. (next)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1-what-is-version-control" class="slide level2" data-background-image="../figures/section-1-vc/version-control.png" data-background-size="6%" data-background-position="85% 6%">
+<h2>Section 1: What is Version Control?</h2>
+
+<img data-src="../figures/section-1-vc/cartoon1.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="t"><div class="footer">
+<p>Source: <a href="https://phdcomics.com/comics.php?f=1531">notFinal.doc</a> by Jorge Cham © 2012</p>
+</div>
+<aside class="notes">
+<p>What’s version control?</p>
+<p>Not this. But we’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document – either by yourself or spread around among colleagues. It’s difficult to tell the difference between files, and what was changed when, by whom, and why?</p>
+<p>Version control is the practice of tracking and managing changes to software code. Version control systems (like Git) are software tools that are used to help teams manage changes to code and documents over time.</p>
+<p>Consider the following scenario. You and your colleagues have been asked to do an analysis of the Work Environment Survey study to determine if workplace satisfaction has increased or decreased significantly since the start of the pandemic. You and your colleagues want to be able to work on the project at the same time, but have run into problems doing this in the past. If you take turns, each of you will spend a lot of time waiting for the other to finish, but if you work on your own copies and save them to the local network, things will be lost, overwritten, or duplicated. A colleague suggests using version control to manage your work.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="changes-saved-sequentially" class="slide level2" data-background-image="../figures/section-1-vc/version-control.png" data-background-size="6%" data-background-position="85% 6%">
+<h2>Changes saved sequentially</h2>
+
+<img data-src="../figures/section-2-git/sequential.png" data-fig-pos="H" class="r-stretch"><aside class="notes">
+<p>She mentions she uses Git and provides you an online link. You decide to do some light reading. You find out git keeps track of snapshots in time – each document or file starts with a base version and then you tell git to save just the changes you made at each step of the way.</p>
+<p>You decide which changes make up the each snapshot, and git stores those changes and keeps useful metadata about them.</p>
+<p>You can think of it as a recording of your progress: you can rewind to start at the base document (the one on the left) and play back each change you made, eventually arriving at your more recent version (the one on the right).</p>
+<p>Each of these three snapshot are called a ‘commit’.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="collaborating-branching" class="slide level2" data-background-image="../figures/section-1-vc/version-control.png" data-background-size="6%" data-background-position="85% 6%">
+<h2>Collaborating Branching</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/section-2-git/branching.png" class="quarto-figure quarto-figure-center" data-fig-pos="t"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment">Multiple users: different people work on their own copy</li>
+<li class="fragment">Each can branch off the original work independently</li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+<p>But git also allows independent users to make changes on the same document. (next) (next)</p>
+<p>Each can, on their own copy, head off on a different track and work on it independently while keeping the main copy intact.</p>
+<p>In this diagram person green takes a copy and person red also takes a copy. They add some lines and when they are finished making changes to their own copy…</p>
+<p>(next slide)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="collaborating-merging" class="slide level2" data-background-image="../figures/section-1-vc/version-control.png" data-background-size="6%" data-background-position="85% 6%">
+<h2>Collaborating: Merging</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment">Merge changes made by each person back into the same base document.</li>
+<li class="fragment">Documents kept in sync across different computers</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/section-2-git/collaborating.png" class="quarto-figure quarto-figure-center" data-fig-pos="t"></p>
+</figure>
+</div>
+</div></div>
+<aside class="notes">
+<p>the changes they want to keep can be merged back into the original. If they don’t like the result, the changes can be discarded. (next)</p>
+<p>Unless multiple users make changes to the same section of the document (a conflict) you can incorporate two sets of changes into the same base document. (next)</p>
+<p>Documents and repositories can be kept in sync across different computers facilitating collaboration among different people.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="version-control-repository" class="slide level2" data-background-image="../figures/section-1-vc/version-control.png" data-background-size="6%" data-background-position="85% 6%">
+<h2>Version Control Repository</h2>
+<p><br> <br> <em>A repository is a data structure that stores <strong>metadata</strong> for a set of files or directory structure, as well as a <strong>historical record of changes</strong> to the repository.</em></p>
+<aside class="notes">
+<p>How does git accomplish this? It leverages something called a repository (or repo, for short)</p>
+<p>In version control systems, a <strong>repository</strong> is a data structure that stores metadata for a set of files or directory structure, as well as a historical record of changes to the repository.</p>
+<p>You store all of your project files in a folder.</p>
+<p>All of the files, plus the complete history for the files in that folder make up a repository (repo).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="version-control-repository-1" class="slide level2" data-background-image="../figures/section-1-vc/version-control.png" data-background-size="6%" data-background-position="85% 6%">
+<h2>Version Control Repository</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2|3-6|7|8|9-14|15|16|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>WES Project Folder</span>
+<span id="cb1-2"><a></a>├── wes<span class="sc">-</span>analysis</span>
+<span id="cb1-3"><a></a>  ├── doc</span>
+<span id="cb1-4"><a></a>  ├── ref</span>
+<span id="cb1-5"><a></a>  │ ├── references</span>
+<span id="cb1-6"><a></a>  │ ├── images</span>
+<span id="cb1-7"><a></a>  ├── plots</span>
+<span id="cb1-8"><a></a>  ├── code</span>
+<span id="cb1-9"><a></a>  ├── data</span>
+<span id="cb1-10"><a></a>  │ ├── wes<span class="sc">-</span>results</span>
+<span id="cb1-11"><a></a>  │ │ ├── wes<span class="sc">-</span>results<span class="fl">-2019.</span>csv <span class="sc">&lt;</span>– DON’T WORRY, THESE WON’T BECOME PUBLIC<span class="sc">!</span></span>
+<span id="cb1-12"><a></a>  │ │ ├── wes<span class="sc">-</span>results<span class="fl">-2020.</span>csv</span>
+<span id="cb1-13"><a></a>  │ │ ├── wes<span class="sc">-</span>results<span class="fl">-2021.</span>csv</span>
+<span id="cb1-14"><a></a>  │ <span class="sc">|</span> <span class="er">|</span>── wes<span class="sc">-</span>results<span class="fl">-2022.</span>csv</span>
+<span id="cb1-15"><a></a>  ├── .git <span class="sc">&lt;</span>———————— THIS MAKES IT A GIT REPOSITORY<span class="sc">!</span></span>
+<span id="cb1-16"><a></a>  ├── .gitignore <span class="sc">&lt;</span>————– FILES listed here are ignored by git not tracked, e.g., csv files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<aside class="notes">
+<p>This slide illustrates the structure of a typical Git repository. Let me walk you through its key components: (next)</p>
+<p>At the top level, we have the wes-analysis folder, which is the root directory of this repository. This is where all our files and folders for the project are organized. Inside this folder you likely have other project-related subfolders such as:</p>
+<ul>
+<li><p><strong>doc</strong> and <strong>ref</strong> containin files such as a list of acronyms, reports, reference materials and possibly articles and images for visual documentation or presentations. This is very much project-dependent.</p></li>
+<li><p><strong>plots</strong> is where visual outputs like graphs or charts from the analysis are saved.</p></li>
+<li><p><strong>code</strong> houses the scripts or programming files you’re working on, forming the core of the project’s logic. (next)</p></li>
+<li><p><strong>data</strong> contains the raw data files in this hypothetical project. It’s worth noting that sensitive or private data, like these CSV files, won’t become public as we will give explicit instructions to git to ignore them.</p></li>
+</ul>
+<p>Two important files help manage this repository (next)</p>
+<p>The <strong>.git</strong> <em>directory</em> is hidden by default and is what makes this a Git repository. It tracks changes to files, allowing us to manage versions of our code and content. (next)</p>
+<p>The <strong>.gitignore</strong> <em>file</em> lists files or patterns we don’t want Git to track—like large data files such as the CSVs. This is a common practice to keep repositories clean and focused on the essential project elements. (next)</p>
+<p>Together, this structure keeps our work organized and ensures that the repository is ready for version control and collaboration.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2-working-locally-with-git" class="slide level2">
+<h2>Section 2: Working locally with Git</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><br> <br> <img data-src="../figures/section-2-git/git-logo.svg" class="quarto-figure quarto-figure-left" style="width:100.0%" data-fig-pos="t"></p>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment">Track changes in files
+<ul>
+<li class="fragment">Source code</li>
+</ul></li>
+<li class="fragment">Manage versions of your work</li>
+<li class="fragment">Facilitates collaboration</li>
+<li class="fragment">Branching and merging</li>
+<li class="fragment">Distributed model</li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+<p>(next) (next)</p>
+<p>Git is a distributed version control system designed to track changes in files, particularly source code. (next)</p>
+<p>Git helps us manage versions of our work, making it easy to revert to earlier states or identify when and why changes were made. (next)</p>
+<p>It enables multiple people to collaborate on projects while maintaining a detailed history of all changes. It enables contributors to work simultaneously without overwriting each other’s work. (next)</p>
+<p>Git supports parallel development, allowing teams to work on different features or fixes without interference. This is done through branching and merging which we introduced earlier and will review shortly. (next)</p>
+<p>Git is a distributed model, meaning every user has a full copy of the repository. The benefit here is that operations require only local files and resources. This makes Git extremely fast and reliable.</p>
+<p>Unlike many version control systems that treat data as a list of file changes over time, Git thinks of data as a series of snapshots of a miniature filesystem. Every time you commit, Git essentially takes a snapshot of your project’s state and stores a reference to it.</p>
+<p>It’s impossible to change files or directories without Git detecting it. This ensures you don’t lose information in transit or encounter undetected file corruption.</p>
+<p>Once a snapshot is committed to Git, it’s incredibly hard to lose, especially if you regularly push your changes to a remote repository.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="preview-git-jargon" class="slide level2" data-background-image="../figures/section-1-vc/version-control.png" data-background-size="6%" data-background-position="85% 6%">
+<h2>Preview: Git Jargon</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment">repo</li>
+<li class="fragment">stage/add</li>
+<li class="fragment">commit/commit message</li>
+<li class="fragment">push</li>
+<li class="fragment">pull</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment">clone</li>
+<li class="fragment">branch</li>
+<li class="fragment">fork</li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+<p>Let’s preview a bit of git Bash jargon. Much of it you will be introduced to in this workshop as many of these are commands that we enter at command-line. Let’s start with the ones we’ll use in the workshop. (next)</p>
+<p>A repo (short for repository) is like a folder where your project’s files and their history are stored. It tracks all the changes you make, letting you see the past versions and collaborate with others. You can have a local repo on your computer or a remote one on a platform like GitHub. (next)</p>
+<p><strong><code>add</code></strong> a git command used to stage files. it is like putting changes into a “ready-to-go” box. It tells Git which changes (new files, edits, or deletions) you want to save in your next snapshot (commit). You’re just preparing them; they aren’t saved yet. (next)</p>
+<p><strong><code>commit -m "message</code></strong> a git command used to take a picture of your work at this moment. It saves the changes you’ve prepared (staged) into Git’s history. The message you add is like a caption, helping you remember what this “snapshot” is about. (next)</p>
+<p><strong><code>push [remote] [branch]</code></strong> a git command used to send your saved work (commits) from your computer to an online storage space (remote repository). This lets others see or work with your updates. (next)</p>
+<p><strong><code>pull [remote] [branch]</code></strong> a git command used to grab the latest updates from the online version of your project and adding them to your work. It makes sure you’re working with the most up-to-date version. (next)</p>
+<p>Some others you may hear about but we won’t be directly going over today.</p>
+<p><strong><code>clone [repositoryurl]</code></strong> a git command used to download a full copy of a project from an online source (like GitHub) to your computer so you can work on it. It brings all the files and the project’s history with it. (next)</p>
+<p><strong><code>branch [branchname]</code></strong> is like a new “workspace” where you can try new ideas or work on features without messing with the main project. Branches keep your main project safe while you experiment or build new things, and you can later combine your changes when they’re ready. (next)</p>
+<p><code>fork</code>: No direct Git command as forking is done through GitHub platform,. It’s like making your own personal copy of someone else’s project, so you can change it without affecting their original work. You can use it to contribute to open-source projects or customize things for your own needs. Once you’re happy with your changes, you can share them back with the original project through a pull request. (next)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="preview-bash-jargon" class="slide level2" data-background-image="../figures/section-2-git/git-logo.png" data-background-size="10%" data-background-position="85% 6%">
+<h2>Preview: Bash Jargon</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|1|2|3|4|5|"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">$</span> cd path/to/directory          <span class="co"># Go to specified directory - "quotes" are needed if there are spaces </span></span>
+<span id="cb2-2"><a></a><span class="ex">$</span> cd ..                         <span class="co"># Go up one directory level</span></span>
+<span id="cb2-3"><a></a><span class="ex">$</span> mkdir new_directory           <span class="co"># Create specified directory</span></span>
+<span id="cb2-4"><a></a><span class="ex">$</span> ls                            <span class="co"># List directories and files</span></span>
+<span id="cb2-5"><a></a><span class="ex">$</span> ls <span class="at">-a</span>                         <span class="co"># List directories and files, including hidden</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<aside class="notes">
+<p>Let’s review some common Bash commands that you’ll use frequently when working with Git and navigating your file system. (next)</p>
+<p><strong>cd path/to/directory</strong>: This command lets you navigate to a specific directory. Think of it as ‘changing your location’ in the file system. If the directory path includes spaces, make sure to enclose it in quotes, like <strong>cd “My Folder”</strong>. (next)</p>
+<p><strong>cd ..</strong>: The <code>..</code> represents the parent directory. Using this command moves you up one level in the directory hierarchy. For example, if you’re in a folder called <em>projects</em>, <strong>cd ..</strong> will take you back to its parent folder. (next)</p>
+<p><strong>mkdir new_directory</strong> :This creates a new directory with the specified name. It’s a quick way to organize your files into new folders directly from the command line. (next)</p>
+<p><strong>ls</strong>: This lists the contents of the current directory, showing all files and subdirectories. It’s a handy way to see where you are and what’s in your folder. (next)</p>
+<p>Adding the <strong>-a</strong> flag shows all files, including hidden ones. Hidden files usually start with a dot, like <strong>.git</strong>, and they’re essential for tasks like managing Git repositories. (next)</p>
+<p>These commands form the foundation of navigating and organizing your files in the terminal, which is key to working effectively with Git.</p>
+<p>(next slide)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hands-on-practice" class="slide level2" data-background-image="../figures/section-2-git/git-logo.png" data-background-size="10%" data-background-position="85% 6%">
+<h2>Hands-On Practice</h2>
+<p><br> <br> <br> <br> Let’s create our first repository!</p>
+</section>
+<section id="the-staging-area" class="slide level2" data-background-image="../figures/section-2-git/git-logo.png" data-background-size="10%" data-background-position="85% 6%">
+<h2>The Staging Area</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/section-2-git/local-repository.png" class="quarto-figure quarto-figure-center" data-fig-pos="t"></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Best Practice Workflow:</strong></p>
+<ul>
+<li>stage and commit changes explicitly</li>
+<li><strong>git add &lt;filename&gt;</strong> followed by <strong>git commit -m ‘message’</strong></li>
+</ul>
+</div>
+<aside class="notes">
+<p>(next)</p>
+<p>As a final note, Git requires us to explicitly add files to a <strong>staging area</strong> before committing them. This lets us organize our work and commit changes in logical portions rather than committing everything at once.<br>
+For example, if you’re working on a thesis, you might want to commit newly added citations and bibliography entries separately from unfinished work in the conclusion.</p>
+<p>Think of Git as taking snapshots of your project’s history.<br>
+<strong><code>git add</code></strong> tells Git what will be included in the next snapshot by placing files into the staging area.<br>
+<strong><code>git commit</code></strong> actually takes the snapshot and makes a permanent record of it.</p>
+<p>If you type <strong><code>git commit</code></strong> without staging anything, Git will prompt you to use options like <strong><code>git commit -a</code></strong> or <strong><code>git commit --all</code></strong> which is kind of like gathering everyone to take a group photo. While these commands gather all changes at once, it’s better to stage manually with <code>git add</code>instead of accidentally including changes you didn’t mean to commit. (next)</p>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Always stage changes explicitly to maintain control over what goes into each commit.<br>
+</li>
+<li>This practice helps you avoid mistakes and keeps your project history clean and well-organized.</li>
+</ul>
+<p>By staging changes, you’re breaking down your work into manageable, logical pieces—an approach that makes your version control workflow much more efficient.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="review-git-jargon" class="slide level2" data-background-image="../figures/section-2-git/git-logo.png" data-background-size="10%" data-background-position="85% 6%">
+<h2>Review: Git Jargon</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="|1|2|3|4|5|6|7|"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">$</span> git init                          <span class="co"># initiate a repository in the current directory</span></span>
+<span id="cb3-2"><a></a><span class="ex">$</span> git status                        <span class="co"># indicate if there are any changes to files</span></span>
+<span id="cb3-3"><a></a><span class="ex">$</span> git add <span class="op">&lt;</span>filename<span class="op">&gt;</span>                <span class="co"># add a new file/change to the staging area</span></span>
+<span id="cb3-4"><a></a><span class="ex">$</span> git commit –m “commit message”    <span class="co"># commit all staged changes to the repository</span></span>
+<span id="cb3-5"><a></a><span class="ex">$</span> git log                           <span class="co"># view commit history</span></span>
+<span id="cb3-6"><a></a><span class="ex">$</span> git diff                          <span class="co"># show changes between commits</span></span>
+<span id="cb3-7"><a></a><span class="ex">$</span> git restore                       <span class="co"># restore file/s to previous commit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<aside class="notes">
+<p>At that point, let’s review some of the essential Git commands we’ve seen..</p>
+<p><strong><code>git init</code></strong>: This command initialized a Git repository in the current directory. It created a hidden <code>.git</code> folder, which Git used to track changes to files. This only needed to be done once per project to start version control.</p>
+<p><strong><code>git status</code></strong>: Running this command gave a snapshot of the repository’s current state. It showed any changes to files, whether they had been staged for commit, and if there were untracked files. It was like a ‘to-do list’ for what was happening in Git.</p>
+<p><strong><code>git add mars.txt</code></strong>: This staged a file or changes to a file, staging it for the next commit.</p>
+<p><strong><code>git commit -m "commit message"</code></strong>: This command took all the changes in the staging area and committed them to the repository, creating a new snapshot. The <code>-m</code> flag allowed us to add a message describing the changes, which was critical for understanding the history later.</p>
+<p><strong><code>git log</code></strong>: This command was used to view the commit history of the repository. It showed who made the changes, when they were made, and the commit messages. Generally, this is an excellent way to review the progress of a project.</p>
+<p><strong><code>git diff</code></strong>: This displayed the changes between commits or the differences between the working directory and the last commit (the HEAD). It was useful for checking exactly what had changed before committing.</p>
+<p><strong><code>git restore</code></strong>: This restored mars.txt to our previous commit, effectively undoing changes. It was handy for discarding changes or returning a file to a specific version.</p>
+<p>These commands form the backbone of working with Git. As you use them, you’ll develop a deeper understanding of how Git tracks and manages your work.”</p>
+<p>(next slide)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3-remote-code-hosting-and-github" class="slide level2">
+<h2>Section 3: Remote code-hosting and GitHub</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/section-3-github/github-mark.png" class="quarto-figure quarto-figure-center" style="width:250.0%" data-fig-pos="t"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br> <br></p>
+<div>
+<ul>
+<li class="fragment">Hosting service for git repositories</li>
+<li class="fragment">Greatly facilitates collaboration</li>
+<li class="fragment"><strong>Git:</strong> Version Control <strong>+</strong></li>
+<li class="fragment"><strong>Hub:</strong> Centralized repos &amp; networking/collaborating</li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+<p>In this section we are going to take a closer look at <strong>GitHub</strong>, one of the most widely used hosting services for Git repositories. Then we’ll create a remote repository for our local planets repo and cconnect the two.</p>
+<p>GitHub is a platform that hosts Git repositories in the web and provides a web interface to interact with repos. It’s main function is to host the ‘remote’ or main copy of a git repository (next)</p>
+<p><strong>Hosting Service for Git Repositories:</strong><br>
+At its core, GitHub is a platform for storing and managing Git repositories in the cloud. It acts as a central hub where your project lives online, making it accessible to team members and collaborators anywhere in the world. (next)</p>
+<p><strong>Facilitates Collaboration:</strong><br>
+GitHub simplifies working together by enabling multiple people to contribute to the same project seamlessly.<br>
+With features like pull requests, code reviews, and issue tracking, it ensures that teams can work efficiently and stay organized, even when working remotely. (next)</p>
+<p>Let’s breaking down the name – Git + Hub:</p>
+<p><strong>Git:</strong> The powerful version control system that tracks changes in your project, keeping a detailed history of your work. (next)</p>
+<p><strong>Hub:</strong> A central place for repositories where networking and collaboration happen. Think of it as the meeting point where all your team’s work comes together.</p>
+<p>With GitHub, you’re not just managing your code; you’re enabling teamwork, encouraging innovation, and building a shared space for your projects to thrive.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="git-github-working-collaboratively" class="slide level2" data-background-image="../figures/section-3-github/github-mark.png" data-background-size="8%" data-background-position="85% 5%">
+<h2>Git + GitHub: Working Collaboratively</h2>
+
+<img data-src="../figures/section-3-github/git-gh-collab2.png" class="quarto-figure quarto-figure-center r-stretch" data-fig-pos="t"><aside class="notes">
+<p>Version control really comes into its own when we begin to collaborate with other people. We already have much of the machinery we need to do this; what we are missing is something that allows us to copy changes from one repository to another.</p>
+<p>In this scenario, multiple people are working on their own copies of a single repository. Instead of passing files back and forth, Git allows them to seamlessly share and sync their work across multiple repositories. The magic happens with a central repository—the single source of truth—that lives on the web, in GitHub. Everyone involved in the project keeps a local copy of the shared repository, making changes and updates on their own computers. The changes are merged into our source of truth repository in GitHub.</p>
+<p>In the pre-workshop you created a GitHub account, linked it with a personal access token (PAT) and MFA, thereby configuring your system to connect to GitHub. This setup will allow us to create a remote repository, sync it with our local work, and share our progress with collaborators—or even the world.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="remote-repository" class="slide level2" data-background-image="../figures/section-3-github/github-mark.png" data-background-size="8%" data-background-position="85% 5%">
+<h2>Remote Repository</h2>
+<div class="fragment">
+<p><img data-src="../figures/section-3-github/remote-repository-final1a.png" class="absolute" style="top: 125px; left: 0px; "></p>
+</div>
+<div class="fragment">
+<p><img data-src="../figures/section-3-github/remote-repository-final1b.png" class="absolute" style="top: 425px; left: 0px; "></p>
+</div>
+<aside class="notes">
+<p>Think of the remote as the “authoritative” version/source/copy.</p>
+<p>If you remember back to the earlier episode where we added and committed our earlier work on mars.txt, we had a diagram of the local repository which looked like this: (next)</p>
+<p>Now that we have two repositories, we need a diagram like this: (next)</p>
+<p>Our local repository still contains our earlier work on mars.txt, but the remote repository on GitHub appears empty as it doesn’t contain any files yet.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hands-on-practice-1" class="slide level2" data-background-image="../figures/section-3-github/github-mark.png" data-background-size="8%" data-background-position="85% 5%">
+<h2>Hands-On Practice</h2>
+<p><br> <br> <br> <br> Let’s create our first remote repository!</p>
+<aside class="notes">
+<p>Let’s make our first remote repository</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-collaborative-workflow" class="slide level2" data-background-image="../figures/section-3-github/github-mark.png" data-background-size="8%" data-background-position="85% 5%">
+<h2>A Collaborative Workflow</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="fragment" data-fragment-index="1">
+<div class="fragment highlight-current-blue" data-fragment-index="1">
+<p>Original Repository</p>
+<p>|── planets</p>
+<p>| |──.git</p>
+<p>| |── mars.txt</p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="7">
+<div class="fragment highlight-current-blue" data-fragment-index="2">
+<p>| |── pluto.txt</p>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="fragment" data-fragment-index="2">
+<div class="fragment highlight-current-blue" data-fragment-index="2">
+<p>GitHub Repository</p>
+<p>|── planets</p>
+<p>| |── .git</p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3">
+<div class="fragment highlight-current-blue" data-fragment-index="3">
+<p>| |── mars.txt</p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="6">
+<div class="fragment highlight-current-blue" data-fragment-index="6">
+<p>| |── pluto.txt</p>
+</div>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="fragment" data-fragment-index="4">
+<div class="fragment highlight-current-blue" data-fragment-index="4">
+<p>Cloned Repository</p>
+<p>|── planets</p>
+<p>| |── .git</p>
+<p>| |── mars.txt</p>
+</div>
+</div>
+<div class="fragment" data-fragment-index="5">
+<div class="fragment highlight-current-blue" data-fragment-index="5">
+<p>| |── pluto.txt</p>
+</div>
+</div>
+</div></div>
+<p><br> <br> <br></p>
+<div class="columns">
+<div style="font-size: 80%">
+<div style="line-height: 80%">
+<div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<div class="fragment highlight-current-blue" data-fragment-index="1">
+<ol type="1">
+<li>Initial repository set up</li>
+</ol>
+</div>
+</div>
+<div class="fragment" data-fragment-index="2">
+<div class="fragment highlight-current-blue" data-fragment-index="2">
+<ol start="2" type="1">
+<li>Remote repository created &amp; linked</li>
+</ol>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3">
+<div class="fragment highlight-current-blue" data-fragment-index="3">
+<ol start="3" type="1">
+<li>Local changes pushed to remote</li>
+</ol>
+</div>
+</div>
+<div class="fragment" data-fragment-index="4">
+<div class="fragment highlight-current-blue" data-fragment-index="4">
+<ol start="4" type="1">
+<li>Remote repository cloned by collaborator</li>
+</ol>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="5">
+<div class="fragment highlight-current-blue" data-fragment-index="5">
+<ol start="5" type="1">
+<li>Collaborator makes additions</li>
+</ol>
+</div>
+</div>
+<div class="fragment" data-fragment-index="6">
+<div class="fragment highlight-current-blue" data-fragment-index="6">
+<ol start="6" type="1">
+<li>Collaborator updates remote with changes</li>
+</ol>
+</div>
+</div>
+<div class="fragment" data-fragment-index="7">
+<div class="fragment highlight-current-blue" data-fragment-index="7">
+<ol start="7" type="1">
+<li>Collaborator changes pulled back to original</li>
+</ol>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+<aside class="notes">
+<p>At this point, stop and compare the three repositories. (next)</p>
+<ol type="1">
+<li>We started with our initial repository called planets. Created our hidden .git directory and mars.txt and commited these to our local repository. (next)</li>
+<li>We then created a remote repository on GitHub which was initialized with a .git directory. (next)</li>
+<li>We pushed our local changes (our new file mars.txt) to our remote on GitHub. (next)</li>
+<li>Our colleague, working on another computer, clone the planets repo (along with text file and hidden git directory) to their local machine.</li>
+</ol>
+<p>We now have three identical repositories in three locations. Our colleague wants to:</p>
+<ol start="5" type="1">
+<li>add a new file with information on Pluto. (next)</li>
+</ol>
+<p>Let’s go ahead and try this out. (flip to bash terminal)</p>
+<ol start="6" type="1">
+<li>With pluto.txt file in the cloned repository we communicated the (by pushing) the changes to our source of truth remote repository (next)</li>
+<li>After pulling all the changes from the remote repository back to the original, our three repositories (original local, second local, and the one on GitHub) are back in sync!</li>
+</ol>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-typical-workflow" class="slide level2" data-background-image="../figures/section-3-github/github-mark.png" data-background-size="8%" data-background-position="85% 5%">
+<h2>A Typical Workflow</h2>
+<p>The table below doubles as a handy cheatsheet; take a screenshot and save for future reference!</p>
+<div style="font-size: 0.75em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Order</th>
+<th>Action</th>
+<th>Git Command</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 (Once Only)</td>
+<td>Create remote</td>
+<td>(Done on GitHub)</td>
+</tr>
+<tr class="even">
+<td>2 (Once Only)</td>
+<td>Clone remote</td>
+<td><code>git clone https://github.com/path/to/remote</code></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Update local</td>
+<td><code>git pull origin main</code></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Make changes</td>
+<td>(Done in editor)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Stage changes</td>
+<td><code>git add numbers.txt</code></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Commit changes</td>
+<td><code>git commit -m "Add 100 to numbers.txt"</code></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Update remote</td>
+<td><code>git push origin main</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<aside class="notes">
+<p>To this point, we have learned a lot of different git commands and workflows involved in tracking all of our changes, keeping our repositories up-to-date, and collaborating across computers using GitHub. While there are multiple levels of nuance that go into each of these steps, let’s lay out a typical workflow.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ignoring-things" class="slide level2" data-background-image="../figures/section-3-github/github-mark.png" data-background-size="8%" data-background-position="85% 5%">
+<h2>Ignoring things</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<p>Original Repository</p>
+<p>|── planets</p>
+<p>| |──.git</p>
+<p>| |── mars.txt</p>
+<p>| |── pluto.txt</p>
+</div>
+<div class="fragment fade-up" data-fragment-index="3">
+<div class="fragment highlight-current-blue" data-fragment-index="3">
+<p>| |── data.csv</p>
+</div>
+</div>
+<div class="fragment fade-up" data-fragment-index="4">
+<div class="fragment highlight-current-blue" data-fragment-index="4">
+<p>| |── .gitignore</p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment fade-left" data-fragment-index="2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../figures/section-3-github/data2.png" class="quarto-figure quarto-figure-center" style="width:75.0%" data-fig-pos="t"></p>
+</figure>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+<p>What if we have files that we do not want Git to track for us, like backup files created by our editor or intermediate files created during data analysis? This often is the case in BC Government data projects. (next)</p>
+<p>AND We KNOW many BC Stats projects involve data with PI or other sensitive information. (next)</p>
+<p>We generally follow a best practice of not pushing data to GitHub. (next)</p>
+<p>We accomplish this by creating a file in the root directory of our project called a .gitignore.</p>
+<p>.gitignore files are plain text files; you can open the file with your chosen text editor and add the names of any files or folder you don’t want to commit and therefore they won’t accidently get pushed to GitHub. Let’s try this. (flip over to Git Bash)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4-bcgov-github-organization" class="slide level2" data-background-image="../figures/section-4-bcgov/bcgov-logo.png" data-background-size="8%" data-background-position="85% 6%" data-transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;">
+<h2>Section 4: BCGov GitHub Organization</h2>
+<div>
+<ul>
+<li class="fragment">set up in early 2014</li>
+<li class="fragment">OCIO + BCDevExchange team</li>
+<li class="fragment"><em>Digital Principles for the B.C. Government</em>: “work in the open”</li>
+<li class="fragment"><strong>bcgov</strong>: open-source code</li>
+<li class="fragment"><strong>bcgov-c</strong>: confidential code</li>
+</ul>
+</div>
+<aside class="notes">
+<p>In this final section, we’re going to talk about how the B.C. Government is embracing open collaboration through the <strong>BCGov GitHub organization</strong> or for short, bcgov github, or just bcgov. The BCGov GitHub organization is the official platform for open-source projects within Provincial Government of BC.</p>
+<ul>
+<li>Let me give you a little backstory: (next)
+<ul>
+<li>The bcgov organization was set up in early 2014 by the OCIO, in collaboration with the BCDevExchange team within the Ministry of Citizen’s Services. (next)</li>
+<li>Why? Because we recognized the need to share code and work transparently—and GitHub was the perfect platform to make that happen! (next)</li>
+</ul></li>
+<li>Our Digital Principles for the B.C. Government urges all government product teams to work <em>in the open</em>. GitHub makes this easier by providing tools to:
+<ul>
+<li>Collaborate with the open-source community.<br>
+</li>
+<li>Share and control versions of our code.<br>
+</li>
+<li>Automate processes.<br>
+</li>
+<li>And, of course, track and resolve issues. (next)</li>
+</ul></li>
+</ul>
+<p>The primary organization, bcgov, houses open-source code developed by government teams. This includes projects with both open-source and inner-source contribution models, with over 1,000 repositories available. (next)</p>
+<p>For confidential code, developers use the bcgov-c organization, ensuring secure storage and management.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4-bcgov-github-organization-1" class="slide level2" data-background-image="../figures/section-4-bcgov/bcgov-logo.png" data-background-size="8%" data-background-position="85% 6%" data-transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;">
+<h2>Section 4: BCGov GitHub Organization</h2>
+
+<img data-src="../figures/section-4-bcgov/bcgov-org2.png" class="r-stretch"><div class="absolute" style="top: 580px; left: 340px; ">
+<div class="fragment fade-up" data-fragment-index="1">
+<div data-id="box2" data-auto-animate-delay="0.2" style="background:  #e83e8c ; width: 80px; height: 5px;">
+
+</div>
+</div>
+</div>
+<div class="footer">
+<p>BCGov: <a href="https://github.com/bcgov">https://github.com/bcgov</a></p>
+</div>
+<aside class="notes">
+<p>The BCGov GitHub organization overview page has changed recently. If you navigate to this page on GitHub (the url is at the bottom of the screen), you will be presented with a README. (zoom in, alt right-click)</p>
+<p>The README speaks to the organization’s:</p>
+<ul>
+<li>Purpose and Vision:</li>
+<li>Role of Developers:</li>
+<li>Support Resources and (next)</li>
+<li>several other links including one for instructions on how to join the community.</li>
+</ul>
+<p>(zoom out, alt+right-click)</p>
+<p>This link takes us to…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bc-developer-guide" class="slide level2" data-background-image="../figures/section-4-bcgov/bcgov-logo.png" data-background-size="8%" data-background-position="85% 6%" data-transition="slide-in fade-out">
+<h2>BC Developer Guide</h2>
+
+<img data-src="../figures/section-4-bcgov/bcgov-org-sign-up.png" class="r-stretch"><div class="footer">
+<p>BC Developer Guide: <a href="https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#directions-to-sign-up-and-link-your-account-for-bcgov">https://developer.gov.bc.ca</a></p>
+</div>
+<aside class="notes">
+<p>…the BC Developer guide, which is a living guide to application development for the B.C government, updated regularly by the Developer Experience team. It’s written for all ministries as a guide for your team’s technical decisions and as a reference throughout your coding products.</p>
+<p>It contains a section that</p>
+<ul>
+<li>gives an overview of the different GitHub Organizations, (bcgov and bcgov-c) and details the purpose and access rules for each organization.<br>
+</li>
+<li>Describes the SSO setup process for bcgov and bcgov-c organizations, including requirements for IDIR accounts and steps for linking accounts.<br>
+</li>
+<li>What I want to highlight is the step-by-step guides for signing up and linking GitHub accounts to bcgov and bcgov-c.<br>
+</li>
+<li>The step-by-step instructions outline key requirements like two-factor devices, personal logins, and IDIR credentials.<br>
+</li>
+<li>List links to supplementary guides, video tutorials, and support request options.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bcgov-github-organization" class="slide level2" data-background-image="../figures/section-4-bcgov/bcgov-logo.png" data-background-size="8%" data-background-position="85% 6%" data-transition="fade-in fade-out" style="padding: 0px 0px 0px 0px;">
+<h2>BCGov GitHub Organization</h2>
+
+<img data-src="../figures/section-4-bcgov/bcgov-org2.png" class="r-stretch"><div class="absolute" style="top: 298px; left: 350px; ">
+<div class="fragment fade-up" data-fragment-index="2">
+<div data-id="box2" data-auto-animate-delay="0.2" style="background:  #e83e8c ; width: 120px; height: 5px;">
+
+</div>
+</div>
+</div>
+<div class="footer">
+<p>BCGov: <a href="https://github.com/bcgov">https://github.com/bcgov</a></p>
+</div>
+<aside class="notes">
+<p>Going back to the bcgov github overview page (next) At the top is a link to BCGov GitHub Policy Framework (next slide)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bcgov-github-policy-framework" class="slide level2" data-background-image="../figures/section-4-bcgov/bcgov-logo.png" data-background-size="8%" data-background-position="85% 6%" data-transition="slide-in fade-out">
+<h2>BCGov GitHub Policy Framework</h2>
+
+<img data-src="../figures/section-4-bcgov/bcgov-policy.png" class="r-stretch"><div class="footer">
+<p>BCGov Policy Framework: <a href="https://github.com/bcgov/BC-Policy-Framework-For-GitHub">https://github.com/bcgov/BC-Policy-Framework-For-GitHub</a></p>
+</div>
+<aside class="notes">
+<p>Scrolling down to the bottom you will find a README.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bcgov-github-policy-framework-1" class="slide level2" data-background-image="../figures/section-4-bcgov/bcgov-logo.png" data-background-size="8%" data-background-position="85% 6%" data-transition="fade-in slide-out">
+<h2>BCGov GitHub Policy Framework</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><img data-src="../figures/section-4-bcgov/bcgov-policy-scroll-readme.png"></p>
+</div><div class="column" style="width:30%;">
+<div>
+<ul>
+<li class="fragment">Joining</li>
+<li class="fragment">Opening &amp; Contents of Repositories</li>
+<li class="fragment">Licensing</li>
+<li class="fragment">Privacy, Security, Copyright</li>
+<li class="fragment">Appropriate Use</li>
+<li class="fragment">How to’s</li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+<p>In that README you’ll find links to:</p>
+<ul>
+<li>A HOW-TO, containing a list of tips, tricks and best practices for using GitHub as a code repository for government projects.</li>
+<li>An employee guide. Which is a guide for developing in GitHub for BC Government employees. This contains information on licensing, conflict of interest and appropriate use policy</li>
+<li>Also a cheatsheet with resources for joining BCGOV, using git, adding required files, how to properly license the contents of a repository</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="mandatory-content" class="slide level2" data-background-image="../figures/section-4-bcgov/bcgov-logo.png" data-background-size="8%" data-background-position="85% 6%" data-transition="fade-in slide-out">
+<h2>Mandatory Content</h2>
+
+<img data-src="../figures/section-4-bcgov/all-the-files.png" class="r-stretch"><aside class="notes">
+<p>Let’s take a look at the mandatory files you’ll typically find in most GitHub repositories. These files aren’t just important—they’re essential for ensuring a well-organized and collaborative project:</p>
+<p>LICENSE: The license file specifies the terms under which others can use, modify, or distribute the project. It’s crucial because it makes clear what permissions are granted. For example, is this code free to use? Can someone adapt it for their own work? Without a license, your project defaults to being fully restricted, which can limit its usability. Generally, for bcgov repositories we use the Apache 2.0 LICENSE:</p>
+<ul>
+<li>This can be added directly to the repository</li>
+<li>Boiler-plate for the Apache 2.0 LICENSE is added to the bottom of your README.md</li>
+<li>Boiler-plate for the Apache 2.0 LICENSE is added to the comments header of every source code file</li>
+</ul>
+<p>Other, non-code files may require a second license, such as the Creative Commons Attribution 4.0 International. This can be added in a footer to your README.md</p>
+<p>README: This is the front page of your repository. It’s often the first thing anyone sees when visiting your project. It explains what the project is about, what problem it solves, how to use it, and sometimes even a roadmap for future development. Think of it as your project’s introduction and user guide rolled into one.</p>
+<p>CONTRIBUTING: This file guides others who want to contribute to your repository.</p>
+<p>CODE-OF-CONDUCT: Open Source space in general has had its struggles with conduct and one approach to improving this is establishing clear code of conduct for open source projects. Most often this is a statement around fostering an open, safe, welcoming, and respectful inclusive community for all. It emphasizes fostering a kind, inclusive, cooperative, and harassment-free open source BCGov community</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p>i</p>
 
 
 </section>
@@ -383,14 +1518,14 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -437,6 +1572,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

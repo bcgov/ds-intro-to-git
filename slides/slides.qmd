@@ -283,7 +283,7 @@ But git also allows independent users to make changes on the same document. (nex
 
 Each can, on their own copy, head off on a different track and work on it independently while keeping the main copy intact. 
 
-In this diagram person green takes a copy and person red also takes a copy.  They add some lines and when they are finished making changes to their own copy...
+In this diagram person green takes a copy of the base document on the left, and person red also takes a copy.  They add some lines of text and when they are finished making changes to their own copy...
 
 (next slide)
 
@@ -310,7 +310,7 @@ In this diagram person green takes a copy and person red also takes a copy.  The
 
 the changes they want to keep can be merged back into the original. If they don't like the result, the changes can be discarded. (next) 
 
-Unless multiple users make changes to the same section of the document (a conflict) you can incorporate two sets of changes into the same base document.  (next)
+Unless multiple users make changes to the same section of the document (this is called a conflict) you can incorporate two sets of changes into the same base document.  (next)
 
 Documents and repositories can be kept in sync across different computers facilitating collaboration among different people.
 
@@ -367,7 +367,7 @@ This slide illustrates the structure of a typical Git repository. Let me walk yo
 
 At the top level, we have the wes-analysis folder, which is the root directory of this repository. This is where all our files and folders for the project are organized.  Inside this folder you likely have other project-related subfolders such as: 
  
- - **doc** and **ref** containin files such as a list of acronyms, reports, reference materials and possibly articles and images for visual documentation or presentations. This is very much project-dependent. 
+ - **doc** and **ref** which may contain files such as a list of acronyms, reports, reference materials and possibly articles and images for visual documentation or presentations. 
 - **plots** is where visual outputs like graphs or charts from the analysis are saved.
 - **code** houses the scripts or programming files you're working on, forming the core of the project’s logic. (next)
 
@@ -377,7 +377,7 @@ Two important files help manage this repository (next)
 
 The **.git** *directory* is hidden by default and is what makes this a Git repository. It tracks changes to files, allowing us to manage versions of our code and content. (next)
 
-The **.gitignore** *file* lists files or patterns we don’t want Git to track—like large data files such as the CSVs. This is a common practice to keep repositories clean and focused on the essential project elements. (next)
+The **.gitignore** *file* lists files or filename patterns we don’t want Git to track—like large data files such as the CSVs. This is a common practice to keep repositories clean and focused on the essential project elements. (next)
 
 Together, this structure keeps our work organized and ensures that the repository is ready for version control and collaboration.
 
@@ -443,7 +443,7 @@ Once a snapshot is committed to Git, it’s incredibly hard to lose, especially 
 
 -   repo
 -   stage/add
--   commit/commit message
+-   commit
 -   push
 -   pull
 
@@ -463,17 +463,17 @@ Once a snapshot is committed to Git, it’s incredibly hard to lose, especially 
 
 ::: notes
 
-Let's preview a bit of git Bash jargon.  Much of it you will be introduced to in this workshop as many of these are commands that we enter at command-line.  Let's start with the ones we'll use in the workshop. (next)
+Let's preview a bit of git Bash jargon.  Many of these are commands that we enter at command-line.  Let's start with the ones we'll use in the workshop. (next)
 
 A repo (short for repository) is like a folder where your project’s files and their history are stored. It tracks all the changes you make, letting you see the past versions and collaborate with others. You can have a local repo on your computer or a remote one on a platform like GitHub. (next)
 
 **`add`** a git command used to stage files. it is like putting changes into a "ready-to-go" box. It tells Git which changes (new files, edits, or deletions) you want to save in your next snapshot (commit). You’re just preparing them; they aren’t saved yet. (next)
 
-**`commit -m "message`** a git command used to take a picture of your work at this moment. It saves the changes you've prepared (staged) into Git's history. The message you add is like a caption, helping you remember what this "snapshot" is about. (next)
+**`commit -m "message`** a git command used to take a picture of your work at this moment. It saves the changes you've prepared (staged) into Git's history. When we commit changes, we add a message. This is like a caption, helping you remember what this "snapshot" is about. (next)
 
 **`push [remote] [branch]`** a git command used to send your saved work (commits) from your computer to an online storage space (remote repository). This lets others see or work with your updates. (next)
 
-**`pull [remote] [branch]`** a git command used to grab the latest updates from the online version of your project and adding them to your work. It makes sure you're working with the most up-to-date version. (next)
+**`pull [remote] [branch]`** a git command used to grab the latest updates from the online version of your project and add them to your work. It makes sure you're working with the most up-to-date version. (next)
 
 Some others you may hear about but we won't be directly going over today.
 
@@ -481,13 +481,10 @@ Some others you may hear about but we won't be directly going over today.
 
 **`branch [branchname]`** is like a new "workspace" where you can try new ideas or work on features without messing with the main project.  Branches keep your main project safe while you experiment or build new things, and you can later combine your changes when they’re ready. (next)
 
-`fork`: No direct Git command as forking is done through GitHub platform,. It’s like making your own personal copy of someone else’s project, so you can change it without affecting their original work. You can use it to contribute to open-source projects or customize things for your own needs. Once you're happy with your changes, you can share them back with the original project through a pull request. (next)
+`fork`: No direct Git command as forking is done through GitHub platform. It’s like making your own personal copy of someone else’s project, so you can change it without affecting their original work. You can use it to contribute to open-source projects or customize things for your own needs. Once you're happy with your changes, you can share them back with the original project through a pull request. (next)
 
 
 :::
-
-
-
 
 
 ## Preview: Bash Jargon {background-image="/figures/section-2-git/git-logo.png" background-size="10%" background-position="85% 6%"}
@@ -505,7 +502,7 @@ $ ls -a                         # List directories and files, including hidden
 ```
 
 ::: notes
-Let’s review some common Bash commands that you’ll use frequently when working with Git and navigating your file system. (next)  
+Some common Bash commands that we’ll need to navigate our file system when working with Git are listed here. (next)  
 
 **cd path/to/directory**: This command lets you navigate to a specific directory. Think of it as ‘changing your location’ in the file system.  If the directory path includes spaces, make sure to enclose it in quotes, like **cd "My Folder"**.  (next)
 

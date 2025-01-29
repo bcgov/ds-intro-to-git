@@ -366,7 +366,7 @@
 <li class="fragment">Installed Git (including Git Bash): <a href="https://git-scm.com/download/win">Git Download</a></li>
 <li class="fragment">Created a GitHub account: <a href="https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#create-your-github-account">Pre-Workshop Materials</a>
 <ul>
-<li class="fragment">Set-up 2MFA</li>
+<li class="fragment">Set-up 2FA/MFA</li>
 <li class="fragment">Created a Personal Access Token</li>
 </ul></li>
 <li class="fragment">Configured Git: <a href="https://bcgov.github.io/ds-intro-to-git/pre-workshop/software-install.html#configure-git">Pre-Workshop Materials</a></li>
@@ -459,7 +459,7 @@
 <aside class="notes">
 <p>But git also allows independent users to make changes on the same document. (next) (next)</p>
 <p>Each can, on their own copy, head off on a different track and work on it independently while keeping the main copy intact.</p>
-<p>In this diagram person green takes a copy and person red also takes a copy. They add some lines and when they are finished making changes to their own copy…</p>
+<p>In this diagram person green takes a copy of the base document on the left, and person red also takes a copy. They add some lines of text and when they are finished making changes to their own copy…</p>
 <p>(next slide)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -492,7 +492,7 @@
 </div></div>
 <aside class="notes">
 <p>the changes they want to keep can be merged back into the original. If they don’t like the result, the changes can be discarded. (next)</p>
-<p>Unless multiple users make changes to the same section of the document (a conflict) you can incorporate two sets of changes into the same base document. (next)</p>
+<p>Unless multiple users make changes to the same section of the document (this is called a conflict) you can incorporate two sets of changes into the same base document. (next)</p>
 <p>Documents and repositories can be kept in sync across different computers facilitating collaboration among different people.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -550,14 +550,14 @@
 <p>This slide illustrates the structure of a typical Git repository. Let me walk you through its key components: (next)</p>
 <p>At the top level, we have the wes-analysis folder, which is the root directory of this repository. This is where all our files and folders for the project are organized. Inside this folder you likely have other project-related subfolders such as:</p>
 <ul>
-<li><p><strong>doc</strong> and <strong>ref</strong> containin files such as a list of acronyms, reports, reference materials and possibly articles and images for visual documentation or presentations. This is very much project-dependent.</p></li>
+<li><p><strong>doc</strong> and <strong>ref</strong> which may contain files such as a list of acronyms, reports, reference materials and possibly articles and images for visual documentation or presentations.</p></li>
 <li><p><strong>plots</strong> is where visual outputs like graphs or charts from the analysis are saved.</p></li>
 <li><p><strong>code</strong> houses the scripts or programming files you’re working on, forming the core of the project’s logic. (next)</p></li>
 <li><p><strong>data</strong> contains the raw data files in this hypothetical project. It’s worth noting that sensitive or private data, like these CSV files, won’t become public as we will give explicit instructions to git to ignore them.</p></li>
 </ul>
 <p>Two important files help manage this repository (next)</p>
 <p>The <strong>.git</strong> <em>directory</em> is hidden by default and is what makes this a Git repository. It tracks changes to files, allowing us to manage versions of our code and content. (next)</p>
-<p>The <strong>.gitignore</strong> <em>file</em> lists files or patterns we don’t want Git to track—like large data files such as the CSVs. This is a common practice to keep repositories clean and focused on the essential project elements. (next)</p>
+<p>The <strong>.gitignore</strong> <em>file</em> lists files or filename patterns we don’t want Git to track—like large data files such as the CSVs. This is a common practice to keep repositories clean and focused on the essential project elements. (next)</p>
 <p>Together, this structure keeps our work organized and ensures that the repository is ready for version control and collaboration.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -622,7 +622,7 @@
 <ul>
 <li class="fragment">repo</li>
 <li class="fragment">stage/add</li>
-<li class="fragment">commit/commit message</li>
+<li class="fragment">commit</li>
 <li class="fragment">push</li>
 <li class="fragment">pull</li>
 </ul>
@@ -637,16 +637,16 @@
 </div>
 </div></div>
 <aside class="notes">
-<p>Let’s preview a bit of git Bash jargon. Much of it you will be introduced to in this workshop as many of these are commands that we enter at command-line. Let’s start with the ones we’ll use in the workshop. (next)</p>
+<p>Let’s preview a bit of git Bash jargon. Many of these are commands that we enter at command-line. Let’s start with the ones we’ll use in the workshop. (next)</p>
 <p>A repo (short for repository) is like a folder where your project’s files and their history are stored. It tracks all the changes you make, letting you see the past versions and collaborate with others. You can have a local repo on your computer or a remote one on a platform like GitHub. (next)</p>
 <p><strong><code>add</code></strong> a git command used to stage files. it is like putting changes into a “ready-to-go” box. It tells Git which changes (new files, edits, or deletions) you want to save in your next snapshot (commit). You’re just preparing them; they aren’t saved yet. (next)</p>
-<p><strong><code>commit -m "message</code></strong> a git command used to take a picture of your work at this moment. It saves the changes you’ve prepared (staged) into Git’s history. The message you add is like a caption, helping you remember what this “snapshot” is about. (next)</p>
+<p><strong><code>commit -m "message</code></strong> a git command used to take a picture of your work at this moment. It saves the changes you’ve prepared (staged) into Git’s history. When we commit changes, we add a message. This is like a caption, helping you remember what this “snapshot” is about. (next)</p>
 <p><strong><code>push [remote] [branch]</code></strong> a git command used to send your saved work (commits) from your computer to an online storage space (remote repository). This lets others see or work with your updates. (next)</p>
-<p><strong><code>pull [remote] [branch]</code></strong> a git command used to grab the latest updates from the online version of your project and adding them to your work. It makes sure you’re working with the most up-to-date version. (next)</p>
+<p><strong><code>pull [remote] [branch]</code></strong> a git command used to grab the latest updates from the online version of your project and add them to your work. It makes sure you’re working with the most up-to-date version. (next)</p>
 <p>Some others you may hear about but we won’t be directly going over today.</p>
 <p><strong><code>clone [repositoryurl]</code></strong> a git command used to download a full copy of a project from an online source (like GitHub) to your computer so you can work on it. It brings all the files and the project’s history with it. (next)</p>
 <p><strong><code>branch [branchname]</code></strong> is like a new “workspace” where you can try new ideas or work on features without messing with the main project. Branches keep your main project safe while you experiment or build new things, and you can later combine your changes when they’re ready. (next)</p>
-<p><code>fork</code>: No direct Git command as forking is done through GitHub platform,. It’s like making your own personal copy of someone else’s project, so you can change it without affecting their original work. You can use it to contribute to open-source projects or customize things for your own needs. Once you’re happy with your changes, you can share them back with the original project through a pull request. (next)</p>
+<p><code>fork</code>: No direct Git command as forking is done through GitHub platform. It’s like making your own personal copy of someone else’s project, so you can change it without affecting their original work. You can use it to contribute to open-source projects or customize things for your own needs. Once you’re happy with your changes, you can share them back with the original project through a pull request. (next)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -669,7 +669,7 @@
 <span id="cb2-5"><a></a><span class="ex">$</span> ls <span class="at">-a</span>                         <span class="co"># List directories and files, including hidden</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes">
-<p>Let’s review some common Bash commands that you’ll use frequently when working with Git and navigating your file system. (next)</p>
+<p>Some common Bash commands that we’ll need to navigate our file system when working with Git are listed here. (next)</p>
 <p><strong>cd path/to/directory</strong>: This command lets you navigate to a specific directory. Think of it as ‘changing your location’ in the file system. If the directory path includes spaces, make sure to enclose it in quotes, like <strong>cd “My Folder”</strong>. (next)</p>
 <p><strong>cd ..</strong>: The <code>..</code> represents the parent directory. Using this command moves you up one level in the directory hierarchy. For example, if you’re in a folder called <em>projects</em>, <strong>cd ..</strong> will take you back to its parent folder. (next)</p>
 <p><strong>mkdir new_directory</strong> :This creates a new directory with the specified name. It’s a quick way to organize your files into new folders directly from the command line. (next)</p>
@@ -862,7 +862,8 @@ With features like pull requests, code reviews, and issue tracking, it ensures t
 <h2>Hands-On Practice</h2>
 <p><br> <br> <br> <br> Let’s create our first remote repository!</p>
 <aside class="notes">
-<p>Let’s make our first remote repository</p>
+<p>Let’s make our first remote repository!</p>
+<p>(flip to section 3.1)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1351,7 +1352,6 @@ With features like pull requests, code reviews, and issue tracking, it ensures t
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p>i</p>
 
 
 </section>
